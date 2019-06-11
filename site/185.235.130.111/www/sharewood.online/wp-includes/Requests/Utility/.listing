@@ -1,0 +1,4 @@
+drwxr-xr-x   2 adminshare 500            71 Mar 15 12:10 .
+drwxr-xr-x   9 adminshare 500          4096 Mar 15 12:10 ..
+-rw-r--r--   1 adminshare 500          1993 Mar 15 12:10 CaseInsensitiveDictionary.php
+-rw-r--r--   1 adminshare 500           829 Mar 15 12:10 FilteredIterator.php

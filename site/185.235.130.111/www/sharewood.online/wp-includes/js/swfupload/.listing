@@ -1,0 +1,6 @@
+drwxr-xr-x   2 adminshare 500            87 Mar 15 12:10 .
+drwxr-xr-x  13 adminshare 500          4096 Mar 15 12:10 ..
+-rw-r--r--   1 adminshare 500          1460 Mar 15 12:10 handlers.js
+-rw-r--r--   1 adminshare 500          1276 Mar 15 12:10 handlers.min.js
+-rw-r--r--   1 adminshare 500          1540 Mar 15 12:10 license.txt
+-rw-r--r--   1 adminshare 500          4439 Mar 15 12:10 swfupload.js

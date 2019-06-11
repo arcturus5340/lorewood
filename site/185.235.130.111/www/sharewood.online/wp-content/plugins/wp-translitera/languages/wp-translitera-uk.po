@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp_translitera\n"
+"POT-Creation-Date: 2018-05-03 18:05+0300\n"
+"PO-Revision-Date: 2018-05-03 18:06+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.13\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admintmpl.php:13 wp-translitera.php:548
+msgid "Settings"
+msgstr "Налаштування"
+
+#: admintmpl.php:15
+msgid "Global settings"
+msgstr "Глобальні налаштування"
+
+#: admintmpl.php:17
+msgid "Use the settings of the main site"
+msgstr "Використовувати налаштування головного сайту"
+
+#: admintmpl.php:19
+msgid "Use forces transliteration for title"
+msgstr "Використовувати примусове транслітерування у назвах"
+
+#: admintmpl.php:20
+msgid "Transliterate 404 url"
+msgstr "Транслитерувати 404 посилання"
+
+#: admintmpl.php:21
+msgid ""
+"Don't use transliteration in frontend (enable when have a problem in front-"
+"end)"
+msgstr ""
+"Не використовуйте транслітерацію в зовнішній інтерфейсі (увімкніть, коли у "
+"вас є проблеми з інтерфейсом)."
+
+#: admintmpl.php:23
+msgid "Media settings"
+msgstr "Налаштування медіа"
+
+#: admintmpl.php:25
+msgid "Transliterate names of uploads files"
+msgstr "Транслітерувати назви завантаженних файлів"
+
+#: admintmpl.php:26
+msgid "Convert files names to lower case"
+msgstr "Перетворення імен файлів у нижній регістр"
+
+#: admintmpl.php:27
+msgid ""
+"File extensions, separated by commas , titles that do not need to "
+"transliterate"
+msgstr ""
+"Розширення файлів, назви яких не треба транслітерувати, розділені комами"
+
+#: admintmpl.php:29
+msgid "Transliteration tables"
+msgstr "Таблиця транслітерації"
+
+#: admintmpl.php:30
+msgid ""
+"Custom transliteration rules, in format я=ja (Everyone ruled from a new "
+"line!). It is enough to create only the lower case."
+msgstr ""
+"Налаштовані користувачем правил транслітерації у форматі я=ja (кожне правило "
+"з нового рядка). Достаттньо створити тільки нижній регістр"
+
+#: admintmpl.php:31
+msgid "Apply"
+msgstr "Прийняти"
+
+#: admintmpl.php:35
+msgid "Convert existing"
+msgstr "Перетворити існуючі"
+
+#: admintmpl.php:37
+msgid "Pages and posts"
+msgstr "Сторінки та записи"
+
+#: admintmpl.php:38
+msgid "Headings, tags etc..."
+msgstr "Категорії, позначки та інше..."
+
+#: admintmpl.php:41
+msgid "Forums"
+msgstr "Форуми"
+
+#: admintmpl.php:42
+msgid "Topics"
+msgstr "Теми"
+
+#: admintmpl.php:44
+msgid "Transliterate"
+msgstr "Траслітерувати"
+
+#: wp-translitera.php:358
+msgid "Plugin WP Translitera has been updated,"
+msgstr "Плагін WP Translitera оновлено,"
+
+#: wp-translitera.php:358
+msgid "update settings"
+msgstr "Оновити налаштування"
+
+#~ msgid ""
+#~ "Use transliteration in frontend for transliteration title out ACP (enable "
+#~ "if use bbPress, buddypress, woocommerce etc)"
+#~ msgstr ""
+#~ "Використовувати траслітерацию у фронт-енді для траснлитерації назв поза "
+#~ "панелі керування (вімкнути якщо використовуєте bbPress, buddypress, "
+#~ "woocommerce etc)"
+
+#~ msgid ""
+#~ "Mbstring module is not installed on your server! Functionality is limited!"
+#~ msgstr ""
+#~ "Модуль Mbstring не встановлений на вашому сервері! Функціональність "
+#~ "обмежена!"
+
+#~ msgid ""
+#~ "Custom transliteration rules, in format я=ja (Everyone ruled from a new "
+#~ "line!)"
+#~ msgstr ""
+#~ "Налаштовані користувачем правила транслітерації у форматі я=ja (кожне "
+#~ "правило з нового рядка)"
+
+#~ msgid "WPForo"
+#~ msgstr "WPForo"
+
+#~ msgid "Convert names to lower case"
+#~ msgstr "Перетворення імен в нижній регістр"

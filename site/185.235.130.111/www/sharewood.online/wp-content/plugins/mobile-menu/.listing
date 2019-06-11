@@ -1,0 +1,9 @@
+drwxr-xr-x   6 adminshare 500           127 Mar 17 05:53 .
+drwxr-xr-x  15 adminshare 500          4096 Jun 11 14:40 ..
+-rw-r--r--   1 adminshare 500          5169 Mar 17 05:53 changelog.txt
+drwxr-xr-x   6 adminshare 500           197 Mar 17 05:53 freemius
+drwxr-xr-x   4 adminshare 500           177 Mar 17 05:53 includes
+drwxr-xr-x   2 adminshare 500            85 Mar 17 05:53 languages
+-rw-r--r--   1 adminshare 500          6344 Mar 17 05:53 mobmenu.php
+-rw-r--r--   1 adminshare 500         10180 Mar 17 05:53 readme.txt
+drwxr-xr-x   3 adminshare 500            29 Mar 17 05:53 vendor

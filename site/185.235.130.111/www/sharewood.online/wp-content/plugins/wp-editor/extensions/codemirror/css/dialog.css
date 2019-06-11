@@ -1,0 +1,37 @@
+.CodeMirror-dialog {
+  position:absolute;
+  background: #EEE;
+  background-image: -webkit-gradient(linear,left bottom,left top,from(#E5E5E5),to(#F4F4F4));
+  background-image: -webkit-linear-gradient(bottom,#E5E5E5,#F4F4F4);
+  background-image: -moz-linear-gradient(bottom,#E5E5E5,#F4F4F4);
+  background-image: -o-linear-gradient(bottom,#E5E5E5,#F4F4F4);
+  background-image: linear-gradient(to top,#E5E5E5,#F4F4F4);
+  z-index: 15;
+  padding: 5px 8px;
+  font-family:Arial, Helvetica, 'sans-serif normal';
+  right:16px;
+  top:36px;
+  overflow: hidden;
+  border-right:none;
+  color: #333;
+}
+
+.CodeMirror-dialog-top {
+  border-bottom: 1px solid #eee;
+  top: 0;
+}
+
+.CodeMirror-dialog-bottom {
+  border-top: 1px solid #eee;
+  bottom: 0;
+}
+
+.CodeMirror-dialog input {
+  width: 20em;
+  color: inherit;
+  font-family: monospace;
+}
+
+.CodeMirror-dialog button {
+  font-size: 70%;
+}

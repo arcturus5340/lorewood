@@ -1,0 +1,533 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Login With Ajax v3.1.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-11-06 18:39+0330\n"
+"Last-Translator: admin <msykes@netweblogic.com>\n"
+"Language-Team:  <info@mo-akbari.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: fa_IR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:50
+msgid "Dismiss"
+msgstr "رد کردن"
+
+# @ default
+#: login-with-ajax-admin.php:106
+msgid "Changes saved."
+msgstr "تغییرات ذخیره شد."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:148
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:153
+msgid "Default Template"
+msgstr "قالب پیش‌فرض"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:162
+msgid ""
+"Choose the default theme you'd like to use. This can be overriden in the "
+"widget, shortcode and template tags."
+msgstr ""
+"قالب پیش‌فرض مورد نظر را انتخاب کنید؛ این عمل می‌تواند موجب بازنویسی در "
+"ابزارک، کدکوتاه و برچسب‌های قالب شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:163
+msgid "Further documentation for this feature coming soon..."
+msgstr "اطلاعات و مستندات بیشتر برای این ویژگی، به‌زودی..."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:169
+msgid "Disable refresh upon login?"
+msgstr "غیرفعال‌سازی تازه‌سازی صفحه (رفرش) هنگام ورود؟"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:174
+msgid ""
+"If the user logs in and you check the button above, only the login widget "
+"will update itself without refreshing the page. Not a good idea if your site "
+"shows different content to users once logged in, as a refresh would be "
+"needed."
+msgstr ""
+"اگر شما تیک چک‌باکس بالا را بزنید، پس از ورود موفقیت آمیز کاربر فقط ابزارک "
+"ورود، تازه‌سازی می‌شود و رفرش کل صفحه انجام نمی‌شود. فعال‌سازی این گزینه، هنگامی "
+"که محتوای صفحه برای کاربر عضو و مهمان متفاوت است، پیشنهاد نمی‌شود!"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:180
+msgid "Redirection Settings"
+msgstr "تنظیمات انتقال"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:184
+msgid "Global Login Redirect"
+msgstr "انتقال پس از ورود کلی"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:188
+msgid ""
+"If you'd like to send the user to a specific URL after login, enter it here "
+"(e.g. http://wordpress.org/)"
+msgstr ""
+"اگر شما می‌خواهید کاربر را پس از ورود، به صفحه‌ی خاصی هدایت کنید، نشانی آن "
+"(صفحه) ‌را اینجا بنویسید. (e.g. http://wordpress.org/)"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:189
+#, php-format
+msgid ""
+"Use %USERNAME% and it will be replaced with the username of person logging "
+"in."
+msgstr ""
+"می‌توانید در نشانی از %USERNAME% استفاده کنید که نام کاربری شخصی که وارد سایت "
+"شده، با آن جایگزین می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:211 login-with-ajax-admin.php:263
+msgid ""
+"With WPML enabled you can provide different redirection destinations based "
+"on language too."
+msgstr ""
+"با فعال‌سازی WPML شما می‌توانید مقاصد مختلفی را برای انتقال‌ها، بر اساس زبان‌ها "
+"نیز فراهم کنید."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:222
+msgid "Global Logout Redirect"
+msgstr "انتقال پس از خروج کلی"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:226
+msgid ""
+"If you'd like to send the user to a specific URL after logout, enter it here "
+"(e.g. http://wordpress.org/)"
+msgstr ""
+"اگر شما می‌خواهید کاربر را پس از خروج، به صفحه‌ی خاصی هدایت کنید، نشانی آن "
+"(صفحه) ‌را اینجا بنویسید. (e.g. http://wordpress.org/)"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:227
+#, php-format
+msgid ""
+"Enter %LASTURL% to send the user back to the page they were previously on."
+msgstr ""
+"اگر می‌خواهید، کاربر به صفحه‌ی قبلی که حضور داشته، بازگردد از %LASTURL% "
+"استفاده کنید."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:235
+msgid "Role-Based Custom Login Redirects"
+msgstr "انتقال‌های ورود سفارشی، بر اساس نقش"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:238
+msgid ""
+"If you would like a specific user role to be redirected to a custom URL upon "
+"login, place it here (blank value will default to the global redirect)"
+msgstr ""
+"اگر شما می‌خواهید کاربر را (پس از ورود) بر اساس نقشی که دارد، به نشانی سفارشی "
+"هدایت کنید، از فیلدهای زیر استفاده کنید (خالی گذاشتن فیلد، موجب انتقال بر "
+"اساس تنظیمات کلی می‌شود)"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:288
+msgid "Role-Based Custom Logout Redirects"
+msgstr "انتقال‌های خروج سفارشی، بر اساس نقش"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:291
+msgid ""
+"If you would like a specific user role to be redirected to a custom URL upon "
+"logout, place it here (blank value will default to the global redirect)"
+msgstr ""
+"اگر شما می‌خواهید کاربر را (پس از خروج) بر اساس نقشی که دارد، به نشانی سفارشی "
+"هدایت کنید، از فیلدهای زیر استفاده کنید (خالی گذاشتن فیلد، موجب انتقال بر "
+"اساس تنظیمات کلی می‌شود)"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:314
+msgid "Notification Settings"
+msgstr "تنظیمات آگاه‌سازی"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:316
+msgid ""
+"If you'd like to override the default Wordpress email users receive once "
+"registered, make sure you check the box below and enter a new email subject "
+"and message."
+msgstr ""
+"اگر شما می‌خواهید نامه‌ی الکترونیکی پیش‌فرضی که سیستم وردپرس برای کاربران ثبت "
+"نام شده می‌فرستد را بازنویسی کنید، تیک چک‌باکس زیر را زده، موضوع و متن پیام "
+"جدید را وارد کنید."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:317
+msgid ""
+"If this feature doesn't work, please make sure that you don't have another "
+"plugin installed which also manages user registrations (e.g. BuddyPress and "
+"MU)."
+msgstr ""
+"اگر این ویژگی عمل نمی‌کند، لطفاً مطمئن شوید که افزونه‌ی دیگر مدیریت نام‌نویسی "
+"کاربران روی سایت شما نصب نیست. مثلاً BuddyPress و MU."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:322
+msgid "Override Default Email?"
+msgstr "بازنویسی نامه‌ی الکترونیکی پیش‌فرض؟"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:330
+msgid "Subject"
+msgstr "موضوع"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:335
+#, php-format
+msgid "Your registration at %BLOGNAME%"
+msgstr "نام‌نویسی شما در %BLOGNAME%"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:339 login-with-ajax-admin.php:381
+#, php-format
+msgid "<code>%USERNAME%</code> will be replaced with a username."
+msgstr "<code>%USERNAME%</code> با یک نام کاربری جایگزین می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:343 login-with-ajax-admin.php:385
+#, php-format
+msgid "<code>%PASSWORD%</code> will be replaced with the user's password."
+msgstr "<code>%PASSWORD%</code> با گذرواژه‌ی کاربر جایگزین می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:345 login-with-ajax-admin.php:387
+#, php-format
+msgid "<code>%BLOGNAME%</code> will be replaced with the name of your blog."
+msgstr "<code>%BLOGNAME%</code> با نام سایت شما جایگزین می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:346 login-with-ajax-admin.php:388
+#, php-format
+msgid "<code>%BLOGURL%</code> will be replaced with the url of your blog."
+msgstr "<code>%BLOGURL%</code> با نشانی سایت شما جایگزین می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:351
+msgid "Message"
+msgstr "پیام"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:368
+#, php-format
+msgid ""
+"Thanks for signing up to our blog. \n"
+"\n"
+"You can login with the following credentials by visiting %BLOGURL%\n"
+"\n"
+"Username : %USERNAME%\n"
+"Password : %PASSWORD%\n"
+"\n"
+"We look forward to your next visit!\n"
+"\n"
+"The team at %BLOGNAME%"
+msgstr ""
+"بابت نام‌نویسی در سایت ما، سپاسگزاریم. \n"
+"\n"
+"شما می‌توانید با مراجعه به %BLOGURL% توسط اطلاعات زیر وارد حساب کاربری خود "
+"شوید.\n"
+"\n"
+"نام کاربری : %USERNAME%\n"
+"گذرواژه : %PASSWORD%\n"
+"\n"
+"ما شدیداً مشتاق حضور شما هستیم!\n"
+"\n"
+"تیم %BLOGNAME%"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:357
+#, php-format
+msgid ""
+"Thanks for signing up to our blog. \n"
+"\n"
+"You can login with the following credentials by visiting %BLOGURL%\n"
+"\n"
+"Username: %USERNAME%\n"
+"To set your password, visit the following address: %PASSWORD%\n"
+"\n"
+"We look forward to your next visit!\n"
+"\n"
+"The team at %BLOGNAME%"
+msgstr ""
+"بابت نام‌نویسی در سایت ما، سپاسگزاریم. \n"
+"\n"
+"شما می‌توانید با مراجعه به %BLOGURL% توسط اطلاعات زیر وارد حساب کاربری خود "
+"شوید.\n"
+"\n"
+"نام کاربری: %USERNAME%\n"
+"مشاهده‌ی صفحه جهت تنظیم گذرواژه: %PASSWORD%\n"
+"\n"
+"ما شدیداً مشتاق حضور شما هستیم!\n"
+"\n"
+"تیم %BLOGNAME%"
+
+# @ default
+#: login-with-ajax-admin.php:396
+msgid "Save Changes"
+msgstr "ذخیره‌ی تنظیمات"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:8 widget/default/widget_out.php:32
+#: widget/divs-only/widget_out.php:26 widget/modal/widget_out.php:9
+#: widget/modal/widget_out.php:36
+msgid "Log In"
+msgstr "ورود به سایت"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:9 widget/default/widget_in.php:13
+msgid "Hi"
+msgstr "سلام"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:15
+msgid "Login widget with AJAX capabilities."
+msgstr "ورود با قابلیت‌های AJAX"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:55 login-with-ajax-widget.php:59
+#, php-format
+msgid "Title (%s)"
+msgstr "عنوان (%s)"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:55
+msgid "Logged In"
+msgstr "برای کاربری که می‌خواهد وارد سایت شود"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:59
+msgid "Logged Out"
+msgstr "برای کاربری که می‌خواهد از سایت خارج شود"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:63
+msgid "Show profile link?"
+msgstr "نمایش پیوند به پروفایل؟"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:67
+msgid "Recover Password?"
+msgstr "بازیابی گذرواژه؟"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:71
+msgid "AJAX Registration?"
+msgstr "نام‌نویسی AJAX؟"
+
+# @ login-with-ajax
+#: login-with-ajax-widget.php:76
+msgid "Template"
+msgstr "قالب"
+
+# @ login-with-ajax
+#: login-with-ajax.php:160
+msgid "Login Successful, redirecting..."
+msgstr "ورود با موفقیت انجام شد؛ درحال انتقال..."
+
+# @ login-with-ajax
+#: login-with-ajax.php:173
+msgid "Login successful, updating..."
+msgstr "ورود با موفقیت انجام شد؛ درحال به‌روزرسانی..."
+
+# @ login-with-ajax
+#: login-with-ajax.php:183 login-with-ajax.php:239
+msgid "An undefined error has ocurred"
+msgstr "یک خطای تعریف نشده رخ داد"
+
+# @ login-with-ajax
+#: login-with-ajax.php:187
+msgid "Please supply your username and password."
+msgstr "لطفاً از نام کاربری و گذرواژه‌ی خود استفاده کنید."
+
+# @ login-with-ajax
+#: login-with-ajax.php:205
+msgid "Registration complete. Please check your e-mail."
+msgstr ""
+"نام‌نویسی کامل شد؛ لطفاً صندوق دریافت پست الکترونیکی خود را بررسی نمایید."
+
+# @ login-with-ajax
+#: login-with-ajax.php:218
+msgid "Registration has been disabled."
+msgstr "نام‌نویسی غیرفعال شده است."
+
+# @ login-with-ajax
+#: login-with-ajax.php:230
+msgid "We have sent you an email"
+msgstr "ما برای شما یک نامه‌ی الکترونیکی فرستاده‌ایم"
+
+# @ default
+#: pluggable.php:35
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "نام‌نویسی کاربر جدید در سایت %s:"
+
+# @ default
+#: pluggable.php:36 pluggable.php:67
+#, php-format
+msgid "Username: %s"
+msgstr "نام کاربری: %s"
+
+# @ default
+#: pluggable.php:37
+#, php-format
+msgid "E-mail: %s"
+msgstr "پست الکترونیکی: %s"
+
+# @ default
+#: pluggable.php:39
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] نام‌نویسی کاربر جدید"
+
+# @ default
+#: pluggable.php:68
+msgid "To set your password, visit the following address:"
+msgstr "برای تنظیم گذرواژه‌ی خود، به نشانی زیر بروید:"
+
+# @ default
+#: pluggable.php:73
+#, php-format
+msgid "[%s] Your username and password info"
+msgstr "[%s] اطلاعات نام کاربری و گذرواژه‌ی شما"
+
+# @ login-with-ajax
+#: widget/default/widget_in.php:25 widget/default/widget_in.php:29
+msgid "Profile"
+msgstr "پروفایل"
+
+# @ login-with-ajax
+#: widget/default/widget_in.php:35
+msgid "Log Out"
+msgstr "خروج"
+
+# @ login-with-ajax
+#: widget/default/widget_in.php:40
+msgid "blog admin"
+msgstr "بلاگ مدیر"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:15 widget/default/widget_out.php:90
+#: widget/divs-only/widget_out.php:12 widget/divs-only/widget_out.php:66
+#: widget/modal/widget_out.php:19 widget/modal/widget_out.php:98
+msgid "Username"
+msgstr "نام کاربری"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:23 widget/divs-only/widget_out.php:17
+#: widget/modal/widget_out.php:27
+msgid "Password"
+msgstr "گذرواژه"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:40 widget/divs-only/widget_out.php:35
+#: widget/modal/widget_out.php:44
+msgid "Remember Me"
+msgstr "مرا به‌خاطر داشته باش"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:43 widget/divs-only/widget_out.php:38
+#: widget/modal/widget_out.php:47
+msgid "Password Lost and Found"
+msgstr "یافتن گذرواژه‌ی فراموش شده"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:43 widget/divs-only/widget_out.php:38
+#: widget/modal/widget_out.php:47
+msgid "Lost your password?"
+msgstr "گذرواژه‌ی خود را فراموش کرده‌اید؟"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:47 widget/default/widget_out.php:100
+#: widget/divs-only/widget_out.php:42 widget/divs-only/widget_out.php:79
+#: widget/modal/widget_out.php:51 widget/modal/widget_out.php:122
+msgid "Register"
+msgstr "نام‌نویسی"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:61 widget/divs-only/widget_out.php:48
+#: widget/modal/widget_out.php:63
+msgid "Forgotten Password"
+msgstr "فراموشی گذرواژه"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:66 widget/divs-only/widget_out.php:50
+#: widget/modal/widget_out.php:69
+msgid "Enter username or email"
+msgstr "نام کاربری یا پست الکترونیکی خود را وارد کنید"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:73 widget/divs-only/widget_out.php:55
+#: widget/modal/widget_out.php:77
+msgid "Get New Password"
+msgstr "دریافت گذرواژه‌ی جدید"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:74 widget/divs-only/widget_out.php:56
+#: widget/divs-only/widget_out.php:80 widget/modal/widget_out.php:78
+#: widget/modal/widget_out.php:123
+msgid "Cancel"
+msgstr "انصراف"
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:84 widget/divs-only/widget_out.php:64
+#: widget/modal/widget_out.php:92
+msgid "Register For This Site"
+msgstr "نام‌نویسی در سایت"
+
+# @ login-with-ajax
+# @ default
+#: widget/default/widget_out.php:85 widget/divs-only/widget_out.php:78
+#: widget/modal/widget_out.php:121
+msgid "A password will be e-mailed to you."
+msgstr "پس از تکمیل اطلاعات زیر، گذرواژه برای شما ارسال می‌شود."
+
+# @ login-with-ajax
+#: widget/default/widget_out.php:94 widget/divs-only/widget_out.php:70
+#: widget/modal/widget_out.php:106
+msgid "E-mail"
+msgstr "پست الکترونیکی"
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:47
+msgid ""
+"Since WordPress 4.3 passwords are not emailed to users anymore, they're "
+"replaced with a link to create a new password."
+msgstr ""
+"از نگارش 4.3 وردپرس به بعد، گذرواژه‌ها برای کاربران توسط نامه‌ی الکترونیکی "
+"ارسال نمی‌شوند؛ بلکه پیوندی جهت ایجاد گذواژه‌ی جدید برای ایشان فرستاده می‌شود."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:48
+msgid "Check your registration email template."
+msgstr "قالب نامه‌ی الکترونیکی نام‌نویسی را بررسی نمایید."
+
+# @ login-with-ajax
+#: login-with-ajax-admin.php:341 login-with-ajax-admin.php:383
+#, php-format
+msgid "%s will be replaced with a link to set the user password."
+msgstr "%s با لینک تنظیم گذرواژه‌ی کاربر جایگزین می‌شود."

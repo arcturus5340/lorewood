@@ -1,0 +1,11 @@
+@charset "utf-8";
+/** 
+ * CSS Document for jQuery Reply to Comment
+ *
+ * @author			Giovambattista Fazioli
+ * @email			g.fazioli@undolog.com
+ * @web				http://www.undolog.com
+ */
+div.jqr2c_box {margin:8px 0 12px 0}
+div.jqr2c_box a.jqr2c_reply {padding:0 12px 0 0;margin:0 12px 0 0;border-right:1px solid #333} 
+div.jqr2c_box a.jqr2c_li_quote {}

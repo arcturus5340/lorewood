@@ -1,0 +1,899 @@
+# Translation of Plugins - WP Mobile Menu &#8211; The Mobile-Friendly Responsive Menu - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - WP Mobile Menu &#8211; The Mobile-Friendly Responsive Menu - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-04-17 21:15:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - WP Mobile Menu &#8211; The Mobile-Friendly Responsive Menu - Stable (latest release)\n"
+
+#: mobmenu.php:43
+msgid "Do you need extra/advanced features? Check the <strong>Professional</strong> and <strong>Business</strong> versions. See all the advanced features, Header Banner, Ajax Sliding Cart, Alternative menus per page, Menus only visible for logged in users, Disable Mobile Menus in specific pages, 2000+ Menu Icons, Find more about the PRO Features <a href=\""
+msgstr "Вам нужен дополнительный или расширенный функционал? Ознакомьтесь с <strong>Professional</strong> и <strong>Business</strong> версиями. Все расширенные функции, баннер в заголовке, скользящая корзина Ajax, альтернативные меню на каждой странице, меню только для авторизовавшихся пользователей, выключение мобильного меню на определённых страницах, 2000+ иконок, больше информации о PRO возможностях: <a href=\""
+
+#: includes/class-wp-mobile-menu-options.php:1448
+msgid "Right 3rd Level Menu Colors"
+msgstr "Цвета правого меню 3 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1402
+msgid "Right 2nd Level Menu Colors"
+msgstr "Цвета правого меню 2 уровня "
+
+#: includes/class-wp-mobile-menu-options.php:1316
+#: includes/class-wp-mobile-menu-options.php:1484
+msgid "3rd Level Text Color Hover"
+msgstr "Цвет текста 3 уровня при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1306
+#: includes/class-wp-mobile-menu-options.php:1474
+msgid "3rd Level Background Color Hover"
+msgstr "Цвет фона 3 уровня при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1296
+#: includes/class-wp-mobile-menu-options.php:1464
+msgid "3rd Level Text Color"
+msgstr "Цвет текста 3 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1286
+#: includes/class-wp-mobile-menu-options.php:1454
+msgid "3rd Level Background Color"
+msgstr "Цвет фона 3 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1280
+msgid "Left 3rd Level Menu Colors"
+msgstr "Цвета левого меню 3 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1270
+#: includes/class-wp-mobile-menu-options.php:1438
+msgid "2nd Level Text Color Hover"
+msgstr "Цвет текста 2 уровня при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1260
+#: includes/class-wp-mobile-menu-options.php:1428
+msgid "2nd Level Background Color Hover"
+msgstr "Цвет фона 2 уровня при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1250
+#: includes/class-wp-mobile-menu-options.php:1418
+msgid "2nd Level Text Color"
+msgstr "Цвет текста 2 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1240
+#: includes/class-wp-mobile-menu-options.php:1408
+msgid "2nd Level Background Color"
+msgstr "Цвет фона 2 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1234
+msgid "Left 2nd Level Menu Colors"
+msgstr "Цвета левого меню 2 уровня"
+
+#: includes/class-wp-mobile-menu-options.php:1131
+msgid "Header Colors"
+msgstr "Цвета заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:1121
+msgid "Menu Items Border Color"
+msgstr "Цвет бордюра элементов меню"
+
+#: includes/class-wp-mobile-menu-options.php:626
+#: includes/class-wp-mobile-menu-options.php:916
+msgid "Blank"
+msgstr "\"_blank\""
+
+#: includes/class-wp-mobile-menu-options.php:625
+#: includes/class-wp-mobile-menu-options.php:915
+msgid "Self"
+msgstr "\"_self\""
+
+#: includes/class-wp-mobile-menu-options.php:606
+#: includes/class-wp-mobile-menu-options.php:896
+msgid "Open Link Url"
+msgstr "Открыть ссылку"
+
+#: includes/class-wp-mobile-menu-options.php:605
+#: includes/class-wp-mobile-menu-options.php:895
+msgid "Open Menu"
+msgstr "Открыть меню"
+
+#: includes/class-wp-mobile-menu-options.php:469
+msgid "Right"
+msgstr "Справа"
+
+#: includes/class-wp-mobile-menu-options.php:468
+msgid "Center"
+msgstr "По центру"
+
+#: includes/class-wp-mobile-menu-options.php:467
+msgid "Left"
+msgstr "Слева"
+
+#: includes/class-wp-mobile-menu-options.php:465
+msgid "Chose the header Logo/Text alignment."
+msgstr "Выберите выравнивание логотипа/текста в заголовке"
+
+#: includes/class-wp-mobile-menu-options.php:462
+msgid "Header Logo/Text Alignment"
+msgstr "Выравнивание логотипа/текста в заголовке"
+
+#: includes/class-wp-mobile-menu-options.php:386
+msgid "Upload your logo image for retina devices"
+msgstr "Загрузите изображение логотипа для устройств с высоким разрешением экрана"
+
+#: includes/class-wp-mobile-menu-options.php:383
+msgid "Logo Retina"
+msgstr "Логотип для Retina"
+
+#: includes/class-wp-mobile-menu-options.php:355
+msgid "Chose the Header Branding ( Logo/Text )."
+msgstr "Выберите брендирование заголовка (логотип / текст)"
+
+#: includes/class-wp-mobile-menu-options.php:296
+msgid "Choose if you want to have the Header Fixed or scrolling with the content."
+msgstr "Выберите если хотите прикрепить заголовок или пролистывать его вместе с содержимым."
+
+#: includes/class-wp-mobile-menu-options.php:292
+msgid "Sticky Header"
+msgstr "Прикрепленный заголовок"
+
+#: includes/class-wp-mobile-menu-options.php:277
+msgid "Custom JS"
+msgstr "Пользовательские JS"
+
+#: includes/class-wp-mobile-menu-options.php:268
+msgid "Custom CSS"
+msgstr "Пользовательские CSS"
+
+#: includes/class-wp-mobile-menu-options.php:263
+msgid "<p>If you are having issues with sticky elements that dont assume a sticky behaviour, enter the ids or class name that identify that element.</p>"
+msgstr "<p>Если у вас есть проблемы с закрепленными элементами, которые не предполагают такое поведение, укажите их ID или имя CSS класса.</p>"
+
+#: includes/class-wp-mobile-menu-options.php:259
+msgid "Sticky Html Elements"
+msgstr "Закрепленные HTML элементы"
+
+#: includes/class-wp-mobile-menu-options.php:245
+msgid "Enter the Submenu Icon Font Size"
+msgstr "Укажите размер шрифта иконки подменю"
+
+#: includes/class-wp-mobile-menu-options.php:242
+msgid "Submenu Icon Font Size"
+msgstr "Размер шрифта иконки подменю"
+
+#: includes/class-wp-mobile-menu-options.php:233
+msgid "Submenu Close Icon"
+msgstr "Иконка закрытия подменю"
+
+#: includes/class-wp-mobile-menu-options.php:224
+msgid "Submenu Open Icon"
+msgstr "Иконка открытия подменю"
+
+#: includes/class-wp-mobile-menu-options.php:215
+msgid "Enter the Close Icon Font Size"
+msgstr "Укажите размер шрифта иконки закрытия"
+
+#: includes/class-wp-mobile-menu-options.php:212
+msgid "Close Icon Font Size"
+msgstr "Размер шрифта иконки закрытия"
+
+#: includes/class-wp-mobile-menu-options.php:203
+msgid "Close Icon"
+msgstr "Иконка закрытия"
+
+#: includes/class-wp-mobile-menu-options.php:195
+msgid "Choose the size of the menu items border.<a href=\"/wp-admin/admin.php?page=mobile-menu-options&tab=colors\" target=\"_blank\">Click here</a> to adjust the color."
+msgstr "Выберите размер рамки у элемента меню.<a href=\"/wp-admin/admin.php?page=mobile-menu-options&tab=colors\" target=\"_blank\">Щелкните здесь</a>, чтобы отрегулировать цвет."
+
+#: includes/class-wp-mobile-menu-options.php:191
+msgid "Menu Items Border Size"
+msgstr "Размер бордюра для элементов меню"
+
+#: includes/class-wp-mobile-menu-options.php:184
+msgid "Choose the display type for the mobile menu."
+msgstr "Выберите тип появления меню"
+
+#: includes/class-wp-mobile-menu-options.php:181
+msgid "Menu Display Type"
+msgstr "Тип появление меню"
+
+#: includes/class-wp-mobile-menu-options.php:175
+msgid "Miscelaneous Options"
+msgstr "Разные настройки"
+
+#: includes/class-wp-mobile-menu-options.php:158
+msgid "Check the desired elements"
+msgstr "Выберите элементы для скрытия"
+
+#: includes/class-wp-mobile-menu-options.php:155
+msgid "Hide elements by default"
+msgstr "Скрыть элементы по умолчанию"
+
+#: includes/class-wp-mobile-menu-options.php:151
+msgid "<p>This will hide the desired elements when the Mobile menu is trigerred at the chosen width. You can use CSS class or IDs.</p><br>Example of an ID and a CSS class: #main-navigation, .site-header"
+msgstr "<p>Эти элементы будут спрятаны когда мобильное меню включится на выбранной ширине окна/экрана. Вы можете использовать CSS классы или ID.</p><br>Примеры ID и CSS классов: #main-navigation, .site-header"
+
+#: includes/class-wp-mobile-menu-options.php:147
+msgid "Hide Menu Elements"
+msgstr "Скрыть элементы меню"
+
+#: includes/class-wp-mobile-menu-options.php:130
+msgid "Enable or disable the Right Menu."
+msgstr "Включить или выключить правое меню"
+
+#: includes/class-wp-mobile-menu-options.php:83
+msgid "Mobile Menu Display Rules( Width Trigger )"
+msgstr "Правила показа мобильного меню (триггер для ширины)"
+
+#: includes/class-wp-mobile-menu-options.php:67
+msgid "Colors"
+msgstr "Цвета"
+
+#: includes/class-wp-mobile-menu-options.php:52
+msgid "Header"
+msgstr "Заголовок"
+
+#: includes/class-wp-mobile-menu-core.php:124
+msgid "Right Mobile Menu"
+msgstr "Правое мобильное меню"
+
+#: includes/class-wp-mobile-menu-core.php:123
+msgid "Left Mobile Menu"
+msgstr "Левое мобильное меню"
+
+#. Author of the plugin
+msgid "Takanakui"
+msgstr "Takanakui"
+
+#. Description of the plugin
+msgid "An easy to use WordPress responsive mobile menu. Keep your mobile visitors engaged."
+msgstr "Плагин WordPress для мобильного (адаптивного) меню очень прост в использовании. Создайте необходимый комфорт для своих мобильных посетителей сайта."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.wpmobilemenu.com/"
+msgstr "https://www.wpmobilemenu.com/"
+
+#. Plugin Name of the plugin
+msgid "Mobile Menu"
+msgstr "Mobile Menu"
+
+#: includes/class-wp-mobile-menu-options.php:1342
+msgid "Text Before Right Icon"
+msgstr "Текст перед правой иконкой"
+
+#: includes/class-wp-mobile-menu-options.php:1326
+msgid "Right Menu Colors"
+msgstr "Цвет правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1183
+#: includes/class-wp-mobile-menu-options.php:1352
+msgid "Close Button Color"
+msgstr "Цвет кнопки закрытия"
+
+#: includes/class-wp-mobile-menu-options.php:1223
+#: includes/class-wp-mobile-menu-options.php:1392
+msgid "Hover Text Color"
+msgstr "Цвет текста при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1213
+#: includes/class-wp-mobile-menu-options.php:1372
+msgid "Background Hover Color"
+msgstr "Фоновый цвет при наведении"
+
+#: includes/class-wp-mobile-menu-options.php:1203
+#: includes/class-wp-mobile-menu-options.php:1382
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: includes/class-wp-mobile-menu-options.php:1193
+#: includes/class-wp-mobile-menu-options.php:1362
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: includes/class-wp-mobile-menu-options.php:1173
+msgid "Text After Left Icon"
+msgstr "Текст после левой иконки"
+
+#: includes/class-wp-mobile-menu-options.php:1163
+#: includes/class-wp-mobile-menu-options.php:1332
+msgid "Icon Color"
+msgstr "Цвет иконки"
+
+#: includes/class-wp-mobile-menu-options.php:1157
+msgid "Left Menu Colors"
+msgstr "Цвет левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1147
+msgid "Header Text Color"
+msgstr "Цвет текста заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:1137
+msgid "Header Background Color"
+msgstr "Цвет фона заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:1111
+msgid "Overlay Background Color"
+msgstr "Цвет фона наложения"
+
+#: includes/class-wp-mobile-menu-options.php:1088
+msgid "Right Menu Font"
+msgstr "Шрифт правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1078
+msgid "Enter the Right Menu Content Padding"
+msgstr "Укажите внутренний отступ правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1075
+msgid "Right Menu Content Padding"
+msgstr "Внутренний отступ от текста правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1054
+#: includes/class-wp-mobile-menu-options.php:1066
+msgid "Enter the Right Menu Panel Width"
+msgstr "Укажите ширину правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:1045
+msgid "Pixels"
+msgstr "Пиксели"
+
+#: includes/class-wp-mobile-menu-options.php:1003
+msgid "Enter the Right Background image opacity"
+msgstr "Укажите прозрачность фона правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:995
+msgid "upload your right menu background image(this will override the Background color option)"
+msgstr "Загрузите фоновое изображение в правом меню (это переопределит опцию «Цвет фона»)"
+
+#: includes/class-wp-mobile-menu-options.php:986
+msgid "Right Panel options"
+msgstr "Настройки панели правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:977
+msgid "Enter the Right Icon Right Margin"
+msgstr "Укажите внешний отступ (справа) иконки правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:974
+msgid "Icon Right Margin"
+msgstr "Правый отступ от иконки"
+
+#: includes/class-wp-mobile-menu-options.php:965
+msgid "Enter the Right Icon Top Margin"
+msgstr "Укажите внешний отступ (сверху) иконки правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:956
+msgid "Upload your right menu icon image"
+msgstr "Загрузите иконку для правого меню"
+
+#: includes/class-wp-mobile-menu-options.php:944
+msgid "Enter the Right Icon Font Size"
+msgstr "Укажите размер шрифта правой иконки"
+
+#: includes/class-wp-mobile-menu-options.php:636
+#: includes/class-wp-mobile-menu-options.php:926
+msgid "Image"
+msgstr "Изображение"
+
+#: includes/class-wp-mobile-menu-options.php:894
+msgid "Open the Right Menu Panel or open a Link url."
+msgstr "Открыть правую панель меню или перейти по ссылке."
+
+#: includes/class-wp-mobile-menu-options.php:867
+msgid "Text Before Icon Font"
+msgstr "Шрифт текста перед иконкой"
+
+#: includes/class-wp-mobile-menu-options.php:861
+msgid "Enter the text that will appear before the Icon."
+msgstr "Введите текст, который появится перед иконкой."
+
+#: includes/class-wp-mobile-menu-options.php:858
+msgid "Text Before Icon"
+msgstr "Текст перед иконкой"
+
+#: includes/class-wp-mobile-menu-options.php:823
+msgid "Select the menu that will open in the right side."
+msgstr "Выберите меню, которое откроется с правой стороны."
+
+#: includes/class-wp-mobile-menu-options.php:62
+#: includes/class-wp-mobile-menu-options.php:820
+msgid "Right Menu"
+msgstr "Правое меню"
+
+#: includes/class-wp-mobile-menu-options.php:797
+msgid "Left Menu Font"
+msgstr "Шрифт левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:787
+msgid "Enter the Left Menu Content Padding"
+msgstr "Укажите внутренний отступ левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:784
+msgid "Left Menu Content Padding"
+msgstr "Внутренний отступ от текста левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:772
+#: includes/class-wp-mobile-menu-options.php:1063
+msgid "Menu Panel Width(Percentage)"
+msgstr "Ширина панели меню (в процентах)"
+
+#: includes/class-wp-mobile-menu-options.php:763
+#: includes/class-wp-mobile-menu-options.php:775
+msgid "Enter the Left Menu Panel Width"
+msgstr "Укажите ширину левой панели меню"
+
+#: includes/class-wp-mobile-menu-options.php:760
+#: includes/class-wp-mobile-menu-options.php:1051
+msgid "Menu Panel Width(Pixels)"
+msgstr "Ширина панели меню (в пикселях)"
+
+#: includes/class-wp-mobile-menu-options.php:755
+#: includes/class-wp-mobile-menu-options.php:1046
+msgid "Percentage"
+msgstr "Проценты"
+
+#: includes/class-wp-mobile-menu-options.php:753
+#: includes/class-wp-mobile-menu-options.php:1044
+msgid "Choose the width units."
+msgstr "Выберите единицы измерения ширины панели"
+
+#: includes/class-wp-mobile-menu-options.php:749
+#: includes/class-wp-mobile-menu-options.php:1040
+msgid "Menu Panel Width Units"
+msgstr "Единицы измерения ширины"
+
+#: includes/class-wp-mobile-menu-options.php:743
+#: includes/class-wp-mobile-menu-options.php:1034
+msgid "<a href=\"https://webgradients.com/\" target=\"_blank\">Click here</a> to get your desired Gradient, just press the copy button and paste in this field."
+msgstr "<a href=\"https://webgradients.com/\" target=\"_blank\">Нажмите здесь</a>, чтобы получить желаемый градиент, просто нажмите кнопку копирования и затем вставьте в это поле."
+
+#: includes/class-wp-mobile-menu-options.php:740
+#: includes/class-wp-mobile-menu-options.php:1031
+msgid "Panel Background Gradient Css"
+msgstr "Градиент для панели меню в CSS"
+
+#: includes/class-wp-mobile-menu-options.php:733
+#: includes/class-wp-mobile-menu-options.php:1024
+msgid "Unset"
+msgstr "Unset (унаследовать от родителя)"
+
+#: includes/class-wp-mobile-menu-options.php:732
+#: includes/class-wp-mobile-menu-options.php:1023
+msgid "Initial"
+msgstr "Initial (установка исходного значения)"
+
+#: includes/class-wp-mobile-menu-options.php:731
+#: includes/class-wp-mobile-menu-options.php:1022
+msgid "Inherit"
+msgstr "Inherit (наследовать у родителя)"
+
+#: includes/class-wp-mobile-menu-options.php:730
+#: includes/class-wp-mobile-menu-options.php:1021
+msgid "Cover"
+msgstr "Cover (растянуть с сохранением пропорций)"
+
+#: includes/class-wp-mobile-menu-options.php:729
+#: includes/class-wp-mobile-menu-options.php:1020
+msgid "Contain"
+msgstr "Contain (растянуть, но изображение должно быть целиком)"
+
+#: includes/class-wp-mobile-menu-options.php:728
+#: includes/class-wp-mobile-menu-options.php:1019
+msgid "Auto"
+msgstr "Авто"
+
+#: includes/class-wp-mobile-menu-options.php:726
+#: includes/class-wp-mobile-menu-options.php:1017
+msgid "Select the Background image size type. <a href=\"https://www.w3schools.com/cssref/css3_pr_background-size.asp\" target=\"_blank\">See the CSS Documentation</a>"
+msgstr "Выберите размер фонового изображения. <a href=\"https://www.w3schools.com/cssref/css3_pr_background-size.asp\" target=\"_blank\"> См. документацию по CSS </a>"
+
+#: includes/class-wp-mobile-menu-options.php:722
+#: includes/class-wp-mobile-menu-options.php:1013
+msgid "Panel Background Image Size"
+msgstr "Размер фона изображения в панели"
+
+#: includes/class-wp-mobile-menu-options.php:712
+msgid "Enter the Left Background image opacity"
+msgstr "Укажите прозрачность левого фонового изображения"
+
+#: includes/class-wp-mobile-menu-options.php:709
+#: includes/class-wp-mobile-menu-options.php:1000
+msgid "Panel Background Image Opacity"
+msgstr "Прозрачность фонового изображения панели"
+
+#: includes/class-wp-mobile-menu-options.php:704
+msgid "Upload your left menu background image(this will override the Background color option)"
+msgstr "Загрузите фоновое изображение вашего левого меню (это переопределит опцию Цвет фона)"
+
+#: includes/class-wp-mobile-menu-options.php:701
+#: includes/class-wp-mobile-menu-options.php:992
+msgid "Panel Background Image"
+msgstr "Фоновое изображение в панели"
+
+#: includes/class-wp-mobile-menu-options.php:695
+msgid "Left Panel options"
+msgstr "Настройки левой панели меню"
+
+#: includes/class-wp-mobile-menu-options.php:687
+msgid "Enter the Left Icon Left Margin"
+msgstr "Укажите внешний отступ (слева) иконки левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:684
+msgid "Icon Left Margin"
+msgstr "Левый отступ от иконки"
+
+#: includes/class-wp-mobile-menu-options.php:676
+msgid "Enter the Left Icon Top Margin"
+msgstr "Укажите внешний отступ (сверху) иконки левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:673
+#: includes/class-wp-mobile-menu-options.php:962
+msgid "Icon Top Margin"
+msgstr "Отступ сверху от иконки"
+
+#: includes/class-wp-mobile-menu-options.php:667
+msgid "Upload your left menu icon image"
+msgstr "Загрузите иконку левого меню"
+
+#: includes/class-wp-mobile-menu-options.php:663
+#: includes/class-wp-mobile-menu-options.php:953
+msgid "Icon Image"
+msgstr "Изображение иконки"
+
+#: includes/class-wp-mobile-menu-options.php:654
+msgid "Enter the Left Icon Font Size"
+msgstr "Укажите размер шрифта левой иконки"
+
+#: includes/class-wp-mobile-menu-options.php:651
+#: includes/class-wp-mobile-menu-options.php:941
+msgid "Icon Font Size"
+msgstr "Размер шрифта иконки"
+
+#: includes/class-wp-mobile-menu-options.php:206
+#: includes/class-wp-mobile-menu-options.php:227
+#: includes/class-wp-mobile-menu-options.php:236
+#: includes/class-wp-mobile-menu-options.php:645
+#: includes/class-wp-mobile-menu-options.php:935
+msgid "<div class=\"mobmenu-icon-holder\"></div><a href=\"#\" class=\"mobmenu-icon-picker button\">Select menu icon</a>"
+msgstr "<div class=\"mobmenu-icon-holder\"></div><a href=\"#\" class=\"mobmenu-icon-picker button\">Выберите иконку меню</a>"
+
+#: includes/class-wp-mobile-menu-options.php:637
+#: includes/class-wp-mobile-menu-options.php:642
+#: includes/class-wp-mobile-menu-options.php:927
+#: includes/class-wp-mobile-menu-options.php:932
+msgid "Icon Font"
+msgstr "Шрифт иконки"
+
+#: includes/class-wp-mobile-menu-options.php:635
+#: includes/class-wp-mobile-menu-options.php:925
+msgid "Choose if you want to display an image or an icon."
+msgstr "Укажите тип иконки - шрифтовая иконка или изображение"
+
+#: includes/class-wp-mobile-menu-options.php:631
+#: includes/class-wp-mobile-menu-options.php:921
+msgid "Icon Type"
+msgstr "Тип иконки"
+
+#: includes/class-wp-mobile-menu-options.php:624
+#: includes/class-wp-mobile-menu-options.php:914
+msgid "Choose it the link will open in the same window or in the new window."
+msgstr "Выберите атрибут, соответствующий действию при нажатии на ссылку - открыть в текущем или в новом окне."
+
+#: includes/class-wp-mobile-menu-options.php:620
+#: includes/class-wp-mobile-menu-options.php:910
+msgid "Icon Link Url Target"
+msgstr "Атрибут target для URL"
+
+#: includes/class-wp-mobile-menu-options.php:614
+#: includes/class-wp-mobile-menu-options.php:904
+msgid "Enter the Icon Link Url."
+msgstr "Введите URL иконки"
+
+#: includes/class-wp-mobile-menu-options.php:611
+#: includes/class-wp-mobile-menu-options.php:901
+msgid "Icon Link URL"
+msgstr "Ссылка на иконку"
+
+#: includes/class-wp-mobile-menu-options.php:604
+msgid "Open the Left Menu Panel or open a Link url."
+msgstr "Открыть левую панель меню или перейти по ссылке."
+
+#: includes/class-wp-mobile-menu-options.php:600
+#: includes/class-wp-mobile-menu-options.php:890
+msgid "Icon Action"
+msgstr "Действие"
+
+#: includes/class-wp-mobile-menu-options.php:577
+msgid "Text After Icon Font"
+msgstr "Текст после иконки"
+
+#: includes/class-wp-mobile-menu-options.php:571
+msgid "Enter the text that will appear after the Icon."
+msgstr "Введите текст, который отобразится после иконки"
+
+#: includes/class-wp-mobile-menu-options.php:568
+msgid "Text After Icon"
+msgstr "Текст после иконки"
+
+#: includes/class-wp-mobile-menu-options.php:562
+#: includes/class-wp-mobile-menu-options.php:852
+msgid "Menu Icon"
+msgstr "Настройка иконки в меню"
+
+#: includes/class-wp-mobile-menu-options.php:556
+#: includes/class-wp-mobile-menu-options.php:845
+msgid "Choose if you want to open the sub-submenu by click in the sub menu item."
+msgstr "Выберите, если вы хотите открыть под-подменю (3-го уровня), щелкнув на элемент подменю."
+
+#: includes/class-wp-mobile-menu-options.php:552
+#: includes/class-wp-mobile-menu-options.php:841
+msgid "Parent Link open submenu(2nd Level)"
+msgstr "Открытие подменю (2-й уровень меню)"
+
+#: includes/class-wp-mobile-menu-options.php:545
+#: includes/class-wp-mobile-menu-options.php:834
+msgid "Choose if you want to open the submenu by click in the Parent Menu item."
+msgstr "Выберите, если вы хотите открыть подменю, щелкнув на элемент родительского меню."
+
+#: includes/class-wp-mobile-menu-options.php:541
+#: includes/class-wp-mobile-menu-options.php:830
+msgid "Parent Link open submenu"
+msgstr "Открытие подменю"
+
+#: includes/class-wp-mobile-menu-options.php:534
+msgid "Select the menu that will open in the left side."
+msgstr "Выберите меню, которое откроется с левой стороны."
+
+#: includes/class-wp-mobile-menu-options.php:57
+#: includes/class-wp-mobile-menu-options.php:531
+msgid "Left Menu"
+msgstr "Левое меню"
+
+#: includes/class-wp-mobile-menu-options.php:510
+#: includes/class-wp-mobile-menu-options.php:580
+#: includes/class-wp-mobile-menu-options.php:800
+#: includes/class-wp-mobile-menu-options.php:870
+#: includes/class-wp-mobile-menu-options.php:1091
+msgid "Select a style"
+msgstr "Выберите стиль"
+
+#: includes/class-wp-mobile-menu-options.php:507
+msgid "Header Menu Font"
+msgstr "Шрифт в меню заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:491
+msgid "Enter the header Logo/Text right margin (only used whit Header Right Alignment)"
+msgstr "Укажите правый внешний отступ от логотипа или текста. Используется только с выравниванием по правому краю."
+
+#: includes/class-wp-mobile-menu-options.php:488
+msgid "Header Logo/Text Right Margin"
+msgstr "Правый отступ от логотипа или текста"
+
+#: includes/class-wp-mobile-menu-options.php:479
+msgid "Enter the header Logo/Text left margin (only used whit Header Left Alignment)"
+msgstr "Укажите левый внешний отступ от логотипа или текста. Используется только с выравниванием по левому краю."
+
+#: includes/class-wp-mobile-menu-options.php:476
+msgid "Header Logo/Text Left Margin"
+msgstr "Левый отступ от логотипа или текста"
+
+#: includes/class-wp-mobile-menu-options.php:453
+msgid "Enter the header text font size"
+msgstr "Укажите размер шрифта в заголовке"
+
+#: includes/class-wp-mobile-menu-options.php:450
+msgid "Header Text Font Size"
+msgstr "Размер шрифта в заголовке"
+
+#: includes/class-wp-mobile-menu-options.php:444
+msgid "Enter the desired text for the Mobile Header. If not specified it will use the site title."
+msgstr "Введите желаемый текст для заголовка мобильного устройства. Если не указано, будет использоваться заголовок сайта."
+
+#: includes/class-wp-mobile-menu-options.php:441
+msgid "Header Text"
+msgstr "Текст заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:432
+msgid "Enter the height of the header"
+msgstr "Укажите высоту заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:429
+msgid "Header Height"
+msgstr "Высота заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:415
+msgid "Enter the logo/text top margin"
+msgstr "Укажите внешний верхний отступ от логотипа или текста"
+
+#: includes/class-wp-mobile-menu-options.php:412
+msgid "Logo/Text Top Margin"
+msgstr "Верхний отступ от логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:406
+msgid "Enter you alternative logo URL. If you leave it blank it will use the Site URL."
+msgstr "Введите альтернативный URL для логотипа. Если не указано, будет использоваться URL сайта."
+
+#: includes/class-wp-mobile-menu-options.php:403
+msgid "Alternative Logo URL"
+msgstr "Альтернативный URL логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:396
+msgid "Choose if you want to disable the logo url to avoid being redirect to the homepage or alternative home url when touching the header logo."
+msgstr "Выберите, если вы хотите отключить URL-адрес логотипа, чтобы избежать перенаправления на домашнюю страницу или альтернативный домашний URL-адрес при касании логотипа заголовка."
+
+#: includes/class-wp-mobile-menu-options.php:392
+msgid "Disable Logo URL "
+msgstr "Отключить ссылку для логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:374
+msgid "Enter the height of the logo"
+msgstr "Укажите высоту логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:371
+msgid "Logo Height"
+msgstr "Высота логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:365
+msgid "Upload your logo image"
+msgstr "Загрузите ваш логотип"
+
+#: includes/class-wp-mobile-menu-options.php:330
+#: includes/class-wp-mobile-menu-options.php:341
+msgid "Text"
+msgstr "Текст"
+
+#: includes/class-wp-mobile-menu-options.php:329
+#: includes/class-wp-mobile-menu-options.php:340
+#: includes/class-wp-mobile-menu-options.php:362
+msgid "Logo"
+msgstr "Логотип"
+
+#: includes/class-wp-mobile-menu-options.php:339
+msgid "Choose if you want to display an image has logo or text instead."
+msgstr "Выберите, хотите ли вы отображать изображение с логотипом или просто текст."
+
+#: includes/class-wp-mobile-menu-options.php:335
+#: includes/class-wp-mobile-menu-options.php:352
+msgid "Site Logo"
+msgstr "Тип логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:324
+msgid "Logo options"
+msgstr "Настройки логотипа"
+
+#: includes/class-wp-mobile-menu-options.php:318
+msgid "Choose if you want to disable the logo/text so it will only display the menu icons in the header."
+msgstr "Выберите, если вы хотите отключить логотип/текст, в заголовке будут отображаться только иконки."
+
+#: includes/class-wp-mobile-menu-options.php:314
+msgid "Disable Logo/Text"
+msgstr "Отключить логотип/текст"
+
+#: includes/class-wp-mobile-menu-options.php:298
+#: includes/class-wp-mobile-menu-options.php:309
+#: includes/class-wp-mobile-menu-options.php:320
+#: includes/class-wp-mobile-menu-options.php:398
+#: includes/class-wp-mobile-menu-options.php:547
+#: includes/class-wp-mobile-menu-options.php:558
+#: includes/class-wp-mobile-menu-options.php:836
+#: includes/class-wp-mobile-menu-options.php:847
+msgid "No"
+msgstr "Нет"
+
+#: includes/class-wp-mobile-menu-options.php:297
+#: includes/class-wp-mobile-menu-options.php:308
+#: includes/class-wp-mobile-menu-options.php:319
+#: includes/class-wp-mobile-menu-options.php:397
+#: includes/class-wp-mobile-menu-options.php:546
+#: includes/class-wp-mobile-menu-options.php:557
+#: includes/class-wp-mobile-menu-options.php:835
+#: includes/class-wp-mobile-menu-options.php:846
+msgid "Yes"
+msgstr "Да"
+
+#: includes/class-wp-mobile-menu-options.php:307
+msgid "Choose if you want to display a naked header with no background color(transparent)."
+msgstr "Выберите, если вы хотите показывать заголовок без цвета фона (прозрачный)."
+
+#: includes/class-wp-mobile-menu-options.php:303
+msgid "Naked Header"
+msgstr "Прозрачный заголовок"
+
+#: includes/class-wp-mobile-menu-options.php:286
+msgid "Main options"
+msgstr "Главные настройки"
+
+#: includes/class-wp-mobile-menu-options.php:280
+msgid "Put your custom JS rules here"
+msgstr "Поместите свои пользовательские правила JS здесь"
+
+#: includes/class-wp-mobile-menu-options.php:271
+msgid "Put your custom CSS rules here"
+msgstr "Поместите свои собственные правила CSS здесь"
+
+#: includes/class-wp-mobile-menu-options.php:253
+msgid "Advanced Options"
+msgstr "Расширенные настройки"
+
+#: includes/class-wp-mobile-menu-options.php:142
+msgid "If you need help identifying the correct elements just send us an email to <a href=\"mailto:support@wpmobilemenu.com\">support@wpmobilemenu.com</a> with your site url and a screenshot of the element you want to hide. We reply fast."
+msgstr "Если вам нужна помощь в определении правильных элементов, просто отправьте нам письмо по адресу <a href=\"mailto:support@wpmobilemenu.com\"> support@wpmobilemenu.com</a> с URL-адресом вашего сайта и сделайте скриншот с экрана того элемента, который вы хотите скрыть. Мы отвечаем быстро."
+
+#: includes/class-wp-mobile-menu-options.php:136
+msgid "Hide Original Menu/header"
+msgstr "Скрыть исходные элементы меню/заголовок"
+
+#: includes/class-wp-mobile-menu-options.php:113
+#: includes/class-wp-mobile-menu-options.php:132
+msgid "Off"
+msgstr "Выкл."
+
+#: includes/class-wp-mobile-menu-options.php:112
+#: includes/class-wp-mobile-menu-options.php:131
+msgid "On"
+msgstr "Вкл."
+
+#: includes/class-wp-mobile-menu-options.php:126
+msgid "Enable Right Menu"
+msgstr "Включить правое меню"
+
+#: includes/class-wp-mobile-menu-options.php:111
+msgid "Enable or disable the Left Menu."
+msgstr "Включение или отключение левого меню."
+
+#: includes/class-wp-mobile-menu-options.php:107
+msgid "Enable Left Menu"
+msgstr "Включить левое меню"
+
+#: includes/class-wp-mobile-menu-options.php:94
+msgid "The Width trigger field is very important because it determines the width that will show the Mobile Menu. If you want it always visible set it to 5000px"
+msgstr "Поле триггера ширины очень важно, поскольку оно определяет ширину, отображающую мобильное меню. Если вы хотите, чтобы мобильное меню отображалось всегда, укажите значение 5000px."
+
+#: includes/class-wp-mobile-menu-options.php:86
+msgid "The Mobile menu will appear below this screen resolution. Place it at 5000 to be always visible. "
+msgstr "Мобильное меню появится в соответствии с указанным разрешением экрана. Укажите 5000px, если вы хотите, чтобы мобильное меню было видно на всех разрешениях."
+
+#: includes/class-wp-mobile-menu-options.php:72
+msgid "Documentation"
+msgstr "Документация"
+
+#: includes/class-wp-mobile-menu-options.php:423
+msgid "Header options"
+msgstr "Настройки заголовка"
+
+#: includes/class-wp-mobile-menu-options.php:47
+msgid "General Options"
+msgstr "Общие настройки"
+
+#: includes/class-wp-mobile-menu-options.php:38
+msgid "Mobile Menu Options"
+msgstr "Настройки мобильного меню"
+
+#: includes/class-wp-mobile-menu-options.php:31
+msgid "Slideout Push Content"
+msgstr "Сдвиг от себя"
+
+#: includes/class-wp-mobile-menu-options.php:30
+msgid "Slideout Over Content"
+msgstr "Сдвиг сверху"
+
+#: includes/class-wp-mobile-menu-options.php:23
+msgid "Choose one menu"
+msgstr "Укажите какое меню отображать"
+
+#: includes/class-wp-mobile-menu-core.php:237
+msgid "Right Menu Icon"
+msgstr "Иконка правого меню"
+
+#: includes/class-wp-mobile-menu-core.php:420
+msgid "Logo Header Menu"
+msgstr "Логотип в меню заголовка"
+
+#: includes/class-wp-mobile-menu-core.php:194
+msgid "Left Menu Icon"
+msgstr "Иконка левого меню"
+
+#: includes/class-wp-mobile-menu-core.php:101
+msgid "Remove Icon Selection"
+msgstr "Удалить выбранную иконку"

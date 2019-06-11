@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp_translitera\n"
+"POT-Creation-Date: 2018-05-03 18:04+0300\n"
+"PO-Revision-Date: 2018-05-03 18:05+0300\n"
+"Last-Translator: Evgenij Yurchenko <evgen@yur4enko.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.13\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admintmpl.php:13 wp-translitera.php:548
+msgid "Settings"
+msgstr "Настройки"
+
+#: admintmpl.php:15
+msgid "Global settings"
+msgstr "Глобальные настройки"
+
+#: admintmpl.php:17
+msgid "Use the settings of the main site"
+msgstr "Использовать настройки главного сайта"
+
+#: admintmpl.php:19
+msgid "Use forces transliteration for title"
+msgstr "Форсированный режим транслитерации"
+
+#: admintmpl.php:20
+msgid "Transliterate 404 url"
+msgstr "Транслитерация 404 ссылок"
+
+#: admintmpl.php:21
+msgid ""
+"Don't use transliteration in frontend (enable when have a problem in front-"
+"end)"
+msgstr ""
+"Не использовать транслитерацию во фронтэнде (включить когда есть проблемы во "
+"фронтенде)"
+
+#: admintmpl.php:23
+msgid "Media settings"
+msgstr "Настройки медиафайлов"
+
+#: admintmpl.php:25
+msgid "Transliterate names of uploads files"
+msgstr "Транслитерировать имена загружаемых файлов"
+
+#: admintmpl.php:26
+msgid "Convert files names to lower case"
+msgstr "Преобразовывать имена файлов в нижний регистр"
+
+#: admintmpl.php:27
+msgid ""
+"File extensions, separated by commas , titles that do not need to "
+"transliterate"
+msgstr ""
+"Расширения файлов, разделенные запятой, заголовки которых не нужно "
+"транслитерировать"
+
+#: admintmpl.php:29
+msgid "Transliteration tables"
+msgstr "Таблицы транслитерации"
+
+#: admintmpl.php:30
+msgid ""
+"Custom transliteration rules, in format я=ja (Everyone ruled from a new "
+"line!). It is enough to create only the lower case."
+msgstr ""
+"Пользовательские правила транслитерации, в формате я=ja (Одно правило на "
+"строку!). Достаточно создать только нижний регистр"
+
+#: admintmpl.php:31
+msgid "Apply"
+msgstr "Применить"
+
+#: admintmpl.php:35
+msgid "Convert existing"
+msgstr "Преобразовать существующие"
+
+#: admintmpl.php:37
+msgid "Pages and posts"
+msgstr "Страницы и посты"
+
+#: admintmpl.php:38
+msgid "Headings, tags etc..."
+msgstr "Рубрики, теги и тд"
+
+#: admintmpl.php:41
+msgid "Forums"
+msgstr "Форумы"
+
+#: admintmpl.php:42
+msgid "Topics"
+msgstr "Темы"
+
+#: admintmpl.php:44
+msgid "Transliterate"
+msgstr "Транслитерировать"
+
+#: wp-translitera.php:358
+msgid "Plugin WP Translitera has been updated,"
+msgstr "Плагин WP Trandslitera был обновлен,"
+
+#: wp-translitera.php:358
+msgid "update settings"
+msgstr "обновите настройки."
+
+#~ msgid ""
+#~ "Use transliteration in frontend for transliteration title out ACP (enable "
+#~ "if use bbPress, buddypress, woocommerce etc)"
+#~ msgstr ""
+#~ "Использовать транслитерацию во фронтенде, для транслитерации заголовков "
+#~ "вне панели управления ( включить если используете bbPress, buddypress, "
+#~ "woocommerce etc)"
+
+#~ msgid ""
+#~ "Mbstring module is not installed on your server! Functionality is limited!"
+#~ msgstr ""
+#~ "Модуль Mbstring не установлен на вашем сервере! Функционал ограничен!"
+
+#~ msgid ""
+#~ "Custom transliteration rules, in format я=ja (Everyone ruled from a new "
+#~ "line!)"
+#~ msgstr ""
+#~ "Пользовательские правила транслитерации, в формате я=ja (каждое правило с "
+#~ "новой строки!)"
+
+#~ msgid "WPForo"
+#~ msgstr "WPForo"
+
+#~ msgid "Convert names to lower case"
+#~ msgstr "Преобразовывать имена в нижний регистр"
+
+#~ msgid ""
+#~ "Use transliteration in frontend for transliteration title out ACP (enable "
+#~ "if use bbPress, buddypress etc)"
+#~ msgstr ""
+#~ "Использовать транслитерацию во фронтэнде для транслитерации вне панели "
+#~ "управления (включить если используете bbPress, buddypress и др)"

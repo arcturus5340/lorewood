@@ -1,0 +1,12 @@
+drwxr-xr-x   3 adminshare 500           285 Mar 17 05:53 .
+drwxr-xr-x   8 adminshare 500          4096 Mar 17 05:53 ..
+-rw-r--r--   1 adminshare 500         28465 Mar 17 05:53 affiliation.php
+drwxr-xr-x   2 adminshare 500            80 Mar 17 05:53 deactivation
+-rw-r--r--   1 adminshare 500            87 Mar 17 05:53 index.php
+-rw-r--r--   1 adminshare 500         26218 Mar 17 05:53 license-activation.php
+-rw-r--r--   1 adminshare 500          8421 Mar 17 05:53 optout.php
+-rw-r--r--   1 adminshare 500          8331 Mar 17 05:53 premium-versions-upgrade-handler.php
+-rw-r--r--   1 adminshare 500          1494 Mar 17 05:53 premium-versions-upgrade-metadata.php
+-rw-r--r--   1 adminshare 500          7106 Mar 17 05:53 resend-key.php
+-rw-r--r--   1 adminshare 500         11710 Mar 17 05:53 subscription-cancellation.php
+-rw-r--r--   1 adminshare 500          5313 Mar 17 05:53 trial-start.php

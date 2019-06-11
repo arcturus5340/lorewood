@@ -1,0 +1,4 @@
+drwxr-xr-x   2 adminshare 500            43 Mar 15 12:10 .
+drwxr-xr-x   9 adminshare 500          4096 Mar 15 12:10 ..
+-rw-r--r--   1 adminshare 500         15325 Mar 15 12:10 cURL.php
+-rw-r--r--   1 adminshare 500         12436 Mar 15 12:10 fsockopen.php

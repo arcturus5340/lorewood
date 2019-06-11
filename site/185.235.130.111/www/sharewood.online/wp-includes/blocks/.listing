@@ -1,0 +1,8 @@
+drwxr-xr-x   2 adminshare 500           137 Mar 15 12:09 .
+drwxr-xr-x  19 adminshare 500          8192 Mar 15 12:09 ..
+-rw-r--r--   1 adminshare 500          3321 Mar 15 12:09 archives.php
+-rw-r--r--   1 adminshare 500           859 Mar 15 12:09 block.php
+-rw-r--r--   1 adminshare 500          2593 Mar 15 12:09 categories.php
+-rw-r--r--   1 adminshare 500          5462 Mar 15 12:09 latest-comments.php
+-rw-r--r--   1 adminshare 500          3112 Mar 15 12:09 latest-posts.php
+-rw-r--r--   1 adminshare 500           678 Mar 15 12:09 shortcode.php

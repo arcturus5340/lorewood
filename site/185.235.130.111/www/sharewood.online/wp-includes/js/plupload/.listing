@@ -1,0 +1,11 @@
+drwxr-xr-x   2 adminshare 500           193 Mar 15 12:10 .
+drwxr-xr-x  13 adminshare 500          4096 Mar 15 12:10 ..
+-rw-r--r--   1 adminshare 500         16189 Mar 15 12:10 handlers.js
+-rw-r--r--   1 adminshare 500         10551 Mar 15 12:10 handlers.min.js
+-rw-r--r--   1 adminshare 500         17987 Mar 15 12:10 license.txt
+-rw-r--r--   1 adminshare 500        254084 Mar 15 12:10 moxie.js
+-rw-r--r--   1 adminshare 500         89142 Mar 15 12:10 moxie.min.js
+-rw-r--r--   1 adminshare 500         60314 Mar 15 12:10 plupload.js
+-rw-r--r--   1 adminshare 500         15742 Mar 15 12:10 plupload.min.js
+-rw-r--r--   1 adminshare 500         12806 Mar 15 12:10 wp-plupload.js
+-rw-r--r--   1 adminshare 500          4920 Mar 15 12:10 wp-plupload.min.js

@@ -1,0 +1,373 @@
+# Translation of Login With Ajax in Chinese (China)
+# This file is distributed under the same license as the Login With Ajax package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-09-24 13:30:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Login With Ajax\n"
+
+#: login-with-ajax-admin.php:47
+msgid "Since WordPress 4.3 passwords are not emailed to users anymore, they're replaced with a link to create a new password."
+msgstr "由于WordPress的4.3密码不会通过电子邮件发送给用户了，他们替换为链接创建一个新的密码。"
+
+#: login-with-ajax-admin.php:48
+msgid "Check your registration email template."
+msgstr "请检查您的注册电子邮件模板。"
+
+#: login-with-ajax-admin.php:341 login-with-ajax-admin.php:383
+msgid "%s will be replaced with a link to set the user password."
+msgstr "%s 将被替换为连接到设置用户密码。"
+
+#: login-with-ajax-admin.php:357
+msgid ""
+"Thanks for signing up to our blog. \n"
+"\n"
+"You can login with the following credentials by visiting %BLOGURL%\n"
+"\n"
+"Username: %USERNAME%\n"
+"To set your password, visit the following address: %PASSWORD%\n"
+"\n"
+"We look forward to your next visit!\n"
+"\n"
+"The team at %BLOGNAME%"
+msgstr ""
+"感谢注册我们的网站。 \n"
+"\n"
+"下面是你的用户名与密码，进入 %BLOGURL%后可用它们登录\n"
+"\n"
+"用户名 : %USERNAME%\n"
+"要设置您的密码，请访问以下地址： %PASSWORD%\n"
+"\n"
+"我们期待你光临！\n"
+"\n"
+"%BLOGNAME% 敬上"
+
+#: login-with-ajax.php:218
+msgid "Registration has been disabled."
+msgstr "不开放注册。"
+
+#: pluggable.php:35
+msgid "New user registration on your site %s:"
+msgstr "您的站点%s有新用户注册："
+
+#: pluggable.php:68
+msgid "To set your password, visit the following address:"
+msgstr "要设置您的密码，请访问以下地址："
+
+#: pluggable.php:73
+msgid "[%s] Your username and password info"
+msgstr "[%s] 您的用户名和密码信息"
+
+#: login-with-ajax-widget.php:55 login-with-ajax-widget.php:59
+msgid "Title (%s)"
+msgstr "标题 (%s)"
+
+#: login-with-ajax-widget.php:55
+msgid "Logged In"
+msgstr "登录"
+
+#: login-with-ajax-widget.php:59
+msgid "Logged Out"
+msgstr "注销"
+
+#: login-with-ajax-admin.php:211 login-with-ajax-admin.php:263
+msgid "With WPML enabled you can provide different redirection destinations based on language too."
+msgstr "如果使用了WPML插件，你还可以根据语言的不同设置不同的跳转页面"
+
+#: login-with-ajax-admin.php:316
+msgid "If you'd like to override the default Wordpress email users receive once registered, make sure you check the box below and enter a new email subject and message."
+msgstr "如果你想自定义用户注册后收到的邮件，请勾选下面 覆盖默认邮箱 ，然后你可以自定义邮箱标题和内容"
+
+#: login-with-ajax-admin.php:368
+msgid ""
+"Thanks for signing up to our blog. \n"
+"\n"
+"You can login with the following credentials by visiting %BLOGURL%\n"
+"\n"
+"Username : %USERNAME%\n"
+"Password : %PASSWORD%\n"
+"\n"
+"We look forward to your next visit!\n"
+"\n"
+"The team at %BLOGNAME%"
+msgstr ""
+"感谢注册我们的网站。 \n"
+"\n"
+"下面是你的用户名与密码，进入 %BLOGURL%后可用它们登录\n"
+"\n"
+"用户名 : %USERNAME%\n"
+"密码 : %PASSWORD%\n"
+"\n"
+"我们期待你光临！\n"
+"\n"
+"%BLOGNAME% 敬上"
+
+#: login-with-ajax-widget.php:67
+msgid "Recover Password?"
+msgstr "更新密码？"
+
+#: login-with-ajax-widget.php:15
+msgid "Login widget with AJAX capabilities."
+msgstr "AJAX登陆小工具"
+
+#: login-with-ajax-widget.php:63
+msgid "Show profile link?"
+msgstr "显示资料链接？"
+
+#: login-with-ajax-widget.php:71
+msgid "AJAX Registration?"
+msgstr "AJAX 注册？"
+
+#: login-with-ajax-widget.php:76
+msgid "Template"
+msgstr "模板"
+
+#: login-with-ajax.php:160
+msgid "Login Successful, redirecting..."
+msgstr "登陆成功，正在转向中..."
+
+#: login-with-ajax.php:173
+msgid "Login successful, updating..."
+msgstr "登录成功，正在转向中..."
+
+#: login-with-ajax.php:183 login-with-ajax.php:239
+msgid "An undefined error has ocurred"
+msgstr "出现未知错误！"
+
+#: login-with-ajax.php:187
+msgid "Please supply your username and password."
+msgstr "请提供用户名和密码"
+
+#: login-with-ajax.php:205
+msgid "Registration complete. Please check your e-mail."
+msgstr "注册成功，请查看你的邮箱"
+
+#: login-with-ajax.php:230
+msgid "We have sent you an email"
+msgstr "我们已发给您一封Email"
+
+#: pluggable.php:36 pluggable.php:67
+msgid "Username: %s"
+msgstr "用户名: %s"
+
+#: pluggable.php:37
+msgid "E-mail: %s"
+msgstr "邮箱: %s"
+
+#: pluggable.php:39
+msgid "[%s] New User Registration"
+msgstr "[%s] 新用户注册"
+
+#: login-with-ajax-widget.php:9 widget/default/widget_in.php:13
+msgid "Hi"
+msgstr "您好"
+
+#: widget/default/widget_in.php:25 widget/default/widget_in.php:29
+msgid "Profile"
+msgstr "个人资料"
+
+#: widget/default/widget_in.php:35
+msgid "Log Out"
+msgstr "注销"
+
+#: widget/default/widget_in.php:40
+msgid "blog admin"
+msgstr "博客后台"
+
+#: login-with-ajax-widget.php:8 widget/default/widget_out.php:32
+#: widget/divs-only/widget_out.php:26 widget/modal/widget_out.php:9
+#: widget/modal/widget_out.php:36
+msgid "Log In"
+msgstr "登录"
+
+#: widget/default/widget_out.php:15 widget/default/widget_out.php:90
+#: widget/divs-only/widget_out.php:12 widget/divs-only/widget_out.php:66
+#: widget/modal/widget_out.php:19 widget/modal/widget_out.php:98
+msgid "Username"
+msgstr "用户名"
+
+#: widget/default/widget_out.php:23 widget/divs-only/widget_out.php:17
+#: widget/modal/widget_out.php:27
+msgid "Password"
+msgstr "密  码"
+
+#: widget/default/widget_out.php:40 widget/divs-only/widget_out.php:35
+#: widget/modal/widget_out.php:44
+msgid "Remember Me"
+msgstr "记住密码"
+
+#: widget/default/widget_out.php:43 widget/divs-only/widget_out.php:38
+#: widget/modal/widget_out.php:47
+msgid "Password Lost and Found"
+msgstr "密码恢复"
+
+#: widget/default/widget_out.php:43 widget/divs-only/widget_out.php:38
+#: widget/modal/widget_out.php:47
+msgid "Lost your password?"
+msgstr "丢失您的密码了？"
+
+#: widget/default/widget_out.php:47 widget/default/widget_out.php:100
+#: widget/divs-only/widget_out.php:42 widget/divs-only/widget_out.php:79
+#: widget/modal/widget_out.php:51 widget/modal/widget_out.php:122
+msgid "Register"
+msgstr "注册"
+
+#: widget/default/widget_out.php:61 widget/divs-only/widget_out.php:48
+#: widget/modal/widget_out.php:63
+msgid "Forgotten Password"
+msgstr "忘记密码"
+
+#: widget/default/widget_out.php:66 widget/divs-only/widget_out.php:50
+#: widget/modal/widget_out.php:69
+msgid "Enter username or email"
+msgstr "请输入用户名或者Email"
+
+#: widget/default/widget_out.php:73 widget/divs-only/widget_out.php:55
+#: widget/modal/widget_out.php:77
+msgid "Get New Password"
+msgstr "更新密码"
+
+#: widget/default/widget_out.php:74 widget/divs-only/widget_out.php:56
+#: widget/divs-only/widget_out.php:80 widget/modal/widget_out.php:78
+#: widget/modal/widget_out.php:123
+msgid "Cancel"
+msgstr "取消"
+
+#: widget/default/widget_out.php:84 widget/divs-only/widget_out.php:64
+#: widget/modal/widget_out.php:92
+msgid "Register For This Site"
+msgstr "在该网站上注册"
+
+#: widget/default/widget_out.php:94 widget/divs-only/widget_out.php:70
+#: widget/modal/widget_out.php:106
+msgid "E-mail"
+msgstr "邮箱"
+
+#: widget/default/widget_out.php:85 widget/divs-only/widget_out.php:78
+#: widget/modal/widget_out.php:121
+msgid "A password will be e-mailed to you."
+msgstr "密码会通过邮箱发给你"
+
+#: login-with-ajax-admin.php:180
+msgid "Redirection Settings"
+msgstr "跳转设置"
+
+#: login-with-ajax-admin.php:184
+msgid "Global Login Redirect"
+msgstr "通用登陆转向"
+
+#: login-with-ajax-admin.php:188
+msgid "If you'd like to send the user to a specific URL after login, enter it here (e.g. http://wordpress.org/)"
+msgstr "如果您想使用户登录后转向特定的一个地址，请在此填写好(比如：http://wordpress.org/)"
+
+#: login-with-ajax-admin.php:189
+msgid "Use %USERNAME% and it will be replaced with the username of person logging in."
+msgstr "%USERNAME%代表登录用户的用户名"
+
+#: login-with-ajax-admin.php:222
+msgid "Global Logout Redirect"
+msgstr "通用注销转向"
+
+#: login-with-ajax-admin.php:226
+msgid "If you'd like to send the user to a specific URL after logout, enter it here (e.g. http://wordpress.org/)"
+msgstr "如果您想使注销用户转向特定的一个地址，请在此填写好(比如：http://wordpress.org/)"
+
+#: login-with-ajax-admin.php:227
+msgid "Enter %LASTURL% to send the user back to the page they were previously on."
+msgstr "%LASTURL%代表用户登录前所在的页面"
+
+#: login-with-ajax-admin.php:235
+msgid "Role-Based Custom Login Redirects"
+msgstr "自定义登陆转向"
+
+#: login-with-ajax-admin.php:238
+msgid "If you would like a specific user role to be redirected to a custom URL upon login, place it here (blank value will default to the global redirect)"
+msgstr "如果您想自定义特定用户的登陆转向，请在此填写好(空白表示默认全球转向哦)"
+
+#: login-with-ajax-admin.php:288
+msgid "Role-Based Custom Logout Redirects"
+msgstr "自定义注销转向"
+
+#: login-with-ajax-admin.php:291
+msgid "If you would like a specific user role to be redirected to a custom URL upon logout, place it here (blank value will default to the global redirect)"
+msgstr "如果您想自定义特定用户的登陆注销，请在此填写好(空白表示默认全球注销哦)"
+
+#: login-with-ajax-admin.php:314
+msgid "Notification Settings"
+msgstr "通知设置"
+
+#: login-with-ajax-admin.php:317
+msgid "If this feature doesn't work, please make sure that you don't have another plugin installed which also manages user registrations (e.g. BuddyPress and MU)."
+msgstr "如果这个功能不能有效使用，请查看是否你还安装了其他影响用户注册的插件（如BuddyPress和MU）"
+
+#: login-with-ajax-admin.php:322
+msgid "Override Default Email?"
+msgstr "覆盖默认邮箱？"
+
+#: login-with-ajax-admin.php:330
+msgid "Subject"
+msgstr "标题"
+
+#: login-with-ajax-admin.php:335
+msgid "Your registration at %BLOGNAME%"
+msgstr "你在%BLOGNAME%注册了"
+
+#: login-with-ajax-admin.php:339 login-with-ajax-admin.php:381
+msgid "<code>%USERNAME%</code> will be replaced with a username."
+msgstr "<code>%USERNAME%</code>代表用户名"
+
+#: login-with-ajax-admin.php:343 login-with-ajax-admin.php:385
+msgid "<code>%PASSWORD%</code> will be replaced with the user's password."
+msgstr "<code>%PASSWORD%</code>代表用户的密码"
+
+#: login-with-ajax-admin.php:345 login-with-ajax-admin.php:387
+msgid "<code>%BLOGNAME%</code> will be replaced with the name of your blog."
+msgstr "<code>%BLOGNAME%</code>代表你网站的名字"
+
+#: login-with-ajax-admin.php:346 login-with-ajax-admin.php:388
+msgid "<code>%BLOGURL%</code> will be replaced with the url of your blog."
+msgstr "<code>%BLOGURL%</code>代表你网站的链接"
+
+#: login-with-ajax-admin.php:351
+msgid "Message"
+msgstr "内容"
+
+#: login-with-ajax-admin.php:396
+msgid "Save Changes"
+msgstr "保存修改"
+
+#: login-with-ajax-admin.php:50
+msgid "Dismiss"
+msgstr "忽略"
+
+#: login-with-ajax-admin.php:106
+msgid "Changes saved."
+msgstr "修改已保存。"
+
+#: login-with-ajax-admin.php:148
+msgid "General Settings"
+msgstr "一般设置"
+
+#: login-with-ajax-admin.php:153
+msgid "Default Template"
+msgstr "默认模板"
+
+#: login-with-ajax-admin.php:162
+msgid "Choose the default theme you'd like to use. This can be overriden in the widget, shortcode and template tags."
+msgstr "选择你希望使用的默认模板。在小工具，简码和函数中可以重写该设置"
+
+#: login-with-ajax-admin.php:163
+msgid "Further documentation for this feature coming soon..."
+msgstr "关于这个功能的文档即将发布..."
+
+#: login-with-ajax-admin.php:169
+msgid "Disable refresh upon login?"
+msgstr "登陆后禁止刷新页面？"
+
+#: login-with-ajax-admin.php:174
+msgid "If the user logs in and you check the button above, only the login widget will update itself without refreshing the page. Not a good idea if your site shows different content to users once logged in, as a refresh would be needed."
+msgstr "勾选该选项后，用户登陆后，只有含该登录框的小工具会刷新，页面不刷新。如果你想让用户登录后跳转到另外一个页面，不要勾选该选项！"

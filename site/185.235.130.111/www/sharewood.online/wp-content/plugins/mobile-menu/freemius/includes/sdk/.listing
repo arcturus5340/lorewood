@@ -1,0 +1,7 @@
+drwxr-xr-x   3 adminshare 500           113 Mar 17 05:53 .
+drwxr-xr-x   8 adminshare 500          4096 Mar 17 05:53 ..
+drwxr-xr-x   2 adminshare 500           177 Mar 17 05:53 Exceptions
+-rw-r--r--   1 adminshare 500          6051 Mar 17 05:53 FreemiusBase.php
+-rw-r--r--   1 adminshare 500         19981 Mar 17 05:53 FreemiusWordPress.php
+-rw-r--r--   1 adminshare 500            87 Mar 17 05:53 index.php
+-rw-r--r--   1 adminshare 500         18027 Mar 17 05:53 LICENSE.txt
