@@ -1,8 +1,0 @@
-drwxr-xr-x   5 adminshare 500           150 Mar 15 12:10 .
-drwxr-xr-x  19 adminshare 500          8192 Mar 15 12:09 ..
--rw-r--r--   1 adminshare 500         24039 Mar 15 12:09 class-wp-rest-request.php
--rw-r--r--   1 adminshare 500          7345 Mar 15 12:09 class-wp-rest-response.php
--rw-r--r--   1 adminshare 500         38680 Mar 15 12:09 class-wp-rest-server.php
-drwxr-xr-x   2 adminshare 500          4096 Mar 15 12:10 endpoints
-drwxr-xr-x   2 adminshare 500           214 Mar 15 12:10 fields
-drwxr-xr-x   2 adminshare 500            91 Mar 15 12:10 search

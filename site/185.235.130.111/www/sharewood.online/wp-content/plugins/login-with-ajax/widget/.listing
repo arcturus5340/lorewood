@@ -1,9 +1,0 @@
-drwxr-xr-x   5 adminshare 500           147 Mar 15 11:58 .
-drwxr-xr-x   4 adminshare 500           189 Mar 15 11:57 ..
-drwxr-xr-x   2 adminshare 500            49 Mar 15 11:58 default
-drwxr-xr-x   2 adminshare 500            28 Mar 15 11:58 divs-only
--rw-r--r--   1 adminshare 500         10051 Mar 15 11:57 loading.gif
--rw-r--r--   1 adminshare 500          5099 Mar 15 11:57 login-with-ajax.js
--rw-r--r--   1 adminshare 500         10025 Mar 15 11:57 login-with-ajax.source.js
-drwxr-xr-x   2 adminshare 500            28 Mar 15 11:58 modal
--rw-r--r--   1 adminshare 500          3424 Mar 15 11:57 widget.css

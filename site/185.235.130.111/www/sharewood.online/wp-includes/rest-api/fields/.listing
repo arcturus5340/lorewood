@@ -1,7 +1,0 @@
-drwxr-xr-x   2 adminshare 500           214 Mar 15 12:10 .
-drwxr-xr-x   5 adminshare 500           150 Mar 15 12:10 ..
--rw-r--r--   1 adminshare 500           893 Mar 15 12:10 class-wp-rest-comment-meta-fields.php
--rw-r--r--   1 adminshare 500         13871 Mar 15 12:10 class-wp-rest-meta-fields.php
--rw-r--r--   1 adminshare 500          1248 Mar 15 12:10 class-wp-rest-post-meta-fields.php
--rw-r--r--   1 adminshare 500          1245 Mar 15 12:10 class-wp-rest-term-meta-fields.php
--rw-r--r--   1 adminshare 500           860 Mar 15 12:10 class-wp-rest-user-meta-fields.php
