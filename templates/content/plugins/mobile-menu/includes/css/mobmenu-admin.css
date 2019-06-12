@@ -1,0 +1,289 @@
+.menu .mobmenu-item-settings {
+    padding: 5px;
+    margin-left: 10px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 11px;
+    font-style: normal;
+}
+.menu-item-handle .item-title {
+    margin-right: 0px!important;
+}
+
+.menu .mobmenu-item-settings:before {
+    padding-right: 5px;   
+}
+
+#mobmenu-modal-header .mobmenu-close-overlay {
+    float: right;
+    padding: 15px 20px 0px 0px;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.menu-item-bar .menu-item-handle:hover .mobmenu-item-settings {
+    opacity: 1;
+    cursor: pointer;
+    background-color: #60AAD4;
+    font-family: "mobmenu";
+}
+
+.menu .mobmenu-item-settings span {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.menu-item-bar .menu-item-handle .mobmenu-item-settings {
+    opacity: 0;
+}
+.mobmenu-item{
+    font-family: "mobmenu";
+}
+
+#mobmenu-modal-body .mobmenu-item {
+    border: 1px solid #dedddd;
+    font-size: 22px;
+    color: #60AAD4;
+    float: left;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    margin: 0px 14px 14px 0;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+#mobmenu-modal-body .mobmenu-item:hover {
+    background-color: #ffbf00;
+}
+
+#mobmenu-modal-body .mobmenu-item.mobmenu-item-selected {
+    background-color: #1e5777;
+    color: #fff;
+}
+
+#mobmenu-modal-body {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 10px;
+}
+
+.mobmenu-icons-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    opacity: 0.8;
+}
+
+.mobmenu-icons-content {
+    max-width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    height: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100058;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+
+}
+
+#mobmenu_left_menu_icon_font, #mobmenu_right_menu_icon_font{
+    display: none;
+}
+
+.mobmenu-icon-holder {
+    float: left;
+    padding-right: 10px;
+    font-size: 24px;
+    color: #60AAD4;
+}
+
+.mobmenu-icons-remove-selected {
+    background-color: #60AAD4;
+    padding: 5px;
+    border-radius: 2px;
+    margin-right: 50px;
+    color: #fff;
+    width: 150px;
+    float: left;
+    margin-left: 150px;
+    line-height: 20px;
+    margin-top: 9px;
+    display: none;
+    cursor: pointer;
+}
+
+
+#mobmenu-modal-header {
+    background-color: #f8f8f8;
+    -moz-box-shadow: 2px 3px 5px 0 rgba(0,0,0,.12);
+    webkit-box-shadow: 2px 3px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 2px 3px 5px 0 rgba(0,0,0,0.12);
+    padding: 10px 0 0;
+    border-radius: 3px 3px 0 0;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    z-index: 3;
+    height: 50px;
+  
+}
+
+#mobmenu-modal-header h2 {
+    float: left;
+    margin-bottom: 0;
+    margin-top: 0px;
+    margin-left: 30px;
+    padding: 0;
+    line-height: 45px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.87);
+    font-weight: 300;
+}
+
+.mobmenu-icons-close-overlay {
+    float: right;
+}
+
+#mobmenu_search_icons {
+    border: none;
+    margin-right: 10px;
+    height: 30px;
+    color: rgba(0,0,0,0.34);
+    font-size: 16px;
+    background-color:#fff;
+}
+
+.mobmenu-icons-search .mobmenu-item {
+    font-size: 20px;
+}
+
+#mobmenu_search_icons:focus {
+    box-shadow: 0 1px 0 0 #ffbf00;
+    background-color: #fff;
+    color: #222;
+}
+.mobmenu-icons-search {
+    padding-left: 30px;
+    float: left;
+    line-height: 45px;
+}
+
+#mobmenu_search_icons::-webkit-input-placeholder, #mobmenu_search_icons:-ms-input-placeholder, #mobmenu_search_icons::-moz-placeholder, #mobmenu_search_icons:-moz-placeholder  {
+    color: #222!important;
+    font-style: italic!important;
+    font-weight: 400!important;
+}
+
+.mobmenu-hide-icons, .mobmenu-goto-icon, #fs_promotional_tab  {
+    display: none;
+}
+
+.mobmenu-goto-icon {  
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 5px;
+    padding: 5px;
+    float: left;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: #ffbf00;
+    color: #fff;   
+}
+
+.mobmenu-goto-icon .mobmenu-item {
+    margin-left: 5px;
+}
+
+.wp-mobile-menu-notice {
+    background-color: #36373c;
+    color: #fff;
+    padding: 10px;
+    border-left-color: #F6C030;
+}
+.wp-mobile-menu-notice a {
+    color:#36373c;
+    padding: 3px 10px;
+    background-color: #F6C030;
+    text-decoration: none;
+    font-weight: bold;
+}
+.wp-mobile-menu-notice strong {
+    color: #F6C030;
+    font-size: 16px;
+}
+/* Adjust Titan Framework Select2 Size*/
+td.second.tf-select .select2 {
+    width: 50%!important;
+}
+.titan-framework-panel-wrap td.second.tf-iframe iframe {
+    margin-left: -200px!important;
+}
+.tf-font .wp-picker-container {
+    display: none;
+}
+
+.tf-sortable li {
+    width: 15%;
+    float: left;
+}
+.tf-sortable ul li i.dashicons-menu{
+    display: none!important;
+}
+.tf-sortable ul{
+    width: 100%;
+}
+.tf-sortable ul li i:last-of-type{
+    margin-left: 0px!important;
+}
+.tf-font .wp-picker-container {
+    display: none;
+}
+.active-tab-colors .form-table tr {
+    width: 50%;
+    float: left;
+}
+.active-tab-colors .form-table th {
+    width: 100vh;
+}
+.active-tab-colors tr.even.first.tf-heading {
+    width: 100%;
+    background: #f4f4f4;
+}
+.tf-heading th.first.last h3 {
+    color: #f3c030;
+}
+.titan-framework-panel-wrap .tf-heading th {
+    background: none repeat scroll 0 0 #36373c!important;
+    width: 100vw;
+}
+.titan-framework-panel-wrap .nav-tab-active, .titan-framework-panel-wrap .nav-tab-active:hover {
+    background: #f3c030!important;
+    border-bottom: 1px solid #f3c030!important;
+}
+td.second.tf-multicheck-pages fieldset {
+    max-height: 500px;
+    height: 500px;
+    overflow: scroll;
+}
+.active-tab-colors th {
+    border: none!important;
+}
+
+#fs_connect .fs-visual .fs-plugin-icon, #fs_connect .fs-visual .fs-connect-logo, #fs_connect .fs-visual .fs-site-icon {
+    border: none!important;
+}

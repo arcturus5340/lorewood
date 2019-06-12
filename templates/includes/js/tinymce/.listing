@@ -1,0 +1,12 @@
+drwxr-xr-x   7 adminshare 500           183 Mar 15 12:10 .
+drwxr-xr-x  13 adminshare 500          4096 Mar 15 12:10 ..
+drwxr-xr-x   2 adminshare 500            28 Mar 15 12:10 langs
+-rw-r--r--   1 adminshare 500         26441 Mar 15 12:10 license.txt
+drwxr-xr-x  24 adminshare 500          4096 Mar 15 12:10 plugins
+drwxr-xr-x   4 adminshare 500            40 Mar 15 12:10 skins
+drwxr-xr-x   4 adminshare 500            34 Mar 15 12:10 themes
+-rw-r--r--   1 adminshare 500        353198 Mar 15 12:10 tinymce.min.js
+-rw-r--r--   1 adminshare 500         15988 Mar 15 12:10 tiny_mce_popup.js
+drwxr-xr-x   2 adminshare 500            90 Mar 15 12:10 utils
+-rw-r--r--   1 adminshare 500        650892 Mar 15 12:10 wp-tinymce.js
+-rw-r--r--   1 adminshare 500          1049 Mar 15 12:10 wp-tinymce.php

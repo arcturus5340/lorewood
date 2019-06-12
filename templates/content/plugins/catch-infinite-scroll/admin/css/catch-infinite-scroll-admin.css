@@ -1,0 +1,28 @@
+.form-table th,
+.form-table td {
+	padding-top: 0;
+	margin-top: 0;
+	padding-left: 0;
+	padding-bottom: 14px;
+}
+
+.wrap p.submit {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+textarea {
+   max-width: 100%;
+}
+
+.form-table td span.ctis-image-holder {
+	display: block;
+}
+
+.form-table td span.ctis-image-holder {
+	max-width: 300px;
+}

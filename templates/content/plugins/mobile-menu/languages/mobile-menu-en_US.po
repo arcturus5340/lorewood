@@ -1,0 +1,1509 @@
+# Translation of JobRoller
+# Copyright (C) 2010 JobRoller
+# This file can be distributed under the JobRoller terms
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Mobile Menu 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-25 16:17+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.0.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: ../includes/freemius\n"
+
+#: includes/class-wp-mobile-menu-core.php:164
+msgid "Remove Icon Selection"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:337
+#: includes/class-wp-mobile-menu-core.php:901
+msgid "Left Menu Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:377
+msgid "Right Menu Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:619
+msgid "Product Category"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:620
+msgid "Price"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:643
+msgid "Refine"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:799
+#: includes/class-wp-mobile-menu-core.php:807
+msgid "Logo Header Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:858
+msgid "% items"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:861
+msgid "0 items"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:863
+msgid "1 item"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:946
+msgid "Unit Price:"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:947
+msgid "Quantity:"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:949
+msgid "Remove this item"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:955
+msgid "No Items found."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:959
+msgid "Total"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:963
+msgid "View cart"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:964
+msgid "Checkout"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:1032
+msgid "My Account"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:1033
+msgid "Sign Out"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-core.php:1035
+msgid "Login"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:54
+msgid "Choose one menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:64
+msgid "Overlay"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:65
+#: includes/class-wp-mobile-menu-options.php:79
+msgid "Slideout Push Content"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:66
+#: includes/class-wp-mobile-menu-options.php:80
+msgid "Slideout Over Content"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:67
+msgid "Slideout from Top"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:71
+msgid "Left"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:72
+msgid "Right"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:73
+msgid "Above"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:74
+msgid "Below"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:90
+msgid "Mobile Menu Options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:99
+msgid "WP Mobile Menu Meta options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:105
+msgid "Alternative Left Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:108
+msgid "Select the menu that will open in the left side just for this page."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:114
+msgid "Alternative Right Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:117
+msgid "Select the menu that will open in the right side just for this page."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:140
+msgid "General Options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:143
+msgid "Header"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:146
+#: includes/class-wp-mobile-menu-options.php:848
+msgid "Left Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:149
+#: includes/class-wp-mobile-menu-options.php:1221
+msgid "Right Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:158
+msgid "Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:161
+msgid "Fonts"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:164
+#: vendor/titan-framework/titan-framework.php:188
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:178
+msgid "Woocommerce Menu Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:181
+#: includes/class-wp-mobile-menu-options.php:640
+#: includes/class-wp-mobile-menu-options.php:753
+#: includes/class-wp-mobile-menu-options.php:913
+#: includes/class-wp-mobile-menu-options.php:1166
+#: includes/class-wp-mobile-menu-options.php:1200
+#: includes/class-wp-mobile-menu-options.php:1298
+#: includes/class-wp-mobile-menu-options.php:1540
+msgid "Select a style"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:202
+msgid "Enable Mobile Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:213
+msgid "Mobile Menu Visibility(Width Trigger)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:216
+msgid ""
+"The Mobile menu will appear at this window size. Place it at 5000 to be "
+"always visible. "
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:225
+msgid ""
+"The Width trigger field is very important because it determines the width "
+"that will show the Mobile Menu. If you want it always visible set it to "
+"5000px"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:238
+msgid "Enable Left Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:242
+msgid "Enable or disable the WP Mobile Menu Left Menu."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:257
+msgid "Enable Right Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:262
+msgid "On"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:263
+msgid "Off"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:278
+msgid "Advanced Options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:318
+msgid "Put your custom CSS rules here"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:327
+msgid "Put your custom JS rules here"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:336
+msgid "Disable Mobile Menu on selected pages"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:339
+msgid "Select a page"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:346
+msgid "Main options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:375
+msgid "Naked Header"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:379
+msgid ""
+"Choose if you want to display a naked header with no background "
+"color(transparent)."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:380
+#: includes/class-wp-mobile-menu-options.php:390
+#: includes/class-wp-mobile-menu-options.php:401
+#: includes/class-wp-mobile-menu-options.php:494
+#: includes/class-wp-mobile-menu-options.php:676
+#: includes/class-wp-mobile-menu-options.php:787
+#: includes/class-wp-mobile-menu-options.php:863
+#: includes/class-wp-mobile-menu-options.php:874
+#: includes/class-wp-mobile-menu-options.php:1236
+#: includes/class-wp-mobile-menu-options.php:1247
+msgid "Yes"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:381
+#: includes/class-wp-mobile-menu-options.php:391
+#: includes/class-wp-mobile-menu-options.php:402
+#: includes/class-wp-mobile-menu-options.php:495
+#: includes/class-wp-mobile-menu-options.php:677
+#: includes/class-wp-mobile-menu-options.php:788
+#: includes/class-wp-mobile-menu-options.php:864
+#: includes/class-wp-mobile-menu-options.php:875
+#: includes/class-wp-mobile-menu-options.php:1237
+#: includes/class-wp-mobile-menu-options.php:1248
+msgid "No"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:385
+msgid "Disable Logo/Text"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:389
+msgid ""
+"Choose if you want to disable the logo/text so it will only display the menu "
+"icons in the header."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:396
+msgid "Auto-hide Header when scrolling down."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:400
+msgid ""
+"Choose if you want to hide the header when scrolling down. It will reapear "
+"when you scroll up."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:406
+msgid "Logo options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:412
+msgid "Site Logo"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:416
+msgid "Choose if you want to display an image has logo or text instead."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:417
+#: includes/class-wp-mobile-menu-options.php:454
+msgid "Logo"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:418
+msgid "Text"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:457
+msgid "Upload your logo image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:463
+msgid "Logo Height"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:466
+msgid "Enter the height of the logo"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:478
+msgid "Logo Retina"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:481
+msgid "Upload your logo image for retina devices"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:489
+msgid "Disable Logo URL "
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:493
+msgid ""
+"Choose if you want to disable the logo url to avoid being redirect to the "
+"homepage or alternative home url when touching the header logo."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:500
+msgid "Alternative Logo URL"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:503
+msgid ""
+"Enter you alternative logo URL. If you leave it blank it will use the Site "
+"URL."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:509
+msgid "Logo/Text Top Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:512
+msgid "Enter the logo/text top margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:520
+msgid "Header options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:526
+msgid "Header Height"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:529
+msgid "Enter the height of the header"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:538
+msgid "Header Text"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:541
+msgid ""
+"Enter the desired text for the Mobile Header. If not specified it will use "
+"the site title."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:565
+msgid "Header Text Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:568
+msgid "Enter the header text font size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:591
+msgid "Header Logo/Text Left Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:594
+msgid ""
+"Enter the header Logo/Text left margin (only used whit Header Left Alignment)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:605
+msgid "Header Logo/Text Spacing"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:608
+msgid ""
+"Enter the header Logo/Text spacing between the Logo and the Text(it only "
+"applies when you have both in the site logo)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:618
+msgid "Header Logo/Text Right Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:621
+msgid ""
+"Enter the header Logo/Text right margin (only used whit Header Right "
+"Alignment)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:637
+msgid "Header Menu Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:665
+msgid "Header Banner options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:671
+msgid "Enable Header Banner"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:675
+#: includes/class-wp-mobile-menu-options.php:786
+msgid "Choose if you want to enable the Header Banner."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:682
+msgid "Header Banner Position"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:686
+msgid "Choose the position of the Header Banner."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:687
+msgid "Above Header"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:688
+msgid "Below Header"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:693
+msgid "Header Banner Content"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:696
+msgid "Enter the banner header content, you can use HTML and Shortcodes."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:701
+msgid "Header Banner Height"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:704
+msgid "Enter the height of the header banner"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:727
+msgid "Header Banner Left Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:730
+msgid ""
+"Enter the header banner left padding (only used whit Header Banner Left "
+"Alignment)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:739
+msgid "Header Banner Right Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:742
+msgid ""
+"Enter the header banner right padding (only used whit Header Banner Right "
+"Alignment)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:750
+msgid "Header Banner Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:776
+msgid "Header Search options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:782
+msgid "Enable Header Search"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:793
+#: includes/class-wp-mobile-menu-options.php:2121
+msgid "Header Elements Order"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:816
+msgid "Search Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:819
+msgid "Enter the Search Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:828
+msgid "Use text instead Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:831
+msgid ""
+"Fill this field with the text that will show up in the submit button of the "
+"search form. Clear this field to use the search icon."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:832
+#: includes/class-wp-mobile-menu-options.php:841
+msgid "Search"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:837
+msgid "Placeholder Text"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:840
+msgid ""
+"Fill this field with the text that will show up in search input field "
+"placeholder."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:851
+msgid "Select the menu that will open in the left side."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:858
+#: includes/class-wp-mobile-menu-options.php:1231
+msgid "Parent Link open submenu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:862
+#: includes/class-wp-mobile-menu-options.php:1235
+msgid ""
+"Choose if you want to open the submenu by click in the Parent Menu item."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:869
+#: includes/class-wp-mobile-menu-options.php:1242
+msgid "Parent Link open submenu(2nd Level)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:873
+#: includes/class-wp-mobile-menu-options.php:1246
+msgid ""
+"Choose if you want to open the sub-submenu by click in the sub menu item."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:883
+#: includes/class-wp-mobile-menu-options.php:1257
+msgid "Only visible for logged users"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:887
+msgid "Enable the left menu for logged in users only."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:895
+#: includes/class-wp-mobile-menu-options.php:1269
+msgid "Menu Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:901
+msgid "Text After Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:904
+msgid "Enter the text that will appear after the Icon."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:910
+msgid "Text After Icon Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:933
+#: includes/class-wp-mobile-menu-options.php:1275
+msgid "Icon Action"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:937
+msgid "Open the Left Menu Panel or open a Link url."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:944
+#: includes/class-wp-mobile-menu-options.php:1318
+msgid "Icon Link URL"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:947
+#: includes/class-wp-mobile-menu-options.php:1321
+msgid "Enter the Icon Link Url."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:953
+#: includes/class-wp-mobile-menu-options.php:1327
+msgid "Icon Link Url Target"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:957
+#: includes/class-wp-mobile-menu-options.php:1331
+msgid "Choose it the link will open in the same window or in the new window."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:964
+#: includes/class-wp-mobile-menu-options.php:1338
+#: includes/class-wp-mobile-menu-options.php:2129
+msgid "Icon Type"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:968
+#: includes/class-wp-mobile-menu-options.php:1342
+#: includes/class-wp-mobile-menu-options.php:2133
+msgid "Choose if you want to display an image or an icon."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:975
+#: includes/class-wp-mobile-menu-options.php:1344
+#: includes/class-wp-mobile-menu-options.php:1349
+#: includes/class-wp-mobile-menu-options.php:2140
+msgid "Icon Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:978
+#: includes/class-wp-mobile-menu-options.php:1352
+#: includes/class-wp-mobile-menu-options.php:2143
+msgid ""
+"<div class=\"mobmenu-icon-holder\"></div><a href=\"#\" class=\"mobmenu-icon-"
+"picker button\">Select menu icon</a>"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:984
+#: includes/class-wp-mobile-menu-options.php:1358
+#: includes/class-wp-mobile-menu-options.php:2149
+msgid "Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:987
+msgid "Enter the Left Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:996
+#: includes/class-wp-mobile-menu-options.php:1370
+#: includes/class-wp-mobile-menu-options.php:2161
+msgid "Icon Image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1000
+msgid "Upload your left menu icon image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1006
+#: includes/class-wp-mobile-menu-options.php:1379
+msgid "Icon Top Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1009
+msgid "Enter the Left Icon Top Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1018
+msgid "Icon Left Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1021
+msgid "Enter the Left Icon Left Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1039
+#: includes/class-wp-mobile-menu-options.php:1412
+msgid "Menu Item Icons Position"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1044
+#: includes/class-wp-mobile-menu-options.php:1417
+msgid ""
+"Choose if you want the menu item icon to display at the left or right side "
+"of the menu items."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1049
+#: includes/class-wp-mobile-menu-options.php:1422
+msgid "Menu Item Icons Horizontal Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1052
+msgid "Enter the Left Menu Item icons horizontal padding(pixels)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1061
+msgid "Left Panel options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1067
+#: includes/class-wp-mobile-menu-options.php:1441
+#: includes/class-wp-mobile-menu-options.php:2177
+msgid "Panel Background Image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1070
+msgid ""
+"Upload your left menu background image(this will override the Background "
+"color option)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1075
+#: includes/class-wp-mobile-menu-options.php:1449
+#: includes/class-wp-mobile-menu-options.php:2185
+msgid "Panel Background Image Opacity"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1078
+#: includes/class-wp-mobile-menu-options.php:2188
+msgid "Enter the Left Background image opacity"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1088
+#: includes/class-wp-mobile-menu-options.php:1462
+#: includes/class-wp-mobile-menu-options.php:2198
+msgid "Panel Background Image Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1092
+#: includes/class-wp-mobile-menu-options.php:1466
+#: includes/class-wp-mobile-menu-options.php:2202
+msgid ""
+"Select the Background image size type. <a href=\"https://www.w3schools.com/"
+"cssref/css3_pr_background-size.asp\" target=\"_blank\">See the CSS "
+"Documentation</a>"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1094
+#: includes/class-wp-mobile-menu-options.php:1468
+#: includes/class-wp-mobile-menu-options.php:2204
+msgid "Auto"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1095
+#: includes/class-wp-mobile-menu-options.php:1469
+#: includes/class-wp-mobile-menu-options.php:2205
+msgid "Contain"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1096
+#: includes/class-wp-mobile-menu-options.php:1470
+#: includes/class-wp-mobile-menu-options.php:2206
+msgid "Cover"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1097
+#: includes/class-wp-mobile-menu-options.php:1471
+#: includes/class-wp-mobile-menu-options.php:2207
+msgid "Inherit"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1098
+#: includes/class-wp-mobile-menu-options.php:1472
+#: includes/class-wp-mobile-menu-options.php:2208
+msgid "Initial"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1099
+#: includes/class-wp-mobile-menu-options.php:1473
+#: includes/class-wp-mobile-menu-options.php:2209
+msgid "Unset"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1106
+#: includes/class-wp-mobile-menu-options.php:1480
+#: includes/class-wp-mobile-menu-options.php:2216
+msgid "Panel Background Gradient Css"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1109
+#: includes/class-wp-mobile-menu-options.php:1483
+#: includes/class-wp-mobile-menu-options.php:2219
+msgid ""
+"<a href=\"https://webgradients.com/\" target=\"_blank\">Click here</a> to "
+"get your desired Gradient, just press the copy button and paste in this "
+"field."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1115
+#: includes/class-wp-mobile-menu-options.php:1489
+#: includes/class-wp-mobile-menu-options.php:2225
+msgid "Menu Panel Width Units"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1119
+#: includes/class-wp-mobile-menu-options.php:1493
+#: includes/class-wp-mobile-menu-options.php:2229
+msgid "Choose the width units."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1121
+#: includes/class-wp-mobile-menu-options.php:1495
+#: includes/class-wp-mobile-menu-options.php:2231
+msgid "Percentage"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1126
+#: includes/class-wp-mobile-menu-options.php:1500
+#: includes/class-wp-mobile-menu-options.php:2236
+msgid "Menu Panel Width(Pixels)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1129
+#: includes/class-wp-mobile-menu-options.php:1141
+msgid "Enter the Left Menu Panel Width"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1138
+#: includes/class-wp-mobile-menu-options.php:1512
+#: includes/class-wp-mobile-menu-options.php:2248
+msgid "Menu Panel Width(Percentage)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1150
+msgid "Left Menu Content Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1153
+msgid "Enter the Left Menu Content Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1163
+msgid "Left Menu Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1189
+msgid "Left Menu Copyright Content"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1192
+#: includes/class-wp-mobile-menu-options.php:1567
+msgid "Enter the Copyright content, you can use HTML and Shortcodes."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1197
+msgid "Copyright Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1224
+msgid "Select the menu that will open in the right side."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1261
+msgid "Enable the right menu for logged in users only."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1279
+msgid "Open the Right Menu Panel or open a Link url."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1286
+msgid "Text Before Icon"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1289
+msgid "Enter the text that will appear before the Icon."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1295
+msgid "Text Before Icon Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1343
+msgid "Image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1361
+msgid "Enter the Right Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1373
+msgid "Upload your right menu icon image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1382
+msgid "Enter the Right Icon Top Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1391
+msgid "Icon Right Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1394
+msgid "Enter the Right Icon Right Margin"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1425
+msgid "Enter the Right Menu Item icons horizontal padding(pixels)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1435
+msgid "Right Panel options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1444
+msgid ""
+"upload your right menu background image(this will override the Background "
+"color option)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1452
+msgid "Enter the Right Background image opacity"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1494
+msgid "Pixels"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1503
+#: includes/class-wp-mobile-menu-options.php:1515
+msgid "Enter the Right Menu Panel Width"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1524
+msgid "Right Menu Content Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1527
+msgid "Enter the Right Menu Content Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1537
+msgid "Right Menu Font"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1564
+msgid "Right Menu Copyright Content"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1572
+msgid "General"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1578
+msgid "Overlay Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1588
+msgid "Highlight Current Page Item"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1600
+msgid "Woocommerce Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1606
+msgid "Cart Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1616
+#: includes/class-wp-mobile-menu-options.php:1840
+#: includes/class-wp-mobile-menu-options.php:1930
+msgid "Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1626
+msgid "Woocommerce Panel Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1636
+msgid "Checkout Button Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1646
+msgid "Checkout Button Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1656
+msgid "View Cart Button Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1666
+msgid "View Cart Button Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1678
+msgid "Header Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1684
+msgid "Header Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1694
+msgid "Header Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1707
+msgid "Header Search Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1713
+msgid "Search Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1723
+msgid "Search Form Button Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1733
+msgid "Search Form Button Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1743
+msgid "Search Form Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1753
+msgid "Search Form Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1763
+msgid "Search Form Placeholder Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1773
+msgid "Header Banner Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1779
+msgid "Header Banner Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1789
+msgid "Header Banner Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1800
+msgid "Left Menu Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1806
+msgid "Left Menu Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1819
+msgid "Left Menu Items Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1830
+#: includes/class-wp-mobile-menu-options.php:1920
+msgid "Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1850
+#: includes/class-wp-mobile-menu-options.php:1940
+msgid "Background Hover Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1860
+#: includes/class-wp-mobile-menu-options.php:1950
+msgid "Hover Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1870
+#: includes/class-wp-mobile-menu-options.php:1960
+msgid "2nd Level Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1880
+#: includes/class-wp-mobile-menu-options.php:1970
+msgid "Submenu Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1890
+msgid "Right Menu Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1896
+msgid "Right Menu Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1909
+msgid "Right Menu Items Icon Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1983
+msgid "3rd Level Menu Colors"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1989
+msgid "Left Menu Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:1999
+msgid "Left Menu Text Color Hover"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2009
+msgid "Left Menu Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2019
+msgid "Left Menu Background Color Hover"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2029
+msgid "Right Menu Text Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2039
+msgid "Right Menu Text Color Hover"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2049
+msgid "Right Menu Background Color"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2059
+msgid "Right Menu Background Color Hover"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2084
+msgid "Woocommerce"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2088
+msgid "Enable Woocommerce Menu"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2092
+msgid "Enable or disable the Woocommerce Menu."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2099
+msgid "Open Cart Panel after adding a product"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2103
+msgid "Open Cart Panel after adding a product."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2110
+msgid "Enable Account Links in Mobile Cart Panel"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2114
+msgid "Enable Account(Login/logout) Section in the Mobile Cart Panel."
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2152
+msgid "Enter the Woocommerce Menu Icon Font Size"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2165
+msgid "Upload your Woocommerce Menu icon image"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2171
+msgid "Woocommerce Panel options"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2180
+msgid ""
+"Upload your Woocommerce menu background image(this will override the "
+"Background color option)"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2239
+#: includes/class-wp-mobile-menu-options.php:2251
+msgid "Enter the Menu Panel Width"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2260
+msgid "Menu Content Padding"
+msgstr ""
+
+#: includes/class-wp-mobile-menu-options.php:2263
+msgid "Enter the Menu Content Padding"
+msgstr ""
+
+#: mobmenu.php:41
+msgid ""
+"<strong>WP Mobile Menu PRO- </strong>If you need further features like 2000+ "
+"Menu Icons, 3rd Level Menus, Header Banner, Menus only visible for logged in "
+"users, alternative menus per page, Disable Mobile Menus in specific pages, "
+"Check the <a href=\""
+msgstr ""
+
+#: vendor/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:189
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: vendor/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:197
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: vendor/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:340
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: vendor/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:340
+msgid "Error"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-admin-page.php:119
+msgid ""
+"<em>Options Page Created with <a href='http://titanframework.net?"
+"utm_source=admin&utm_medium=admin footer'>Titan Framework</a></em>"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-admin-page.php:365
+msgid "Settings saved."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-admin-page.php:367
+msgid "Settings reset to default."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-customizer.php:33
+#: vendor/titan-framework/lib/class-meta-box.php:37
+msgid "More Options"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-ajax-button.php:30
+#: vendor/titan-framework/lib/class-option-ajax-button.php:33
+msgid "Security check failed, please refresh the page and try again."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-ajax-button.php:87
+msgid "Something went wrong"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-ajax-button.php:95
+msgid "Click me"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-ajax-button.php:100
+msgid "Please wait..."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:379
+msgid "Theme License"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:380
+msgid "Enter your theme license key."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:381
+msgid "License Key"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:382
+msgid "License Action"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:383
+msgid "Deactivate License"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:384
+msgid "Activate License"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:385
+#: vendor/titan-framework/lib/class-option-edd-license.php:397
+msgid "License status is unknown."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:386
+msgid "Renew?"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:387
+msgid "unlimited"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:388
+msgid "License key is active."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:389
+#, php-format
+msgid "Expires %s."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:390
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:391
+#, php-format
+msgid "License key expired %s."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:392
+msgid "License key has expired."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:393
+msgid "License keys do not match."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:394
+msgid "License is inactive."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:395
+msgid "License key is disabled."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:396
+msgid "Site is inactive."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:398
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-edd-license.php:399
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-enable.php:62
+#: vendor/titan-framework/lib/class-option-enable.php:141
+msgid "Enabled"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-enable.php:65
+#: vendor/titan-framework/lib/class-option-enable.php:144
+msgid "Disabled"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-multicheck-pages.php:28
+#: vendor/titan-framework/lib/class-option-multicheck-pages.php:49
+#: vendor/titan-framework/lib/class-option-multicheck-posts.php:35
+#: vendor/titan-framework/lib/class-option-multicheck-posts.php:61
+#: vendor/titan-framework/lib/class-option-select-pages.php:34
+#: vendor/titan-framework/lib/class-option-select-posts.php:42
+#, php-format
+msgid "Untitled %s"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-multicheck.php:40
+#: vendor/titan-framework/lib/class-option-multicheck.php:189
+msgid "Select All"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-save.php:21
+msgid "Save Changes"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-save.php:24
+msgid "Reset to Defaults"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-save.php:27
+msgid "Are you sure you want to reset ALL options to their default values?"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option-select-categories.php:35
+#: vendor/titan-framework/lib/class-option-select-pages.php:27
+#: vendor/titan-framework/lib/class-option-select-post-types.php:27
+#: vendor/titan-framework/lib/class-option-select-posts.php:36
+msgid "Select"
+msgstr ""
+
+#: vendor/titan-framework/lib/class-option.php:119
+#, php-format
+msgid "Option type or extended class %s does not exist."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-titan-framework.php:190
+#, php-format
+msgid ""
+"All option IDs per namespace must be unique. The id %s has been used "
+"multiple times."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-titan-framework.php:445
+#, php-format
+msgid "%s needs a %s parameter."
+msgstr ""
+
+#: vendor/titan-framework/lib/class-titan-framework.php:455
+#, php-format
+msgid "Container of type %s, does not exist."
+msgstr ""
+
+#: vendor/titan-framework/titan-framework-checker.php:72
+msgid "Titan Framework needs to be installed."
+msgstr ""
+
+#: vendor/titan-framework/titan-framework-checker.php:75
+msgid "Click here to search for the plugin."
+msgstr ""
+
+#: vendor/titan-framework/titan-framework-checker.php:82
+msgid "Titan Framework needs to be activated."
+msgstr ""
+
+#: vendor/titan-framework/titan-framework-checker.php:85
+msgid "Click here to go to the plugins page and activate it."
+msgstr ""
+
+#: vendor/titan-framework/titan-framework.php:192
+msgid "GitHub Repo"
+msgstr ""
+
+#: vendor/titan-framework/titan-framework.php:196
+msgid "Issue Tracker"
+msgstr ""
+
+#, fuzzy
+#~| msgid "This feed does not appear to be valid."
+#~ msgid "The file does not exist, please try again."
+#~ msgstr "This feed does not appear to be valid."
+
+#, fuzzy
+#~| msgid "This feed does not appear to be valid."
+#~ msgid "This field must be a valid date."
+#~ msgstr "This feed does not appear to be valid."
+
+#, fuzzy
+#~ msgid "Allow customer reviews?"
+#~ msgstr "My Uploaded CV's"
+
+#, fuzzy
+#~| msgid "This feed does not appear to be valid."
+#~ msgid "This setting does not apply to guest purchases."
+#~ msgstr "This feed does not appear to be valid."
+
+#, fuzzy
+#~ msgid "Allow reviews."
+#~ msgstr "My Uploaded CV's"
+
+#, fuzzy
+#~ msgid "Clear Tracked Resumes"
+#~ msgstr "My Uploaded CV's"
+
+#~ msgid "My Uploaded Resumes"
+#~ msgstr "My Uploaded CV's"

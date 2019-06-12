@@ -1,0 +1,13 @@
+drwxr-xr-x   6 adminshare 500           197 Mar 17 05:53 .
+drwxr-xr-x   6 adminshare 500           127 Mar 17 05:53 ..
+drwxr-xr-x   6 adminshare 500            67 Mar 17 05:53 assets
+-rw-r--r--   1 adminshare 500         14500 Mar 17 05:53 config.php
+drwxr-xr-x   8 adminshare 500          4096 Mar 17 05:53 includes
+-rw-r--r--   1 adminshare 500            87 Mar 17 05:53 index.php
+drwxr-xr-x   2 adminshare 500          4096 Mar 17 05:53 languages
+-rw-r--r--   1 adminshare 500         35140 Mar 17 05:53 LICENSE.txt
+-rw-r--r--   1 adminshare 500           841 Mar 17 05:53 package.json
+-rw-r--r--   1 adminshare 500          8663 Mar 17 05:53 README.md
+-rw-r--r--   1 adminshare 500          2915 Mar 17 05:53 require.php
+-rw-r--r--   1 adminshare 500         18744 Mar 17 05:53 start.php
+drwxr-xr-x   8 adminshare 500          4096 Mar 17 05:53 templates
