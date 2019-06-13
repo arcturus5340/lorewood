@@ -4,18 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="./content/themes/sharewood/fonts/font-awesome/css/font-awesome.min.css">
-
-  <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-
+  <link rel="stylesheet" href="/static/content/themes/sharewood/fonts/font-awesome/css/font-awesome.min.css">
   <title>Sharewood</title>
-<meta name='robots' content='noindex,follow' />
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
+<meta name="robots" content="noindex,follow" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//s.w.org" />
     <script type="text/javascript">
       window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/sharewood.online\/includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
       !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -34,33 +27,34 @@ img.emoji {
   padding: 0 !important;
 }
 </style>
-  <link rel='stylesheet' id='login-with-ajax-css'  href='./content/plugins/login-with-ajax/widget/widget.css?ver=3.1.7' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-css'  href='./includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='catch-infinite-scroll-css'  href='./content/plugins/catch-infinite-scroll/public/css/catch-infinite-scroll-public.css?ver=1.3' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-postratings-css'  href='./content/plugins/wp-postratings/css/postratings-css.css?ver=1.86.2' type='text/css' media='all' />
-<link rel='stylesheet' id='tf-compiled-options-mobmenu-css'  href='./content/uploads/dynamic-mobmenu.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='tf-google-webfont-dosis-css'  href='//fonts.googleapis.com/css?family=Dosis%3Ainherit%2C400&#038;subset=latin%2Clatin-ext&#038;ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='tf-google-webfont-roboto-css'  href='//fonts.googleapis.com/css?family=Roboto%3A500%2C400&#038;subset=latin%2Clatin-ext&#038;ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cssmobmenu-icons-css'  href='./content/plugins/mobile-menu/includes/css/mobmenu-icons.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='bs-css'  href='./content/themes/sharewood/css/bootstrap.min.css?ver=5.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='main-css'  href='./content/themes/sharewood/style.css?ver=5.1.1' type='text/css' media='all' />
-<script type='text/javascript' src='./includes/js/jquery/jquery.js?ver=1.12.4'></script>
-<script type='text/javascript' src='./includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript'>
+{% load static %}
+  <link rel="stylesheet" id="login-with-ajax-css"  href="/static/content/plugins/login-with-ajax/widget/widget.css?ver=3.1.7" type="text/css" media="all" />
+<link rel="stylesheet" id="wp-block-library-css"  href="/static/includes/css/dist/block-library/style.min.css?ver=5.1.1" type="text/css" media="all" />
+<link rel="stylesheet" id="catch-infinite-scroll-css"  href="/static/content/plugins/catch-infinite-scroll/public/css/catch-infinite-scroll-public.css?ver=1.3"  type="text/css" media="all" />
+<link rel="stylesheet" id="wp-postratings-css"  href="/static/content/plugins/wp-postratings/css/postratings-css.css?ver=1.86.2"  type="text/css" media="all" />
+<link rel="stylesheet" id="tf-compiled-options-mobmenu-css"  href="/static/content/uploads/dynamic-mobmenu.css?ver=5.1.1"  type="text/css" media="all" />
+<link rel="stylesheet" id="tf-google-webfont-dosis-css"  href="//fonts.googleapis.com/css?family=Dosis%3Ainherit%2C400&#038;subset=latin%2Clatin-ext&#038;ver=5.1.1" type="text/css" media="all" />
+<link rel="stylesheet" id="tf-google-webfont-roboto-css"  href="//fonts.googleapis.com/css?family=Roboto%3A500%2C400&#038;subset=latin%2Clatin-ext&#038;ver=5.1.1" type="text/css" media="all" />
+<link rel="stylesheet" id="cssmobmenu-icons-css"  href="/static/content/plugins/mobile-menu/includes/css/mobmenu-icons.css?ver=5.1.1"   type="text/css" media="all" />
+<link rel="stylesheet" id="bs-css"  href="/static/content/themes/sharewood/css/bootstrap.min.css?ver=5.1.1"  type="text/css"  media="all" />
+<link rel="stylesheet" id="main-css"  href="/static/content/themes/sharewood/style.css?ver=5.1.1"  type="text/css" media="all" />
+<script type="text/javascript" src="/static/includes/js/jquery/jquery.js?ver=1.12.4" ></script>
+<script type="text/javascript" src="/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" ></script>
+<script type="text/javascript">
 /* <![CDATA[ */
 var LWA = {"ajaxurl":"https:\/\/sharewood.online\/admin\/admin-ajax.php"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='./content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
-<script type='text/javascript'>
+<script type="text/javascript" src="/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7" ></script>
+<script type="text/javascript">
 /* <![CDATA[ */
 var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/content\/plugins\/catch-infinite-scroll\/image\/loader.gif","load_more_text":"Load More","finish_text":"\u0411\u043e\u043b\u044c\u0448\u0435 \u043f\u043e\u0441\u0442\u043e\u0432 \u043d\u0435\u0442.","event":"scroll","navigationSelector":".pagination","nextSelector":"a.next","contentSelector":".inf","itemSelector":".post-block","type":"post"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='./content/plugins/catch-infinite-scroll/public/js/catch-infinite-scroll-public.js?ver=1.3'></script>
-<script type='text/javascript' src='./content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
-<link rel='https://api.w.org/' href='./json/' />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./includes/wlwmanifest.xml" />
+<script type="text/javascript" src="/static/content/plugins/catch-infinite-scroll/public/js/catch-infinite-scroll-public.js?ver=1.3" ></script>
+<script type="text/javascript" src="/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1" ></script>
+<link rel="https://api.w.org/" href="./json/" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/static/includes/wlwmanifest.xml" />
 
 <header>
         <div class="container">
@@ -83,7 +77,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
             <div class="sform bform" data-toggle="modal" data-target="#myModal1">
               <!--<div class="sform" data-toggle="collapse" data-target="#block-form">-->
-                              <img src="./content/themes/sharewood/img/search%20(2).png">
+                              <img src="/static/content/themes/sharewood/img/search%20(2).png" >
 
             </div>
                           <div
@@ -120,19 +114,19 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 
           <script>
 (function(u,l,o,g,i,n){
-  if(typeof l[g] === 'undefined') l[g] = [];
+  if(typeof l[g] === "undefined") l[g] = [];
   l[i] = function() {
     if(l[g].length){
       for (var i = 0; i < l[g].length; i++) {
         var f = l[g][i];
-        if(typeof f === 'function'){
+        if(typeof f === "function"){
           f.call(l);
         }
         l[g].splice(i--,1)
       }
     }
   };
-  if(typeof l[o] === 'undefined'){
+  if(typeof l[o] === "undefined"){
     l[o] = {};
     l[o][n] = function(){
       var args = arguments;
@@ -141,13 +135,13 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
       });
     };
   }
-  var s = u.createElement('script');
-  s.src = '//ulogin.ru/js/ulogin.js?version=1';
+  var s = u.createElement("script");
+  s.src = "//ulogin.ru/js/ulogin.js?version=1";
   s.async = true;
   s.onload = l[i];
-  u.getElementsByTagName('head')[0].appendChild(s);
-})(document,window,'uLogin','uLoginCallbacks','uLoginOnload','customInit');
-</script><div class="ulogin_block"><div class="ulogin_label">или&nbsp;</div><div id=uLogin02464165 class="ulogin_panel" data-uloginid="02a127e3" data-ulogin="redirect_uri=https%3A%2F%2Fsharewood.online%2F%3Fulogin%3Dtoken%26backurl%3Dhttps%253A%252F%252Fsharewood.online%252F;"></div><div style="clear:both"></div></div><script>uLogin.customInit('uLogin02464165')</script>
+  u.getElementsByTagName("head")[0].appendChild(s);
+})(document,window,"uLogin","uLoginCallbacks","uLoginOnload","customInit");
+</script><div class="ulogin_block"><div class="ulogin_label">или&nbsp;</div><div id=uLogin02464165 class="ulogin_panel" data-uloginid="02a127e3" data-ulogin="redirect_uri=https%3A%2F%2Fsharewood.online%2F%3Fulogin%3Dtoken%26backurl%3Dhttps%253A%252F%252Fsharewood.online%252F;"></div><div style="clear:both"></div></div><script>uLogin.customInit("uLogin02464165")</script>
 
           <div class="lwa-links">
 
@@ -180,8 +174,8 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
           <div class="lwa-remember-email">
             <div>
                                 <input type="text" name="user_login" id="lwa_user_remember" value="Введите имя пользователя или email"
-                       onfocus="if(this.value == 'Введите имя пользователя или email'){this.value = '';}"
-                       onblur="if(this.value == ''){this.value = 'Введите имя пользователя или email'}"/>
+                       onfocus="if(this.value == "Введите имя пользователя или email"){this.value = "";}"
+                       onblur="if(this.value == ""){this.value = "Введите имя пользователя или email"}"/>
                           </div>
           </div>
           <div>
@@ -207,8 +201,8 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
               <div>
                 <label>
                                     <input type="text" name="user_login" id="user_login" value="Логин"
-                         onfocus="if(this.value == 'Логин'){this.value = '';}"
-                         onblur="if(this.value == ''){this.value = 'Логин'}"/>
+                         onfocus="if(this.value == "Логин"){this.value = "";}"
+                         onblur="if(this.value == ""){this.value = "Логин"}"/>
                 </label>
               </div>
             </div>
@@ -216,8 +210,8 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
               <div>
                 <label>
                                     <input type="text" name="user_email" id="user_email" value="E-mail"
-                         onfocus="if(this.value == 'E-mail'){this.value = '';}"
-                         onblur="if(this.value == ''){this.value = 'E-mail'}"/>
+                         onfocus="if(this.value == "E-mail"){this.value = "";}"
+                         onblur="if(this.value == ""){this.value = "E-mail"}"/>
                 </label>
               </div>
             </div>
@@ -252,7 +246,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
       <div class="row" style="padding: 15px;">
 
 
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border-top no-gutters post-top-overlay post-block-top" style="margin: 0; background: url('./content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg')no-repeat;background-size: 100%;background-position: top center;object-fit: cover;object-position: top;height: 380px;width: 100%;">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border-top no-gutters post-top-overlay post-block-top" style="margin: 0; background: url("/static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg" ) no-repeat; background-size: 100%; background-position: top center; object-fit: cover; object-position: top; height: 380px;width: 100%;">
 
     <div class="meta-block">19 марта </div>
 
@@ -279,7 +273,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 <div id="post-1025"  class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters" >
   <div class="post-middle-img grid1">
       <figure class="effect-duke">
-<img width="2542" height="1010" src="./content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg" class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="./content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg 2542w, ./content/uploads/2019/03/4fd24c81a2d24e9dedf0a-300x119.jpg 300w, ./content/uploads/2019/03/4fd24c81a2d24e9dedf0a-768x305.jpg 768w, ./content/uploads/2019/03/4fd24c81a2d24e9dedf0a-1024x407.jpg 1024w, ./content/uploads/2019/03/4fd24c81a2d24e9dedf0a-250x99.jpg 250w" sizes="(max-width: 2542px) 100vw, 2542px" />
+<img width="2542" height="1010" src="/static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg"  class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="/static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a.jpg"  2542w, /static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a-300x119.jpg 300w, /static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a-768x305.jpg 768w, /static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a-1024x407.jpg 1024w, /static/content/uploads/2019/03/4fd24c81a2d24e9dedf0a-250x99.jpg 250w" sizes="(max-width: 2542px) 100vw, 2542px" />
 <div class="post-middle-wrap">
 <div class="post-wrap-h2"><h2><a href="./irina-marjasova-dushevnyj-storitelling-tarif-samostojatelnyj-2019/">[Ирина Марьясова] Душевный сторителлинг. Тариф Самостоятельный (2019)</a></h2></div>
 <div class="meta-block">19 марта</div>
@@ -296,7 +290,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 <div id="post-1019"  class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters" >
   <div class="post-middle-img grid1">
       <figure class="effect-duke">
-<img width="825" height="388" src="./content/uploads/2019/03/15.jpg" class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="./content/uploads/2019/03/15.jpg 825w, ./content/uploads/2019/03/15-300x141.jpg 300w, ./content/uploads/2019/03/15-768x361.jpg 768w, ./content/uploads/2019/03/15-250x118.jpg 250w" sizes="(max-width: 825px) 100vw, 825px" />
+<img width="825" height="388" src="/static/content/uploads/2019/03/15.jpg" class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="/static/content/uploads/2019/03/15.jpg 825w, /static/content/uploads/2019/03/15-300x141.jpg 300w, /static/content/uploads/2019/03/15-768x361.jpg 768w, /static/content/uploads/2019/03/15-250x118.jpg 250w" sizes="(max-width: 825px) 100vw, 825px" />
 <div class="post-middle-wrap">
 <div class="post-wrap-h2"><h2><a href="./finarium-sozdanie-investicionnogo-portfelja-2019/">[ФИНАРИУМ] Создание инвестиционного портфеля (2019)</a></h2></div>
 <div class="meta-block">19 марта</div>
@@ -313,7 +307,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 <div id="post-404"  class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters" >
   <div class="post-middle-img grid1">
       <figure class="effect-duke">
-<img width="1366" height="768" src="./content/uploads/2019/02/look.com_.ua-255555.jpg" class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="./content/uploads/2019/02/look.com_.ua-255555.jpg 1366w, ./content/uploads/2019/02/look.com_.ua-255555-300x169.jpg 300w, ./content/uploads/2019/02/look.com_.ua-255555-768x432.jpg 768w, ./content/uploads/2019/02/look.com_.ua-255555-1024x576.jpg 1024w, ./content/uploads/2019/02/look.com_.ua-255555-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />
+<img width="1366" height="768" src="/static/content/uploads/2019/02/look.com_.ua-255555.jpg" class="img-responsive cropped-middle-post wp-post-image" alt="" srcset="/static/content/uploads/2019/02/look.com_.ua-255555.jpg 1366w, /static/content/uploads/2019/02/look.com_.ua-255555-300x169.jpg 300w, /static/content/uploads/2019/02/look.com_.ua-255555-768x432.jpg 768w, /static/content/uploads/2019/02/look.com_.ua-255555-1024x576.jpg 1024w, /static/content/uploads/2019/02/look.com_.ua-255555-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />
 <div class="post-middle-wrap">
 <div class="post-wrap-h2"><h2><a href="./zapis-sajta-pod-nomerom-9/">Запись сайта под номером 9</a></h2></div>
 <div class="meta-block">15 марта</div>
@@ -357,7 +351,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
       <a href="nazvanie-zapisi-8-nazvanie-zapisi-8.html">
         <div class="grid">
           <figure class="effect-duke">
-            <img width="1366" height="768" src="./content/uploads/2019/02/look.com_.ua-264882.jpg" class="img-responsive border-r post-1-cropped wp-post-image" alt="" srcset="./content/uploads/2019/02/look.com_.ua-264882.jpg 1366w, ./content/uploads/2019/02/look.com_.ua-264882-300x169.jpg 300w, ./content/uploads/2019/02/look.com_.ua-264882-768x432.jpg 768w, ./content/uploads/2019/02/look.com_.ua-264882-1024x576.jpg 1024w, ./content/uploads/2019/02/look.com_.ua-264882-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />            <figcaption>
+            <img width="1366" height="768" src="/static/content/uploads/2019/02/look.com_.ua-264882.jpg" class="img-responsive border-r post-1-cropped wp-post-image" alt="" srcset="/static/content/uploads/2019/02/look.com_.ua-264882.jpg 1366w, /static/content/uploads/2019/02/look.com_.ua-264882-300x169.jpg 300w, /static/content/uploads/2019/02/look.com_.ua-264882-768x432.jpg 768w, /static/content/uploads/2019/02/look.com_.ua-264882-1024x576.jpg 1024w, /static/content/uploads/2019/02/look.com_.ua-264882-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />            <figcaption>
               <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8/"></a>
             </figcaption>
           </figure>
@@ -394,7 +388,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 
 
 
-       <ul class="pagination"><li class='active'><span aria-current='page' class='page-numbers current'>1</span></li><li><a class='page-numbers' href='./page/2/'>2</a></li><li><a class='page-numbers' href='./page/3/'>3</a></li><li><a class="next page-numbers" href="./page/2/">Вперед</a></li></ul>
+       <ul class="pagination"><li class="active"><span aria-current="page" class="page-numbers current">1</span></li><li><a class="page-numbers" href="./page/2/">2</a></li><li><a class="page-numbers" href="./page/3/">3</a></li><li><a class="next page-numbers" href="./page/2/">Вперед</a></li></ul>
       </div>
 
 
@@ -419,7 +413,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 
 <article id="post-398" class="post-398 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
   <div class="row post-sidebar-cropped post-sidebar-overlay"
-       style="margin: 0; background: url('./content/uploads/2019/02/5a89b01873bd3-1024x602.jpg')no-repeat;background-size: cover;">
+       style="margin: 0; background: url("/static/content/uploads/2019/02/5a89b01873bd3-1024x602.jpg")no-repeat;background-size: cover;">
 
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -481,7 +475,7 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 
 <article id="post-162" class="post-162 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
   <div class="row post-sidebar-cropped post-sidebar-overlay"
-       style="margin: 0; background: url('./content/uploads/2019/02/img-1024x700.jpeg')no-repeat;background-size: cover;">
+       style="margin: 0; background: url("/static/content/uploads/2019/02/img-1024x700.jpeg")no-repeat;background-size: cover;">
 
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -603,8 +597,8 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
 <script>
    jQuery( document ).ready(function() {
  jQuery(function(){
-            jQuery('.bform').click(function(){
-                jQuery('.container').toggleClass('blur');
+            jQuery(".bform").click(function(){
+                jQuery(".container").toggleClass("blur");
             });
         });
 
@@ -1324,16 +1318,16 @@ var selector = {"jetpack_enabled":"","image":"https:\/\/sharewood.online\/conten
   position: absolute;
 }
 
-</style><link rel='stylesheet' id='ulogin-style-css'  href='./content/plugins/ulogin/css/ulogin.css?ver=5.1.1' type='text/css' media='all' />
-<script type='text/javascript'>
+</style><link rel="stylesheet" id="ulogin-style-css"  href="/static/content/plugins/ulogin/css/ulogin.css?ver=5.1.1" type="text/css" media="all" />
+<script type="text/javascript">
 /* <![CDATA[ */
 var ratingsL10n = {"plugin_url":"https:\/\/sharewood.online\/content\/plugins\/wp-postratings","ajax_url":"https:\/\/sharewood.online\/admin\/admin-ajax.php","text_wait":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043d\u0435 \u0433\u043e\u043b\u043e\u0441\u0443\u0439\u0442\u0435 \u0437\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0437\u0430\u043f\u0438\u0441\u0435\u0439 \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e.","image":"squares","image_ext":"png","max":"10","show_loading":"1","show_fading":"1","custom":"0"};
-var ratings_mouseover_image=new Image();ratings_mouseover_image.src="./content/plugins/wp-postratings/images/squares/rating_over.png";;
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src="/static/content/plugins/wp-postratings/images/squares/rating_over.png";;
 /* ]]> */
 </script>
-<script type='text/javascript' src='./content/plugins/wp-postratings/js/postratings-js.js?ver=1.86.2'></script>
-<script type='text/javascript' src='./includes/js/wp-embed.min.js?ver=5.1.1'></script>
-<script type='text/javascript' src='./content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1'></script>
-<script type='text/javascript' src='./content/themes/sharewood/js/main.js?ver=5.1.1'></script>
+<script type="text/javascript" src="/static/content/plugins/wp-postratings/js/postratings-js.js?ver=1.86.2"></script>
+<script type="text/javascript" src="/static/includes/js/wp-embed.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="/static/content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1"></script>
+<script type="text/javascript" src="/static/content/themes/sharewood/js/main.js?ver=5.1.1"></script>
 </body>
 </html>
