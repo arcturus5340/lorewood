@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'u7ezx%&4=+%y3kw*)jrf3zf^@s68e2guxsh0v#_r=beo&#=yes'
+SECRET_KEY = 'i_6_gq)3)iq-m#(sync@yp$oq87u31rp+z9dr93qw8gtcuzjk5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,8 +54,7 @@ ROOT_URLCONF = 'sharewood.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,10 +117,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-#STATIC_ROOT = "/home/ray/PycharmProjects/sharewood/sharewood/static/"
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    '/home/ray/PycharmProjects/sharewood/sharewood/static/',
+    '{}/Projects/sharewood/static/'.format(os.getenv("HOME")),
 )
