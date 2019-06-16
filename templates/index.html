@@ -139,6 +139,100 @@
     .logout-lavel:visited {
       text-decoration: none;
     }
+
+    div.dropdown {
+      color: #555;
+      margin: 0px -22px 0 0;
+      width: 143px;
+      position: relative;
+      height: 17px;
+      text-align:left;
+    }
+    
+    div.submenu {
+      position: absolute;
+      z-index: 100;
+      width: 135px;
+      display: none;
+      margin-left: 30px;
+      padding: 35px 0 5px;
+      border-radius: 6px;
+    }
+
+    .dropdown  li a {
+      color: #555555;
+      display: block;
+      font-family: arial;
+      font-weight: bold;
+      padding: 6px 15px;
+      cursor: pointer;
+      text-decoration:none;
+    }
+
+    .dropdown li a:hover{
+      background:#155FB0;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    a.account {
+      font-size: 11px;
+      line-height: 16px;
+      color: #555;
+      position: absolute;
+      z-index: 110;
+      display: block;
+      padding: 11px 0 0 20px;
+      height: 28px;
+      width: 121px;
+      margin: -11px 0 0 -10px;
+      text-decoration: none;
+      background: url(images/arrow.png) 80px 32px no-repeat;
+      cursor:pointer;
+    }
+
+    .root {
+      list-style: none;
+      font-size: 11px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+      background: #fff;
+      padding: 10px 0 10px 0;
+      border-radius: 5px 5px 5px 5px;
+      margin: 21px 0 0 0;
+    }
+
+    .root:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-bottom-color: #ffffff;
+      position: absolute;
+      color: #ffffff;
+      top: 54px;
+      left: 17px;
+    }
+
+    .profile-circle {
+      margin-left: 20px;
+      width: 51px;
+      height: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      border: 2px solid #eee;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+      vertical-align: middle;
+    }
+
+    .common-class {
+
+    }
+ 
     </style>
   </head>
   <header>
@@ -180,7 +274,28 @@
           </div>
           <div class="lwa lwa-template-modal">
             {% if user.is_authenticated %}
-              <a href="/logout" class="logout-label"> Выйти </a>
+              <!-- <a href="/logout" class="logout-label"> Выйти </a> -->
+              <div class="dropdown" style="float:right">
+                <a href="#" class="account">
+                <img src="/static/includes/images/avatar-default.png" class="profile-circle"/>
+                </a>
+                <div class="submenu" style="display: none; ">
+                  <ul class="root">
+                    <li>
+                      <a href="#" >Личный кабинет</a>
+                    </li>
+                    <li>
+                      <a href="#" >Профиль</a>
+                    </li>
+                    <li>
+                      <a href="#">Настройки</a>
+                    </li>
+                    <li>
+                      <a href="/logout/">Выйти</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             {% else %}
               <a href="./wp-login.php" class="lwa-links-modal"> Войти </a>
             {% endif %}
@@ -290,6 +405,7 @@
               </form>
               <div class="lwa-register" style="display:none;">
                 <form name="lwa-register" action="/register" method="post">
+                  {% csrf_token %}
                   <br><br><span class="lwa-status"></span>
                   <div>
                     <div>
@@ -299,30 +415,26 @@
                     </div>
                     <div class="lwa-username">
                       <div>
-                        <label>
-                          <input type="text" name="user_login" id="user_login" placeholder="Логин" />
-                        </label>
+                        <label>Введите логин</label>
+                        {% regform.username %}
                       </div>
                     </div>
                     <div class="lwa-email">
                       <div>
-                        <label>
-                          <input type="email" name="user_email" id="user_email" placeholder="E-mail"/>
-                        </label>
+                        <label>Введите E-mail</label>
+                        {% regform.email %}
                       </div>
                     </div>
                     <div class="lwa-email">
                       <div>
-                        <label>
-                          <input type="password" name="user_password" id="user_password" placeholder="Введите пароль"/>
-                        </label>
+                        <label>Введите пароль</label>
+                        {% regform.password1 %}
                       </div>
                     </div>
                     <div class="lwa-email">
                       <div>
-                        <label>
-                          <input type="password" name="user_password_confirm" id="user_password_confirm" placeholder="Введите пароль еще раз"/>
-                        </label>
+                        <label>Введите пароль еще раз</label>
+                        {% regform.password2 %}
                       </div>
                     </div>
                     <div>
@@ -817,8 +929,6 @@
         font-size: 30px;
       }
 
- 
-
   </style>
   <link rel="stylesheet" id="ulogin-style-css" href="/static/content/plugins/ulogin/css/ulogin.css?ver=5.1.1" type="text/css" media="all" />
   <script type="text/javascript">
@@ -852,6 +962,17 @@
               }
             }
       });
+    });
+
+    $(document).ready(function() {
+      $(".account").mousemove(function() {
+          $(".submenu").show();
+      });
+
+      $(".dropdown").mouseleave(function() {
+          $(".submenu").hide();
+      });
+
     });
     </script>
 </html>
