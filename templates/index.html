@@ -187,7 +187,7 @@
       width: 121px;
       margin: -11px 0 0 -10px;
       text-decoration: none;
-      background: url(images/arrow.png) 80px 32px no-repeat;
+      background: url(images/arrow.png) 80px 32px no-repeat; <!-- WTF?! -->
       cursor:pointer;
     }
 
@@ -299,7 +299,7 @@
             {% else %}
               <a href="./wp-login.php" class="lwa-links-modal"> Войти </a>
             {% endif %}
-            <div class="lwa-modal" id="auth" style="display:none;">
+            <form class="lwa-modal" id="auth" style="display:none;">
             <form method="post">
               <form name="lwa-form" class="lwa-form" method="post" id="login_form">
                 {% csrf_token %}
@@ -451,7 +451,8 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </form>
+            </form>
           </div>
         </div>
       </div>
@@ -534,7 +535,7 @@
                       <figure class="effect-duke">
                         <img width="1366" height="768" src="/static/content/uploads/2019/02/look.com_.ua-264882.jpg" class="img-responsive border-r post-1-cropped wp-post-image" alt="" srcset="/static/content/uploads/2019/02/look.com_.ua-264882.jpg 1366w, /static/content/uploads/2019/02/look.com_.ua-264882-300x169.jpg 300w, /static/content/uploads/2019/02/look.com_.ua-264882-768x432.jpg 768w, /static/content/uploads/2019/02/look.com_.ua-264882-1024x576.jpg 1024w, /static/content/uploads/2019/02/look.com_.ua-264882-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />
                         <figcaption>
-                          <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8/"></a>
+                          <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8.html"></a>
                         </figcaption>
                       </figure>
                     </div>
@@ -552,7 +553,7 @@
                       <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0</div>
                       <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 15 марта 2019 </div>
                     </div>
-                    <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8/"> <div class="btn btn-more">Читать полностью</div> </a>
+                    <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8.html"> <div class="btn btn-more">Читать полностью</div> </a>
                   </div>
                 </div>
               </div>
@@ -569,7 +570,7 @@
           <div class="row" style="padding: 0 15px;">
             <div id="post-404" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
               <div class="rating"><span><span class="post-ratings__results">5.1</span><span class="eee">из 10</span></span></div>
-              <div class="post-wrap-h2"><h2><a href="./zapis-sajta-pod-nomerom-9/">Запись сайта под номером 9</a></h2></div>
+              <div class="post-wrap-h2"><h2><a href="./zapis-sajta-pod-nomerom-9.html">Запись сайта под номером 9</a></h2></div>
               <div class="excerpt clip">
                 <p>Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнить важнейшие задания по&#8230;</p>
               </div>
@@ -928,6 +929,7 @@
         cursor: pointer;
         font-size: 30px;
       }
+    }
 
   </style>
   <link rel="stylesheet" id="ulogin-style-css" href="/static/content/plugins/ulogin/css/ulogin.css?ver=5.1.1" type="text/css" media="all" />
