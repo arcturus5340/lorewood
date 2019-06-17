@@ -4,14 +4,17 @@ import django.shortcuts
 import django.contrib.auth
 import django.contrib.auth.models
 import django.contrib.auth.forms
+import django.template
 import django_registration.backends.activation.views
 import django_registration.forms
+
 
 def index(request):
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
     authnext = "/"
     return django.shortcuts.render(request, 'index.html', {'form' : authform, 'next' : authnext, 'regform' : regform })
+
 
 def login(request):
     if request.method == 'POST':
@@ -27,9 +30,11 @@ def login(request):
 
         return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
+
 def logout(request):
     django.contrib.auth.logout(request)
     return django.shortcuts.redirect("/")
+
 
 def register(request):
     username = request.POST.getlist('username')
@@ -73,3 +78,31 @@ def register(request):
     # # Registration function
 
 
+def advertising(request):
+    template = django.template.loader.get_template('../templates/advertising.html')
+    return django.http.HttpResponse(template.render())
+
+
+def donations(request):
+    template = django.template.loader.get_template('../templates/donations.html')
+    return django.http.HttpResponse(template.render())
+
+
+def info(request):
+    template = django.template.loader.get_template('../templates/info.html')
+    return django.http.HttpResponse(template.render())
+
+
+def regulations(request):
+    template = django.template.loader.get_template('../templates/regulations.html')
+    return django.http.HttpResponse(template.render())
+
+
+def rightholder(request):
+    template = django.template.loader.get_template('../templates/rightholder.html')
+    return django.http.HttpResponse(template.render())
+
+
+def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
+    template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
+    return django.http.HttpResponse(template.render())
