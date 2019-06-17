@@ -72,6 +72,7 @@
     </script>
     <script type="text/javascript" src="/static/includes/js/jquery/jquery.js?ver=1.12.4" ></script>
     <script type="text/javascript" src="/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript">
     /* <![CDATA[ */
       var LWA = {"ajaxurl":"https://sharewood.online/admin/admin-ajax.php"};
@@ -95,7 +96,144 @@
     </script>
     <script type="text/javascript" src="/static/content/plugins/catch-infinite-scroll/public/js/catch-infinite-scroll-public.js?ver=1.3" ></script>
     <script type="text/javascript" src="/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1" ></script>
+    <style>
+    .logout-label {
+      float: right;
+      background: #b64d49;
+      width: 120px;
+      border: 0;
+      height: 45px;
+      padding: 15px 0px 12px 50px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      border-radius: 4px;
+    }
 
+    .logout-label:hover {
+      background: #bf635f;
+    }
+
+    .logout-label:after {
+      position: absolute;
+      content: '\f2c0';
+      font-family: Fontawesome;
+      font-size: 18px;
+      color: #fff;
+      top: 11px;
+      left: 18px;
+      text-decoration: none;
+    }
+
+    .logout-label {
+      color: #fff;
+    }
+
+    .logout-label:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logout-lavel:visited {
+      text-decoration: none;
+    }
+
+    div.dropdown {
+      color: #555;
+      margin: 0px -22px 0 0;
+      width: 143px;
+      position: relative;
+      height: 17px;
+      text-align:left;
+    }
+    
+    div.submenu {
+      position: absolute;
+      z-index: 100;
+      width: 135px;
+      display: none;
+      margin-left: 30px;
+      padding: 35px 0 5px;
+      border-radius: 6px;
+    }
+
+    .dropdown  li a {
+      color: #555555;
+      display: block;
+      font-family: arial;
+      font-weight: bold;
+      padding: 6px 15px;
+      cursor: pointer;
+      text-decoration:none;
+    }
+
+    .dropdown li a:hover{
+      background:#155FB0;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    a.account {
+      font-size: 11px;
+      line-height: 16px;
+      color: #555;
+      position: absolute;
+      z-index: 110;
+      display: block;
+      padding: 11px 0 0 20px;
+      height: 28px;
+      width: 121px;
+      margin: -11px 0 0 -10px;
+      text-decoration: none;
+      background: url(images/arrow.png) 80px 32px no-repeat; <!-- WTF?! -->
+      cursor:pointer;
+    }
+
+    .root {
+      list-style: none;
+      font-size: 11px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+      background: #fff;
+      padding: 10px 0 10px 0;
+      border-radius: 5px 5px 5px 5px;
+      margin: 21px 0 0 0;
+    }
+
+    .root:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-bottom-color: #ffffff;
+      position: absolute;
+      color: #ffffff;
+      top: 54px;
+      left: 17px;
+    }
+
+    .profile-circle {
+      margin-left: 20px;
+      width: 51px;
+      height: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      border: 2px solid #eee;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+      vertical-align: middle;
+    }
+
+    .common-class {
+
+    }
+ 
+    </style>
   </head>
   <header>
     <div class="container">
@@ -135,30 +273,59 @@
             <img src="/static/content/themes/sharewood/img/search%20(2).png"  alt="magnifier">
           </div>
           <div class="lwa lwa-template-modal">
-            <a href="./wp-login.php" class="lwa-links-modal"> Войти </a>
-            <div class="lwa-modal" style="display:none;">
-              <form name="lwa-form" class="lwa-form" action="./wp-login.php" method="post">
+            {% if user.is_authenticated %}
+              <!-- <a href="/logout" class="logout-label"> Выйти </a> -->
+              <div class="dropdown" style="float:right">
+                <a href="#" class="account">
+                <img src="/static/includes/images/avatar-default.png" class="profile-circle"/>
+                </a>
+                <div class="submenu" style="display: none; ">
+                  <ul class="root">
+                    <li>
+                      <a href="#" >Личный кабинет</a>
+                    </li>
+                    <li>
+                      <a href="#" >Профиль</a>
+                    </li>
+                    <li>
+                      <a href="#">Настройки</a>
+                    </li>
+                    <li>
+                      <a href="/logout/">Выйти</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            {% else %}
+              <a href="./wp-login.php" class="lwa-links-modal"> Войти </a>
+            {% endif %}
+            <form class="lwa-modal" id="auth" style="display:none;">
+            <form method="post">
+              <form name="lwa-form" class="lwa-form" method="post" id="login_form">
+                {% csrf_token %}
                 <span class="lwa-status"></span>
                 <div>
+
                   <div class="lwa-username">
                     <div class="username_label">
                       <label>введите логин</label>
                     </div>
                     <div class="username_input">
-                      <input type="text" name="log" id="lwa_user_login" class="input"/>
+                        <div id="lwa_user_login" class="input">{{ form.username }}</div>
                     </div>
                   </div>
                   <div class="lwa-password">
                     <div class="password_label">
-                      <label>введтие пароль</label>
+                      <label>введите пароль</label>
                     </div>
                     <div class="password_input">
-                      <input type="password" name="pwd" id="lwa_user_pass" class="input" value=""/>
+                        <div id="lwa_user_pass" class="input" value="">{{ form.password }}</div>
                     </div>
                   </div>
+                  <br><p id="error-login" style="color:red" hidden>Введен неправильный логин или пароль</p>
                   <div class="lwa-submit">
                     <div class="lwa-submit-button">
-                      <button type="submit" name="wp-submit" class="lwa-wp-submit" value="выполнить вход" tabindex="100"> <strong>выполнить</strong> вход </button>
+                      <button type="button" name="wp-submit" id="login_button" class="lwa-wp-submit" value="выполнить вход" tabindex="100"> <strong>выполнить</strong> вход </button>
                       <input type="hidden" name="lwa_profile_link" value="1"/>
                       <input type="hidden" name="login-with-ajax" value="login"/>
                     </div>
@@ -237,30 +404,37 @@
                 </div>
               </form>
               <div class="lwa-register" style="display:none;">
-                <form name="lwa-register" action="./wp-login.php?action=register" method="post">
-                  <span class="lwa-status"></span>
+                <form name="lwa-register" action="/register" method="post">
+                  {% csrf_token %}
+                  <br><br><span class="lwa-status"></span>
                   <div>
                     <div>
                       <div>
-                        <strong><p>Зарегистрироваться на этом сайте</p></strong>
+                        <strong><p>Зарегистрироваться</p></strong>
                       </div>
                     </div>
                     <div class="lwa-username">
                       <div>
-                        <label>
-                          <input type="text" name="user_login" id="user_login" value="Логин"
-                                 onfocus="if(this.value === 'Логин'){this.value = '';}"
-                                 onblur="if(this.value === ''){this.value = 'Логин'}"/>
-                        </label>
+                        <label>Введите логин</label>
+                        {% regform.username %}
                       </div>
                     </div>
                     <div class="lwa-email">
                       <div>
-                        <label>
-                          <input type="text" name="user_email" id="user_email" value="E-mail"
-                                 onfocus="if(this.value === 'E-mail'){this.value = '';}"
-                                 onblur="if(this.value === ''){this.value = 'E-mail'}"/>
-                        </label>
+                        <label>Введите E-mail</label>
+                        {% regform.email %}
+                      </div>
+                    </div>
+                    <div class="lwa-email">
+                      <div>
+                        <label>Введите пароль</label>
+                        {% regform.password1 %}
+                      </div>
+                    </div>
+                    <div class="lwa-email">
+                      <div>
+                        <label>Введите пароль еще раз</label>
+                        {% regform.password2 %}
                       </div>
                     </div>
                     <div>
@@ -269,7 +443,6 @@
                     </div>
                     <div>
                       <div>
-                        Пароль будет отправлен вам на e-mail.<br />
                         <input type="submit" value="Регистрация" tabindex="100"/>
                         <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
                         <input type="hidden" name="login-with-ajax" value="register"/>
@@ -278,7 +451,8 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </form>
+            </form>
           </div>
         </div>
       </div>
@@ -361,7 +535,7 @@
                       <figure class="effect-duke">
                         <img width="1366" height="768" src="/static/content/uploads/2019/02/look.com_.ua-264882.jpg" class="img-responsive border-r post-1-cropped wp-post-image" alt="" srcset="/static/content/uploads/2019/02/look.com_.ua-264882.jpg 1366w, /static/content/uploads/2019/02/look.com_.ua-264882-300x169.jpg 300w, /static/content/uploads/2019/02/look.com_.ua-264882-768x432.jpg 768w, /static/content/uploads/2019/02/look.com_.ua-264882-1024x576.jpg 1024w, /static/content/uploads/2019/02/look.com_.ua-264882-250x141.jpg 250w" sizes="(max-width: 1366px) 100vw, 1366px" />
                         <figcaption>
-                          <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8/"></a>
+                          <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8.html"></a>
                         </figcaption>
                       </figure>
                     </div>
@@ -379,7 +553,7 @@
                       <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0</div>
                       <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 15 марта 2019 </div>
                     </div>
-                    <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8/"> <div class="btn btn-more">Читать полностью</div> </a>
+                    <a href="./nazvanie-zapisi-8-nazvanie-zapisi-8.html"> <div class="btn btn-more">Читать полностью</div> </a>
                   </div>
                 </div>
               </div>
@@ -396,7 +570,7 @@
           <div class="row" style="padding: 0 15px;">
             <div id="post-404" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
               <div class="rating"><span><span class="post-ratings__results">5.1</span><span class="eee">из 10</span></span></div>
-              <div class="post-wrap-h2"><h2><a href="./zapis-sajta-pod-nomerom-9/">Запись сайта под номером 9</a></h2></div>
+              <div class="post-wrap-h2"><h2><a href="./zapis-sajta-pod-nomerom-9.html">Запись сайта под номером 9</a></h2></div>
               <div class="excerpt clip">
                 <p>Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнить важнейшие задания по&#8230;</p>
               </div>
@@ -746,6 +920,7 @@
       .mobmenu input[type="number"]:focus {
         border-color: rgba(0, 0, 0, 0)!important;
       }
+
       .mob-expand-submenu i {
         padding: 12px;
         top: 10px;
@@ -754,7 +929,6 @@
         cursor: pointer;
         font-size: 30px;
       }
-
     }
 
   </style>
@@ -767,6 +941,40 @@
   </script>
   <script type="text/javascript" src="/static/content/plugins/wp-postratings/js/postratings-js.js?ver=1.86.2"></script>
   <script type="text/javascript" src="/static/includes/js/wp-embed.min.js?ver=5.1.1"></script>
-  <script type="text/javascript" src="/static/content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1"></script>
+  <!-- <script type="text/javascript" src="/static/content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1"></script> -->
   <script type="text/javascript" src="/static/content/themes/sharewood/js/main.js?ver=5.1.1"></script>
+  <script type="text/javascript">
+    $('#login_button').on("click", function(){
+      $('#error-login').hide();
+      $.ajax({
+          type:"POST",
+          url: '/login/',
+          data: {
+            'login' : $('#id_username').val(),
+            'password' : $('#id_password').val(),
+            'csrfmiddlewaretoken': $( "input[name=csrfmiddlewaretoken]" ).val(),
+          },
+          success: function(response){
+              // do something with response
+              if(response['result'] == "Success!") {
+                var url = "/";
+                $(location).attr('href', url);
+              } else {
+                $('#error-login').show();
+              }
+            }
+      });
+    });
+
+    $(document).ready(function() {
+      $(".account").mousemove(function() {
+          $(".submenu").show();
+      });
+
+      $(".dropdown").mouseleave(function() {
+          $(".submenu").hide();
+      });
+
+    });
+    </script>
 </html>
