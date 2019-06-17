@@ -404,9 +404,9 @@
                 </div>
               </form>
               <div class="lwa-register" style="display:none;">
-                <form name="lwa-register" action="/register" method="post">
+                <form name="lwa-register" id="registration-form" action="/register" method="post">
                   {% csrf_token %}
-                  <br><br><span class="lwa-status"></span>
+                  <br><br><div id="reg-error"></div>
                   <div>
                     <div>
                       <div>
@@ -415,26 +415,26 @@
                     </div>
                     <div class="lwa-username">
                       <div>
-                        <label>Введите логин</label>
-                        {% regform.username %}
+                        <label>Введите логин:</label>
+                        {{ regform.username }}
                       </div>
-                    </div>
+                    </div><br>
                     <div class="lwa-email">
                       <div>
-                        <label>Введите E-mail</label>
-                        {% regform.email %}
+                        <label>Введите E-mail:</label>
+                        {{ regform.email }}
                       </div>
-                    </div>
+                    </div><br>
                     <div class="lwa-email">
                       <div>
-                        <label>Введите пароль</label>
-                        {% regform.password1 %}
+                        <label>Введите пароль:</label>
+                        {{ regform.password1 }}
                       </div>
-                    </div>
+                    </div><br>
                     <div class="lwa-email">
                       <div>
-                        <label>Введите пароль еще раз</label>
-                        {% regform.password2 %}
+                        <label>Введите пароль еще раз:</label>
+                        {{ regform.password2 }}
                       </div>
                     </div>
                     <div>
@@ -443,7 +443,7 @@
                     </div>
                     <div>
                       <div>
-                        <input type="submit" value="Регистрация" tabindex="100"/>
+                        <input type="submit" id="reg-submit" value="Регистрация" tabindex="100"/>
                         <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
                         <input type="hidden" name="login-with-ajax" value="register"/>
                       </div>
@@ -451,8 +451,7 @@
                   </div>
                 </form>
               </div>
-            </form>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -963,6 +962,31 @@
                 $('#error-login').show();
               }
             }
+      });
+    });
+
+    $("#reg-submit").on("click", function() {
+      $.ajax({
+        type : 'POST',
+        url : "/register/",
+        data : {
+          /*'login' : $('#id_username').val(),
+          'email' : $('#id_email').val(),
+                'password1' : $('#id_password1').val(),
+                'password2' : $('#id_password2').val(),*/
+                'form' : {{ regform }},
+                'csrfmiddlewaretoken': $( "#registration-form" ).find( "input[name=csrfmiddlewaretoken]" ).val(),
+        },
+        success : function(data){
+          alert("Hey");
+          if(response['result'] == "Success!") {
+                    var url = "/";
+                    $(location).attr('href', url);
+
+                }   else {
+                    $('#reg-error').html(response['result']);
+                }
+        },
       });
     });
 
