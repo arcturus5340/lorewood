@@ -1,11 +1,14 @@
 import json
 import django.http
 import django.shortcuts
+import django.core.exceptions
 import django.contrib.auth
+import django.contrib.auth.password_validation
 import django.contrib.auth.models
 import django.contrib.auth.forms
 import django_registration.backends.activation.views
 import django_registration.forms
+import django.db.utils
 
 def index(request):
     regform = django_registration.forms.RegistrationForm
@@ -37,23 +40,38 @@ def register(request):
     password1 = request.POST.getlist('password1')
     password2 = request.POST.getlist('password2')
     
-    regform = django_registration.forms.RegistrationForm(request.POST)
-    regview = django_registration.backends.activation.views.RegistrationView()
     response_data = {}
 
+    error = ""
     registrated = False
     if(password1 != password2):
         response_data['result'] = "Пароли не совпадают"
-    else:    
+    else:   
         try:
-            user = regview.create_inactive_user(regform)
-            registrated = True
-        except ValueError as err:
-            response_data['result'] = "Произошла ошибка при валидации"
-        except AttributeError:
-            registrated = True
+            validate = django.contrib.auth.password_validation.validate_password(password1[0])
+            try:
+                user = django.contrib.auth.models.User.objects.create_user(username[0], email[0], password1[0])
+                registrated = True
+            except ValueError as err:
+                error = "Произошла ошибка при валидации"
+            except django.db.utils.IntegrityError:
+                error = "Такой юзернейм уже зарегестрирован"
+
+        except django.core.exceptions.ValidationError as err:
+            error_str = str(err)
+            if error_str.find("too short") != -1:
+                error = "Пароль слишком короткий. Минимальное количество - 8 cимволов"
+            elif error_str.find("too common") != -1:
+                error = "Пароль слишком предсказуемый"
+            else:
+                error = "Пароль содержит недопустимые символы"
+        
+        response_data['result'] = error
 
     if registrated:
+        user = django.contrib.auth.authenticate(username=username[0], password=password1[0])
+        django.contrib.auth.login(request, user)
+
         response_data['result'] = "Success!" 
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
