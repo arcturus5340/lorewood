@@ -6,6 +6,7 @@ import django.contrib.auth
 import django.contrib.auth.password_validation
 import django.contrib.auth.models
 import django.contrib.auth.forms
+import django.template
 import django_registration.backends.activation.views
 import django_registration.forms
 import django.db.utils
@@ -76,18 +77,32 @@ def register(request):
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
-    # response_data = {}
-    # if password1[0] == password2[0]:
-    #     user = django.contrib.auth.models.User.objects.create_user(username[0], email[0], password1[0])
-    # else:
-    #     response_data['result'] = "Ошибка! Пароли не совпадают."
+def advertising(request):
+    template = django.template.loader.get_template('../templates/advertising.html')
+    return django.http.HttpResponse(template.render())
 
-    # if user is not None:
-    #     response_data['result'] = 'Success!'
-    # else:
-    #     response_data['result'] = user
 
-    # return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
-    # # Registration function
+ def donations(request):
+    template = django.template.loader.get_template('../templates/donations.html')
+    return django.http.HttpResponse(template.render())
 
+
+ def info(request):
+    template = django.template.loader.get_template('../templates/info.html')
+    return django.http.HttpResponse(template.render())
+
+
+ def regulations(request):
+    template = django.template.loader.get_template('../templates/regulations.html')
+    return django.http.HttpResponse(template.render())
+
+
+ def rightholder(request):
+    template = django.template.loader.get_template('../templates/rightholder.html')
+    return django.http.HttpResponse(template.render())
+
+
+ def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
+    template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
+    return django.http.HttpResponse(template.render()) 
 
