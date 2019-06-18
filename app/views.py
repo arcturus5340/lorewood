@@ -10,13 +10,37 @@ import django.template
 import django_registration.backends.activation.views
 import django_registration.forms
 import django.db.utils
+import django.core.paginator
+
+import app.models
+import datetime
+
+def record(request):
+    print(request.get_full_path())
 
 
 def index(request):
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
+
+    record_list = app.models.Records.objects.all()
+    paginator = django.core.paginator.Paginator(record_list, 3)
+
+    page = request.GET.get('page')
+    records = paginator.get_page(page)
+
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
     authnext = "/"
-    return django.shortcuts.render(request, 'index.html', {'form' : authform, 'next' : authnext, 'regform' : regform })
+
+    return django.shortcuts.render(request, 'index.html', {
+                                                           'form' : authform,
+                                                           'next' : authnext,
+                                                           'regform' : regform,
+                                                           'records': records,
+                                                           })
 
 
 def login(request):
@@ -81,34 +105,6 @@ def register(request):
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
-def advertising(request):
-    template = django.template.loader.get_template('../templates/advertising.html')
-    return django.http.HttpResponse(template.render())
-
-
- def donations(request):
-    template = django.template.loader.get_template('../templates/donations.html')
-    return django.http.HttpResponse(template.render())
-
-
- def info(request):
-    template = django.template.loader.get_template('../templates/info.html')
-    return django.http.HttpResponse(template.render())
-
-
- def regulations(request):
-    template = django.template.loader.get_template('../templates/regulations.html')
-    return django.http.HttpResponse(template.render())
-
-
- def rightholder(request):
-    template = django.template.loader.get_template('../templates/rightholder.html')
-    return django.http.HttpResponse(template.render())
-
-
- def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
-    template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
-    return django.http.HttpResponse(template.render()) 
 
 def advertising(request):
     template = django.template.loader.get_template('../templates/advertising.html')
