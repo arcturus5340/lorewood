@@ -38,8 +38,7 @@ jQuery(document).ready( function($) {
 			url : form_action,
 			data : form.serialize(),
 			success : function(data){
-				lwaAjax( data, statusElement );
-				$(document).trigger('lwa_' + data.action, [data, form]);
+				alert("HEY")
 			},
 			error : function(){ lwaAjax({}, statusElement); },
 			dataType : 'jsonp'
