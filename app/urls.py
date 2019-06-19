@@ -14,5 +14,6 @@ urlpatterns = [
     path('regulations/', views.regulations, name='regulations'),
     path('rightholder/', views.rightholder, name='rightholder'),
     path('nazvanie-zapisi-8-nazvanie-zapisi-8/', views.nazvanie_zapisi_8_nazvanie_zapisi_8, name='advertising'),
+    path('user/<str:username>/<str:activation_key>', views.activate_account, name='activate_account')
     re_path(r'r.*/', views.record, name='advertising'),
 ]
