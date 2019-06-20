@@ -230,6 +230,11 @@
           <div class="lwa lwa-template-modal">
             {% if user.is_authenticated %}
             <!-- <a href="/logout" class="logout-label"> Выйти </a> -->
+            {% if user.is_active %}
+              <div style="position:absolute; margin-left: 135px; margin-top: 14px; color:green"> {{ user.get_username }} </div>
+            {% else %}
+              <div style="position:absolute; margin-left: 135px; margin-top: 6px; color:red; text-align: center"> {{ user.get_username }} <br><p style="font-size: 10px">(не активный)</p> </div>
+            {% endif %}
             <div class="dropdown" style="float:right">
               <a href="#" class="account">
                 <img alt="" src="/static/includes/images/avatar-default.png" class="profile-circle"/>
@@ -302,8 +307,8 @@
                   </div>
                 </form>
                 <br>
-                <form name="lwa-remember" class="lwa-remember" action="./wp-login.php?action=lostpassword" method="post" style="display:none;"> <!-- WTF?! -->
-                  <span class="lwa-status"></span>
+                <form name="lwa-remember" class="lwa-remember" id="remember-form" method="post" style="display:none;"> <!-- WTF?! -->
+                {% csrf_token %}
                   <div>
                     <div>
                       <div>
@@ -313,14 +318,13 @@
                     </div>
                     <div class="lwa-remember-email">
                       <div>
-                        <input type="text" name="user_login" id="lwa_user_remember" value="Введите имя пользователя или email"
-                               onfocus="if(this.value === 'Введите имя пользователя или email'){this.value = '';}"
-                               onblur="if(this.value === ''){this.value = 'Введите имя пользователя или email'}"/> <!-- need label -->
+                        <input type="text" name="user_login" id="lwa_user_remember" placeholder="Введите имя пользователя или email" required /> <!-- need label -->
                       </div>
                     </div>
                     <div>
+                      <br><div id="remember-errors" style="color:red"></div>
                       <div>
-                        <input type="submit" value="Получить новый пароль"/>
+                        <input id="remember-button" type="submit" value="Восстановить пароль"/>
                         <a href="#" class="lwa-links-remember-cancel"> Отмена </a>
                         <input type="hidden" name="login-with-ajax" value="remember"/>
                       </div>
@@ -330,7 +334,7 @@
                 <div class="lwa-register" style="display:none;">
                   <form name="lwa-register" id="registration-form" action="/register/" method="post">
                     {% csrf_token %}
-                    <br><br><div id="reg-error"></div>
+                    <br><br>
                     <div>
                       <div>
                         <div>
@@ -340,25 +344,25 @@
                       <div class="lwa-username">
                         <div>
                           <label>Введите логин:</label>
-                          {{ regform.username }}
+                          <input type="text" name="username" autofocus required maxlength="20" id="id_username">
                         </div>
                       </div><br>
                       <div class="lwa-email">
                         <div>
                           <label>Введите E-mail:</label>
-                          {{ regform.email }}
+                          <input type="email" name="email" required maxlength="254" id="id_email">
                         </div>
                       </div><br>
                       <div class="lwa-email">
                         <div>
                           <label>Введите пароль:</label>
-                          {{ regform.password1 }}
+                          <input type="password" name="password1" required id="id_password1">
                         </div>
                       </div><br>
                       <div class="lwa-email">
                         <div>
                           <label>Введите пароль еще раз:</label>
-                          {{ regform.password2 }}
+                          <input type="password" name="password2" required id="id_password2">
                         </div>
                       </div>
                       <div>
@@ -367,6 +371,7 @@
                       </div>
                       <div>
                         <div>
+                          <br><div id="errors" style="color:red"></div>
                           <input type="submit" id="reg-submit" value="Регистрация" tabindex="100"/>
                           <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
                           <input type="hidden" name="login-with-ajax" value="register"/>
@@ -857,33 +862,9 @@
                 $(location).attr('href', url);
               } else {
                 $('#error-login').show();
+                $(".lwa-loading").remove()
               }
             }
-      });
-    });
-
-    $("#reg-submit").on("click", function() {
-      $.ajax({
-        type : 'POST',
-        url : "/register/",
-        data : {
-          /*'login' : $('#id_username').val(),
-          'email' : $('#id_email').val(),
-                'password1' : $('#id_password1').val(),
-                'password2' : $('#id_password2').val(),*/
-                'form' : {{ regform }},
-                'csrfmiddlewaretoken': $( "#registration-form" ).find( "input[name=csrfmiddlewaretoken]" ).val(),
-        },
-        success : function(data){
-          alert("Hey");
-          if(response['result'] === "Success!") {
-                    let url = "/";
-                    $(location).attr('href', url);
-
-                }   else {
-                    $('#reg-error').html(response['result']);
-                }
-        },
       });
     });
 
@@ -897,5 +878,26 @@
       });
 
     });
+
+    $('#remember-button').on("click", function(i){
+      $('#remember-errors').hide();
+      i.preventDefault();
+      $.ajax({
+        type:"POST",
+        url: '/remember/',
+        data: $("#remember-form").serialize(),
+        success: function(response){
+          // do something with response
+          if(response['result'] === "Success!") {
+            let url = "/";
+            $(location).attr('href', url);
+          } else {
+            $('#remember-errors').show();
+            $('#remember-errors').html(response["result"]);
+          }
+        }
+      });
+    });
+
     </script>
 </html>

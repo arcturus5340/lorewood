@@ -14,5 +14,11 @@ urlpatterns = [
     path('regulations/', views.regulations, name='regulations'),
     path('rightholder/', views.rightholder, name='rightholder'),
     path('nazvanie-zapisi-8-nazvanie-zapisi-8/', views.nazvanie_zapisi_8_nazvanie_zapisi_8, name='advertising'),
+    path('user/<str:username>/activate/<str:activation_key>', views.activate_account, name='activate_account'),
+    # Форма для изменения пароля 
+    path('user/<str:username>/remember/<str:activation_key>', views.password_change_view, name='password_change_view'),
+    path('remember/', views.remember, name='remember'),
+    # Функция изменение пароля
+    path('user/<str:username>/change-password/', views.change_password, name="change_password"),
     re_path(r'r.*/', views.record, name='advertising'),
 ]
