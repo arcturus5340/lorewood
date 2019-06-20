@@ -19,34 +19,36 @@ import re
 
 import app.models
 import datetime
+import math
+
 
 address = "http://127.0.0.1:8000/"
 
 def record(request):
     print(request.get_full_path())
 
-def index(request):
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
 
+from el_pagination.decorators import page_template
+
+@page_template('entry_index.html')
+def index(request, template='index.html', extra_context=None):
     record_list = app.models.Records.objects.all()
-    paginator = django.core.paginator.Paginator(record_list, 3)
-
-    page = request.GET.get('page')
-    records = paginator.get_page(page)
 
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
     authnext = "/"
 
-    return django.shortcuts.render(request, 'index.html', {
-                                                           'form' : authform,
-                                                           'next' : authnext,
-                                                           'regform' : regform,
-                                                           'records': records,
-                                                           })
+    context = {
+               'form' : authform,
+               'next' : authnext,
+               'regform' : regform,
+               'records': record_list,
+    }
+
+    if extra_context is not None:
+        context.update(extra_context)
+
+    return django.shortcuts.render(request, template, context)
 
 
 def login(request):
@@ -149,6 +151,7 @@ def rightholder(request):
 def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
     template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
     return django.http.HttpResponse(template.render())
+
 
 def activation_key_generator(size=40, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
@@ -275,6 +278,3 @@ def change_password(request, username):
     else:
         response_data['result'] = "Пароли не совпадают"
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
-
-
-
