@@ -293,8 +293,8 @@
                   </div>
                 </form>
                 <br>
-                <form name="lwa-remember" class="lwa-remember" action="./wp-login.php?action=lostpassword" method="post" style="display:none;"> <!-- WTF?! -->
-                  <span class="lwa-status"></span>
+                <form name="lwa-remember" class="lwa-remember" id="remember-form" method="post" style="display:none;"> <!-- WTF?! -->
+                {% csrf_token %}
                   <div>
                     <div>
                       <div>
@@ -304,14 +304,13 @@
                     </div>
                     <div class="lwa-remember-email">
                       <div>
-                        <input type="text" name="user_login" id="lwa_user_remember" value="Введите имя пользователя или email"
-                               onfocus="if(this.value === 'Введите имя пользователя или email'){this.value = '';}"
-                               onblur="if(this.value === ''){this.value = 'Введите имя пользователя или email'}"/> <!-- need label -->
+                        <input type="text" name="user_login" id="lwa_user_remember" placeholder="Введите имя пользователя или email" required /> <!-- need label -->
                       </div>
                     </div>
                     <div>
+                      <br><div id="remember-errors" style="color:red"></div>
                       <div>
-                        <input type="submit" value="Получить новый пароль"/>
+                        <input id="remember-button" type="submit" value="Восстановить пароль"/>
                         <a href="#" class="lwa-links-remember-cancel"> Отмена </a>
                         <input type="hidden" name="login-with-ajax" value="remember"/>
                       </div>
@@ -898,6 +897,7 @@
                 $(location).attr('href', url);
               } else {
                 $('#error-login').show();
+                $(".lwa-loading").remove()
               }
             }
       });
@@ -913,5 +913,26 @@
       });
 
     });
+
+    $('#remember-button').on("click", function(i){
+      $('#remember-errors').hide();
+      i.preventDefault();
+      $.ajax({
+        type:"POST",
+        url: '/remember/',
+        data: $("#remember-form").serialize(),
+        success: function(response){
+          // do something with response
+          if(response['result'] === "Success!") {
+            let url = "/";
+            $(location).attr('href', url);
+          } else {
+            $('#remember-errors').show();
+            $('#remember-errors').html(response["result"]);
+          }
+        }
+      });
+    });
+
     </script>
 </html>
