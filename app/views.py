@@ -14,33 +14,44 @@ import django.core.paginator
 
 import app.models
 import datetime
+import math
+
 
 def record(request):
     print(request.get_full_path())
 
 
-def index(request):
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
-    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1)
+from el_pagination.decorators import page_template
+
+@page_template('entry_index.html')
+def index(request, template='index.html', extra_context=None):
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1, main_pic='../record_src/r1/look.com_.ua-264882')
+    # b = app.models.Records.objects.create(title='Beatles Blog', text='All the latest Beatles news.', description='All the lqwdassdasdasdasdasdasdasdasdasdasdatest Beatles news.', rating=10.1, main_pic='../record_src/r1/look.com_.ua-264882')
 
     record_list = app.models.Records.objects.all()
-    paginator = django.core.paginator.Paginator(record_list, 3)
+    # paginator = django.core.paginator.Paginator(record_list, 5)
 
-    page = request.GET.get('page')
-    records = paginator.get_page(page)
+    # page = request.GET.get('page')
+    # records = paginator.get_page(page)
 
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
     authnext = "/"
 
-    return django.shortcuts.render(request, 'index.html', {
-                                                           'form' : authform,
-                                                           'next' : authnext,
-                                                           'regform' : regform,
-                                                           'records': records,
-                                                           })
+    context = {
+               'form' : authform,
+               'next' : authnext,
+               'regform' : regform,
+               'records': record_list,
+    }
+
+    # if request.is_ajax():
+    #     template = page_template
+
+    if extra_context is not None:
+        context.update(extra_context)
+
+    return django.shortcuts.render(request, template, context)
 
 
 def login(request):
@@ -134,3 +145,40 @@ def rightholder(request):
 def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
     template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
     return django.http.HttpResponse(template.render())
+#
+# < ul
+#
+#
+# class ="pagination" > < !-- Выровнить по центрц --> < !--
+#
+#
+# { % load
+# filters %}
+# { %
+# for index in records.paginator.num_pages | for_range: 1 %}
+# { % if index == records.number %}
+# < li
+#
+#
+# class ="active" > < span aria-current="page" class ="page-numbers current" > {{index}} < / span > < / li >
+#
+#
+# { % else %}
+# < li > < a
+#
+#
+# class ="page-numbers" href="?page={{ index }}" > {{index}} < / a > < / li >
+#
+#
+# { % endif %}
+# { % endfor %}
+#
+# { % if records.has_next %}
+# < li > < a
+#
+#
+# class ="next page-numbers" href="?page={{ records.next_page_number }}" >> < / a > < / li >
+#
+#
+# { % endif %}
+# < / ul >
