@@ -32,6 +32,13 @@ from el_pagination.decorators import page_template
 
 @page_template('entry_index.html')
 def index(request, template='index.html', extra_context=None):
+    # obj = app.models.Records.objects.create(title="Название Записи",
+    #                                         main_pic="/static/record_src/r1/look.com_.ua-264882.jpg",
+    #                                         description="Описание. Описание. Описание. Описание. Описание. Описание. Описание. ",
+    #                                         text="Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. ",
+    #                                         rating=9.4)
+
+
     record_list = app.models.Records.objects.all()
 
     regform = django_registration.forms.RegistrationForm

@@ -1845,8 +1845,8 @@ tinycolor.isReadable = function(color1, color2, wcag2) {
 // colors for that base, returns the most readable color.
 // Optionally returns Black or White if the most readable color is unreadable.
 // *Example*
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
-//    tinycolor.mostReadable(tinycolor.mostReadable("#123", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
+//    tinycolor.mostReadable(tinycolor.mostReadable("#123.html", ["#124", "#125"],{includeFallbackColors:false}).toHexString(); // "#112255"
+//    tinycolor.mostReadable(tinycolor.mostReadable("#123.html", ["#124", "#125"],{includeFallbackColors:true}).toHexString();  // "#ffffff"
 //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"large"}).toHexString(); // "#faf3f3"
 //    tinycolor.mostReadable("#a8015a", ["#faf3f3"],{includeFallbackColors:true,level:"AAA",size:"small"}).toHexString(); // "#ffffff"
 tinycolor.mostReadable = function(baseColor, colorList, args) {
@@ -4690,7 +4690,7 @@ module.exports = _extends({
 
 /***/ }),
 /* 122 */,
-/* 123 */,
+/* 123.html */,
 /* 124 */
 /***/ (function(module, exports) {
 

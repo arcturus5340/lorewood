@@ -515,7 +515,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (!terminated) {
 	                switch (result.length) {
 	                    case 2:
-	                        // e.g. '&#123;'
+	                        // e.g. '&#123.html;'
 	                        numeric = (ch === '#');
 	                        break;
 	                    case 3:
