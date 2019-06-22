@@ -13,24 +13,19 @@ import django_registration.forms
 import django.db.utils
 import django.core.paginator
 import django.core.mail
+import el_pagination.decorators
+
 import string
 import random
 import re
 
 import app.models
-import datetime
-import math
 
 
 address = "http://127.0.0.1:8000/"
 
-def record(request):
-    print(request.get_full_path())
 
-
-from el_pagination.decorators import page_template
-
-@page_template('entry_index.html')
+@el_pagination.decorators.page_template('entry_index.html')
 def index(request, template='index.html', extra_context=None):
     # obj = app.models.Records.objects.create(title="Название Записи",
     #                                         main_pic="/static/record_src/r1/look.com_.ua-264882.jpg",
@@ -155,13 +150,24 @@ def rightholder(request):
     return django.http.HttpResponse(template.render())
 
 
-def nazvanie_zapisi_8_nazvanie_zapisi_8(request):
-    template = django.template.loader.get_template('../templates/nazvanie-zapisi-8-nazvanie-zapisi-8.html')
-    return django.http.HttpResponse(template.render())
+def record(request, record_id):
+    prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
+    record = app.models.Records.objects.get(id=record_id)
+
+    record_id = 1 if record_id+1 >= app.models.Records.objects.count() else record_id+1
+    next_record = app.models.Records.objects.get(id=record_id)
+    author = django.contrib.auth.models.User.objects.get(username=record.author)
+    return django.shortcuts.render(request, "record.html", {
+                                                             'prev_record': prev_record,
+                                                             'record': record,
+                                                             'next_record': next_record,
+                                                             'author': author,
+                                                           })
 
 
 def activation_key_generator(size=40, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
+
 
 def send_activation_email(username, email):
     activation_key = activation_key_generator()
@@ -174,6 +180,7 @@ def send_activation_email(username, email):
 
     send_email = django.core.mail.send_mail(subject, message, from_email, to_list)
     return send_email
+
 
 def validate_password(password):
     error = "no error"
@@ -194,7 +201,7 @@ def activate_account(request, username, activation_key):
     invalid = False
     try:
         compare_data = app.models.UserActivation.objects.get(username=username)
-        
+
         if compare_data.activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
             this_user.is_active = True
@@ -212,6 +219,7 @@ def activate_account(request, username, activation_key):
     if invalid:
         template = django.template.loader.get_template('../templates/invalid_activation_key.html')
         return django.http.HttpResponse(template.render())
+
 
 def remember(request):
     user_login = request.POST["user_login"]
@@ -248,6 +256,7 @@ def remember(request):
             response_data['result'] = "Пользователь не подтвердил свою электронную почту"
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
+
 def password_change_view(request, username, activation_key):
     invalid = True
     
@@ -263,6 +272,7 @@ def password_change_view(request, username, activation_key):
         return django.http.HttpResponse(template.render())
     else:
         return django.shortcuts.render(request, 'user/password_change.html', {'username':username})
+
 
 def change_password(request, username):
     new_password1 = request.POST["new_password1"]
