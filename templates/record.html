@@ -41,9 +41,9 @@
     <!-- WTF?! -->
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://sharewood.online/wp-includes/wlwmanifest.xml" />
     <!-- WTF?! -->
-    <link rel='prev' title='Название записи 7' href='https://sharewood.online/nazvanie-zapisi-7/' />
+    <link rel='prev' title='{{ prev_record.title }}' href='/r{{ prev_record.id }}' />
     <!-- WTF?! -->
-    <link rel='next' title='Запись сайта под номером 9' href='https://sharewood.online/zapis-sajta-pod-nomerom-9/' />
+    <link rel='next' title='{{ next_record.title }}' href='/r{{ next_record.id }}' />
     <!-- WTF?! -->
     <meta name="generator" content="WordPress 5.1.1" />
     <link rel="canonical" href="/r{{ record.id }}" />
