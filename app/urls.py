@@ -20,4 +20,5 @@ urlpatterns = [
     # Функция изменение пароля
     path('user/<str:username>/change-password/', views.change_password, name="change_password"),
     path('r<int:record_id>/', views.record, name='record'),
+    path('tag/<str:tag>/', views.records_by_tags, name='records_by_text'),
 ]

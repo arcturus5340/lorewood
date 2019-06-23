@@ -25,7 +25,7 @@ import app.models
 address = "http://127.0.0.1:8000/"
 
 
-@el_pagination.decorators.page_template('entry_index.html')
+@el_pagination.decorators.page_template('records_listrecords_list.html')
 def index(request, template='index.html', extra_context=None):
     # obj = app.models.Records.objects.create(title="Название Записи",
     #                                         main_pic="/static/record_src/r1/look.com_.ua-264882.jpg",
@@ -153,7 +153,17 @@ def rightholder(request):
 def record(request, record_id):
     prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
     record = app.models.Records.objects.get(id=record_id)
+    similar_records = []
+    for tag in record.tags.split(", "):
+        for r in app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag)):
+            if r not in similar_records and r != record:
+                similar_records.append(r)
 
+    random.shuffle(similar_records)
+    if len(similar_records) > 1:
+        similar_records = similar_records[:2]
+    elif len(similar_records) > 0:
+        similar_records = similar_records[:1]
     record_id = 1 if record_id+1 >= app.models.Records.objects.count() else record_id+1
     next_record = app.models.Records.objects.get(id=record_id)
     author = django.contrib.auth.models.User.objects.get(username=record.author)
@@ -162,7 +172,24 @@ def record(request, record_id):
                                                              'record': record,
                                                              'next_record': next_record,
                                                              'author': author,
+                                                             'similar_records': similar_records,
                                                            })
+
+
+@el_pagination.decorators.page_template('records_list.html')
+def records_by_tags(request, tag, template='records_by_tag.html', extra_context=None):
+    records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
+
+    context = {
+               'tag': tag,
+               'records': records,
+              }
+
+    if extra_context is not None:
+        context.update(extra_context)
+
+    print(records)
+    return django.shortcuts.render(request, template, context)
 
 
 def activation_key_generator(size=40, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):

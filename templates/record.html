@@ -41,9 +41,9 @@
     <!-- WTF?! -->
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://sharewood.online/wp-includes/wlwmanifest.xml" />
     <!-- WTF?! -->
-    <link rel='prev' title='{{ prev_record.title }}' href='/r{{ prev_record.id }}' />
+    <link rel='prev' title='Название записи 7' href='https://sharewood.online/nazvanie-zapisi-7/' />
     <!-- WTF?! -->
-    <link rel='next' title='{{ next_record.title }}' href='/r{{ next_record.id }}' />
+    <link rel='next' title='Запись сайта под номером 9' href='https://sharewood.online/zapis-sajta-pod-nomerom-9/' />
     <!-- WTF?! -->
     <meta name="generator" content="WordPress 5.1.1" />
     <link rel="canonical" href="/r{{ record.id }}" />
@@ -327,10 +327,10 @@
                                                         <source src="{{ media|slice:"1:" }}">
                                                     </audio>
                                                 {% elif media.0 == 'F' %}
-                                                  <a href="{{ media|slice:"1:" }}" download>{{ media|split:"/"|last }}</a>
+                                                    <a href="{{ media|slice:"1:" }}" download>{{ media|split:"/"|last }}</a>
                                                 {% elif media.0 == 'V' %}
                                                      <video width="640" height="480" controls>
-                                                        <source src="{{ media|slice:"1:" }}">
+                                                        <source src="{{ media|slice:"1:" }}" type="video/webm, codecs='vp8, vorbis'">
                                                     </video>
                                                 {% endif %}
                                                 <br>
@@ -422,7 +422,7 @@
                                 </div>
                                 </span>
                                 <div id="post-ratings-402-loading" class="post-ratings-loading">
-                                    <img src="https://sharewood.online/wp-content/plugins/wp-postratings/images/loading.gif" width="16" height="16" class="post-ratings-image" alt="" /> Загрузка...</div>
+                                    <img src="/static/content/plugins/wp-postratings/images/loading.gif" width="16" height="16" class="post-ratings-image" alt="" /> Загрузка...</div>
                             </div>
                         </div>
                         <div class="col col-md-6 col-xs-12">
@@ -603,40 +603,29 @@
                         <div class="related-block">
                             <h3>Может быть <span>интересно</span></h3>
                             <ul>
-                                <li>
-                                    <div class="cell">
-                                        <a href="https://sharewood.online/gejmer-vstroil-v-igre-jemuljatornuju-kon/"></a>
-                                        <img width="1170" height="800" src="https://sharewood.online/wp-content/uploads/2019/02/img.jpeg" class="img-responsive related-cropped wp-post-image" alt="" sizes="(max-width: 1170px) 100vw, 1170px" />
-                                        <div class="related-wrap">
-                                            <div class="tags"> <a href="https://sharewood.online/tag/mashiny/" rel="tag">машины</a> <a href="https://sharewood.online/tag/ovoshhi/" rel="tag">овощи</a> <a href="https://sharewood.online/tag/stomatolog/" rel="tag">стоматолог</a> <a href="https://sharewood.online/tag/frukty/" rel="tag">фрукты</a></div>
-                                            <a href="https://sharewood.online/gejmer-vstroil-v-igre-jemuljatornuju-kon/" rel="bookmark" title="Геймер встроил в игре эмуляторную консоль и установил мировой рекорд">
-                                                <h2>Геймер встроил в игре эмуляторную консоль и установил мировой рекорд</h2>
-                                            </a>
-                                            <div class="excerpt">
-                                                <p>В блоге Американка МагГи появилась запись, посвящённая новому проекту Alice: Asylum. Теперь можно сказать, что&#8230;</p>
+                                {% for similar_record in similar_records %}
+                                    <li>
+                                        <div class="cell">
+                                            <a href="/r{{ similar_record.id }}"></a>
+                                            <img width="1170" height="800" src="{{ similar_record.main_pic }}" class="img-responsive related-cropped wp-post-image" alt="" sizes="(max-width: 1170px) 100vw, 1170px" />
+                                            <div class="related-wrap">
+                                                <div class="tags">
+                                                    {% for tag in similar_record.tags|split:", " %}
+                                                        <a href="/tag/{{ tag }}" rel="tag">{{ tag }}</a>
+                                                    {% endfor %}
+                                                </div>
+                                                <a href="/r{{ similar_record.id }}" rel="bookmark" title="{{ similar_record.title }}">
+                                                    <h2>{{ similar_record.title }}</h2>
+                                                </a>
+                                                <div class="excerpt">
+                                                    <p>{{ similar_record.discription }}</p>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <i class="fa fa-clock-o" aria-hidden="true"></i> 14 февраля 2019 </div>
                                             </div>
-                                            <div class="meta-item">
-                                                <i class="fa fa-clock-o" aria-hidden="true"></i> 14 февраля 2019 </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cell">
-                                        <a href="https://sharewood.online/zapis-sajta-pod-nomerom-9/"></a>
-                                        <img width="1366" height="768" src="https://sharewood.online/wp-content/uploads/2019/02/look.com_.ua-255555.jpg" class="img-responsive related-cropped wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
-                                        <div class="related-wrap">
-                                            <div class="tags"> <a href="https://sharewood.online/tag/mashiny/" rel="tag">машины</a> <a href="https://sharewood.online/tag/ovoshhi/" rel="tag">овощи</a> <a href="https://sharewood.online/tag/stomatolog/" rel="tag">стоматолог</a> <a href="https://sharewood.online/tag/frukty/" rel="tag">фрукты</a></div>
-                                            <a href="https://sharewood.online/zapis-sajta-pod-nomerom-9/" rel="bookmark" title="Запись сайта под номером 9">
-                                                <h2>Запись сайта под номером 9</h2>
-                                            </a>
-                                            <div class="excerpt">
-                                                <p>Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнить важнейшие задания по&#8230;</p>
-                                            </div>
-                                            <div class="meta-item">
-                                                <i class="fa fa-clock-o" aria-hidden="true"></i> 15 марта 2019 </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>

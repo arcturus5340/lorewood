@@ -1,0 +1,75 @@
+{% load el_pagination_tags %}
+
+{% paginate records %}
+{% for record in records %}
+  {% if forloop.counter0|divisibleby:2 %}
+  <div class="post-block post-block-1">
+    <article id="post-402" class="post-402 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 pr-0" style="position: relative;">
+          <div class="name-cat-wrap">
+            <div class="name-cat"></div>
+          </div>
+          <a href="/r{{ record.id }}/">
+            <div class="grid">
+              <figure class="effect-duke">
+                <img width="1366" height="768" src="{{ record.main_pic }}" class="img-responsive border-r post-1-cropped wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                <figcaption>
+                  <a href="/r{{ record.id }}/"></a>
+                </figcaption>
+              </figure>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6">
+          <div class="post-wrap">
+            <div class="rating"><span><span class="post-ratings__results">{{ record.rating }}</span> <span class="eee">из 10</span></span></div>
+            <div class="post-wrap-h2"><h2><a href="/r{{ record.id }}/">{{ record.title }}</a></h2></div>
+            <div class="excerpt clip">
+              <p>{{ record.description }}</p>
+            </div>
+            <div class="meta-block">
+              <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>
+              <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0</div> <!-- comments -->
+              <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ record.date }}</div>
+            </div>
+            <a href="/r{{ record.id }}/"> <div class="btn btn-more">Читать полностью</div> </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  {% else %}
+  <div class="post-block post-block-2">
+    <article id="post-396" class="post-396 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
+      <div class="row border-r post-2-cropped post-2-overlay" style="margin: 0; background: url('{{ record.main_pic }}')no-repeat;background-size: cover;">
+        <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 border-l">
+          <div class="name-cat"></div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6">
+          <div class="post-wrap">
+            <div class="rating">
+              <span><span class="post-ratings__results">{{ record.rating }}</span> <span class="eee">из 10</span></span>
+            </div>
+            <div class="post-wrap-h2">
+              <h2><a href="/r{{ record.id }}">{{ record.title }}</a></h2>
+            </div>
+            <div class="excerpt clip">
+              <p>{{ record.description }}</p>
+            </div>
+            <div class="meta-block">
+              <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>
+              <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0 </div>
+              <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i>15 марта 2019          </div>
+              <a href="/r{{ record.id }}">
+                <div class="btn btn-more"><strong>Читать</strong> полностью</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  {% endif %}
+{% endfor %}
+{% show_more %}
