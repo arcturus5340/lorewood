@@ -12,3 +12,8 @@ def for_range(value, start_index=0):
 @register.filter(name='split')
 def split_filter(value, arg):
     return value.split(arg)
+
+
+@register.filter(name='strftime')
+def strftime(date, template):
+    return date.strftime(template)

@@ -9,7 +9,7 @@ class Records(django.db.models.Model):
     description = django.db.models.TextField(default='')
     text = django.db.models.TextField()
     media = django.db.models.TextField(default='/static/record_src/r1/media/01. Balls To The Wall.mp3')
-#    date = django.db.models.DateField(auto_now_add=True)
+    date = django.db.models.DateField(default=datetime.datetime.now())
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
 

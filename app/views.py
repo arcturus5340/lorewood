@@ -25,7 +25,7 @@ import app.models
 address = "http://127.0.0.1:8000/"
 
 
-@el_pagination.decorators.page_template('records_listrecords_list.html')
+@el_pagination.decorators.page_template('records_list.html')
 def index(request, template='index.html', extra_context=None):
     # obj = app.models.Records.objects.create(title="Название Записи",
     #                                         main_pic="/static/record_src/r1/look.com_.ua-264882.jpg",
