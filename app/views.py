@@ -20,6 +20,7 @@ import random
 import re
 
 import app.models
+import app.forms
 
 
 address = "http://127.0.0.1:8000/"
@@ -195,7 +196,6 @@ def records_by_tags(request, tag, template='records_by_tag.html', extra_context=
 def activation_key_generator(size=40, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
 
-
 def send_activation_email(username, email):
     activation_key = activation_key_generator()
     user_activation = app.models.UserActivation.objects.create_user_key(username, activation_key)
@@ -207,7 +207,6 @@ def send_activation_email(username, email):
 
     send_email = django.core.mail.send_mail(subject, message, from_email, to_list)
     return send_email
-
 
 def validate_password(password):
     error = "no error"
@@ -228,7 +227,7 @@ def activate_account(request, username, activation_key):
     invalid = False
     try:
         compare_data = app.models.UserActivation.objects.get(username=username)
-
+        
         if compare_data.activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
             this_user.is_active = True
@@ -246,7 +245,6 @@ def activate_account(request, username, activation_key):
     if invalid:
         template = django.template.loader.get_template('../templates/invalid_activation_key.html')
         return django.http.HttpResponse(template.render())
-
 
 def remember(request):
     user_login = request.POST["user_login"]
@@ -283,7 +281,6 @@ def remember(request):
             response_data['result'] = "Пользователь не подтвердил свою электронную почту"
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
-
 def password_change_view(request, username, activation_key):
     invalid = True
     
@@ -299,7 +296,6 @@ def password_change_view(request, username, activation_key):
         return django.http.HttpResponse(template.render())
     else:
         return django.shortcuts.render(request, 'user/password_change.html', {'username':username})
-
 
 def change_password(request, username):
     new_password1 = request.POST["new_password1"]
@@ -321,4 +317,91 @@ def change_password(request, username):
             response_data['result'] = validate_pass
     else:
         response_data['result'] = "Пароли не совпадают"
+    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+
+def change_cabinet_password(request):
+    username = request.user.username
+    new_password1 = request.POST["new_password1"]
+    new_password2 = request.POST["new_password2"]
+    response_data = {}
+
+    if new_password1 == new_password2:
+        validate_pass = validate_password(new_password1)
+        if validate_pass == "no error":
+            user = django.contrib.auth.models.User.objects.get(username=username)
+            user.set_password(new_password1)
+            user.save()
+
+            django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            
+            response_data['result'] = 'Success!'
+        else:
+            response_data['result'] = validate_pass
+    else:
+        response_data['result'] = "Пароли не совпадают"
+    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+
+def change_email(request):
+    user = django.contrib.auth.models.User.objects.get(email=request.POST['email'])
+    if user:
+        response_data = "Такой эмейл уже зарегестрирован"
+    else:
+        activation_key = activation_key_generator()
+        user_activation = app.models.UserEmail.objects.create_user_key(request.user.username, activation_key, request.POST['email'])
+        subject = "Изменение email аккаунта sharewood.online"
+        message = "Здравствуйте! Перейдите по ссылке, чтобы подтвердить данный email: "+address+"user/"+request.user.username+"/change-email/"+activation_key+" С уважением, команда Sharewood"
+        from_email = django.conf.settings.EMAIL_HOST_USER
+        to_list = [request.POST["email"]]
+
+        send_email = django.core.mail.send_mail(subject, message, from_email, to_list)
+        
+        if send_email:
+            response_data = "Success!"
+
+    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+
+def change_email_confirm(request, username, activation_key):
+    invalid = True
+    
+    try:
+        compare_data = app.models.UserEmail.objects.get(username=username)
+        if compare_data.activation_key == activation_key:
+            invalid = False 
+    except:
+        print("Error")
+        
+    if invalid:
+        template = django.template.loader.get_template('../templates/invalid_activation_key.html')
+        return django.http.HttpResponse(template.render())
+    else:
+        user = django.contrib.auth.models.User.objects.get(username=username)
+        user.email = compare_data.email
+        user.is_active = True
+        user.save()
+
+        django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+        app.models.UserEmail.objects.get(username=username).delete()
+        return django.shortcuts.redirect(request, '/user/profile.html')
+
+def cabinet(request, username):
+    user = request.user
+    if user.username == username:
+        return django.shortcuts.render(request, 'user/cabinet.html')
+    
+    return django.shortcuts.redirect("/")
+
+def save_personal_data(request):  
+
+    user_form = app.forms.UserForm(request.POST, request.FILES or None, instance=request.user)
+    profile_form = app.forms.ProfileForm(request.POST, request.FILES or None, instance=request.user.profile)
+    if user_form.is_valid() and profile_form.is_valid():
+        myuser = user_form.save(commit=False)
+        result = profile_form.save(commit=False)
+        myuser.save()
+        result.save()
+
+        response_data = "Success!"
+    else:
+        response_data = "Failure"
+
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")

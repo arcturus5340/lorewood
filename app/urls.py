@@ -19,6 +19,13 @@ urlpatterns = [
     path('remember/', views.remember, name='remember'),
     # Функция изменение пароля
     path('user/<str:username>/change-password/', views.change_password, name="change_password"),
+    path('user/<str:username>/cabinet', views.cabinet, name="cabinet"),
+    
+    path('change-cabinet-password/', views.change_cabinet_password, name="change_cabinet_password"),
+    path('change-email/', views.change_email, name="change_email"),
+    path('user/<str:username>/change-email/<str:activation_key>', views.change_email_confirm, name="change_email_confirm"),
+    path('save-personal-data/', views.save_personal_data, name="save_personal_data"),
+
     path('r<int:record_id>/', views.record, name='record'),
     path('tag/<str:tag>/', views.records_by_tags, name='records_by_text'),
 ]

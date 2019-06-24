@@ -24,3 +24,10 @@ urlpatterns = [
     django.urls.re_path('', django.urls.include('app.urls')),
     django.urls.path('admin/', django.contrib.admin.site.urls),
 ] + django.conf.urls.static.static(django.conf.settings.STATIC_URL, document_root=django.conf.settings.STATIC_ROOT)
+
+if django.conf.settings.DEBUG:
+    urlpatterns += [
+        django.urls.re_path(r'^media/(?P<path>.*)$', django.views.static.serve, {
+            'document_root': django.conf.settings.MEDIA_ROOT,
+        }),
+    ]
