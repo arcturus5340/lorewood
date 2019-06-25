@@ -19,7 +19,7 @@ class Records(django.db.models.Model):
 class Comments(django.db.models.Model):
     author = django.db.models.TextField()
     text = django.db.models.TextField()
-    date = django.db.models.DateField(default=datetime.datetime.now())
+    date = django.db.models.DateField(default=django.utils.timezone.now)
 
 
 class UserActivationManager(django.db.models.Manager):

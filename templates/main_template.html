@@ -190,6 +190,11 @@
             box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
             vertical-align: middle;
         }
+
+        .data-table {
+            border-collapse: separate;
+            border-spacing: 20px 15px;
+        }
     </style>
 </head>
 <header>
@@ -303,11 +308,13 @@
                                             <input type="hidden" name="login-with-ajax" value="login" />
                                         </div>
                                         <script type="text/javascript" src="/static/includes/reg_form.js"></script>
-                                        <div class="ulogin_block">
-                                            <div class="ulogin_label"> или&nbsp;</div>
-                                            <div id=uLogin02464165 class="ulogin_panel" data-uloginid="02a127e3" data-ulogin="redirect_uri=https%3A%2F%2Fsharewood.online%2F%3Fulogin%3Dtoken%26backurl%3Dhttps%253A%252F%252Fsharewood.online%252F;"></div>
-                                            <!-- WTF?! -->
-                                            <div style="clear:both"></div>
+                                        <div>
+                                        <p style="text-align: center;color:grey"> или войдите с помощью </p>
+                                        </div>
+                                        <div class="ulogin_block" style="text-align: center">
+                                            <a href="social/login/vk-oauth2"><img src="/static/includes/images/vk-login.png" style="width:50px; height:50px;" data-toggle="tooltip" title=""></a>
+                                            <a href="social/login/twitter-oauth2"><img src="/static/includes/images/twitter-login.png" style="width:45px; height:45px; margin-right: 3px" data-toggle="tooltip" title=""></a>
+                                            <a href="social/login/facebook-oauth2"><img src="/static/includes/images/facebook-login.png" style="width:45px; height:45px" data-toggle="tooltip" title=""></a>
                                         </div>
                                         <script>
                                             uLogin.customInit("uLogin02464165")
