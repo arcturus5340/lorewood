@@ -4,7 +4,6 @@ from django.dispatch import receiver
 import django.db.models
 import datetime
 
-
 class Records(django.db.models.Model):
     title = django.db.models.TextField()
     author = django.db.models.TextField(default='arcturus5340')
@@ -12,7 +11,7 @@ class Records(django.db.models.Model):
     description = django.db.models.TextField(default='')
     text = django.db.models.TextField()
     media = django.db.models.TextField(default='/static/record_src/r1/media/01. Balls To The Wall.mp3')
-    date = django.db.models.DateField(default=datetime.datetime.now())
+    date = django.db.models.DateField(default=django.utils.timezone.now)
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
 
