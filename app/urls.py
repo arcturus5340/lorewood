@@ -28,4 +28,5 @@ urlpatterns = [
 
     path('r<int:record_id>/', views.record, name='record'),
     path('tag/<str:tag>/', views.records_by_tags, name='records_by_text'),
+    path('search', views.search, name='search'),
 ]

@@ -16,6 +16,13 @@ class Records(django.db.models.Model):
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
 
+
+class Comments(django.db.models.Model):
+    author = django.db.models.TextField()
+    text = django.db.models.TextField()
+    date = django.db.models.DateField(default=datetime.datetime.now())
+
+
 class UserActivationManager(django.db.models.Manager):
     def create_user_key(self, username, activation_key):
         user_key = self.create(username=username, activation_key=activation_key)

@@ -54,6 +54,28 @@ def index(request, template='index.html', extra_context=None):
     return django.shortcuts.render(request, template, context)
 
 
+@el_pagination.decorators.page_template('records_list.html')
+def search(request, template='search_page.html', extra_context=None):
+    search = request.GET.getlist('s')[0]
+    records = app.models.Records.objects.filter(
+        django.db.models.Q(title__contains=search) |
+        django.db.models.Q(description__contains=search) |
+        django.db.models.Q(text__contains=search) |
+        django.db.models.Q(author__contains=search) |
+        django.db.models.Q(tags__contains=search)
+    )
+    context = {
+        'search': search,
+        'records': records,
+    }
+    print(records)
+
+    if extra_context is not None:
+        context.update(extra_context)
+
+    return django.shortcuts.render(request, template, context)
+
+
 def login(request):
     if request.method == 'POST':
         user_login = request.POST.getlist('login')
@@ -189,7 +211,6 @@ def records_by_tags(request, tag, template='records_by_tag.html', extra_context=
     if extra_context is not None:
         context.update(extra_context)
 
-    print(records)
     return django.shortcuts.render(request, template, context)
 
 
