@@ -620,7 +620,40 @@
                         <div class="comment-container">
                             <div id="comments">
                                 <div class="comment-number-top">Пока нет комментариев</div>
+                                {% if user.is_authenticated %}
+                                <div id="respond" class="comment-respond">
+                                  <h3 id="reply-title" class="comment-reply-title"> 
+                                    <small>
+                                      <a rel="nofollow" id="cancel-comment-reply-link" href="/nazvanie-zapisi-8-nazvanie-zapisi-8/#respond" style="display:none;">Отменить ответ</a>
+                                    </small>
+                                  </h3>      
 
+                                  <form method="post" id="commentform" class="comment-form">
+                                      <p class="logged-in-as"></p>
+                                      
+                                      <div class="media-left2">
+                                        <a href="#" class="account">
+                                          <img alt="" src="{{ user.profile.avatar.url }}" class="profile-circle"/>
+                                        </a>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label for="comment"></label>
+                                        <textarea class="form-control" id="comment" name="comment" placeholder="Введите сообщение" cols="45" rows="8" required></textarea>
+                                      </div>
+
+                                      <p class="form-submit">
+
+                                        <input name="submit" type="submit" id="submit" class="btn btn-default btn-comment" value="Оставить комментарий" /> 
+
+                                        <input type='hidden' name='comment_post_ID' value='402' id='comment_post_ID' />
+
+                                        <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+                                      </p>      
+                                  </form>
+                                </div>
+                                {% else %}
                                 <div class="autorized">
                                     <p>Авторизоваться, чтобы оставлять комментарии</p>
                                     <div class="lwa lwa-template-modal"> <a href="https://sharewood.online/wp-login.php" class="lwa-links-modal">Войти</a>
@@ -750,7 +783,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                {% endif %}
                             </div>
                         </div>
                     </div>
