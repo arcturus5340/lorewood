@@ -625,123 +625,128 @@
                                     <p>Авторизоваться, чтобы оставлять комментарии</p>
                                     <div class="lwa lwa-template-modal"> <a href="https://sharewood.online/wp-login.php" class="lwa-links-modal">Войти</a>
                                         <!-- WTF?! -->
-                                        <div class="lwa-modal" style="display:none;">
-                                            <form name="lwa-form" class="lwa-form" action="https://sharewood.online/wp-login.php" method="post">
-                                                <span class="lwa-status"></span>
-                                                <div>
-                                                    <div class="lwa-username">
-                                                        <div class="username_label">
-                                                            <label>введите логин</label>
-                                                        </div>
-                                                        <div class="username_input">
-                                                            <input type="text" name="log" id="lwa_user_login" class="input" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="lwa-password">
-                                                        <div class="password_label">
-                                                            <label>введтие пароль</label>
-                                                        </div>
-                                                        <div class="password_input">
-                                                            <input type="password" name="pwd" id="lwa_user_pass" class="input" value="" />
-                                                        </div>
-                                                    </div>
-                                                    <div></div>
-                                                    <div class="lwa-submit">
-                                                        <div class="lwa-submit-button">
-                                                            <button type="submit" name="wp-submit" class="lwa-wp-submit" value="выполнить вход" tabindex="100"><strong>выполнить</strong> вход</button>
-                                                            <input type="hidden" name="lwa_profile_link" value="1" />
-                                                            <input type="hidden" name="login-with-ajax" value="login" />
-                                                        </div>
-
-                                                        <div class="ulogin_block">
-                                                            <div class="ulogin_label">или&nbsp;</div>
-                                                            <div id=uLogin12859001 class="ulogin_panel" data-uloginid="02a127e3" data-ulogin="redirect_uri=https%3A%2F%2Fsharewood.online%2F%3Fulogin%3Dtoken%26backurl%3Dhttps%253A%252F%252Fsharewood.online%252Fnazvanie-zapisi-8-nazvanie-zapisi-8%252F;"></div>
-                                                            <div style="clear:both"></div>
-                                                        </div>
-                                                        <script>
-                                                            uLogin.customInit('uLogin12859001')
-                                                        </script>
-
-                                                        <div class="lwa-links">
-
-                                                            <div class="links-f lf-l">
-                                                                <a class="lwa-links-remember" href="https://sharewood.online/wp-login.php?action=lostpassword" title="Забыли пароль?">Забыли пароль?</a>
-                                                                <!-- WTF?! -->
-                                                            </div>
-
-                                                            <div class="links-f lf-r">
-                                                                Нет аккаунта? <a href="https://sharewood.online/wp-login.php?action=register" class="lwa-links-register-inline"><strong>Зарегистрировать</strong></a>
-                                                                <!-- WTF?! -->
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
+                                        <div class="lwa-modal" id="auth" style="display:none;">
+                                          <form method="post">
+                                            <form name="lwa-form" class="lwa-form" method="post" id="login_form">
+                                              {% csrf_token %}
+                                              <span class="lwa-status"></span>
+                                              <div>
+                                                <div class="lwa-username">
+                                                  <div class="username_label">
+                                                    <label>введите логин</label>
+                                                  </div>
+                                                  <div class="username_input">
+                                                      <div id="lwa_user_login" class="input"><input type="text" name="username" id="id_username" required autofocus></div>
+                                                  </div>
                                                 </div>
+                                                <div class="lwa-password">
+                                                  <div class="password_label">
+                                                    <label>введите пароль</label>
+                                                  </div>
+                                                  <div class="password_input">
+                                                      <div id="lwa_user_pass" class="input" value=""><input type="password" name="password" id="id_password" required></div>
+                                                  </div>
+                                                </div>
+                                                <br><p id="error-login" style="color:red" hidden>Введен неправильный логин или пароль</p>
+                                                <div class="lwa-submit">
+                                                  <div class="lwa-submit-button">
+                                                    <button type="button" name="wp-submit" id="login_button" class="lwa-wp-submit" value="выполнить вход" tabindex="100"> <strong>выполнить</strong> вход </button>
+                                                    <input type="hidden" name="lwa_profile_link" value="1"/>
+                                                    <input type="hidden" name="login-with-ajax" value="login"/>
+                                                  </div>
+                                                  <script type="text/javascript" src="/static/includes/reg_form.js"></script>
+                                                  <div class="ulogin_block">
+                                                    <div class="ulogin_label"> или&nbsp;</div>
+                                                    <div id=uLogin02464165 class="ulogin_panel" data-uloginid="02a127e3" data-ulogin="redirect_uri=https%3A%2F%2Fsharewood.online%2F%3Fulogin%3Dtoken%26backurl%3Dhttps%253A%252F%252Fsharewood.online%252F;"></div> <!-- WTF?! -->
+                                                    <div style="clear:both"></div>
+                                                  </div>
+                                                  <script>uLogin.customInit("uLogin02464165")</script>
+                                                  <div class="lwa-links">
+                                                    <div class="links-f lf-l">
+                                                      <a class="lwa-links-remember" href="./wp-login.php?action=lostpassword" title="Забыли пароль?"> Забыли пароль? </a> <!-- WTF?! -->
+                                                    </div>
+                                                    <div class="links-f lf-r"> Нет аккаунта?
+                                                      <a href="./wp-login.php?action=register" class="lwa-links-register-inline"> <strong>Зарегистрировать</strong> </a> <!-- WTF?! -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
                                             </form>
                                             <br>
-                                            <form name="lwa-remember" class="lwa-remember" style="margin-top: 20px; display:none;" action="https://sharewood.online/wp-login.php?action=lostpassword" method="post">
-                                                <span class="lwa-status"></span>
+                                            <form name="lwa-remember" class="lwa-remember" id="remember-form" method="post" style="display:none;"> <!-- WTF?! -->
+                                            {% csrf_token %}
+                                              <div>
                                                 <div>
-                                                    <div>
-                                                        <div>
-                                                            <strong>Восстановление пароля</strong>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                    <div class="lwa-remember-email">
-                                                        <div>
-                                                            <input type="text" name="user_login" id="lwa_user_remember" value="Введите имя пользователя или email" onfocus="if(this.value === 'Введите имя пользователя или email'){this.value = '';}" onblur="if(this.value === ''){this.value = 'Введите имя пользователя или email'}" />
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <input type="submit" value="Получить новый пароль" />
-                                                            <a href="#" class="lwa-links-remember-cancel"> Отмена </a>
-                                                            <input type="hidden" name="login-with-ajax" value="remember" />
-                                                        </div>
-                                                    </div>
+                                                  <div>
+                                                    <strong>Восстановление пароля</strong>
+                                                    <br>
+                                                  </div>
                                                 </div>
+                                                <div class="lwa-remember-email">
+                                                  <div>
+                                                    <input type="text" name="user_login" id="lwa_user_remember" placeholder="Введите имя пользователя или email" required /> <!-- need label -->
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <br><div id="remember-errors" style="color:red"></div>
+                                                  <div>
+                                                    <input id="remember-button" type="submit" value="Восстановить пароль"/>
+                                                    <a href="#" class="lwa-links-remember-cancel"> Отмена </a>
+                                                    <input type="hidden" name="login-with-ajax" value="remember"/>
+                                                  </div>
+                                                </div>
+                                              </div>
                                             </form>
-
                                             <div class="lwa-register" style="display:none;">
-                                                <form name="lwa-register" action="https://sharewood.online/wp-login.php?action=register" method="post">
-                                                    <span class="lwa-status"></span>
+                                              <form name="lwa-register" id="registration-form" action="/register/" method="post">
+                                                {% csrf_token %}
+                                                <br><br>
+                                                <div>
+                                                  <div>
                                                     <div>
-                                                        <div>
-                                                            <div>
-                                                                <strong>Зарегистрироваться на этом сайте</strong>
-                                                            </div>
-                                                        </div>
-                                                        <div class="lwa-username">
-                                                            <div>
-                                                                <label>
-                                                                    <input type="text" name="user_login" id="user_login" value="Логин" onfocus="if(this.value === 'Логин'){this.value = '';}" onblur="if(this.value === ''){this.value = 'Логин'}" />
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="lwa-email">
-                                                            <div>
-                                                                <label>
-                                                                    <input type="text" name="user_email" id="user_email" value="E-mail" onfocus="if(this.value === 'E-mail'){this.value = '';}" onblur="if(this.value === ''){this.value = 'E-mail'}" />
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div>
-                                                                Пароль будет отправлен вам на e-mail.
-                                                                <br/>
-                                                                <input type="submit" value="Регистрация" tabindex="100" />
-                                                                <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
-                                                                <input type="hidden" name="login-with-ajax" value="register" />
-                                                            </div>
-                                                        </div>
+                                                      <strong>Зарегистрироваться</strong>
                                                     </div>
-                                                </form>
+                                                  </div>
+                                                  <div class="lwa-username">
+                                                    <div>
+                                                      <label>Введите логин:</label>
+                                                      <input type="text" name="username" autofocus required maxlength="20" id="id_username">
+                                                    </div>
+                                                  </div><br>
+                                                  <div class="lwa-email">
+                                                    <div>
+                                                      <label>Введите E-mail:</label>
+                                                      <input type="email" name="email" required maxlength="254" id="id_email">
+                                                    </div>
+                                                  </div><br>
+                                                  <div class="lwa-email">
+                                                    <div>
+                                                      <label>Введите пароль:</label>
+                                                      <input type="password" name="password1" required id="id_password1">
+                                                    </div>
+                                                  </div><br>
+                                                  <div class="lwa-email">
+                                                    <div>
+                                                      <label>Введите пароль еще раз:</label>
+                                                      <input type="password" name="password2" required id="id_password2">
+                                                    </div>
+                                                  </div>
+                                                  <div>
+                                                    <div>
+                                                    </div>
+                                                  </div>
+                                                  <div>
+                                                    <div>
+                                                      <br><div id="errors" style="color:red"></div>
+                                                      <input type="submit" id="reg-submit" value="Регистрация" tabindex="100"/>
+                                                      <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
+                                                      <input type="hidden" name="login-with-ajax" value="register"/>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </form>
                                             </div>
+                                          </form>
                                         </div>
                                     </div>
                                 </div>
