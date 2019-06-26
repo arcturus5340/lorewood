@@ -34,8 +34,9 @@ def index(request, template='index.html', extra_context=None):
     #                                         text="Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. ",
     #                                         rating=9.4)
 
-
-    record_list = app.models.Records.objects.all()
+    last_records = list(app.models.Records.objects.all())[-4:]
+    record_list = list(app.models.Records.objects.all())[:-4]
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
 
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
@@ -46,6 +47,9 @@ def index(request, template='index.html', extra_context=None):
                'next' : authnext,
                'regform' : regform,
                'records': record_list,
+               'last_records': last_records,
+               'popular_records_template': 'popular_records_template.html',
+               'popular_records': popular_records,
     }
 
     if extra_context is not None:
@@ -64,9 +68,13 @@ def search(request, template='search_page.html', extra_context=None):
         django.db.models.Q(author__contains=search) |
         django.db.models.Q(tags__contains=search)
     )
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
+
     context = {
         'search': search,
         'records': records,
+        'popular_records_template': 'popular_records_template.html',
+        'popular_records': popular_records,
     }
     print(records)
 
@@ -149,32 +157,31 @@ def register(request):
 
 
 def advertising(request):
-    template = django.template.loader.get_template('../templates/advertising.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, "advertising.html")
 
 
 def donations(request):
-    template = django.template.loader.get_template('../templates/donations.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, "donations.html")
 
 
 def info(request):
-    template = django.template.loader.get_template('../templates/info.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, "info.html")
 
 
 def regulations(request):
-    template = django.template.loader.get_template('../templates/regulations.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, "regulations.html")
 
 
 def rightholder(request):
-    template = django.template.loader.get_template('../templates/rightholder.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, "rightholder.html")
 
 
 def record(request, record_id):
-    prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
+    try:
+        prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
+    except app.models.Records.DoesNotExist:
+        prev_record = 0
+        
     record = app.models.Records.objects.get(id=record_id)
     similar_records = []
     for tag in record.tags.split(", "):
@@ -202,10 +209,13 @@ def record(request, record_id):
 @el_pagination.decorators.page_template('records_list.html')
 def records_by_tags(request, tag, template='records_by_tag.html', extra_context=None):
     records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
 
     context = {
                'tag': tag,
                'records': records,
+               'popular_records_template': 'popular_records_template.html',
+               'popular_records': popular_records,
               }
 
     if extra_context is not None:

@@ -23,6 +23,7 @@ import django.contrib.auth.views
 urlpatterns = [
     django.urls.re_path('', django.urls.include('app.urls')),
     django.urls.path('admin/', django.contrib.admin.site.urls),
+    django.urls.path('social/', django.urls.include('social_django.urls')),
 ] + django.conf.urls.static.static(django.conf.settings.STATIC_URL, document_root=django.conf.settings.STATIC_ROOT)
 
 if django.conf.settings.DEBUG:

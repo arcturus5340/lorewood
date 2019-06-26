@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'el_pagination',
+    'social_django',
     'app',
 ]
 
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
             ],
         },
     },
@@ -109,9 +111,26 @@ LOGIN_REDIRECT_URL = "/"
 
 # Authentication Backends
 AUTHENTICATION_BACKENDS = [
+    'social_core.backends.vk.VKOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'django.contrib.auth.backends.AllowAllUsersModelBackend'
 ]
+
+SOCIAL_AUTH_POSTGRES_JSONFIELD = True
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7033607'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'mHZ6n0XvxVY2nU1iz9Xy'
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['photos']
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'XXXXXXXXX'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'XXXXXXXXX'
+SOCIAL_AUTH_FACEBOOK_SCOPE = []
+
+SOCIAL_AUTH_TWITTER_KEY = 'XXXXXXXXX'
+SOCIAL_AUTH_TWITTER_SECRET = 'XXXXXXXXX'
+SOCIAL_AUTH_TWITTER_SCOPE = []
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
