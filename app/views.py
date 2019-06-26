@@ -34,8 +34,9 @@ def index(request, template='index.html', extra_context=None):
     #                                         text="Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. ",
     #                                         rating=9.4)
 
-
-    record_list = app.models.Records.objects.all()
+    last_records = list(app.models.Records.objects.all())[-4:]
+    record_list = list(app.models.Records.objects.all())[:-4]
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
 
     regform = django_registration.forms.RegistrationForm
     authform = django.contrib.auth.forms.AuthenticationForm
@@ -46,6 +47,9 @@ def index(request, template='index.html', extra_context=None):
                'next' : authnext,
                'regform' : regform,
                'records': record_list,
+               'last_records': last_records,
+               'popular_records_template': 'popular_records_template.html',
+               'popular_records': popular_records,
     }
 
     if extra_context is not None:
@@ -64,9 +68,13 @@ def search(request, template='search_page.html', extra_context=None):
         django.db.models.Q(author__contains=search) |
         django.db.models.Q(tags__contains=search)
     )
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
+
     context = {
         'search': search,
         'records': records,
+        'popular_records_template': 'popular_records_template.html',
+        'popular_records': popular_records,
     }
     print(records)
 
@@ -201,10 +209,13 @@ def record(request, record_id):
 @el_pagination.decorators.page_template('records_list.html')
 def records_by_tags(request, tag, template='records_by_tag.html', extra_context=None):
     records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
+    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
 
     context = {
                'tag': tag,
                'records': records,
+               'popular_records_template': 'popular_records_template.html',
+               'popular_records': popular_records,
               }
 
     if extra_context is not None:
