@@ -183,9 +183,11 @@ def record(request, record_id, extra_context=None):
     if request.POST.getlist("add_comment"):
         app.models.Comments.objects.create(author='arcturus5340', # login
                                            text=request.POST.getlist("add_comment")[0],
-                                           date=datetime.datetime.now())
+                                           date=datetime.datetime.now(),
+                                           record_id=record_id)
 
-    comments = app.models.Comments.objects.all()
+    comments = list(app.models.Comments.objects.filter(record_id=record_id))
+    print(comments)
 
     try:
         prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
