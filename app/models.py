@@ -11,7 +11,7 @@ class Records(django.db.models.Model):
     description = django.db.models.TextField(default='')
     text = django.db.models.TextField()
     media = django.db.models.TextField(default='/static/record_src/r1/media/01. Balls To The Wall.mp3')
-    date = django.db.models.DateField(default=django.utils.timezone.now)
+    date = django.db.models.DateField(default=django.utils.timezone.now())
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
 
@@ -19,7 +19,7 @@ class Records(django.db.models.Model):
 class Comments(django.db.models.Model):
     author = django.db.models.TextField()
     text = django.db.models.TextField()
-    date = django.db.models.DateField(default=django.utils.timezone.now)
+    date = django.db.models.DateField(default=datetime.datetime.now())
 
 
 class UserActivationManager(django.db.models.Manager):

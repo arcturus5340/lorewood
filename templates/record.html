@@ -619,7 +619,20 @@
                     <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                         <div class="comment-container">
                             <div id="comments">
-                                <div class="comment-number-top">Пока нет комментариев</div>
+                                <ul class="comment-list media-list">
+                                    {% include page_template %}
+                                    <script src="http://code.jquery.com/jquery-latest.js"></script>
+                                    <script src="/static/el-pagination/js/el-pagination.js"></script>
+                                    <script>
+                                        $.endlessPaginate({
+                                            paginateOnScroll: true,
+                                            paginateOnScrollMargin: 5000,
+                                            paginateOnScrollChunkSize: 20
+                                        });
+                                    </script>
+                                </ul>
+
+                              <div class="comment-number-top">Пока нет комментариев</div>
                                 {% if user.is_authenticated %}
                                 <div id="respond" class="comment-respond">
                                   <h3 id="reply-title" class="comment-reply-title"> 
@@ -628,7 +641,7 @@
                                     </small>
                                   </h3>      
 
-                                  <form method="post" id="commentform" class="comment-form">
+                                  <form method="post" id="commentform" class="comment-form" action="/r{{ record.id }}/"> {% csrf_token %}
                                       <p class="logged-in-as"></p>
                                       
                                       <div class="media-left2">
@@ -639,18 +652,12 @@
 
                                       <div class="form-group">
                                         <label for="comment"></label>
-                                        <textarea class="form-control" id="comment" name="comment" placeholder="Введите сообщение" cols="45" rows="8" required></textarea>
+                                        <textarea class="form-control" id="comment" name="add_comment" placeholder="Введите сообщение" cols="45" rows="8" required></textarea>
                                       </div>
 
                                       <p class="form-submit">
-
-                                        <input name="submit" type="submit" id="submit" class="btn btn-default btn-comment" value="Оставить комментарий" /> 
-
-                                        <input type='hidden' name='comment_post_ID' value='402' id='comment_post_ID' />
-
-                                        <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-
-                                      </p>      
+                                        <input name="submit" type="submit" id="submit" class="btn btn-default btn-comment" value="Оставить комментарий" hidden />
+                                      </p>
                                   </form>
                                 </div>
                                 {% else %}

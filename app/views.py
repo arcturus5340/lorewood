@@ -78,7 +78,6 @@ def search(request, template='search_page.html', extra_context=None):
         'popular_records_template': 'popular_records_template.html',
         'popular_records': popular_records,
     }
-    print(records)
 
     if extra_context is not None:
         context.update(extra_context)
@@ -178,7 +177,16 @@ def rightholder(request):
     return django.shortcuts.render(request, "rightholder.html")
 
 
-def record(request, record_id):
+import datetime
+@el_pagination.decorators.page_template('comments_list.html')
+def record(request, record_id, extra_context=None):
+    if request.POST.getlist("add_comment"):
+        app.models.Comments.objects.create(author='arcturus5340', # login
+                                           text=request.POST.getlist("add_comment")[0],
+                                           date=datetime.datetime.now())
+
+    comments = app.models.Comments.objects.all()
+
     try:
         prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
     except app.models.Records.DoesNotExist:
@@ -199,13 +207,21 @@ def record(request, record_id):
     record_id = 1 if record_id+1 >= app.models.Records.objects.count() else record_id+1
     next_record = app.models.Records.objects.get(id=record_id)
     author = django.contrib.auth.models.User.objects.get(username=record.author)
-    return django.shortcuts.render(request, "record.html", {
-                                                             'prev_record': prev_record,
-                                                             'record': record,
-                                                             'next_record': next_record,
-                                                             'author': author,
-                                                             'similar_records': similar_records,
-                                                           })
+
+    context = {
+                 'prev_record': prev_record,
+                 'record': record,
+                 'next_record': next_record,
+                 'author': author,
+                 'similar_records': similar_records,
+                 'comments': comments,
+              }
+
+    if extra_context is not None:
+        context.update(extra_context)
+
+    return django.shortcuts.render(request, "record.html", context)
+
 
 
 @el_pagination.decorators.page_template('records_list.html')
