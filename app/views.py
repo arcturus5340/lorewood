@@ -58,16 +58,18 @@ def index(request, template='index.html', extra_context=None):
     return django.shortcuts.render(request, template, context)
 
 
+# TODO: improve search engine
 @el_pagination.decorators.page_template('records_list.html')
 def search(request, template='search_page.html', extra_context=None):
     search = request.GET.getlist('s')[0]
-    records = app.models.Records.objects.filter(
-        django.db.models.Q(title__contains=search) |
-        django.db.models.Q(description__contains=search) |
-        django.db.models.Q(text__contains=search) |
-        django.db.models.Q(author__contains=search) |
-        django.db.models.Q(tags__contains=search)
-    )
+    records = []
+    for record in app.models.Records.objects.all():
+        if ((search.lower() in record.title.lower()) or
+            (search.lower() in record.description.lower()) or
+            (search.lower() in record.text.lower()) or
+            (search.lower() in record.author.lower()) or
+            (search.lower() in record.tags.lower())):
+            records.append(record)
     popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
 
     context = {
