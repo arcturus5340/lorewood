@@ -27,12 +27,14 @@
                             <div class="col-8" style="">
                                 <div class="tab-content" id="nav-tabContent">
                                     <div id="personal-data-tabpanel">
-                                        <form id="personal-data-form" method="post" enctype="multipart/form-data">
+                                        <form action="/save-personal-data/" id="personal-data-form" method="POST" enctype="multipart/form-data">
                                             {% csrf_token %}
                                             <div>
                                                 {% if user.profile.avatar %}
-                                                <img id="avatar-upload" src="{{ user.profile.avatar.url }}" style="width:200px; height:200px; float:left; margin-left: 20px; margin-right: 20px"> {% else %}
-                                                <img id="avatar-upload" src="/static/includes/images/avatar-default.png" style="width:200px; height:200px; float:left; margin-left: 20px; margin-right: 20px"> {% endif %}
+                                                <img id="avatar-upload" src="{{ user.profile.avatar }}" style="width:200px; height:200px; float:left; margin-left: 20px; margin-right: 20px"> 
+                                                {% else %}
+                                                <img id="avatar-upload" src="/static/includes/images/avatar-default.png" style="width:200px; height:200px; float:left; margin-left: 20px; margin-right: 20px"> 
+                                                {% endif %}
                                                 <input type="file" accept="image/*" class="custom-file-input" name="avatar" id="id_avatar">
                                             </div>
                                             <table class="data-table">
@@ -158,13 +160,17 @@ $("#id_avatar").change(function() {
 readURL(this);
 });
 
-$("#save-data").on("click", function(i) {
+/*$("#save-data").on("click", function(i) {
 $("#save-data-status").hide();
 i.preventDefault();
 $.ajax({
     type: "POST",
     url: '/save-personal-data/',
-    data: $("#personal-data-form").serialize(),
+    data: {
+        'form': $("#personal-data-form").serialize(),
+        'file': $("#id_avatar").val(),
+        'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val(),
+    },
     success: function(response) {
         if (response === "Success!") {
             $("#save-data-status").show();
@@ -177,7 +183,7 @@ $.ajax({
     }
 });
 });
-
+*/
 $("#password-button").on("click", function(i) {
 $('#password-errors').hide()
 i.preventDefault();
