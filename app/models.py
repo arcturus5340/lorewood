@@ -49,7 +49,7 @@ class UserEmail(django.db.models.Model):
 
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
-    avatar = django.db.models.ImageField(upload_to='avatars/', null=True, blank=True, default='avatars/avatar-default.png')
+    avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
     bio = django.db.models.TextField(max_length=500, blank=True)
     
 @receiver(post_save, sender=User)
