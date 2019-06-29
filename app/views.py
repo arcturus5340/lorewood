@@ -1,4 +1,3 @@
-import json
 import django.http
 import django.shortcuts
 import django.conf
@@ -15,13 +14,14 @@ import django.core.paginator
 import django.core.mail
 import el_pagination.decorators
 
-import string
+import json
+import PIL
 import random
 import re
+import string
 
-import app.models
 import app.forms
-from PIL import Image
+import app.models
 
 
 address = "http://127.0.0.1:8000/"
@@ -29,11 +29,6 @@ address = "http://127.0.0.1:8000/"
 
 @el_pagination.decorators.page_template('records_list.html')
 def index(request, template='index.html', extra_context=None):
-    # obj = app.models.Records.objects.create(title="Название Записи",
-    #                                         main_pic="/static/record_src/r1/look.com_.ua-264882.jpg",
-    #                                         description="Описание. Описание. Описание. Описание. Описание. Описание. Описание. ",
-    #                                         text="Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. ",
-    #                                         rating=9.4)
 
     last_records = list(app.models.Records.objects.all())[-4:]
     record_list = list(app.models.Records.objects.all())[:-4]
@@ -182,7 +177,7 @@ import datetime
 @el_pagination.decorators.page_template('comments_list.html')
 def record(request, record_id, template="record.html", extra_context=None):
     if request.POST.getlist("add_comment"):
-        app.models.Comments.objects.create(author='arcturus5340', # login
+        app.models.Comments.objects.create(author=request.POST.getlist("username")[0],
                                            text=request.POST.getlist("add_comment")[0],
                                            date=datetime.datetime.now(),
                                            record_id=record_id)
@@ -446,7 +441,7 @@ def cabinet(request, username):
 def save_personal_data(request): 
     filename = "default"
     try:
-        im = Image.open(request.FILES.get("avatar"))
+        im = PIL.Image.open(request.FILES.get("avatar"))
         width, height = im.size   # Get dimensions
 
         filename = "media/avatars/cropped/cropped-"+request.user.username+"crop.jpg"
