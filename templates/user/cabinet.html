@@ -128,7 +128,27 @@
                                         </table>
                                     </div>
 
-                                    <div id="pay-in-tabpanel" hidden>Пополнить счет</div>
+                                    <div id="pay-in-tabpanel" hidden>
+                                        <h2>Пополнить счет</h2>
+                                        <form id="pay-in-form" method="post">
+                                            <p> Баланс: {{ user.profile.balance }} RUB</p>
+                                            {% csrf_token %}
+                                            <div>
+                                                <div id="pay-in-sum">
+                                                    <div>
+                                                        <input type="number" class="form-control" name="sum" id="pay-in-field" placeholder="Введите сумму пополнения" required />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <br>
+                                                        <div id="pay-in-status" hidden></div>
+                                                        <input id="pay-in-button" type="submit" value="Пополнить" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                     <div id="buy-premium-tabpanel" hidden>Купить ПРЕМИУМ</div>
                                 </div>
                             </div>
