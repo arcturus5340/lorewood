@@ -179,7 +179,7 @@ def rightholder(request):
 
 import datetime
 @el_pagination.decorators.page_template('comments_list.html')
-def record(request, record_id, extra_context=None):
+def record(request, record_id, template="record.html", extra_context=None):
     if request.POST.getlist("add_comment"):
         app.models.Comments.objects.create(author='arcturus5340', # login
                                            text=request.POST.getlist("add_comment")[0],
@@ -187,7 +187,6 @@ def record(request, record_id, extra_context=None):
                                            record_id=record_id)
 
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
-    print(comments)
 
     try:
         prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
@@ -210,6 +209,7 @@ def record(request, record_id, extra_context=None):
     next_record = app.models.Records.objects.get(id=record_id)
     author = django.contrib.auth.models.User.objects.get(username=record.author)
 
+    placeholder = request.POST.getlist('quote') or ['',]
     context = {
                  'prev_record': prev_record,
                  'record': record,
@@ -217,12 +217,13 @@ def record(request, record_id, extra_context=None):
                  'author': author,
                  'similar_records': similar_records,
                  'comments': comments,
+                 'placeholder': placeholder[0],
               }
 
     if extra_context is not None:
         context.update(extra_context)
 
-    return django.shortcuts.render(request, "record.html", context)
+    return django.shortcuts.render(request, template ,context)
 
 
 
