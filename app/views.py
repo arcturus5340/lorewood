@@ -443,44 +443,51 @@ def cabinet(request, username):
     
     return django.shortcuts.redirect("/")
 
-def save_personal_data(request):  
-    im = Image.open(request.FILES["avatar"])
-    width, height = im.size   # Get dimensions
+def save_personal_data(request): 
+    filename = "default"
+    try:
+        im = Image.open(request.FILES.get("avatar"))
+        width, height = im.size   # Get dimensions
 
-    filename = "media/avatars/cropped/cropped-"+request.user.username+"crop.jpg"
-    need_crop = True
+        filename = "media/avatars/cropped/cropped-"+request.user.username+"crop.jpg"
 
-    if width>height:
-        diff = width - height
-        new_width = width - diff
-        new_height = height
+        if width>height:
+            diff = width - height
+            new_width = width - diff
+            new_height = height
 
-        left = int(diff/2)
-        right = int(new_width + diff/2)
-        top = 0
-        bottom = int(new_height)
-    elif height>width:
-        diff = height - width
-        new_height = height - diff
-        new_width = width
+            left = int(diff/2)
+            right = int(new_width + diff/2)
+            top = 0
+            bottom = int(new_height)
+        elif height>width:
+            diff = height - width
+            new_height = height - diff
+            new_width = width
 
-        left = 0
-        right = int(new_width)
-        top = int(diff/2)
-        bottom = int(new_height + diff/2)
-    else:
-        filename = request.FILES['avatar']
-        need_crop = False
-    
-    if need_crop:
+            left = 0
+            right = int(new_width)
+            top = int(diff/2)
+            bottom = int(new_height + diff/2)
+        else:
+            left = 0
+            top = 0
+            right = width
+            bottom = height
+
         image = im.crop((left, top, right, bottom))
-        print(image.save(filename))
+        image.save(filename)
+    except:
+        print("Image does not exist")
 
     user = django.contrib.auth.models.User.objects.get(username=request.user.username)
-    user.first_name = request.POST['first_name']
-    user.last_name = request.POST['last_name']
-    user.profile.bio = request.POST['bio']
-    user.profile.avatar = "/"+filename
+    user.first_name = request.POST.get('first_name')
+    user.last_name = request.POST.get('last_name')
+    user.profile.bio = request.POST.get('bio')
+    
+    if filename != "default":
+        user.profile.avatar = "/"+filename
+    
     myuser = user.save()
 
     return django.shortcuts.redirect("/user/"+request.user.username+"/cabinet")

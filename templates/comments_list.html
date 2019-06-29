@@ -4,12 +4,12 @@
               <img alt="" src="https://secure.gravatar.com/avatar/cd6edfb6795d16fb722f547ddfb67f84?s=64&amp;d=mm&amp;r=g" class="avatar avatar-64 photo media-object" width="64" height="64">
           </div>
           <div class="media-body">
-              <span class="meta media-heading">{{ comment.author }}</span>
+              <span class="meta media-heading" id="comment-author{{comment.id}}">{{ comment.author }}</span>
               <span class="meta media-time">{{ comment.date }}</span>
-              <p>{{ comment.text }}</p>
+              <p id="comment{{comment.id}}">{{ comment.text }}</p>
               <div class="jqr2c_box">
-                  <a class="jqr2c_reply"><button type="submit" name="reply" value="True" class="btn-link">Ответить</button></a>
-                  <a class="jqr2c_quote" href="#comment_field"><button type="submit" name="quote" value="{{ comment.text }}" class="btn-link">Цитата</button></a>
+                  <a class="jqr2c_reply" href="#comment_field" id="{{comment.id}}"><button type="submit" name="reply" value="True" class="btn-link">Ответить</button></a>
+                  <a class="jqr2c_quote" href="#comment_field" id="{{comment.id}}"><button type="submit" name="quote" value="{{ comment.text }}" class="btn-link">Цитата</button></a>
               </div>
           </div>
       </li>

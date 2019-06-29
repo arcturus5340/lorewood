@@ -1387,12 +1387,35 @@
         });
     </script>
     <script>
-        $(document).on('click', 'a[href^="#"]', function (event) {
+        $(".jqr2c_quote").on('click', function (event) {
             event.preventDefault();
 
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 500);
+
+            var id = $(this).attr("id");
+            var comment = "#comment".concat(id);
+            var author_id = "#comment-author".concat(id);
+            var author = $(author_id).html();
+            var comment_text = author.concat(': "', $(comment).html(), '", ');
+            
+            $("#comment_field").val(comment_text); 
+        });
+
+        $(".jqr2c_reply").on('click', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+
+            var id = $(this).attr("id");
+            var author_id = "#comment-author".concat(id);
+            var author = $(author_id).html();
+            var comment_text = author.concat(', ');
+            
+            $("#comment_field").val(comment_text); 
         });
     </script>
 </body>
