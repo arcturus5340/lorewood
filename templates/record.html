@@ -206,6 +206,57 @@
             line-height: 1.42857143;
         }
 
+        ul#menu, ul#menu ul {
+            list-style-type:none;
+            width: 720px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        ul#menu a {
+            display: block;
+            text-decoration: none;  
+        }
+
+        ul#menu li {
+            margin-top: 1px;
+        }
+
+        ul#menu li a img {
+            vertical-align: middle;
+            padding: 0 5px 5px 0;
+        }
+
+        ul#menu li a {
+            background: #F7F7F7;
+            border: 1px solid #EEEEEE;
+            color: #757575;  
+            padding: 12px;
+            -webkit-transition: 0.1s;
+            -moz-transition: 0.1s;
+            transition: 0.1s;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px; 
+        }
+
+        ul#menu li a:hover {
+            background: #d4d3d5;
+        }
+
+        ul#menu li ul li a {
+            background: white;
+            color: #3394B8;
+            padding-left: 20px;
+        }
+
+        ul#menu li ul li a:hover {
+            padding-left: 25px;
+        }
+
+        #submenu-status {
+            color: #3394B8;
+        }
+
     </style>
 
 </head>
@@ -542,12 +593,8 @@
                                             </div>
                                         </td>
                                         <td valign="top">
+                                        
                                             <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
-                                                </div>
                                                 <div class="row mt-25">
                                                     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                                                         {{ record.text }} {% load filters %} {% for media in record.media|split:", " %} {% if media.0 == 'A' %}
@@ -562,6 +609,41 @@
                                                         {% endif %}
                                                         <a href="{{ media|slice:" 1: " }}" download> Загрузить {{ media|split:"/"|last }}</a>
                                                         <br> {% endfor %}
+                                                        <h4>Материалы курса</h4>
+                                                        <ul id="menu">
+                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  Основы JavaScript</a>
+                                                                <ul>
+                                                                    <li><a href="">Как удалить js</a></li>
+                                                                    <li><a href="">Как уничтожить js</a></li>
+                                                                    <li><a href="">Что делать когда кошмары с js</a></li>
+                                                                    <li><a href="">Окончание первой части. Аминь, js</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  Подготовка к работе</a>
+                                                                <ul>
+                                                                    <li><a href="">Что такое программирование?</a></li>
+                                                                    <li><a href="">Введение в искусство гуглить</a></li>
+                                                                    <li><a href="">Введение в stackoverflow</a></li>
+                                                                    <li><a href="">Конец курса программирования</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  JavaScript в работе</a>
+                                                                <ul>
+                                                                    <li><a href="">Что делать, когда не знаешь Python?</a></li>
+                                                                    <li><a href="">Как покончить жизнь суицидом?</a></li>
+                                                                    <li><a href="">Что делать, если снова кошмары с js?</a></li>
+                                                                    <li><a href="">Уляля</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  Бонус. Дополнительные технологии</a>
+                                                                <ul>
+                                                                    <li><a href="">Что делать, если кончилась фантазия?</a></li>
+                                                                    <li><a href="">Еще одно рандомное название видео</a></li>
+                                                                    <li><a href="">тор в лабЕ</a></li>
+                                                                    <li><a href="">Конец курса</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                                                     </div>
@@ -1467,6 +1549,34 @@
             
             $("#comment_field").val(comment_text); 
         });
+
+        $(document).ready(function(){
+          initMenu();
+        });
+
+        function initMenu() {
+
+        $('#menu ul').hide();
+
+        $('#menu li a').click(
+            function() {
+                var iselemnt = $(this).next();
+                if((iselemnt.is('ul')) && (iselemnt.is(':visible'))) {
+                    $(this).find('#submenu-status').html("+");
+                    iselemnt.slideUp('normal');
+                    return false;
+                }
+
+                if((iselemnt.is('ul')) && (!iselemnt.is(':visible'))) {
+                    $(this).find('#submenu-status').html("&minus;");
+                    iselemnt.slideDown('normal');
+                    return false;
+                }
+
+            }
+        );
+
+        }
     </script>
 </body>
 
