@@ -230,10 +230,13 @@
             {% endif %}
             <div class="dropdown" style="float:right">
               <a href="#" class="account">
-                <img alt="" src="{{ user.profile.avatar.url }}" class="profile-circle"/>
+                <img alt="" src="{{ user.profile.avatar }}" class="profile-circle"/>
               </a>
               <div class="submenu" style="display: none; ">
                 <ul class="root">
+                  <li>
+                      <div style="font-size: 14px; margin-left: 13px"><b>Баланс:</b><br><i>{{ user.profile.balance }} RUB</i></div>
+                  </li><br>
                   <li>
                     <a href="/user/{{user.get_username}}/cabinet" >Личный кабинет</a>
                   </li>

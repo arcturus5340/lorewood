@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
 from app.models import Profile
+from app.models import Comments
+
 
 class UserForm(forms.ModelForm):
     class Meta:

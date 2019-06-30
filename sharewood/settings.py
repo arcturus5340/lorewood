@@ -113,7 +113,7 @@ LOGIN_REDIRECT_URL = "/"
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.vk.VKOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.twitter.TwitterOAuth2',
+    #'social_core.backends.twitter.TwitterOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'django.contrib.auth.backends.AllowAllUsersModelBackend'
 ]
