@@ -1,21 +1,23 @@
-import django.http
-import django.shortcuts
 import django.conf
 import django.core.exceptions
+import django.core.mail
+import django.core.paginator
 import django.contrib.auth
-import django.contrib.auth.password_validation
-import django.contrib.auth.models
 import django.contrib.auth.forms
-import django.template
+import django.contrib.auth.models
+import django.contrib.auth.password_validation
+import django.db.models
+import django.db.utils
+import django.http
+import django.shortcuts
+import django.template.loader
 import django_registration.backends.activation.views
 import django_registration.forms
-import django.db.utils
-import django.core.paginator
-import django.core.mail
 import el_pagination.decorators
 
+import datetime
 import json
-import PIL
+import PIL.Image
 import random
 import re
 import string
@@ -64,13 +66,13 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     popular_records = sorted(records, key=lambda obj: obj.rating)[-5:]
 
     found_records = []
-    for record in records:
-        if ((search_text.lower() in record.title.lower()) or
-                (search_text.lower() in record.description.lower()) or
-                (search_text.lower() in record.text.lower()) or
-                (search_text.lower() in record.author.lower()) or
-                (search_text.lower() in record.tags.lower())):
-            found_records.append(record)
+    for r in records:
+        if ((search_text.lower() in r.title.lower()) or
+                (search_text.lower() in r.description.lower()) or
+                (search_text.lower() in r.text.lower()) or
+                (search_text.lower() in r.author.lower()) or
+                (search_text.lower() in r.tags.lower())):
+            found_records.append(r)
 
     context = {
         'search': search,
@@ -85,7 +87,7 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     return django.shortcuts.render(request, template, context)
 
 
-def login(request):
+def login(request: django.http.HttpRequest):
     user_login = request.POST.get('login')
     user_password = request.POST.get('password')
     user = django.contrib.auth.authenticate(username=user_login, password=user_password)
@@ -100,45 +102,53 @@ def login(request):
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
-def logout(request):
+def logout(request: django.http.HttpRequest):
     django.contrib.auth.logout(request)
     return django.shortcuts.redirect("/")
 
 
-# Watafak
-def validate_password(password):
+def validate_password(password: str):
     try:
         django.contrib.auth.password_validation.validate_password(password)
     except django.core.exceptions.ValidationError as err:
-        print(err)
-        error_str = str(err)
-        if error_str.find('too short') != -1:
-            return 'Пароль слишком короткий. Минимальное количество - 8 символов'
-        elif error_str.find('too common') != -1:
+        minimum_length = re.compile(r'This password is too short. It must contain at least [0-9]* characters?\.')
+        attribute_similarity = re.compile(r'The password is too similar to the (username|first_name|last_name|email)\.')
+
+        if list(filter(minimum_length.match, err)):
+            return 'Пароль слишком короткий. Минимальное количество - {} символов'.format(
+                django.contrib.auth.password_validation.MinimumLengthValidator().min_length
+            )
+        elif list(filter(attribute_similarity.match, err)):
+            return 'Пароль схож с Вашими личными данными'
+        elif 'This password is too common.' in err:
             return 'Пароль слишком предсказуемый'
-        else:
-            return 'Пароль содержит недопустимые символы'
+        elif 'This password is entirely numeric.' in err:
+            return 'Пароль не может состоять лишь из цифр'
+        return 'Ошибка при валидации пароля'
     return
 
 
-def send_activation_email(username, email):
+# TODO: handle secret_keys identity exception
+def send_activation_email(username: str, email: str):
     activation_key = activation_key_generator()
     app.models.UserActivation.objects.create_user_key(username, activation_key)
 
     subject = 'Активация аккаунта sharewood.online'
-    message = ('Здравствуйте! Вы зарегестирорвались на сайте sharewood.online. Перейдите по ссылке, чтобы активировать '
-               'ваш аккаунт: {}user/{}/activate/{} '
+    message = ('Здравствуйте! \n'
+               'Вы зарегестирорвались на сайте sharewood.online. Перейдите по ссылке, чтобы активировать '
+               'ваш аккаунт: {}user/{}/activate/{} \n\n'
                'С уважением, команда Sharewood').format(address, username, activation_key)
 
     from_email = django.conf.settings.EMAIL_HOST_USER
     return django.core.mail.send_mail(subject, message, from_email, [email])
 
 
-def activation_key_generator(size=40, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
+def activation_key_generator(size: int = 40,
+                             chars: string = string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
 
 
-def register(request):
+def register(request: django.http.HttpRequest):
     username = request.POST.get('username')
     email = request.POST.get('email')
     password1 = request.POST.get('password1')
@@ -148,6 +158,7 @@ def register(request):
     if password1 != password2:
         response_data['result'] = 'Пароли не совпадают'
 
+    # TODO: support for special characters in login
     elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
         response_data['result'] = ('Логин должен начинаться с латинской буквы, '
                                    'а также состоять только из латинских букв, цифр и символов . и _ ')
@@ -176,69 +187,66 @@ def register(request):
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-def advertising(request):
-    return django.shortcuts.render(request, "advertising.html")
+def advertising(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'advertising.html')
 
 
-def donations(request):
-    return django.shortcuts.render(request, "donations.html")
+def donations(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'donations.html')
 
 
-def info(request):
-    return django.shortcuts.render(request, "info.html")
+def info(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'info.html')
 
 
-def regulations(request):
-    return django.shortcuts.render(request, "regulations.html")
+def regulations(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'regulations.html')
 
 
-def rightholder(request):
-    return django.shortcuts.render(request, "rightholder.html")
+def rightholder(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'rightholder.html')
 
 
-import datetime
-
-
+# TODO: output date and time for client time zone
+# TODO: optimize search of similar records
+# TODO: number of similar records depending on the number of comments
 @el_pagination.decorators.page_template('comments_list.html')
-def record(request, record_id, template="record.html", extra_context=None):
-    if request.POST.getlist("add_comment"):
-        app.models.Comments.objects.create(author=request.POST.getlist("username")[0],
-                                           text=request.POST.getlist("add_comment")[0],
-                                           date=datetime.datetime.now(),
-                                           record_id=record_id)
+def record(request: django.http.HttpRequest,
+           record_id: int,
+           template: str = "record.html",
+           extra_context: typing.Optional[dict] = None):
 
-    comments = list(app.models.Comments.objects.filter(record_id=record_id))
+    records = app.models.Records.objects.all()
+    prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
+    current_record = records[record_id-1]
+    next_record = records[record_id % app.models.Records.objects.count()]
+    author = django.contrib.auth.models.User.objects.get(username=current_record.author)
 
-    try:
-        prev_record = app.models.Records.objects.get(id=(record_id - 1) or app.models.Records.objects.count())
-    except app.models.Records.DoesNotExist:
-        prev_record = 0
-
-    record = app.models.Records.objects.get(id=record_id)
     similar_records = []
-    for tag in record.tags.split(", "):
+    for tag in current_record.tags.split(', '):
         for r in app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag)):
-            if r not in similar_records and r != record:
+            if r not in similar_records and r != current_record:
                 similar_records.append(r)
-
     random.shuffle(similar_records)
     if len(similar_records) > 1:
         similar_records = similar_records[:2]
     elif len(similar_records) > 0:
         similar_records = similar_records[:1]
-    record_id = 1 if record_id + 1 >= app.models.Records.objects.count() else record_id + 1
-    next_record = app.models.Records.objects.get(id=record_id)
-    author = django.contrib.auth.models.User.objects.get(username=record.author)
 
-    placeholder = request.POST.getlist('quote') or ['', ]
+    if request.POST.get('add_comment'):
+        app.models.Comments.objects.create(author=request.POST.get('username'),
+                                           text=request.POST.get('add_comment'),
+                                           date=datetime.datetime.now(),
+                                           record_id=record_id)
+    comments = list(app.models.Comments.objects.filter(record_id=record_id))
+
     context = {
         'prev_record': prev_record,
-        'record': record,
+        'record': current_record,
         'next_record': next_record,
         'author': author,
         'similar_records': similar_records,
         'comments': comments,
-        'placeholder': placeholder[0],
     }
 
     if extra_context is not None:
@@ -248,9 +256,13 @@ def record(request, record_id, template="record.html", extra_context=None):
 
 
 @el_pagination.decorators.page_template('records_list.html')
-def records_by_tags(request, tag, template='records_by_tag.html', extra_context=None):
+def records_by_tags(request: django.http.HttpRequest,
+                    tag: str,
+                    template: str = 'records_by_tag.html',
+                    extra_context: typing.Optional[dict] = None):
+
     records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
-    popular_records = list(app.models.Records.objects.order_by('rating'))[-5:]
+    popular_records = sorted(list(app.models.Records.objects.all()), key=lambda obj: obj.rating)[-5:]
 
     context = {
         'tag': tag,
@@ -265,158 +277,148 @@ def records_by_tags(request, tag, template='records_by_tag.html', extra_context=
     return django.shortcuts.render(request, template, context)
 
 
-def activate_account(request, username, activation_key):
-    invalid = False
+# TODO: add an exception list
+def activate_account(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        compare_data = app.models.UserActivation.objects.get(username=username)
-
-        if compare_data.activation_key == activation_key:
+        if app.models.UserActivation.objects.get(username=username).activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
             this_user.is_active = True
             this_user.save()
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
             app.models.UserActivation.objects.get(username=username).delete()
-
             return django.shortcuts.redirect("/")
-        else:
-            invalid = True
-    except:
-        invalid = True
+    except Exception:
+        pass
 
-    if invalid:
-        template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-        return django.http.HttpResponse(template.render())
+    template = django.template.loader.get_template('../templates/invalid_activation_key.html')
+    return django.http.HttpResponse(template.render())
 
 
-def remember(request):
-    user_login = request.POST["user_login"]
-    user_exists = False
+# TODO: handle a failed data retrieval attempt
+def remember(request: django.http.HttpRequest):
+    user_login = request.POST.get('user_login')
     response_data = {}
 
     try:
         this_user = django.contrib.auth.models.User.objects.get(username=user_login)
-        user_exists = True
-    except:
-        try:
-            this_user = django.contrib.auth.models.User.objects.get(email=user_login)
-            user_exists = True
-        except:
-            response_data['result'] = "Пользователь с такими данными не зарегестрирован"
-
-    if user_exists:
         if this_user.is_active:
             activation_key = activation_key_generator()
-            user_activation = app.models.UserActivation.objects.create_user_key(this_user.username, activation_key)
+            app.models.UserActivation.objects.create_user_key(this_user.username, activation_key)
 
-            subject = "Восстановление аккаунта sharewood.online"
-            message = "Здравствуйте! Перейдите по ссылке, чтобы поменять ваш пароль: " + address + "user/" + this_user.username + "/remember/" + activation_key + " С уважением, команда Sharewood"
+            subject = 'Восстановление аккаунта sharewood.online'
+            message = ('Здравствуйте!\n'
+                       'Перейдите по ссылке, чтобы поменять ваш пароль: {}user/{}/remember/{}\n\n'
+                       'С уважением, команда Sharewood').format(address, this_user.username, activation_key)
+
             from_email = django.conf.settings.EMAIL_HOST_USER
-            to_list = [this_user.email]
+            send_email = django.core.mail.send_mail(subject, message, from_email, [this_user.email])
 
-            send_email = django.core.mail.send_mail(subject, message, from_email, to_list)
             if send_email:
-                response_data['result'] = "Success!"
+                response_data['result'] = 'Success!'
             else:
-                response_data['result'] = "Ошибка при отправлении письма"
-
+                response_data['result'] = 'Ошибка при отправлении письма'
         else:
-            response_data['result'] = "Пользователь не подтвердил свою электронную почту"
-    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+            response_data['result'] = 'Пользователь не подтвердил свою электронную почту'
+    except django.core.exceptions.MultipleObjectsReturned:
+        response_data['result'] = 'Ошибка безопасности. Зарегистрирован еще один пользователь с такими данными'
+    except django.core.exceptions.ObjectDoesNotExist:
+        response_data['result'] = 'Пользователь с такими данными не зарегестрирован'
+
+    return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-def password_change_view(request, username, activation_key):
-    invalid = True
-
+# TODO: except: print('Error'): what kind of error?
+def password_change_view(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        compare_data = app.models.UserActivation.objects.get(username=username)
-        if compare_data.activation_key == activation_key:
-            invalid = False
-    except:
-        print("Error")
+        if app.models.UserActivation.objects.get(username=username).activation_key != activation_key:
+            template = django.template.loader.get_template('../templates/invalid_activation_key.html')
+            return django.http.HttpResponse(template.render())
+    except Exception:
+        print('Error')
 
-    if invalid:
-        template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-        return django.http.HttpResponse(template.render())
-    else:
-        return django.shortcuts.render(request, 'user/password_change.html', {'username': username})
+    return django.shortcuts.render(request, 'user/password_change.html', {'username': username})
 
 
-def change_password(request, username):
-    new_password1 = request.POST["new_password1"]
-    new_password2 = request.POST["new_password2"]
+def change_password(request: django.http.HttpRequest, username: str):
+    new_password1 = request.POST.get('new_password1')
+    new_password2 = request.POST.get('new_password2')
     response_data = {}
 
-    if new_password1 == new_password2:
-        validate_pass = validate_password(new_password1)
-        if validate_pass == "no error":
+    if new_password1 != new_password2:
+        response_data['result'] = 'Пароли не совпадают'
+    else:
+        response_data['result'] = validate_password(new_password1)
+        if not response_data['result']:
             user = django.contrib.auth.models.User.objects.get(username=username)
             user.set_password(new_password1)
             user.save()
 
             django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-
-            response_data['result'] = 'Success!'
+            # Are you sure, that you need to delete record from UserActivation?
             app.models.UserActivation.objects.get(username=username).delete()
-        else:
-            response_data['result'] = validate_pass
-    else:
-        response_data['result'] = "Пароли не совпадают"
-    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+            response_data['result'] = 'Success!'
+
+    return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-def change_cabinet_password(request):
+def change_cabinet_password(request: django.http.HttpRequest):
     username = request.user.username
-    new_password1 = request.POST["new_password1"]
-    new_password2 = request.POST["new_password2"]
+    new_password1 = request.POST.get('new_password1')
+    new_password2 = request.POST.get('new_password2')
     response_data = {}
 
-    if new_password1 == new_password2:
-        validate_pass = validate_password(new_password1)
-        if validate_pass == "no error":
+    if new_password1 != new_password2:
+        response_data['result'] = 'Пароли не совпадают'
+    else:
+        response_data['result'] = validate_password(new_password1)
+        if not response_data['result']:
             user = django.contrib.auth.models.User.objects.get(username=username)
             user.set_password(new_password1)
             user.save()
 
             django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-
             response_data['result'] = 'Success!'
-        else:
-            response_data['result'] = validate_pass
-    else:
-        response_data['result'] = "Пароли не совпадают"
-    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+
+    return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-def change_email(request):
-    user = django.contrib.auth.models.User.objects.get(email=request.POST['email'])
-    if user:
-        response_data = "Такой эмейл уже зарегестрирован"
+# response_data['result'] or response_data?
+def change_email(request: django.http.HttpRequest):
+    username = request.user.username
+    email = request.POST.get('email')
+
+    if django.contrib.auth.models.User.objects.get(email=email):
+        response_data = 'Такой эмейл уже зарегестрирован'
     else:
         activation_key = activation_key_generator()
-        user_activation = app.models.UserEmail.objects.create_user_key(request.user.username, activation_key,
-                                                                       request.POST['email'])
-        subject = "Изменение email аккаунта sharewood.online"
-        message = "Здравствуйте! Перейдите по ссылке, чтобы подтвердить данный email: " + address + "user/" + request.user.username + "/change-email/" + activation_key + " С уважением, команда Sharewood"
-        from_email = django.conf.settings.EMAIL_HOST_USER
-        to_list = [request.POST["email"]]
+        app.models.UserEmail.objects.create_user_key(username, activation_key, email)
 
-        send_email = django.core.mail.send_mail(subject, message, from_email, to_list)
+        subject = 'Изменение email аккаунта sharewood.online'
+        message = ('Здравствуйте!\n'
+                   'Перейдите по ссылке, чтобы подтвердить данный email: {}user/{}/change-email/\n\n'
+                   'С уважением, команда Sharewood').format(address, username, activation_key)
+
+        from_email = django.conf.settings.EMAIL_HOST_USER
+        send_email = django.core.mail.send_mail(subject, message, from_email, [email])
 
         if send_email:
-            response_data = "Success!"
+            response_data = 'Success!'
+        else:
+            response_data = 'Ошибка при отправке письма с активацией'
 
-    return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
+    return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-def change_email_confirm(request, username, activation_key):
+# TODO: Refactor this
+def change_email_confirm(request: django.http.HttpRequest, username, activation_key):
     invalid = True
 
     try:
         compare_data = app.models.UserEmail.objects.get(username=username)
         if compare_data.activation_key == activation_key:
             invalid = False
-    except:
+    except Exception:
         print("Error")
 
     if invalid:
@@ -433,21 +435,19 @@ def change_email_confirm(request, username, activation_key):
         return django.shortcuts.redirect(request, '/user/profile.html')
 
 
-def cabinet(request, username):
-    user = request.user
-    if user.username == username:
+def cabinet(request: django.http.HttpRequest, username: str):
+    if request.user.username == username:
         return django.shortcuts.render(request, 'user/cabinet.html')
+    return django.shortcuts.redirect('/')
 
-    return django.shortcuts.redirect("/")
 
-
-def save_personal_data(request):
-    filename = "default"
+def save_personal_data(request: django.http.HttpRequest):
+    username = request.user.username
     try:
-        im = PIL.Image.open(request.FILES.get("avatar"))
+        im = PIL.Image.open(request.FILES.get('avatar'))
         width, height = im.size  # Get dimensions
 
-        filename = "media/avatars/cropped/cropped-" + request.user.username + "crop.jpg"
+        filename = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
 
         if width > height:
             diff = width - height
@@ -475,17 +475,15 @@ def save_personal_data(request):
 
         image = im.crop((left, top, right, bottom))
         image.save(filename)
-    except:
-        print("Image does not exist")
 
-    user = django.contrib.auth.models.User.objects.get(username=request.user.username)
-    user.first_name = request.POST.get('first_name')
-    user.last_name = request.POST.get('last_name')
-    user.profile.bio = request.POST.get('bio')
-
-    if filename != "default":
+        user = django.contrib.auth.models.User.objects.get(username=username)
+        user.first_name = request.POST.get('first_name')
+        user.last_name = request.POST.get('last_name')
+        user.profile.bio = request.POST.get('bio')
         user.profile.avatar = "/" + filename
+        user.save()
 
-    myuser = user.save()
+    except Exception:
+        print('Image does not exist')
 
-    return django.shortcuts.redirect("/user/" + request.user.username + "/cabinet")
+    return django.shortcuts.redirect("/user/{}/cabinet".format(username))
