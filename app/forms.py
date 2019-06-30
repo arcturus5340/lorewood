@@ -1,15 +1,16 @@
-from django import forms
-from django.contrib.auth.models import User
-from app.models import Profile
-from app.models import Comments
+import django.forms
+import django.contrib.auth.models
+
+import app.models
 
 
-class UserForm(forms.ModelForm):
+class UserForm(django.forms.ModelForm):
     class Meta:
-        model = User
+        model = django.contrib.auth.models.User
         fields = ('first_name', 'last_name')
 
-class ProfileForm(forms.ModelForm):
+
+class ProfileForm(django.forms.ModelForm):
     class Meta:
-        model = Profile
+        model = app.models.Profile
         fields = ('avatar', 'bio')
