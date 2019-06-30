@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-3">
+            <div class="logo">
+                <a href="/"> Share<span>wood</span> </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-7 col-lg-7">
+            <div class="menu">
+                <ul id="top-nav-ul" class="nav navbar-nav top-menu">
+                    <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29">
+                        <a href="/info/"> О сайте </a>
+                    </li>
+                    <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34">
+                        <a href="http://#"> Форум </a>
+                    </li>
+                    <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
+                        <a href="/regulations/"> Правила </a>
+                    </li>
+                    <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33">
+                        <a href="/advertising/"> Реклама </a>
+                    </li>
+                    <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
+                        <a href="/rightholder/"> Правообладателям </a>
+                    </li>
+                    <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30">
+                        <a href="/donations/"> Поддержать проект </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="sform bform" data-toggle="modal" data-target="#myModal1">
+                <!--<div class="sform" data-toggle="collapse" data-target="#block-form">-->
+                <img src="/static/content/themes/sharewood/img/search%20(2).png" alt="magnifier">
+            </div>
+            <div class="lwa lwa-template-modal">
+                {% if user.is_authenticated %}
+                {% if user.is_active %}
+                <div style="position:absolute; margin-left: 135px; margin-top: 14px; color:green"> {{ user.get_username }} </div>
+                {% else %}
+                <div style="position:absolute; margin-left: 135px; margin-top: 6px; color:red; text-align: center"> {{ user.get_username }}
+                    <br>
+                    <p style="font-size: 10px">(не активный)</p>
+                </div>
+                {% endif %}
+                <div class="dropdown" style="float:right">
+                    <a href="#" class="account">
+                        <img alt="" src="{{ user.profile.avatar }}" class="profile-circle" />
+                    </a>
+                    <div class="submenu" style="display: none; ">
+                        <ul class="root">
+                            <li>
+                                <div style="font-size: 14px; margin-left: 13px"><b>Баланс:</b><br><i>{{ user.profile.balance }} RUB</i></div>
+                            </li><br>
+                            <li>
+                                <a href="/user/{{user.get_username}}/cabinet">Личный кабинет</a>
+                            </li>
+                            <li>
+                                <a href="/user/{{user.get_username}}/cabinet#list-pay-in">Пополнить счет</a>
+                            </li>
+                            <li>
+                                <a href="/user/{{user.get_username}}/cabinet#list-buy-premium">Купить PREMIUM</a>
+                            </li>
+                            <li>
+                                <a href="/user/{{user.get_username}}/cabinet#list-settings">Настройки</a>
+                            </li>
+                            <li>
+                                <a href="/logout/">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% else %}
+                <a href="" class="lwa-links-modal"> Войти </a>
+                <!-- WTF?! -->
+                {% endif %}
+                {% include "includes/auth_form.html" %}
+            </div>
+        </div>
+    </div>
+</div>
+
