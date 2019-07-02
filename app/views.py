@@ -155,7 +155,8 @@ def activate_account(request: django.http.HttpRequest, username: str, activation
 
 def save_personal_data(request: django.http.HttpRequest):
     username = request.user.username
-    
+    filename = "default"
+
     try:
         im = PIL.Image.open(request.FILES.get('avatar'))
         width, height = im.size  # Get dimensions
@@ -196,7 +197,10 @@ def save_personal_data(request: django.http.HttpRequest):
     user.first_name = request.POST.get('first_name')
     user.last_name = request.POST.get('last_name')
     user.profile.bio = request.POST.get('bio')
-    user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
+    
+    if filename != "default":
+        user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
+    
     user.save()
 
     return django.shortcuts.redirect("/user/{}/cabinet".format(username))
