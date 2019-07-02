@@ -322,21 +322,15 @@ def change_email(request: django.http.HttpRequest):
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-# TODO: Refactor this
+# TODO: add an exception list
 def change_email_confirm(request: django.http.HttpRequest, username, activation_key):
-    invalid = True
 
     try:
         compare_data = app.models.UserEmail.objects.get(username=username)
-        if compare_data.activation_key == activation_key:
-            invalid = False
-    except Exception:
-        print("Error")
+        if compare_data.activation_key != activation_key:
+            template = django.template.loader.get_template('../templates/invalid_activation_key.html')
+            return django.http.HttpResponse(template.render())
 
-    if invalid:
-        template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-        return django.http.HttpResponse(template.render())
-    else:
         user = django.contrib.auth.models.User.objects.get(username=username)
         user.email = compare_data.email
         user.is_active = True
@@ -344,7 +338,11 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
 
         django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         app.models.UserEmail.objects.get(username=username).delete()
-        return django.shortcuts.redirect(request, '/user/profile.html')
+
+    except Exception:
+        print("Error")
+
+    return django.shortcuts.redirect(request, '/user/profile.html')
 
 
 # TODO: output date and time for client time zone
