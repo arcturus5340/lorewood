@@ -155,11 +155,13 @@ def activate_account(request: django.http.HttpRequest, username: str, activation
 
 def save_personal_data(request: django.http.HttpRequest):
     username = request.user.username
+    filename = "default"
+
     try:
         im = PIL.Image.open(request.FILES.get('avatar'))
         width, height = im.size  # Get dimensions
 
-        filename = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
+        filename = django.conf.settings.MEDIA_ROOT + '/avatars/cropped/cropped-{}crop.jpg'.format(username)
 
         if width > height:
             diff = width - height
@@ -188,15 +190,18 @@ def save_personal_data(request: django.http.HttpRequest):
         image = im.crop((left, top, right, bottom))
         image.save(filename)
 
-        user = django.contrib.auth.models.User.objects.get(username=username)
-        user.first_name = request.POST.get('first_name')
-        user.last_name = request.POST.get('last_name')
-        user.profile.bio = request.POST.get('bio')
-        user.profile.avatar = "/" + filename
-        user.save()
-
     except Exception:
         print('Image does not exist')
+
+    user = django.contrib.auth.models.User.objects.get(username=username)
+    user.first_name = request.POST.get('first_name')
+    user.last_name = request.POST.get('last_name')
+    user.profile.bio = request.POST.get('bio')
+    
+    if filename != "default":
+        user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
+    
+    user.save()
 
     return django.shortcuts.redirect("/user/{}/cabinet".format(username))
 
