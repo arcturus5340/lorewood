@@ -34,17 +34,6 @@
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
 
-    <link rel='https://api.w.org/' href='https://sharewood.online/wp-json/' />
-    <!-- WTF?! -->
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sharewood.online/xmlrpc.php?rsd" />
-    <!-- WTF?! -->
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://sharewood.online/wp-includes/wlwmanifest.xml" />
-    <!-- WTF?! -->
-    <link rel='prev' title='Название записи 7' href='https://sharewood.online/nazvanie-zapisi-7/' />
-    <!-- WTF?! -->
-    <link rel='next' title='Запись сайта под номером 9' href='https://sharewood.online/zapis-sajta-pod-nomerom-9/' />
-    <!-- WTF?! -->
-    <meta name="generator" content="WordPress 5.1.1" />
     <link rel="canonical" href="/r{{ record.id }}" />
     <link rel='shortlink' href='/r{{ record.id }}' />
     <link rel="alternate" type="application/json+oembed" href="https://sharewood.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsharewood.online%2Fnazvanie-zapisi-8-nazvanie-zapisi-8%2F" />
@@ -441,13 +430,12 @@
                                 <div id="respond" class="comment-respond">
                                     <h3 id="reply-title" class="comment-reply-title">
                                     <small>
-                                      <a rel="nofollow" id="cancel-comment-reply-link" href="/nazvanie-zapisi-8-nazvanie-zapisi-8/#respond" style="display:none;">Отменить ответ</a>
+                                      <a rel="nofollow" id="cancel-comment-reply-link" href="/r{{ record.id }}/#respond" style="display:none;">Отменить ответ</a>
                                     </small>
                                   </h3>
 
                                     <form method="post" id="commentform" class="comment-form" action="/r{{ record.id }}/"> {% csrf_token %}
                                         <p class="logged-in-as"></p>
-
                                         <div class="media-left2">
                                             <a href="#" class="account">
                                                 <img alt="" src="{{ user.profile.avatar.url }}" class="profile-circle" />
@@ -606,4 +594,4 @@
     </script>
 </body>
 
-</html>
+</html>f
