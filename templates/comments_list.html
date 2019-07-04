@@ -1,5 +1,5 @@
 {% load el_pagination_tags %} {% load filters %} {% paginate comments %} {% for comment in comments %}
-<li id="comment-7" class="comment byuser comment-author-prokta odd alt thread-odd thread-alt depth-1 media">
+<li id="comment-{{ comment.id }}" class="comment byuser comment-author-prokta odd alt thread-odd thread-alt depth-1 media">
     <div class="media-left">
         <img alt="" src="https://secure.gravatar.com/avatar/cd6edfb6795d16fb722f547ddfb67f84?s=64&amp;d=mm&amp;r=g" class="avatar avatar-64 photo media-object" width="64" height="64">
     </div>

@@ -15,6 +15,7 @@ class Records(django.db.models.Model):
     date = django.db.models.DateField(default=datetime.datetime.now())
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
+    comments_count = django.db.models.IntegerField(default=0)
 
 
 class Comments(django.db.models.Model):

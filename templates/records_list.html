@@ -1,6 +1,6 @@
 {% load el_pagination_tags %} {% load filters %} {% paginate records %} {% for record in records %} {% if forloop.counter0|divisibleby:2 %}
 <div class="post-block post-block-1">
-    <article id="post-402" class="post-402 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
+    <article id="post-{{ record.id }}" class="post-{{ record.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in record.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 pr-0" style="position: relative;">
                 <div class="name-cat-wrap">
@@ -28,8 +28,7 @@
                     </div>
                     <div class="meta-block">
                         <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>
-                        <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0</div>
-                        <!-- comments -->
+                        <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> {{ record.comments_count }}</div>
                         <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ record.date|strftime:'%Y %m %d' }}</div>
                     </div>
                     <a href="/r{{ record.id }}/">
@@ -42,7 +41,7 @@
 </div>
 {% else %}
 <div class="post-block post-block-2">
-    <article id="post-396" class="post-396 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
+    <article id="post-{{ record.id }}" class="post-{{ record.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in record.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
         <div class="row border-r post-2-cropped post-2-overlay" style="margin: 0; background: url('{{ record.main_pic }}')no-repeat;background-size: cover;">
             <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 border-l">
                 <div class="name-cat"></div>
@@ -60,7 +59,7 @@
                     </div>
                     <div class="meta-block">
                         <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>
-                        <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0 </div>
+                        <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> {{ record.comments_count }} </div>
                         <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ record.date|strftime:'%Y %m %d' }}</div>
                         <a href="/r{{ record.id }}">
                             <div class="btn btn-more"><strong>Читать</strong> полностью</div>

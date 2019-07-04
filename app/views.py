@@ -381,6 +381,9 @@ def record(request: django.http.HttpRequest,
                                            text=request.POST.get('add_comment'),
                                            date=datetime.datetime.now(),
                                            record_id=record_id)
+        current_record.comments_count += 1
+        current_record.save()
+
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
 
     context = {

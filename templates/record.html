@@ -30,7 +30,6 @@
     <!-- Auth style -->
     <link rel="stylesheet" href="/static/includes/auth_style.css" />
     <script type='text/javascript' src='/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
 
@@ -110,7 +109,7 @@
 
 </head>
 
-<body class="post-template-default single single-post postid-402 single-format-standard mob-menu-slideout-over">
+<body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over">
 
     <header class="header-page">{% include "includes/header.html" %}</header>
 
@@ -125,12 +124,11 @@
                     </div>
                     <div class="col-xs-12 col-md-4 col-sm-4">
                         <div class="rating"><span><span class="post-ratings__results">{{ record.rating }}</span>
-                            <meta itemprop="headline" content="Название записи 8, название записи 8" />
-                            <meta itemprop="description" content="Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет выполнить важнейшие задания по разработке новых предложений. Задача организации, в особенности же консуль..." />
-                            <meta itemprop="datePublished" content="2019-03-15T05:04:31+00:00" />
-                            <meta itemprop="dateModified" content="2019-03-16T12:26:41+00:00" />
+                            <meta itemprop="headline" content="{{ record.title }}" />
+                            <meta itemprop="description" content="{{ record.description }}" />
+                            <meta itemprop="datePublished" content="{{ record.date }}" />
                             <meta itemprop="url" content="/r{{ record.id }}" />
-                            <meta itemprop="author" content="" />
+                            <meta itemprop="author" content="{{ record.author }}" />
                             <meta itemprop="mainEntityOfPage" content="/r{{ record.id }}" />
                             <div style="display: none;" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                                 <meta itemprop="url" content="/static/content/uploads/2019/02/look.com_.ua-264882-150x150.jpg" />
@@ -155,7 +153,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="meta-block">
-                            <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> 0 </div>
+                            <div class="meta-item"><i class="fa fa-commenting" aria-hidden="true"></i> {{ record.comments_count }} </div>
                             <div class="meta-item"><i class="fa fa-clock-o" aria-hidden="true"></i>{{ record.date|strftime:'%Y %m %d' }}</div>
                         </div>
                     </div>
@@ -167,7 +165,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <article id="post-402" class="post-402 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag-mashiny tag-ovoshhi tag-stomatolog tag-frukty">
+                    <article id="post-{{ record.id }}" class="post-{{ record.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in record.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
                         <div class="post-container">
                             <div class="row">
                                 <table>
@@ -323,21 +321,20 @@
                         <div class="row">
                             <div class="col col-md-6 col-xs-12">
                                 <div class="post-ratings-wrapper">
-                                    <span id="post-ratings-402" class="post-ratings" itemscope itemtype="http://schema.org/Article" data-nonce="d2d295a659">
-                                <div class="post-rating__item post-rating__item-1"><img id="rating_402_1" src="/static/content/plugins/wp-postratings/images/squares/rating_half.png" alt="1" title="1" onmouseover="current_rating(402, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">1</span></div>
-                                <div class="post-rating__item post-rating__item-2"><img id="rating_402_2" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="2" title="2" onmouseover="current_rating(402, 2, '2');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 2, '2');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">2</span></div>
-                                <div class="post-rating__item post-rating__item-3"><img id="rating_402_3" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="3" title="3" onmouseover="current_rating(402, 3, '3');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 3, '3');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">3</span></div>
-                                <div class="post-rating__item post-rating__item-4"><img id="rating_402_4" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="4" title="4" onmouseover="current_rating(402, 4, '4');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 4, '4');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">4</span></div>
-                                <div class="post-rating__item post-rating__item-5"><img id="rating_402_5" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="5" title="5" onmouseover="current_rating(402, 5, '5');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 5, '5');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">5</span></div>
-                                <div class="post-rating__item post-rating__item-6"><img id="rating_402_6" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="6" title="6" onmouseover="current_rating(402, 6, '6');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 6, '6');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">6</span></div>
-                                <div class="post-rating__item post-rating__item-7"><img id="rating_402_7" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="7" title="7" onmouseover="current_rating(402, 7, '7');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 7, '7');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">7</span></div>
-                                <div class="post-rating__item post-rating__item-8"><img id="rating_402_8" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="8" title="8" onmouseover="current_rating(402, 8, '8');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 8, '8');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">8</span></div>
-                                <div class="post-rating__item post-rating__item-9"><img id="rating_402_9" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="9" title="9" onmouseover="current_rating(402, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">9</span></div>
-                                <div class="post-rating__item post-rating__item-10"><img id="rating_402_10" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="10" title="10" onmouseover="current_rating(402, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">10</span></div>
+                                    <span id="post-ratings-{{ record.id }}" class="post-ratings" itemscope itemtype="http://schema.org/Article" data-nonce="d2d295a659">
+                                <div class="post-rating__item post-rating__item-1"><img id="rating_{{ record_id }}_1" src="/static/content/plugins/wp-postratings/images/squares/rating_half.png" alt="1" title="1" onmouseover="current_rating(402, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">1</span></div>
+                                <div class="post-rating__item post-rating__item-2"><img id="rating_{{ record_id }}_2" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="2" title="2" onmouseover="current_rating(402, 2, '2');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 2, '2');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">2</span></div>
+                                <div class="post-rating__item post-rating__item-3"><img id="rating_{{ record_id }}_3" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="3" title="3" onmouseover="current_rating(402, 3, '3');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 3, '3');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">3</span></div>
+                                <div class="post-rating__item post-rating__item-4"><img id="rating_{{ record_id }}_4" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="4" title="4" onmouseover="current_rating(402, 4, '4');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 4, '4');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">4</span></div>
+                                <div class="post-rating__item post-rating__item-5"><img id="rating_{{ record_id }}_5" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="5" title="5" onmouseover="current_rating(402, 5, '5');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 5, '5');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">5</span></div>
+                                <div class="post-rating__item post-rating__item-6"><img id="rating_{{ record_id }}_6" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="6" title="6" onmouseover="current_rating(402, 6, '6');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 6, '6');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">6</span></div>
+                                <div class="post-rating__item post-rating__item-7"><img id="rating_{{ record_id }}_7" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="7" title="7" onmouseover="current_rating(402, 7, '7');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 7, '7');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">7</span></div>
+                                <div class="post-rating__item post-rating__item-8"><img id="rating_{{ record_id }}_8" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="8" title="8" onmouseover="current_rating(402, 8, '8');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 8, '8');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">8</span></div>
+                                <div class="post-rating__item post-rating__item-9"><img id="rating_{{ record_id }}_9" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="9" title="9" onmouseover="current_rating(402, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">9</span></div>
+                                <div class="post-rating__item post-rating__item-10"><img id="rating_{{ record_id }}_10" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="10" title="10" onmouseover="current_rating(402, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating(402, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">10</span></div>
                                 <meta itemprop="headline" content="{{ record.title }}" />
                                 <meta itemprop="description" content="{{ record.description }}" />
-                                <meta itemprop="datePublished" content="2019-03-15T05:04:31+00:00" />
-                                <meta itemprop="dateModified" content="2019-03-16T12:26:41+00:00" />
+                                <meta itemprop="datePublished" content="{{ record.date }}" />
                                 <meta itemprop="url" content="/r{{ record.id }}" />
                                 <meta itemprop="author" content="{{ author.username }}" />
                                 <meta itemprop="mainEntityOfPage" content="/r{{ record.id }}" />
@@ -505,7 +502,6 @@
     {% include "includes/mobmenu.html" %}
 
     <link rel='stylesheet' id='ulogin-style-css' href='/static/content/plugins/ulogin/css/ulogin.css?ver=5.1.1' type='text/css' media='all' />
-    <!-- WTF?! -->
     <script type='text/javascript'>
         /* <![CDATA[ */
         let ratingsL10n;
