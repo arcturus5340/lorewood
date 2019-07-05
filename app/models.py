@@ -14,6 +14,11 @@ class Records(django.db.models.Model):
     media = django.db.models.TextField(default='1, 2, 3, 4')
     date = django.db.models.DateField(default=datetime.datetime.now())
     rating = django.db.models.FloatField(default=0.0)
+    best_rating = django.db.models.IntegerField(default=1)
+    worst_rating = django.db.models.IntegerField(default=10)
+    rating_count = django.db.models.IntegerField(default=0)
+    rating_sum = django.db.models.IntegerField(default=0)
+    rated_users = django.db.models.TextField(default='')
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
     comments_count = django.db.models.IntegerField(default=0)
 

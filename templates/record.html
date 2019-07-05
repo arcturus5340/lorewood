@@ -143,10 +143,10 @@
                                 </div>
                             </div>
                             <div style="display: none;" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                <meta itemprop="bestRating" content="10" />
-                                <meta itemprop="worstRating" content="1" />
-                                <meta itemprop="ratingValue" content="0.86" />
-                                <meta itemprop="ratingCount" content="7" />
+                                <meta itemprop="bestRating" content="{{ record.best_rating }}" />
+                                <meta itemprop="worstRating" content="{{ record.worst_rating }}" />
+                                <meta itemprop="ratingValue" content="{{ record.rating }}" />
+                                <meta itemprop="ratingCount" content="{{ record.rating_count }}" />
                             </div> <span class="eee">из 10</span></span>
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                     </article>
                     <div class="social-container">
                         <div class="row">
-                            <div class="col col-md-6 col-xs-12">
+                            <div class="col col-md-6 col-xs-12"{% if user.get_username in record.rated_users|split:" " %} hidden{% endif %}>
                                 <div class="post-ratings-wrapper">
                                     <span id="post-ratings-{{ record.id }}" class="post-ratings" itemscope itemtype="http://schema.org/Article" data-nonce="d2d295a659">
                                 <div class="post-rating__item post-rating__item-1"><img id="rating_{{ record.id }}_1" src="/static/content/plugins/wp-postratings/images/squares/rating_half.png" alt="1" title="1" onmouseover="current_rating({{ record.id }}, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">1</span></div>
@@ -331,10 +331,10 @@
                                     </div>
                                 </div>
                                 <div style="display: none;" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                    <meta itemprop="bestRating" content="10" />
-                                    <meta itemprop="worstRating" content="1" />
-                                    <meta itemprop="ratingValue" content="0.86" />
-                                    <meta itemprop="ratingCount" content="7" />
+                                    <meta itemprop="bestRating" content="{{ record.best_rating }}" />
+                                    <meta itemprop="worstRating" content="{{ record.worst_rating }}" />
+                                    <meta itemprop="ratingValue" content="{{ record.rating }}" />
+                                    <meta itemprop="ratingCount" content="{{ record.rating_count }}" />
                                 </div>
                                 </span>
                                 <div id="post-ratings-{{ record.id }}-loading" class="post-ratings-loading">

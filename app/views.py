@@ -353,6 +353,7 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
 
 # TODO: output date and time for client time zone
 # TODO: optimize search of similar records
+# TODO: optimize search of media-content
 # TODO: number of similar records depending on the number of comments
 @django.views.decorators.csrf.csrf_exempt
 @el_pagination.decorators.page_template('comments_list.html')
@@ -360,15 +361,6 @@ def record(request: django.http.HttpRequest,
            record_id: int,
            template: str = "record.html",
            extra_context: typing.Optional[dict] = None):
-
-    if request.POST.get('action') == 'postratings':
-        print(request.POST.get('rate'))
-        request.POST._mutable = True
-        request.POST.pop('action')
-        request.POST.pop('pid')
-        request.POST.pop('rate')
-        request.POST.pop('postratings_{}_nonce'.format(record_id))
-
 
     records = app.models.Records.objects.all()
     prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
@@ -397,6 +389,16 @@ def record(request: django.http.HttpRequest,
                                            date=datetime.datetime.now(),
                                            record_id=record_id)
         current_record.comments_count += 1
+        current_record.save()
+
+    if request.POST.get('action') == 'postratings':
+        rate = int(request.POST.get('rate'))
+        current_record.rating_sum += rate
+        current_record.rating_count += 1
+        current_record.rating = int((current_record.rating_sum / current_record.rating_count) * 10) / 10
+        current_record.best_rating = max(rate, current_record.best_rating)
+        current_record.worst_rating = min(rate, current_record.worst_rating)
+        current_record.rated_users += request.user.username + ' '
         current_record.save()
 
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
