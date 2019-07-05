@@ -11,11 +11,17 @@ class Records(django.db.models.Model):
     main_pic = django.db.models.FilePathField(default=None)
     description = django.db.models.TextField(default='')
     text = django.db.models.TextField()
-    media = django.db.models.TextField(default='/static/record_src/r1/media/01. Balls To The Wall.mp3')
+    media = django.db.models.TextField(default='1, 2, 3, 4')
     date = django.db.models.DateField(default=datetime.datetime.now())
     rating = django.db.models.FloatField(default=0.0)
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
     comments_count = django.db.models.IntegerField(default=0)
+
+
+# TODO: automate media paths
+class Media(django.db.models.Model):
+    title = django.db.models.TextField()
+    data = django.db.models.TextField()
 
 
 class Comments(django.db.models.Model):

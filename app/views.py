@@ -376,6 +376,10 @@ def record(request: django.http.HttpRequest,
     next_record = records[record_id % app.models.Records.objects.count()]
     author = django.contrib.auth.models.User.objects.get(username=current_record.author)
 
+    content = []
+    for media_id in current_record.media.split(', '):
+        content.append(app.models.Media.objects.get(id=media_id))
+
     similar_records = []
     for tag in current_record.tags.split(', '):
         for r in app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag)):
@@ -400,6 +404,7 @@ def record(request: django.http.HttpRequest,
     context = {
         'prev_record': prev_record,
         'record': current_record,
+        'content': content,
         'next_record': next_record,
         'author': author,
         'similar_records': similar_records,
