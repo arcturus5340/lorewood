@@ -106,6 +106,56 @@
             color: #3394B8;
         }
 
+        .lwa-modal-video { 
+            visibility: hidden; 
+            top: 100px; 
+            left: 40%; 
+            margin-left: -240px; 
+            width: 400px; 
+            position: absolute; 
+            z-index: 101; 
+            padding: 30px 40px 34px; 
+            border-radius: 5px; 
+            -moz-border-radius: 5px; 
+            -webkit-border-radius: 5px; 
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            -box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .lwa-modal-video h4, .lwa-modal-video p { 
+            margin-bottom:10px; 
+        }
+        
+        .lwa-modal-video .lwa-modal-close { 
+            font-size: 30px; 
+            line-height: .5; 
+            position: absolute; 
+            top: 8px; right: 11px; 
+            color: #aaa; 
+            text-shadow: 0 -1px 1px rbga(0,0,0,.6); 
+            font-weight: bold; 
+            cursor: pointer; 
+        } 
+
+        .lwa-modal-audio { 
+            visibility: hidden; 
+            top: 100px; 
+            left: 50%; 
+            margin-left: -240px; 
+            width: 400px; 
+            padding: 20px;
+            position: absolute; 
+            z-index: 101; 
+            -moz-border-radius: 5px; 
+            -webkit-border-radius: 5px; 
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            -box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
     </style>
 
 </head>
@@ -231,17 +281,13 @@
                                                                     {% for data in media.data|split:", " %}
                                                                       <li>
                                                                         {% if data.0 == 'A' %}
-                                                                            <audio controls>
-                                                                              <source src="{{ data|slice:" 1: " }}">
-                                                                            </audio>
+                                                                            <a href="{{ data|slice:" 1: " }}" style="float:left; width: 90%" class="audio-link"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                         {% elif data.0 == 'F' %}
-                                                                            <a href="{{ data|slice:" 1: " }}">{{ data|split:"/"|last }}</a>
+                                                                            <a href="{{ data|slice:" 1: " }}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                         {% elif data.0 == 'V' %}
-                                                                            <video width="640" height="480" controls>
-                                                                              <source src="{{ data|slice:" 1: " }}">
-                                                                            </video>
+                                                                            <a href="{{ data|slice:" 1: " }}" class="video-link" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                         {% endif %}
-                                                                        <a href="{{ data|slice:" 1: " }}" download> Загрузить {{ data|split:"/"|last }}</a>
+                                                                        <a href="{{ data|slice:" 1: " }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px"></a>
                                                                       </li>
                                                                     {% endfor %}
                                                                 </ul>
@@ -477,6 +523,66 @@
     <footer>
     {% include "includes/footer.html" %}
     </footer>
+
+    <!-- Video view modal -->
+    <div class="lwa-modal-video" id="video-view" tabindex="-2" role="dialog" hidden style="display: block; width: 55%; ">
+        <div >
+            <div class="modal-content">
+                <button type="button" id="video-close" data-dismiss="modal">&times;</button>
+                <div class="modal-body" style="background: #fff;">
+                    <video width="640" height="480" controls>
+                      <source id="video-source" src="">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(".video-link").on("click", function(i) {
+            i.preventDefault();
+            let link = jQuery(this).attr("href");
+            jQuery("#video-source").attr("src", link);
+            jQuery("#video-view").css("visibility", "visible");
+            
+            let height = jQuery(window).scrollTop();
+            jQuery("#video-view").css("margin-top", height-100);
+        });
+
+        jQuery("#video-close").on("click", function() {
+            jQuery("#video-view").css("visibility", "hidden");
+        });
+    </script>
+
+    <!-- audio view modal -->
+    <div class="lwa-modal-audio" id="audio-view" tabindex="-2" role="dialog" hidden style="display: block;">
+        <div >
+            <div class="modal-content">
+                <button type="button" id="audio-close" data-dismiss="modal">&times;</button>
+                <div class="modal-body" style="background: #fff; margin-left: 30px">
+                    <audio controls>
+                      <source id="audio-source" src="">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(".audio-link").on("click", function(i) {
+            i.preventDefault();
+            let link = jQuery(this).attr("href");
+            jQuery("#audio-source").attr("src", link);
+            jQuery("#audio-view").css("visibility", "visible");
+            
+            let height = jQuery(window).scrollTop();
+            jQuery("#audio-view").css("margin-top", height+100);
+        });
+
+        jQuery("#audio-close").on("click", function() {
+            jQuery("#audio-view").css("visibility", "hidden");
+        });
+    </script>
 
     {% include "includes/search_form.html" %}
 
