@@ -43,3 +43,8 @@ def strftime(date, template):
     elif month == 12:
         sdate[1] = 'Декабрь'
     return " ".join(sdate)
+
+
+@register.filter(name='zip')
+def zip_lists(a, b):
+  return zip(a, b)

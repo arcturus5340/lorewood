@@ -355,6 +355,7 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
 # TODO: optimize search of similar records
 # TODO: optimize search of media-content
 # TODO: number of similar records depending on the number of comments
+# TODO: avatars load optimization
 @django.views.decorators.csrf.csrf_exempt
 @el_pagination.decorators.page_template('comments_list.html')
 def record(request: django.http.HttpRequest,
@@ -402,6 +403,10 @@ def record(request: django.http.HttpRequest,
         current_record.save()
 
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
+    authors = [comment.author for comment in comments]
+    user_ids = [app.models.User.objects.get(username=author).id for author in authors]
+    avatars = [app.models.Profile.objects.get(user_id=id).avatar for id in user_ids]
+    print(avatars)
 
     context = {
         'prev_record': prev_record,
@@ -411,6 +416,7 @@ def record(request: django.http.HttpRequest,
         'author': author,
         'similar_records': similar_records,
         'comments': comments,
+        'avatars': avatars,
     }
 
     if extra_context is not None:
