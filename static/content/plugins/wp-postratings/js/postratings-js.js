@@ -45,8 +45,8 @@ function rate_post() {
       ratingsL10n.show_loading && jQuery("#post-ratings-" + post_id + "-loading").show();
       jQuery.ajax({
         type: "POST",
-        xhrFields: {withCredentials: !0},
-        dataType: "html",
+        // xhrFields: {withCredentials: !0},
+        // dataType: "html",
         url: ratingsL10n.ajax_url,
         data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce,
         cache: !1,
@@ -54,8 +54,8 @@ function rate_post() {
       })
     }) : (ratingsL10n.show_loading && jQuery("#post-ratings-" + post_id + "-loading").show(), jQuery.ajax({
       type: "POST",
-      xhrFields: {withCredentials: !0},
-      dataType: "html",
+      // xhrFields: {withCredentials: !0},
+      // dataType: "html",
       url: ratingsL10n.ajax_url,
       data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce,
       cache: !1,
