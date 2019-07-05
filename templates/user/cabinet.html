@@ -169,129 +169,129 @@ if (input.files && input.files[0]) {
     var reader = new FileReader();
 
     reader.onload = function(e) {
-        $('#avatar-upload').attr('src', e.target.result);
+        jQuery('#avatar-upload').attr('src', e.target.result);
     }
 
     reader.readAsDataURL(input.files[0]);
 }
 }
 
-$("#id_avatar").change(function() {
+jQuery("#id_avatar").change(function() {
 readURL(this);
 });
 
-/*$("#save-data").on("click", function(i) {
-$("#save-data-status").hide();
+/*jQuery("#save-data").on("click", function(i) {
+jQuery("#save-data-status").hide();
 i.preventDefault();
-$.ajax({
+jQuery.ajax({
     type: "POST",
     url: '/save-personal-data/',
     data: {
-        'form': $("#personal-data-form").serialize(),
-        'file': $("#id_avatar").val(),
-        'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val(),
+        'form': jQuery("#personal-data-form").serialize(),
+        'file': jQuery("#id_avatar").val(),
+        'csrfmiddlewaretoken': jQuery("input[name=csrfmiddlewaretoken]").val(),
     },
     success: function(response) {
         if (response === "Success!") {
-            $("#save-data-status").show();
-            $("#save-data-status").css("color", "green");
-            $("#save-data-status").html("Успешно сохранено");
+            jQuery("#save-data-status").show();
+            jQuery("#save-data-status").css("color", "green");
+            jQuery("#save-data-status").html("Успешно сохранено");
         } else {
-            $("#save-data-status").show();
-            $("#save-data-status").html("Произошла ошибка");
+            jQuery("#save-data-status").show();
+            jQuery("#save-data-status").html("Произошла ошибка");
         }
     }
 });
 });
 */
-$("#password-button").on("click", function(i) {
-$('#password-errors').hide()
+jQuery("#password-button").on("click", function(i) {
+jQuery('#password-errors').hide()
 i.preventDefault();
-$.ajax({
+jQuery.ajax({
     type: "POST",
     url: '/change-cabinet-password/',
-    data: $("#new_password_form").serialize(),
+    data: jQuery("#new_password_form").serialize(),
     success: function(response) {
         // do something with response
         if (response['result'] === "Success!") {
-            $("#password-errors").show();
-            $("#password-errors").css("color", "green");
-            $('#password-errors').html("Успешно сохранено");
+            jQuery("#password-errors").show();
+            jQuery("#password-errors").css("color", "green");
+            jQuery('#password-errors').html("Успешно сохранено");
         } else {
-            $('#password-errors').html(response["result"]);
-            $('#password-errors').show()
+            jQuery('#password-errors').html(response["result"]);
+            jQuery('#password-errors').show()
         }
     }
 });
 });
 
-$("#new-email-button").on("click", function(i) {
-$('#new-email-status').hide()
+jQuery("#new-email-button").on("click", function(i) {
+jQuery('#new-email-status').hide()
 i.preventDefault();
-$.ajax({
+jQuery.ajax({
     type: "POST",
     url: '/change-email/',
-    data: $("#new-email-form").serialize(),
+    data: jQuery("#new-email-form").serialize(),
     success: function(response) {
         if (response == "Success!") {
-            $("#new-email-status").show();
-            $("#new-email-status").css("color", "green");
-            $('#new-email-status').html("Активация была отправлена на указанный эмейл");
+            jQuery("#new-email-status").show();
+            jQuery("#new-email-status").css("color", "green");
+            jQuery('#new-email-status').html("Активация была отправлена на указанный эмейл");
         } else {
-            $("#new-email-status").show();
-            $("#new-email-status").css("color", "red");
-            $('#new-email-status').html(response);
+            jQuery("#new-email-status").show();
+            jQuery("#new-email-status").css("color", "red");
+            jQuery('#new-email-status').html(response);
         }
     }
 });
 });
 
-$("#list-personal-data-list").on("click", function() {
-$("#settings-tabpanel").hide();
-$("#pay-in-tabpanel").hide();
-$("#buy-premium-tabpanel").hide();
-$("#personal-data-tabpanel").show("slow");
+jQuery("#list-personal-data-list").on("click", function() {
+jQuery("#settings-tabpanel").hide();
+jQuery("#pay-in-tabpanel").hide();
+jQuery("#buy-premium-tabpanel").hide();
+jQuery("#personal-data-tabpanel").show("slow");
 
-$("#list-settings-list").removeClass("active");
-$("#list-pay-in-list").removeClass("active");
-$("#list-buy-premium-list").removeClass("active");
-$(this).addClass("active");
+jQuery("#list-settings-list").removeClass("active");
+jQuery("#list-pay-in-list").removeClass("active");
+jQuery("#list-buy-premium-list").removeClass("active");
+jQuery(this).addClass("active");
 });
 
-$("#list-settings-list").on("click", function() {
-$("#pay-in-tabpanel").hide();
-$("#buy-premium-tabpanel").hide();
-$("#personal-data-tabpanel").hide();
-$("#settings-tabpanel").show("slow");
+jQuery("#list-settings-list").on("click", function() {
+jQuery("#pay-in-tabpanel").hide();
+jQuery("#buy-premium-tabpanel").hide();
+jQuery("#personal-data-tabpanel").hide();
+jQuery("#settings-tabpanel").show("slow");
 
-$("#list-personal-data-list").removeClass("active");
-$("#list-pay-in-list").removeClass("active");
-$("#list-buy-premium-list").removeClass("active");
-$(this).addClass("active");
+jQuery("#list-personal-data-list").removeClass("active");
+jQuery("#list-pay-in-list").removeClass("active");
+jQuery("#list-buy-premium-list").removeClass("active");
+jQuery(this).addClass("active");
 });
 
-$("#list-pay-in-list").on("click", function() {
-$("#buy-premium-tabpanel").hide();
-$("#personal-data-tabpanel").hide();
-$("#settings-tabpanel").hide();
-$("#pay-in-tabpanel").show("slow");
+jQuery("#list-pay-in-list").on("click", function() {
+jQuery("#buy-premium-tabpanel").hide();
+jQuery("#personal-data-tabpanel").hide();
+jQuery("#settings-tabpanel").hide();
+jQuery("#pay-in-tabpanel").show("slow");
 
-$("#list-personal-data-list").removeClass("active");
-$("#list-settings-list").removeClass("active");
-$("#list-buy-premium-list").removeClass("active");
-$(this).addClass("active");
+jQuery("#list-personal-data-list").removeClass("active");
+jQuery("#list-settings-list").removeClass("active");
+jQuery("#list-buy-premium-list").removeClass("active");
+jQuery(this).addClass("active");
 });
 
-$("#list-buy-premium-list").on("click", function() {
-$("#personal-data-tabpanel").hide();
-$("#settings-tabpanel").hide();
-$("#pay-in-tabpanel").hide();
-$("#buy-premium-tabpanel").show("slow");
+jQuery("#list-buy-premium-list").on("click", function() {
+jQuery("#personal-data-tabpanel").hide();
+jQuery("#settings-tabpanel").hide();
+jQuery("#pay-in-tabpanel").hide();
+jQuery("#buy-premium-tabpanel").show("slow");
 
-$("#list-personal-data-list").removeClass("active");
-$("#list-settings-list").removeClass("active");
-$("#list-pay-in-list").removeClass("active");
-$(this).addClass("active");
+jQuery("#list-personal-data-list").removeClass("active");
+jQuery("#list-settings-list").removeClass("active");
+jQuery("#list-pay-in-list").removeClass("active");
+jQuery(this).addClass("active");
 });
 </script>
 
