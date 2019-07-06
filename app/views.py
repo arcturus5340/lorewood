@@ -18,6 +18,7 @@ import el_pagination.decorators
 
 import datetime
 import json
+import logging
 import PIL.Image
 import random
 import re
@@ -28,9 +29,10 @@ import app.forms
 import app.models
 
 address = 'http://127.0.0.1:8000/'
+# logging.basicConfig(format = u'[%(asctime)s] %(clientip)s %(levelname)-8s: %(message)s',
+#                     filename="sample.log", level=logging.WARNING)
 
 
-# TODO: calculating popular records once in a while
 @el_pagination.decorators.page_template('records_list.html')
 def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):
     regform = django_registration.forms.RegistrationForm
@@ -39,7 +41,6 @@ def index(request: django.http.HttpRequest, template: str = 'index.html', extra_
 
     records = list(app.models.Records.objects.all())
     last_records = records[-4:]
-    popular_records = sorted(records, key=lambda obj: obj.rating)[-5:]
 
     context = {
         'regform': regform,
@@ -47,8 +48,6 @@ def index(request: django.http.HttpRequest, template: str = 'index.html', extra_
         'next': authnext,
         'records': records,
         'last_records': last_records,
-        'popular_records': popular_records,
-        'popular_records_template': 'popular_records_template.html',
     }
 
     if extra_context is not None:
@@ -74,6 +73,7 @@ def login(request: django.http.HttpRequest):
 
 def logout(request: django.http.HttpRequest):
     django.contrib.auth.logout(request)
+    print(request.get_full_path())
     return django.shortcuts.redirect("/")
 
 
@@ -433,13 +433,10 @@ def records_by_tags(request: django.http.HttpRequest,
                     extra_context: typing.Optional[dict] = None):
 
     records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
-    popular_records = sorted(list(app.models.Records.objects.all()), key=lambda obj: obj.rating)[-5:]
 
     context = {
         'tag': tag,
         'records': records,
-        'popular_records_template': 'popular_records_template.html',
-        'popular_records': popular_records,
     }
 
     if extra_context is not None:
@@ -449,13 +446,11 @@ def records_by_tags(request: django.http.HttpRequest,
 
 
 # TODO: improve search engine
-# TODO: calculating popular records once in a while
 @el_pagination.decorators.page_template('records_list.html')
 def search(request: django.http.HttpRequest, template: str = 'search.html',
            extra_context: typing.Optional[dict] = None):
     search_text = request.GET.get('s', default=' ')
     records = list(app.models.Records.objects.all())
-    popular_records = sorted(records, key=lambda obj: obj.rating)[-5:]
 
     found_records = []
     for r in records:
@@ -469,8 +464,6 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     context = {
         'search': search,
         'records': found_records,
-        'popular_records_template': 'popular_records_template.html',
-        'popular_records': popular_records,
     }
 
     if extra_context is not None:

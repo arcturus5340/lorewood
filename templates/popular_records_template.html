@@ -1,45 +1,42 @@
-{% load filters %}
-
 <div class="row" style="padding: 0 15px;">
-    <div id="post-{{ popular_records.0.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
-        <div class="rating"><span><span class="post-ratings__results">{{ popular_records.0.rating }} </span><span class="eee">из 10</span></span>
+    <div id="post-14" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
+        <div class="rating"><span><span class="post-ratings__results">9.4 </span><span class="eee">из 10</span></span>
         </div>
         <div class="post-wrap-h2">
-            <h2><a href="/r{{ popular_records.0.id }}">{{ popular_records.0.title }}</a></h2></div>
+            <h2><a href="/r14">Название Записи</a></h2></div>
         <div class="excerpt clip">
-            <p>{{ popular_records.0.description }}</p>
+            <p>Описание. Описание. Описание. Описание. Описание. Описание. Описание. </p>
         </div>
     </div>
 </div>
 <div class="triangle2">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-2 pr-0">
-            <article id="post-{{ popular_records.1.id }}" class="post-{{ popular_records.1.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in popular_records.1.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
-                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url('{{ popular_records.1.main_pic }}')no-repeat;background-size: cover;">
+            <article id="post-6" class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url('/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg')no-repeat;background-size: cover;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">{{ popular_records.1.rating }}</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">6.8</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r{{ popular_records.1.id }}">{{ popular_records.1.title }}</a></h2></div>
-                            <!-- WTF?! -->
-                            <div class="excerpt clip">{{ popular_records.1.description }}</div>
+                                <h2><a href="/r6">Название Записи 6</a></h2></div>
+                            <div class="excerpt clip">Описание. Описание. Описание. Описание. Описание. Описание. Описание. </div>
                         </div>
                     </div>
                 </div>
             </article>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-1 pl-0">
-            <article id="post-{{ popular_records.2.id }}" class="post-{{ popular_records.2.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in popular_records.2.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
+            <article id="post-17" class="post-17 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
                 <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: #51b956;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">{{ popular_records.2.rating }}</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">4.1</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r{{ popular_records.2.id }}">{{ popular_records.2.title }}</a></h2></div>
+                                <h2><a href="/r17">Название Записи</a></h2></div>
                             <div class="excerpt clip">
-                                <p>{{ popular_records.2.description }}</p>
+                                <p>Описание. Описание. Описание. Описание. Описание. Описание. Описание. </p>
                             </div>
                         </div>
                     </div>
@@ -49,17 +46,16 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-2 pr-0">
-            <article id="post-{{ popular_records.3.id }}" class="post-{{ popular_records.3.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in popular_records.3.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
+            <article id="post-5" class="post-5 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
                 <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: #51b956;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">{{ popular_records.3.rating }}</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">1.9</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r{{ popular_records.3.id }}">{{ popular_records.3.title }}</a></h2></div>
-                            <!-- WTF?! -->
+                                <h2><a href="/r5">Название Записи 5</a></h2></div>
                             <div class="excerpt clip">
-                                <p>{{ popular_records.3.description }}</p>
+                                <p>Описание. Описание. Описание. Описание. Описание. Описание. Описание. </p>
                             </div>
                         </div>
                     </div>
@@ -67,17 +63,16 @@
             </article>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-1 pl-0">
-            <article id="post-{{ popular_records.4.id }}" class="post-{{ popular_records.4.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in popular_records.4.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
-                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url({{ popular_records.4.main_pic }})no-repeat;background-size: cover;">
+            <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url(/static/record_src/r1/look.com_.ua-264882.jpg)no-repeat;background-size: cover;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">{{ popular_records.4.rating }}</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">0.0</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r{{ popular_records.4.id }}">{{ popular_records.4.title }}</a></h2></div>
-                            <!-- WTF?! -->
+                                <h2><a href="/r1">Название Записи 1</a></h2></div>
                             <div class="excerpt clip">
-                                <p>{{ popular_records.4.description }}</p>
+                                <p>Описание. Описание. Описание. Описание. Описание. Описание. Описание. </p>
                             </div>
                         </div>
                     </div>
