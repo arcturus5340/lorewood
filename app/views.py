@@ -29,8 +29,8 @@ import app.forms
 import app.models
 
 address = 'http://127.0.0.1:8000/'
-# logging.basicConfig(format = u'[%(asctime)s] %(clientip)s %(levelname)-8s: %(message)s',
-#                     filename="sample.log", level=logging.WARNING)
+logging.basicConfig(format = u'[%(asctime)s] %(levelname)-8s: %(message)s',
+                    filename="sharewood.log", level=logging.NOTSET)
 
 
 @el_pagination.decorators.page_template('records_list.html')
@@ -65,15 +65,18 @@ def login(request: django.http.HttpRequest):
     if user:
         response_data['result'] = 'Success!'
         django.contrib.auth.login(request, user)
+        logging.info('user \'{}\' logged in'.format(user_login))
     else:
         response_data['result'] = 'Failed!'
+        logging.warning('login error')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
 def logout(request: django.http.HttpRequest):
+    user_login = request.user.username
     django.contrib.auth.logout(request)
-    print(request.get_full_path())
+    logging.info('user \'{}\' logged out'.format(user_login))
     return django.shortcuts.redirect("/")
 
 

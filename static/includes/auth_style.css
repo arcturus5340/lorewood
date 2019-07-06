@@ -88,8 +88,8 @@ a.account {
     width: 121px;
     margin: -11px 0 0 -10px;
     text-decoration: none;
-    background: url(images/arrow.png) 80px 32px no-repeat;
-    <!-- WTF?! --> cursor: pointer;
+    background: url(images/arrow-pointer-blue-2x.png) 80px 32px no-repeat;
+    cursor: pointer;
 }
 
 .root {

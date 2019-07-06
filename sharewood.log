@@ -1,0 +1,5 @@
+[2019-07-06 17:25:48,136] WARNING : login error
+[2019-07-06 17:25:50,440] INFO    : user login logged in
+[2019-07-06 17:25:52,514] INFO    : user login logged out
+[2019-07-06 18:28:06,901] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-06 18:38:05,118] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.

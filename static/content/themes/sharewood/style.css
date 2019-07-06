@@ -285,7 +285,7 @@ a img.aligncenter {
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url('/wp-content/themes/sharewood/fonts/web/HelveticaNeue.ttf') format("truetype");
+  src: url('/static/content/themes/sharewood/fonts/web/HelveticaNeue.ttf') format("truetype");
 }
 
 
@@ -305,7 +305,7 @@ header {
 .triangle:before {
   position: absolute;
   content: '';
-  background: url(/wp-content/uploads/2019/02/tl.png) no-repeat;
+  background: url(/static/content/uploads/2019/02/tl.png) no-repeat;
   width: 11px;
   background-size: 100%;
   height: 11px;
@@ -317,7 +317,7 @@ header {
 .triangle:after {
   position: absolute;
   content: '';
-  background: url(/wp-content/uploads/2019/02/tr.png) no-repeat;
+  background: url(/static/content/uploads/2019/02/tr.png) no-repeat;
   width: 11px;
   background-size: 100%;
   height: 11px;
@@ -333,7 +333,7 @@ header {
 .triangle2:before {
   position: absolute;
   content: '';
-  background: url(/wp-content/uploads/2019/02/tl.png) no-repeat;
+  background: url(/static/content/uploads/2019/02/tl.png) no-repeat;
   width: 11px;
   background-size: 100%;
   height: 11px;
@@ -345,7 +345,7 @@ header {
 .triangle2:after {
   position: absolute;
   content: '';
-  background: url(/wp-content/uploads/2019/02/tr.png) no-repeat;
+  background: url(/static/content/uploads/2019/02/tr.png) no-repeat;
   width: 11px;
   background-size: 100%;
   height: 11px;
@@ -1322,7 +1322,7 @@ textarea.form-control {
 
 .btn-comment {
 
-  background: #51b956 url('/wp-content/themes/sharewood/img/reply.png') no-repeat;
+  background: #51b956 url('/static/content/themes/sharewood/img/reply.png') no-repeat;
   background-position: center;
   position: absolute;
   right: 0;
@@ -1339,7 +1339,7 @@ textarea.form-control {
 }
 
 .btn-comment:hover {
-  background: #21a528 url('/wp-content/themes/sharewood/img/reply.png') no-repeat;
+  background: #21a528 url('/static/content/themes/sharewood/img/reply.png') no-repeat;
   color: #fff;
   background-position: center;
 }
@@ -1771,7 +1771,7 @@ blockquote:before {
 
 .contact-sidebar {
 
-  background: #94a1a9 url('/wp-content/themes/sharewood/img/send-mail.png') no-repeat;
+  background: #94a1a9 url('/static/content/themes/sharewood/img/send-mail.png') no-repeat;
   background-position: top right;
   overflow: hidden;
   color: #fff;
@@ -2609,7 +2609,7 @@ input[type="submit"]{
   border-radius: 3px !important;
   width: 52px !important;
   height: 32px;
-  background: url(/wp-content/themes/sharewood/img/tvitter2.png) 5px 4px / 45px no-repeat !important;
+  background: url(/static/content/themes/sharewood/img/tvitter2.png) 5px 4px / 45px no-repeat !important;
   background-color: #44a9e4 !important;
   opacity: 1 !important;
 }
@@ -2782,15 +2782,15 @@ label {
   border-left: 1px solid #eff2f3 !important;
 }
 
-.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_on.png"],
-.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_half.png"],
-.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_over.png"] {
+.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="/static/content/plugins/wp-postratings/images/squares/rating_on.png"],
+.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="/static/content/plugins/wp-postratings/images/squares/rating_half.png"],
+.post-ratings-wrapper .post-ratings .post-rating__item:not(:first-child) img[src="/static/content/plugins/wp-postratings/images/squares/rating_over.png"] {
   border-left: 1px solid #6cc570 !important;
 }
 
-.post-ratings-wrapper .post-ratings img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_on.png"] + span,
-.post-ratings-wrapper .post-ratings img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_half.png"] + span,
-.post-ratings-wrapper .post-ratings img[src="https://sharewood.online/wp-content/plugins/wp-postratings/images/squares/rating_over.png"] + span {
+.post-ratings-wrapper .post-ratings img[src="/static/content/plugins/wp-postratings/images/squares/rating_on.png"] + span,
+.post-ratings-wrapper .post-ratings img[src="/static/content/plugins/wp-postratings/images/squares/rating_half.png"] + span,
+.post-ratings-wrapper .post-ratings img[src="/static/content/plugins/wp-postratings/images/squares/rating_over.png"] + span {
   color: #ffffff;
 }
 
