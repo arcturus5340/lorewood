@@ -21,6 +21,9 @@ class Records(django.db.models.Model):
     rated_users = django.db.models.TextField(default='')
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
     comments_count = django.db.models.IntegerField(default=0)
+    price = django.db.models.IntegerField(default=0)
+    pre_video = django.db.models.TextField(default="/static/")
+    includes = django.db.models.TextField(default="-")
 
 
 # TODO: automate media paths
