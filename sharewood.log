@@ -3,3 +3,23 @@
 [2019-07-06 17:25:52,514] INFO    : user login logged out
 [2019-07-06 18:28:06,901] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
 [2019-07-06 18:38:05,118] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-06 18:48:49,079] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-06 18:54:16,756] INFO    : user 'login' logged in
+[2019-07-06 18:54:29,240] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 392, in record
+    avatar=app.models.Profile.objects.get(user_id=django.contrib.auth.models.User.objects.get(username=request.POST.get('username').id).avatar),
+AttributeError: 'str' object has no attribute 'id'
+[2019-07-06 18:54:29,349] WARNING : Not Found: /favicon.ico
+[2019-07-06 18:55:19,898] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-06 18:56:23,214] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.

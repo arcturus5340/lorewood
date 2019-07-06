@@ -34,6 +34,7 @@ class Media(django.db.models.Model):
 
 class Comments(django.db.models.Model):
     author = django.db.models.TextField()
+    avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
     text = django.db.models.TextField()
     date = django.db.models.DateField(default=datetime.datetime.now())
     record_id = django.db.models.IntegerField(default=1)
