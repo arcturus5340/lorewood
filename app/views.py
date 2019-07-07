@@ -63,8 +63,8 @@ def login(request: django.http.HttpRequest):
 
     response_data = {}
     if user:
-        response_data['result'] = 'Success!'
         django.contrib.auth.login(request, user)
+        response_data['result'] = 'Success!'
         # logging.info('user \'{}\' logged in'.format(user_login))
     else:
         response_data['result'] = 'Failed!'
@@ -107,21 +107,23 @@ def register(request: django.http.HttpRequest):
     else:
         response_data['result'] = validate_password(password1)
         if not response_data['result']:
-            try:
-                reguser = django.contrib.auth.models.User.objects.create_user(username, email, password1)
-                if send_activation_email(username=username, email=email):
-                    user = django.contrib.auth.authenticate(username=username, password=password1)
+            reguser = django.contrib.auth.models.User.objects.create_user(username, email, password1)
+            if send_activation_email(username=username, email=email):
+                reguser.is_active = False
+                reguser.save()
+                response_data['result'] = 'Success!'
+                # logging.info('registration success')
+
+                user = django.contrib.auth.authenticate(username=username, password=password1)
+                if user:
                     django.contrib.auth.login(request, user)
-                    reguser.is_active = False
-                    reguser.save()
-                    response_data['result'] = 'Success!'
-                    # logging.info('registration success')
+                    # logging.info('user \'{}\' logged in'.format(user_login))
                 else:
-                    response_data['result'] = 'Ошибка при отправке письма с активацией'
-                    # logging.error('registration error (no email was sent)')
-            except ValueError:
-                response_data['result'] = 'Произошла ошибка при валидации'
-                # logging.error('registration error (data validation error)')
+                    response_data['result'] = 'Failed!'
+                    # logging.warning('login error')
+            else:
+                response_data['result'] = 'Ошибка при отправке письма с активацией'
+                # logging.error('registration error (no email was sent)')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
@@ -146,31 +148,35 @@ def rightholder(request: django.http.HttpRequest):
     return django.shortcuts.render(request, 'rightholder.html')
 
 
-# TODO: add an exception list
 def activate_account(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
         if app.models.UserActivation.objects.get(username=username).activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
             this_user.is_active = True
+            # logging.info('user \'{}\' is activated'.format(user_login))
             this_user.save()
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
+            # logging.info('user \'{}\' logged in'.format(user_login))
+
             app.models.UserActivation.objects.get(username=username).delete()
             return django.shortcuts.redirect("/")
-    except Exception:
+    except django.core.exceptions.ObjectDoesNotExist:
+        # logging.error('user \'{}\' does not exist'.format(user_login))
         pass
 
     template = django.template.loader.get_template('../templates/invalid_activation_key.html')
     return django.http.HttpResponse(template.render())
 
 
+#TODO: refucktor this plz, @abinba
 def save_personal_data(request: django.http.HttpRequest):
     username = request.user.username
     filename = "default"
 
     try:
         im = PIL.Image.open(request.FILES.get('avatar'))
-        width, height = im.size  # Get dimensions
+        width, height = im.size
 
         filename = django.conf.settings.MEDIA_ROOT + '/avatars/cropped/cropped-{}crop.jpg'.format(username)
 
@@ -201,17 +207,20 @@ def save_personal_data(request: django.http.HttpRequest):
         image = im.crop((left, top, right, bottom))
         image.save(filename)
 
-    except Exception:
-        print('Image does not exist')
+    except IOError:
+        # logging.error('image-file could not be open/written'.format(user_login))
+        pass
+    except KeyError:
+        # logging.error('output format could not be determined from the file name'.format(user_login))
+        pass
 
     user = django.contrib.auth.models.User.objects.get(username=username)
     user.first_name = request.POST.get('first_name')
     user.last_name = request.POST.get('last_name')
     user.profile.bio = request.POST.get('bio')
-    
+
     if filename != "default":
         user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
-    
     user.save()
 
     return django.shortcuts.redirect("/user/{}/cabinet".format(username))
@@ -377,6 +386,7 @@ def record(request: django.http.HttpRequest,
     prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
     current_record = records[record_id-1]
     next_record = records[record_id % app.models.Records.objects.count()]
+    print(current_record.author)
     author = django.contrib.auth.models.User.objects.get(username=current_record.author)
 
     content = []
