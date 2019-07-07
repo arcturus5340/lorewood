@@ -25,6 +25,9 @@ class Records(django.db.models.Model):
     pre_video = django.db.models.TextField(default="/static/")
     includes = django.db.models.TextField(default="-")
 
+    def __str__(self):
+        return self.title
+
 
 # TODO: automate media paths
 class Media(django.db.models.Model):
