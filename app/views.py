@@ -29,8 +29,8 @@ import app.forms
 import app.models
 
 address = 'http://127.0.0.1:8000/'
-logging.basicConfig(format = u'[%(asctime)s] %(levelname)-8s: %(message)s',
-                    filename="sharewood.log", level=logging.NOTSET)
+# logging.basicConfig(format = u'[%(asctime)s] %(levelname)-8s: %(message)s',
+#                     filename="../sharewood.log", level=logging.NOTSET)
 
 
 @el_pagination.decorators.page_template('records_list.html')
@@ -65,10 +65,10 @@ def login(request: django.http.HttpRequest):
     if user:
         response_data['result'] = 'Success!'
         django.contrib.auth.login(request, user)
-        logging.info('user \'{}\' logged in'.format(user_login))
+        # logging.info('user \'{}\' logged in'.format(user_login))
     else:
         response_data['result'] = 'Failed!'
-        logging.warning('login error')
+        # logging.warning('login error')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
@@ -76,7 +76,7 @@ def login(request: django.http.HttpRequest):
 def logout(request: django.http.HttpRequest):
     user_login = request.user.username
     django.contrib.auth.logout(request)
-    logging.info('user \'{}\' logged out'.format(user_login))
+    # logging.info('user \'{}\' logged out'.format(user_login))
     return django.shortcuts.redirect("/")
 
 
@@ -89,14 +89,20 @@ def register(request: django.http.HttpRequest):
     response_data = {}
     if password1 != password2:
         response_data['result'] = 'Пароли не совпадают'
+        # logging.warning('registration error (Passwords do not match)')
 
-    # TODO: support for special characters in login
     elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
         response_data['result'] = ('Логин должен начинаться с латинской буквы, '
                                    'а также состоять только из латинских букв, цифр и символов . и _ ')
+        # logging.warning('registration error (Wrong login format)')
 
-    elif django.contrib.auth.models.User.objects.filter(email=email):
+    elif django.contrib.auth.models.User.objects.filter(username=username).exists():
+        response_data['result'] = 'Такой юзернейм уже зарегестрирован'
+        # logging.error('registration error (Existing username)')
+
+    elif django.contrib.auth.models.User.objects.filter(email=email).exists():
         response_data['result'] = 'Такой эмейл уже зарегестрирован'
+        # logging.warning('registration error (Existing email)')
 
     else:
         response_data['result'] = validate_password(password1)
@@ -109,12 +115,13 @@ def register(request: django.http.HttpRequest):
                     reguser.is_active = False
                     reguser.save()
                     response_data['result'] = 'Success!'
+                    # logging.info('registration success')
                 else:
                     response_data['result'] = 'Ошибка при отправке письма с активацией'
+                    # logging.error('registration error (no email was sent)')
             except ValueError:
                 response_data['result'] = 'Произошла ошибка при валидации'
-            except django.db.utils.IntegrityError:
-                response_data['result'] = 'Такой юзернейм уже зарегестрирован'
+                # logging.error('registration error (data validation error)')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
