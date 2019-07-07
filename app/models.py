@@ -25,6 +25,10 @@ class Records(django.db.models.Model):
     pre_video = django.db.models.TextField(default="/static/")
     includes = django.db.models.TextField(default="-")
 
+    class Meta:
+        verbose_name = "Запись" 
+        verbose_name_plural = "Записи"
+
     def __str__(self):
         return self.title
 
