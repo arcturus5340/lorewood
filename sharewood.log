@@ -23,3 +23,14 @@ AttributeError: 'str' object has no attribute 'id'
 [2019-07-06 18:54:29,349] WARNING : Not Found: /favicon.ico
 [2019-07-06 18:55:19,898] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
 [2019-07-06 18:56:23,214] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:28:09,342] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:28:48,192] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:30:12,499] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:32:24,283] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:33:12,603] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:36:28,723] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:38:00,723] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:41:25,817] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:42:11,892] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 04:52:26,923] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-07 08:18:40,875] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
