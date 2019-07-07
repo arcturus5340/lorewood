@@ -6,12 +6,11 @@ import datetime
 
 
 class Records(django.db.models.Model):
-    title = django.db.models.TextField()
-    author = django.db.models.TextField(default='arcturus5340')
-    main_pic = django.db.models.FilePathField(default=None)
-    description = django.db.models.TextField(default='')
+    title = django.db.models.CharField(max_length=150)
+    author = django.db.models.CharField(default='arcturus5340', max_length=60)
+    main_pic = django.db.models.FileField(upload_to="static/record_src/")
+    description = django.db.models.TextField(default='', max_length=255)
     text = django.db.models.TextField()
-    media = django.db.models.TextField(default='1, 2, 3, 4')
     date = django.db.models.DateField(default=datetime.datetime.now())
     rating = django.db.models.FloatField(default=0.0)
     best_rating = django.db.models.IntegerField(default=1)
@@ -19,11 +18,11 @@ class Records(django.db.models.Model):
     rating_count = django.db.models.IntegerField(default=0)
     rating_sum = django.db.models.IntegerField(default=0)
     rated_users = django.db.models.TextField(default='')
-    tags = django.db.models.TextField(default='code, #ihatejs, abinba!')
+    tags = django.db.models.TextField(default='code, #ihatejs, abinba!', max_length=255)
     comments_count = django.db.models.IntegerField(default=0)
     price = django.db.models.IntegerField(default=0)
-    pre_video = django.db.models.TextField(default="/static/")
-    includes = django.db.models.TextField(default="-")
+    pre_video = django.db.models.FileField(upload_to="static/record_src/")
+    includes = django.db.models.TextField(default="-", max_length=255)
 
     class Meta:
         verbose_name = "Запись" 
@@ -35,8 +34,17 @@ class Records(django.db.models.Model):
 
 # TODO: automate media paths
 class Media(django.db.models.Model):
-    title = django.db.models.TextField()
+    record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
+    part_num = django.db.models.IntegerField(default=1)
+    title = django.db.models.CharField(max_length=150)
     data = django.db.models.TextField()
+
+    class Meta:
+        verbose_name = "Материал" 
+        verbose_name_plural = "Материалы"
+
+    def __str__(self):
+        return self.title
 
 
 class Comments(django.db.models.Model):
