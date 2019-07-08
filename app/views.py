@@ -28,6 +28,7 @@ import typing
 
 import app.forms
 import app.models
+import app.views_api
 
 address = 'http://127.0.0.1:8000/'
 logging.getLogger(__name__)
@@ -507,6 +508,19 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
         context.update(extra_context)
 
     return django.shortcuts.render(request, template, context)
+
+
+def api(request: django.http.HttpRequest, data: string):
+    try:
+        return getattr(app.views_api, data)(request)
+    except AttributeError:
+        response = django.shortcuts.render(request, '404.html')
+        response.status_code = 404
+        return response
+
+
+def statistics(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'charts.html', {"customers": 10})
 
 
 # ----------------------------- functions -------------------------------

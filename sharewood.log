@@ -1,6 +1,1181 @@
-
-[2019-07-08 05:25:17,709] INFO    : user 'login' logged in
-[2019-07-08 05:25:18,005] WARNING : Not Found: /favicon.ico
-[2019-07-08 05:37:17,097] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-08 09:50:42,175] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-08 09:54:52,099] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:11:43,888] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:22:25,175] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:22:40,358] ERROR   : Internal Server Error: /api/chart/data/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 592, in get
+    "users": django.contrib.auth.User.objects.all().count(),
+AttributeError: module 'django.contrib.auth' has no attribute 'User'
+[2019-07-08 11:22:40,416] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:23:30,604] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:30:45,919] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:30:55,249] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:31:16,212] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:33:25,220] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:35:03,942] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:36:29,005] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:37:36,188] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:38:08,021] ERROR   : Internal Server Error: /api/123
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 514, in api
+    return getattr(views_app, data)()
+NameError: name 'views_app' is not defined
+[2019-07-08 11:38:30,145] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:38:33,044] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:38:35,321] ERROR   : Internal Server Error: /api/123
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 514, in api
+    return getattr(app.views_app, data)()
+AttributeError: module 'app' has no attribute 'views_app'
+[2019-07-08 11:39:14,112] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:39:27,560] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:39:28,927] ERROR   : Internal Server Error: /api/123
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 514, in api
+    return getattr(views_api, data)()
+NameError: name 'views_api' is not defined
+[2019-07-08 11:39:46,317] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:39:47,902] ERROR   : Internal Server Error: /api/123
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 514, in api
+    return getattr(app.views_api, data)()
+AttributeError: module 'app.views_api' has no attribute '123'
+[2019-07-08 11:39:47,961] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:40:56,680] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 11:41:24,566] ERROR   : Internal Server Error: /api/123
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 514, in api
+    return getattr(app.views_api, data)(request)
+AttributeError: module 'app.views_api' has no attribute '123'
+[2019-07-08 11:41:24,590] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:42:01,076] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:42:41,069] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:42,172] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:42,192] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:42:48,774] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:49,139] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:42:50,119] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:50,136] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:42:50,368] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:50,431] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:50,466] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:50,531] WARNING : Not Found: /api/regi
+[2019-07-08 11:42:50,854] WARNING : Not Found: /api/regi
+[2019-07-08 11:50:01,393] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:50:03,772] WARNING : Not Found: /api/regi
+[2019-07-08 11:50:03,801] WARNING : Not Found: /favicon.ico
+[2019-07-08 11:50:13,470] WARNING : Not Found: /api/regi
+[2019-07-08 11:51:18,536] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view app.views.api didn't return an HttpResponse object. It returned None instead.
+[2019-07-08 11:52:42,894] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:55:09,152] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 11:56:33,529] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 11:56:36,212] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 11:56:56,551] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 11:56:57,334] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:06,829] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:07,635] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:50,975] WARNING : Not Found: /api/registratio
+[2019-07-08 11:57:53,223] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:59,371] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:59,787] WARNING : Not Found: /api/registration
+[2019-07-08 11:57:59,997] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:00,158] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:00,305] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:00,458] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:06,771] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:07,166] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:07,374] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:07,544] WARNING : Not Found: /api/registration
+[2019-07-08 11:58:57,100] WARNING : Not Found: /api/
+[2019-07-08 11:59:07,786] WARNING : Not Found: /api/registration
+[2019-07-08 11:59:47,297] WARNING : Not Found: /api/registration
+[2019-07-08 11:59:47,317] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 11:59:48,710] WARNING : Not Found: /api/registration
+[2019-07-08 11:59:49,148] WARNING : Not Found: /api/registration
+[2019-07-08 12:00:05,211] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:00:06,164] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:06,792] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:27,120] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:00:27,965] WARNING : Not Found: /api/registration
+[2019-07-08 12:00:28,187] WARNING : Not Found: /api/registration
+[2019-07-08 12:00:34,199] WARNING : Not Found: /api/registration
+[2019-07-08 12:00:34,253] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:00:35,080] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,131] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,173] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,237] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,276] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,318] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,417] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,468] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,496] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,534] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,567] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,654] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,688] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,723] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,767] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,854] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:35,892] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:36,462] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:00:36,796] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:01:24,585] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in registration
+    return django.http.JsonResponse({1: 100})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-08 12:01:24,783] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:01:39,365] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:01:40,442] WARNING : Not Found: /api/registration
+[2019-07-08 12:01:40,952] WARNING : Not Found: /api/registration
+[2019-07-08 12:01:41,192] WARNING : Not Found: /api/registration
+[2019-07-08 12:02:22,265] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:03:54,791] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:04:04,108] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:05:07,190] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:05:13,237] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:05:30,921] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:05:47,514] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 12:08:00,766] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 12:08:05,629] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:08:51,106] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api' not found. 'api' is not a valid view function or pattern name.
+[2019-07-08 12:08:51,208] WARNING : Not Found: /favicon.ico
+[2019-07-08 12:08:51,709] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api' not found. 'api' is not a valid view function or pattern name.
+[2019-07-08 12:08:52,278] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api' not found. 'api' is not a valid view function or pattern name.
+[2019-07-08 12:08:52,307] WARNING : Not Found: /favicon.ico
+[2019-07-08 12:09:01,459] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:09:01,999] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:09:02,434] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:09:02,499] WARNING : Not Found: /favicon.ico
+[2019-07-08 12:12:12,601] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:12:12,667] WARNING : Not Found: /favicon.ico
+[2019-07-08 12:12:13,205] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 573, in get
+    return render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:15:00,579] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-08 12:15:26,207] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 523, in statistics
+    return django.shortcuts.render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:15:26,240] WARNING : Not Found: /favicon.ico
+[2019-07-08 12:15:26,855] ERROR   : Internal Server Error: /statistics/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 523, in statistics
+    return django.shortcuts.render(request, 'charts.html', {"customers": 10})
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api-data' with no arguments not found. 1 pattern(s) tried: ['api/(?P<data>[^/]+)$']
+[2019-07-08 12:16:31,911] WARNING : Not Found: /api/registration/
+[2019-07-08 12:16:32,783] WARNING : Not Found: /api/registration/
+[2019-07-08 12:16:33,808] WARNING : Not Found: /api/registration/
+[2019-07-08 12:50:09,191] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:21:58,906] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:22:00,063] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:22:19,237] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:22:50,582] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:23:03,380] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:26:15,326] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 13:26:24,441] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:26:24,464] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in registration
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/usr/lib/python3.7/collections/__init__.py", line 566, in __init__
+    self.update(*args, **kwds)
+  File "/usr/lib/python3.7/collections/__init__.py", line 653, in update
+    _count_elements(self, iterable)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in <genexpr>
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 8, in format_date
+    month = int(sdate[1])
+IndexError: list index out of range
+[2019-07-08 13:26:25,479] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:26:25,497] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in registration
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/usr/lib/python3.7/collections/__init__.py", line 566, in __init__
+    self.update(*args, **kwds)
+  File "/usr/lib/python3.7/collections/__init__.py", line 653, in update
+    _count_elements(self, iterable)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in <genexpr>
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 8, in format_date
+    month = int(sdate[1])
+IndexError: list index out of range
+[2019-07-08 13:26:26,203] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in registration
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/usr/lib/python3.7/collections/__init__.py", line 566, in __init__
+    self.update(*args, **kwds)
+  File "/usr/lib/python3.7/collections/__init__.py", line 653, in update
+    _count_elements(self, iterable)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 38, in <genexpr>
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 8, in format_date
+    month = int(sdate[1])
+IndexError: list index out of range
+[2019-07-08 13:26:34,809] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 13:26:38,179] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:26:38,200] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 39, in registration
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/usr/lib/python3.7/collections/__init__.py", line 566, in __init__
+    self.update(*args, **kwds)
+  File "/usr/lib/python3.7/collections/__init__.py", line 653, in update
+    _count_elements(self, iterable)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 39, in <genexpr>
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in format_date
+    month = int(sdate[1])
+IndexError: list index out of range
+[2019-07-08 13:26:47,318] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 39, in registration
+    return django.http.JsonResponse(data)
+  File "/usr/lib/python3.7/collections/__init__.py", line 566, in __init__
+    self.update(*args, **kwds)
+  File "/usr/lib/python3.7/collections/__init__.py", line 653, in update
+    _count_elements(self, iterable)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 39, in <genexpr>
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 9, in format_date
+    if month == 1:
+IndexError: list index out of range
+[2019-07-08 13:26:47,561] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 13:26:48,867] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:27:09,611] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 13:28:26,363] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:28:36,063] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:29:45,819] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:30:23,812] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:31:48,343] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:31:49,434] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:32:47,306] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:32:48,077] WARNING : Not Found: /favicon.ico
+[2019-07-08 13:34:09,941] WARNING : Not Found: /api/registrations
+[2019-07-08 13:34:12,655] WARNING : Not Found: /api/registrations
+[2019-07-08 13:35:05,460] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 13:48:32,004] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 14:25:27,205] WARNING : Not Found: /favicon.ico
+[2019-07-08 14:27:13,373] WARNING : Not Found: /favicon.ico

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'el_pagination',
     'social_django',
     'app',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
