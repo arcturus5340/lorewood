@@ -19,6 +19,7 @@ import el_pagination.decorators
 import datetime
 import json
 import logging
+import os
 import PIL.Image
 import random
 import re
@@ -28,10 +29,12 @@ import filetype
 
 import app.forms
 import app.models
+import app.views_api
 
 address = 'http://127.0.0.1:8000/'
-# logging.basicConfig(format = u'[%(asctime)s] %(levelname)-8s: %(message)s',
-#                     filename="../sharewood.log", level=logging.NOTSET)
+logging.getLogger(__name__)
+logging.basicConfig(format=u'[%(asctime)s] %(levelname)-8s: %(message)s',
+                    filename=os.path.join(django.conf.settings.BASE_DIR, 'sharewood.log'), level=logging.NOTSET)
 
 
 @el_pagination.decorators.page_template('records_list.html')
@@ -66,10 +69,10 @@ def login(request: django.http.HttpRequest):
     if user:
         django.contrib.auth.login(request, user)
         response_data['result'] = 'Success!'
-        # logging.info('user \'{}\' logged in'.format(user_login))
+        logging.info('user \'{}\' logged in'.format(user_login))
     else:
         response_data['result'] = 'Failed!'
-        # logging.warning('failed login attempt')
+        logging.warning('failed login attempt')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type="application/json")
 
@@ -77,7 +80,7 @@ def login(request: django.http.HttpRequest):
 def logout(request: django.http.HttpRequest):
     user_login = request.user.username
     django.contrib.auth.logout(request)
-    # logging.info('user \'{}\' logged out'.format(user_login))
+    logging.info('user \'{}\' logged out'.format(user_login))
     return django.shortcuts.redirect("/")
 
 
@@ -90,20 +93,20 @@ def register(request: django.http.HttpRequest):
     response_data = {}
     if password1 != password2:
         response_data['result'] = 'Пароли не совпадают'
-        # logging.warning('failed registration attempt (passwords do not match)')
+        logging.warning('failed registration attempt (passwords do not match)')
 
     elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
         response_data['result'] = ('Логин должен начинаться с латинской буквы, '
                                    'а также состоять только из латинских букв, цифр и символов . и _ ')
-        # logging.warning('failed registration attempt (wrong login format)')
+        logging.warning('failed registration attempt (wrong login format)')
 
     elif django.contrib.auth.models.User.objects.filter(username=username).exists():
         response_data['result'] = 'Такой юзернейм уже зарегестрирован'
-        # logging.error('failed registration attempt (existing username)')
+        logging.warning('failed registration attempt (existing username)')
 
     elif django.contrib.auth.models.User.objects.filter(email=email).exists():
         response_data['result'] = 'Такой эмейл уже зарегестрирован'
-        # logging.warning('failed registration attempt (existing email)')
+        logging.warning('failed registration attempt (existing email)')
 
     else:
         response_data['result'] = validate_password(password1)
@@ -113,18 +116,18 @@ def register(request: django.http.HttpRequest):
                 reguser.is_active = False
                 reguser.save()
                 response_data['result'] = 'Success!'
-                # logging.info('registration success')
+                logging.info('registration success (username: \'{}\')'.format(username))
 
                 user = django.contrib.auth.authenticate(username=username, password=password1)
                 if user:
                     django.contrib.auth.login(request, user)
-                    # logging.info('user \'{}\' logged in'.format(user_login))
+                    logging.info('user \'{}\' logged in'.format(username))
                 else:
                     response_data['result'] = 'Failed!'
-                    # logging.warning('failed login attempt')
+                    logging.warning('failed login attempt')
             else:
                 response_data['result'] = 'Ошибка при отправке письма с активацией'
-                # logging.error('failed registration attempt (no email was sent)')
+                logging.error('failed registration attempt (no email was sent)')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
@@ -154,18 +157,17 @@ def activate_account(request: django.http.HttpRequest, username: str, activation
         if app.models.UserActivation.objects.get(username=username).activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
             this_user.is_active = True
-            # logging.info('user \'{}\' is activated'.format(user_login))
+            logging.info('user \'{}\' is activated'.format(username))
             this_user.save()
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
-            # logging.info('user \'{}\' logged in'.format(user_login))
+            logging.info('user \'{}\' logged in'.format(username))
 
             app.models.UserActivation.objects.get(username=username).delete()
-            return django.shortcuts.redirect("/")
-        # logging.error('failed account activation attempt (keys do not match)')
+            return django.shortcuts.redirect('/')
+        logging.warning('failed account activation attempt (keys do not match)')
     except django.core.exceptions.ObjectDoesNotExist:
-        # logging.error('failed account activation attempt (user \'{}\' does not exist)'.format(user_login))
-        pass
+        logging.error('failed account activation attempt (user \'{}\' does not exist)'.format(username))
 
     template = django.template.loader.get_template('../templates/invalid_activation_key.html')
     return django.http.HttpResponse(template.render())
@@ -210,11 +212,9 @@ def save_personal_data(request: django.http.HttpRequest):
         image.save(filename)
 
     except IOError:
-        # logging.error('image-file could not be open/written')
-        pass
+        logging.error('image-file could not be open/written')
     except KeyError:
-        # logging.error('output format could not be determined from the file name')
-        pass
+        logging.error('output format could not be determined from the file name')
 
     user = django.contrib.auth.models.User.objects.get(username=username)
     user.first_name = request.POST.get('first_name')
@@ -237,12 +237,11 @@ def cabinet(request: django.http.HttpRequest, username: str):
 def password_change_view(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
         if app.models.UserActivation.objects.get(username=username).activation_key != activation_key:
-            # logging.error('failed password change attempt (keys do not match)')
+            logging.warning('failed password change attempt (keys do not match)')
             template = django.template.loader.get_template('../templates/invalid_activation_key.html')
             return django.http.HttpResponse(template.render())
     except django.core.exceptions.ObjectDoesNotExist:
-        # logging.error('failed password change attempt (user \'{}\' does not exist)'.format(username))
-        pass
+        logging.error('failed password change attempt (user \'{}\' does not exist)'.format(username))
 
     return django.shortcuts.render(request, 'user/password_change.html', {'username': username})
 
@@ -254,7 +253,7 @@ def change_password(request: django.http.HttpRequest, username: str):
 
     if new_password1 != new_password2:
         response_data['result'] = 'Пароли не совпадают'
-        # logging.error('failed password change attempt (passwords do not match)')
+        logging.warning('failed password change attempt (passwords do not match)')
     else:
         response_data['result'] = validate_password(new_password1)
         if not response_data['result']:
@@ -263,15 +262,14 @@ def change_password(request: django.http.HttpRequest, username: str):
                 user.set_password(new_password1)
                 user.save()
             except django.core.exceptions.ObjectDoesNotExist:
-                # logging.error('failed password change attempt (user \'{}\' does not exist)'.format(user_login))
-                pass
+                logging.error('failed password change attempt (user \'{}\' does not exist)'.format(username))
 
             django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            # logging.info('user \'{}\' logged in'.format(user_login))
-            #@abinba Are you sure, that you need to delete record from UserActivation?
+            logging.info('user \'{}\' logged in'.format(username))
+            # @abinba Are you sure, that you need to delete record from UserActivation?
             app.models.UserActivation.objects.get(username=username).delete()
             response_data['result'] = 'Success!'
-            # logging.info('password change success')
+            logging.info('password changed (username: \'{}\')'.format(username))
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
@@ -284,7 +282,7 @@ def change_cabinet_password(request: django.http.HttpRequest):
 
     if new_password1 != new_password2:
         response_data['result'] = 'Пароли не совпадают'
-        # logging.error('failed password change attempt (passwords do not match)')
+        logging.warning('failed cabinet password change attempt (passwords do not match)')
     else:
         response_data['result'] = validate_password(new_password1)
         if not response_data['result']:
@@ -293,14 +291,12 @@ def change_cabinet_password(request: django.http.HttpRequest):
                 user.set_password(new_password1)
                 user.save()
             except django.core.exceptions.ObjectDoesNotExist:
-                # logging.error('failed cabinet password change attempt (user \'{}\' does not exist)'.format(user_login))
-                pass
+                logging.error('failed cabinet password change attempt (user \'{}\' does not exist)'.format(username))
 
             django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            # logging.info('user \'{}\' logged in'.format(user_login))
+            logging.info('user \'{}\' logged in'.format(username))
             response_data['result'] = 'Success!'
-            # logging.info('cabinet password change success')
-
+            logging.info('cabinet password changed (username: \'{}\')'.format(username))
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
@@ -325,33 +321,33 @@ def remember(request: django.http.HttpRequest):
 
             if send_email:
                 response_data['result'] = 'Success!'
-                # logging.error('password recovery success')
+                logging.info('password recovered (username: \'{}\')'.format(user_login))
             else:
                 response_data['result'] = 'Ошибка при отправке активационного письма'
-                # logging.error('failed password recovery attempt (error while sending a letter)')
+                logging.error('failed password recovery attempt (error while sending a letter)')
         else:
             response_data['result'] = 'Пользователь не подтвердил свою электронную почту'
-            # logging.error('failed password recovery attempt (user \'{}\' account is not activated)'.format(user_login))
+            logging.warning('failed password recovery attempt (user \'{}\' account is not activated)'.format(user_login))
     except django.core.exceptions.MultipleObjectsReturned:
         response_data['result'] = ('Ошибка безопасности. '
                                    'Зарегистрирован еще один пользователь с такими данными. '
                                    'Обратитесь к администратору сайта')
-        # logging.error('failed password recovery attempt (there are two identical users in the system)')
+        logging.error('failed password recovery attempt (there are two identical users in the system)')
     except django.core.exceptions.ObjectDoesNotExist:
         response_data['result'] = 'Пользователь с такими данными не зарегестрирован'
-        # logging.error('failed password recovery attempt (user \'{}\' does not exist)'.format(user_login))
+        logging.error('failed password recovery attempt (user \'{}\' does not exist)'.format(user_login))
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
-#@abinba response_data['result'] or response_data?
+# @abinba response_data['result'] or response_data?
 def change_email(request: django.http.HttpRequest):
     username = request.user.username
     email = request.POST.get('email')
 
     if django.contrib.auth.models.User.objects.filter(email=email).exists():
         response_data = 'Такой эмейл уже зарегестрирован'
-        # logging.error('failed email change attempt (existing email)')
+        logging.warning('failed email change attempt (existing email)')
     else:
         activation_key = activation_key_generator()
         app.models.UserEmail.objects.create_user_key(username, activation_key, email)
@@ -366,10 +362,10 @@ def change_email(request: django.http.HttpRequest):
 
         if send_email:
             response_data = 'Success!'
-            # logging.error('email change request')
+            logging.info('email change requested (username: \'{}\')'.format(username))
         else:
             response_data = 'Ошибка при отправке активационного письма'
-            # logging.error('failed email change attempt (error while sending a letter)')
+            logging.error('failed email change attempt (error while sending a letter)')
 
     return django.http.HttpResponse(json.dumps(response_data), content_type='application/json')
 
@@ -379,7 +375,7 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
     try:
         compare_data = app.models.UserEmail.objects.get(username=username)
         if compare_data.activation_key != activation_key:
-            # logging.error('failed account activation attempt (keys do not match)')
+            logging.warning('failed account activation attempt (keys do not match)')
             template = django.template.loader.get_template('../templates/invalid_activation_key.html')
             return django.http.HttpResponse(template.render())
 
@@ -387,15 +383,14 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
         user.email = compare_data.email
         user.is_active = True
         user.save()
-        # logging.error('email change confirm for {}'.format(user_login))
+        logging.info('email change confirmed (username: {})'.format(username))
 
         django.contrib.auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-        # logging.info('user \'{}\' logged in'.format(user_login))
+        logging.info('user \'{}\' logged in'.format(username))
         app.models.UserEmail.objects.get(username=username).delete()
 
     except django.core.exceptions.ObjectDoesNotExist:
-        # logging.error('failed password recovery attempt (user \'{}\' does not exist)'.format(user_login))
-        pass
+        logging.error('failed password recovery attempt (user \'{}\' does not exist)'.format(username))
 
     return django.shortcuts.redirect(request, '/user/profile.html')
 
@@ -498,7 +493,6 @@ def record(request: django.http.HttpRequest,
     if extra_context is not None:
         context.update(extra_context)
 
-
     return django.shortcuts.render(request, template, context)
 
 
@@ -545,6 +539,19 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
         context.update(extra_context)
 
     return django.shortcuts.render(request, template, context)
+
+
+def api(request: django.http.HttpRequest, data: string):
+    try:
+        return getattr(app.views_api, data)(request)
+    except AttributeError:
+        response = django.shortcuts.render(request, '404.html')
+        response.status_code = 404
+        return response
+
+
+def statistics(request: django.http.HttpRequest):
+    return django.shortcuts.render(request, 'charts.html', {"customers": 10})
 
 
 # ----------------------------- functions -------------------------------
