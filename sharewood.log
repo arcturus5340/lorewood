@@ -1179,3 +1179,980 @@ IndexError: list index out of range
 [2019-07-08 13:48:32,004] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
 [2019-07-08 14:25:27,205] WARNING : Not Found: /favicon.ico
 [2019-07-08 14:27:13,373] WARNING : Not Found: /favicon.ico
+<<<<<<< HEAD
+=======
+[2019-07-08 15:34:27,276] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 15:34:30,976] WARNING : Not Found: /api
+[2019-07-08 15:34:55,041] ERROR   : Internal Server Error: /api/format_date
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 14, in format_date
+    month = int(sdate[1])
+IndexError: list index out of range
+[2019-07-08 15:45:39,767] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 15:47:17,539] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 15:53:44,213] WARNING : Not Found: /api/format_date
+[2019-07-08 15:53:51,620] ERROR   : Internal Server Error: /api/registrations
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+AttributeError: module 'app.views_api' has no attribute 'registrations'
+[2019-07-08 15:53:58,581] WARNING : Not Found: /api/registration
+[2019-07-08 15:54:04,559] ERROR   : Internal Server Error: /api/registrations
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+AttributeError: module 'app.views_api' has no attribute 'registrations'
+[2019-07-08 15:54:14,102] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 15:54:15,048] WARNING : Not Found: /api/registrations
+[2019-07-08 16:01:12,358] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:03:42,449] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:05:07,095] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:17:25,984] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:27:50,416] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login:
+TypeError: can't compare datetime.datetime to datetime.date
+[2019-07-08 16:29:11,650] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-08 16:29:39,974] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:29:42,384] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:30:23,988] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:30:24,536] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:30:25,438] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:30:34,545] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login:
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:30:34,599] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:31:23,780] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-08 16:31:35,256] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:31:38,004] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login:
+TypeError: can't compare datetime.datetime to datetime.date
+[2019-07-08 16:31:49,321] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login:
+TypeError: can't compare datetime.datetime to datetime.date
+[2019-07-08 16:31:49,769] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:31:59,007] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login:
+TypeError: can't compare datetime.datetime to datetime.date
+[2019-07-08 16:32:16,977] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:32:18,172] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:18,419] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:18,451] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:18,521] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:18,577] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:19,076] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:19,472] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:19,736] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:19,945] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:20,148] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:32:20,339] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:33:36,958] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:34:00,427] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    print(user.last_login.date())
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:34:00,439] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 16:34:08,871] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    print(user.last_login.date())
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:34:57,170] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:14,393] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:28,105] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:28,870] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:29,326] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:47,436] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:48,197] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:48,541] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:48,840] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:35:49,056] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:40,538] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,167] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,419] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,452] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,509] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,546] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,630] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,686] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,716] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:37:41,748] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 22, in activity
+    if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+AttributeError: 'NoneType' object has no attribute 'date'
+[2019-07-08 16:44:12,335] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:02:06,972] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:03:29,273] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:07:17,447] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:07:33,262] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:24:47,274] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:27:29,483] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 17:28:23,544] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:28:25,291] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:28:25,306] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:28:28,963] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:28:55,959] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:28:59,121] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:28:59,141] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:28:59,774] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:26,918] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:27,196] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:28,269] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:29:28,288] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:44,715] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:45,467] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:29:59,680] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:13,412] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:30:13,436] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:14,219] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:14,935] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:30:14,954] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:26,097] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:26,811] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:27,035] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:30:27,222] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:28,387] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:38,598] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:39,301] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 25, in activity
+    data['last_month'] += 1
+KeyError: 'last_month'
+[2019-07-08 17:30:49,103] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 17:31:07,191] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:31:09,072] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:31:29,180] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:31:54,356] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:31:54,458] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-08 17:31:56,748] WARNING : Not Found: /favicon.ico
+[2019-07-08 17:31:56,796] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    data['last_week'] += 1
+KeyError: 'last_week'
+[2019-07-08 17:31:57,778] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    data['last_week'] += 1
+KeyError: 'last_week'
+[2019-07-08 17:31:58,528] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    data['last_week'] += 1
+KeyError: 'last_week'
+[2019-07-08 17:32:40,478] WARNING : Not Found: /api/registrations
+[2019-07-08 17:33:54,914] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    data['last_week'] += 1
+KeyError: 'last_week'
+[2019-07-08 17:33:56,825] ERROR   : Internal Server Error: /api/activity
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 546, in api
+    return getattr(app.views_api, data)(request)
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 23, in activity
+    data['last_week'] += 1
+KeyError: 'last_week'
+[2019-07-08 17:34:23,572] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+>>>>>>> 481a2132ec989a3df0bfe9ef32e3bece2ece3baa

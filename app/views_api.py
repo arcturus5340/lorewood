@@ -1,6 +1,36 @@
 import django.http
 import django.contrib.auth.models
+<<<<<<< HEAD
 import collections
+=======
+
+import collections
+import datetime
+
+
+def registration(request: django.http.HttpRequest):
+    users = django.contrib.auth.models.User.objects.all()
+    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+    return django.http.JsonResponse(data)
+
+
+def activity(request: django.http.HttpRequest):
+    users = django.contrib.auth.models.User.objects.all()
+    data = {
+        'За последнюю неделю': 0,
+        'За последний месяц': 0,
+        'За поледний год и более': 0,
+    }
+    for user in users:
+        if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
+            data['За последнюю неделю'] += 1
+        elif (datetime.date.today() - datetime.timedelta(days=30)) < user.last_login.date():
+            data['За последний месяц'] += 1
+        else:
+            data['За поледний год и более'] += 1
+
+    return django.http.JsonResponse(data)
+>>>>>>> 481a2132ec989a3df0bfe9ef32e3bece2ece3baa
 
 
 def format_date(date):
@@ -31,9 +61,12 @@ def format_date(date):
     elif month == 12:
         sdate[1] = 'Декабрь'
     return " ".join(reversed(sdate))
+<<<<<<< HEAD
 
 
 def registration(request: django.http.HttpRequest):
     users = django.contrib.auth.models.User.objects.all()
     data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
     return django.http.JsonResponse(data)
+=======
+>>>>>>> 481a2132ec989a3df0bfe9ef32e3bece2ece3baa
