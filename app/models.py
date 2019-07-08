@@ -6,9 +6,10 @@ import datetime
 
 
 class Records(django.db.models.Model):
+    path = "record_src/"
     title = django.db.models.CharField(max_length=150)
     author = django.db.models.CharField(default='arcturus5340', max_length=60)
-    main_pic = django.db.models.FileField(upload_to="static/record_src/")
+    main_pic = django.db.models.FileField(upload_to=path)
     description = django.db.models.TextField(default='', max_length=255)
     text = django.db.models.TextField()
     date = django.db.models.DateField(default=datetime.datetime.now())
@@ -21,7 +22,7 @@ class Records(django.db.models.Model):
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!', max_length=255)
     comments_count = django.db.models.IntegerField(default=0)
     price = django.db.models.IntegerField(default=0)
-    pre_video = django.db.models.FileField(upload_to="static/record_src/")
+    pre_video = django.db.models.FileField(upload_to=path, blank=True)
     includes = django.db.models.TextField(default="-", max_length=255)
 
     class Meta:
@@ -35,9 +36,35 @@ class Records(django.db.models.Model):
 # TODO: automate media paths
 class Media(django.db.models.Model):
     record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
+    path = "record_src/"
     part_num = django.db.models.IntegerField(default=1)
     title = django.db.models.CharField(max_length=150)
-    data = django.db.models.TextField()
+
+    file1 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file2 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file3 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file4 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file5 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file6 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file7 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file8 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file9 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file10 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file11 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file12 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file13 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file14 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file15 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file16 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file17 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file18 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file19 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file20 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file21 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file22 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file23 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file24 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+    file25 = django.db.models.FileField(upload_to=path, null=True, blank=True)
 
     class Meta:
         verbose_name = "Материал" 

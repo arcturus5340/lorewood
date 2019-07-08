@@ -24,6 +24,7 @@ import random
 import re
 import string
 import typing
+import filetype
 
 import app.forms
 import app.models
@@ -418,10 +419,40 @@ def record(request: django.http.HttpRequest,
     print(current_record.author)
     author = django.contrib.auth.models.User.objects.get(username=current_record.author)
 
-    content = []
-    for media_id in current_record.media.split(', '):
-        content.append(app.models.Media.objects.get(id=media_id))
+    files = app.models.Media.objects.values_list('file1', 'file2', 'file3', 'file4', 'file5', 'file6',
+        'file7', 'file8', 'file9', 'file10', 'file11', 'file12', 'file13', 'file14', 'file15', 'file16',
+        'file17', 'file18', 'file19', 'file20', 'file21', 'file22', 'file23', 'file24', 'file25').filter(record_id=current_record.id)
 
+    media = app.models.Media.objects.values_list('title').filter(record_id=current_record.id)
+
+    part_files = []
+    media_num = 0
+    for rows in files:
+        part_files.append([])
+        for file in rows:
+            if file != None and file != '':
+                path = "{}/media/{}".format(django.conf.settings.BASE_DIR, file)
+                kind = filetype.guess(path)
+                filekind = str(kind)
+                if filekind.find(".video.") != -1:
+                    file = "V/{}".format(file)
+                elif filekind.find(".audio.") != -1:
+                    file = "A/{}".format(file)
+                else:
+                    file = "F/{}".format(file)
+                part_files[media_num].append(file)
+        media_num += 1
+
+    content = []
+    part_num = 0
+    for part in media:
+        content.append([])
+        content[part_num].append([])
+        content[part_num].append([])
+        content[part_num][0] = part[0]
+        content[part_num][1] = part_files[part_num]
+        part_num += 1
+    
     similar_records = []
     for tag in current_record.tags.split(', '):
         for r in app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag)):
@@ -457,11 +488,11 @@ def record(request: django.http.HttpRequest,
     context = {
         'prev_record': prev_record,
         'record': current_record,
-        'content': content,
         'next_record': next_record,
         'author': author,
         'similar_records': similar_records,
         'comments': comments,
+        'content' : content,
     }
 
     if extra_context is not None:

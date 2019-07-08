@@ -164,7 +164,7 @@
 
     <header class="header-page">{% include "includes/header.html" %}</header>
 
-    <div class="post-featured post-featured-cropped" style="background: url('{{ record.main_pic }}')no-repeat;background-size: cover;">
+    <div class="post-featured post-featured-cropped" style="background: url('{{ record.main_pic.url }}')no-repeat;background-size: cover;">
         <div class="post-featured-wrap">
             <div class="container">
                 <div class="row">
@@ -275,19 +275,24 @@
 
                                                         <h4>Материалы курса</h4>
                                                         <ul id="menu">
-                                                            {% for media in content %}
-                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  {{ media.title }}</a>
+                                                            {% for parts in content %}
+                                                            <li><a href=""><nobr id="submenu-status">+</nobr>  {{ parts.0 }}</a>
                                                                 <ul>
-                                                                    {% for data in media.data|split:", " %}
+                                                                    {% for data in parts.1 %}
                                                                       <li>
                                                                         {% if data.0 == 'A' %}
-                                                                            <a href="{{ data|slice:" 1: " }}" style="float:left; width: 90%" class="audio-link"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'A/'|last}}" style="float:left; width: 90%" class="audio-link"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'A/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                            </a>
                                                                         {% elif data.0 == 'F' %}
-                                                                            <a href="{{ data|slice:" 1: " }}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'F/'|last}}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'F/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                            </a>
                                                                         {% elif data.0 == 'V' %}
-                                                                            <a href="{{ data|slice:" 1: " }}" class="video-link" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'V/'|last}}" class="video-link" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a href="/media/{{ data|split:'V/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                            </a>
                                                                         {% endif %}
-                                                                        <a href="{{ data|slice:" 1: " }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px"></a>
                                                                       </li>
                                                                     {% endfor %}
                                                                 </ul>
@@ -414,13 +419,13 @@
                     <div id="" class="row navigation">
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box previous">
                             <div class="nav-wrap">
-                                <a href="/r{{ prev_record.id }}" rel="prev"><img width="1366" height="768" src="{{ prev_record.main_pic }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                <a href="/r{{ prev_record.id }}" rel="prev"><img width="1366" height="768" src="{{ prev_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ prev_record.title }}</div>
                                 </a><span class="meta-nav" aria-hidden="true">Предыдущий пост</span> </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box next" style="float:right;">
                             <div class="nav-wrap">
-                                <a href="/r{{ next_record.id }}" rel="next"><img width="1366" height="768" src="{{ next_record.main_pic }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                <a href="/r{{ next_record.id }}" rel="next"><img width="1366" height="768" src="{{ next_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ next_record.title }}</div>
                                 </a><span class="meta-nav" aria-hidden="true">Следующий пост</span> </div>
                         </div>
@@ -493,7 +498,7 @@
                                 <li>
                                     <div class="cell">
                                         <a href="/r{{ similar_record.id }}"></a>
-                                        <img width="1170" height="800" src="{{ similar_record.main_pic }}" class="img-responsive related-cropped wp-post-image" alt="" sizes="(max-width: 1170px) 100vw, 1170px" />
+                                        <img width="1170" height="800" src="{{ similar_record.main_pic.url }}" class="img-responsive related-cropped wp-post-image" alt="" sizes="(max-width: 1170px) 100vw, 1170px" />
                                         <div class="related-wrap">
                                             <div class="tags">
                                                 {% for tag in similar_record.tags|split:", " %}
