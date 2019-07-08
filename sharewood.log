@@ -1,36 +1,6 @@
-[2019-07-06 17:25:48,136] WARNING : login error
-[2019-07-06 17:25:50,440] INFO    : user login logged in
-[2019-07-06 17:25:52,514] INFO    : user login logged out
-[2019-07-06 18:28:06,901] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-06 18:38:05,118] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
-[2019-07-06 18:48:49,079] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-06 18:54:16,756] INFO    : user 'login' logged in
-[2019-07-06 18:54:29,240] ERROR   : Internal Server Error: /r1/
-Traceback (most recent call last):
-  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
-    response = get_response(request)
-  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
-    return view(request, *args, **kwargs)
-  File "/home/arcturus/Projects/sharewood/app/views.py", line 392, in record
-    avatar=app.models.Profile.objects.get(user_id=django.contrib.auth.models.User.objects.get(username=request.POST.get('username').id).avatar),
-AttributeError: 'str' object has no attribute 'id'
-[2019-07-06 18:54:29,349] WARNING : Not Found: /favicon.ico
-[2019-07-06 18:55:19,898] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-06 18:56:23,214] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:28:09,342] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:28:48,192] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:30:12,499] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:32:24,283] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:33:12,603] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:36:28,723] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:38:00,723] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:41:25,817] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:42:11,892] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 04:52:26,923] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
-[2019-07-07 08:18:40,875] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+
+[2019-07-08 05:25:17,709] INFO    : user 'login' logged in
+[2019-07-08 05:25:18,005] WARNING : Not Found: /favicon.ico
+[2019-07-08 05:37:17,097] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 09:50:42,175] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-08 09:54:52,099] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
