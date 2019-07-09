@@ -168,7 +168,6 @@
                         scales: {
                             yAxes: [{
                                 ticks: {
-                                    max: Math.max.apply(null, default_data) + 250,
                                     min: 0,
                                     stepSize: 250,
                                 }
@@ -187,6 +186,7 @@
         <div>
           <table>
             <tr>
+            <h1 align="center">Статистика сайта sharewood.online</h1>
             <div url-endpoint='/api/registration' style="float:left; width: 40%; margin: 100px">
                 <div>
                     <canvas id="regChart"></canvas>
