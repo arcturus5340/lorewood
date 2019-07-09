@@ -129,14 +129,14 @@
                                     </div>
 
                                     <div id="pay-in-tabpanel" hidden>
-                                        <h2>Пополнить счет</h2>
+                                        <h2 style="color:green">Пополнить счет</h2>
                                         <form id="pay-in-form" method="post">
-                                            <p> Баланс: {{ user.profile.balance }} RUB</p>
+                                            <p> <b>Баланс:</b> {{ user.profile.balance }} RUB</p>
                                             {% csrf_token %}
                                             <div>
                                                 <div id="pay-in-sum">
                                                     <div>
-                                                        <input type="number" class="form-control" name="sum" id="pay-in-field" placeholder="Введите сумму пополнения" required />
+                                                        <input type="number" class="form-control" name="sum" id="pay-in-field" placeholder="Введите сумму пополнения" required style="width:300px" />
                                                     </div>
                                                 </div>
                                                 <div>
@@ -149,7 +149,25 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div id="buy-premium-tabpanel" hidden>Купить ПРЕМИУМ</div>
+                                    <div id="buy-premium-tabpanel" hidden>
+                                    <h2 style="color:green">Купить ПРЕМИУМ</h2>
+                                    {% if user.profile.is_premium %}
+                                    <h2 style="color:green">У вас неограниченный доступ ко всему контенту.</h2>
+                                    {% else %}
+                                    <form id="pay-in-form" method="post" action="/buy-premium/">
+                                        <p> <b>Баланс:</b> {{ user.profile.balance }} RUB</p>
+                                        <p> <b>Стоимость:</b> {{ premium }} RUB</p>
+                                        {% csrf_token %}
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <input id="pay-in-button" type="submit" value="Купить премиум" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    {% endif %}
+                                    </div>
                                 </div>
                             </div>
                         </td>

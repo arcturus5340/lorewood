@@ -235,7 +235,7 @@
                                                         <source src="{{ record.pre_video.url }}" type="">
                                                     </video>
                                                     <div class="card-body" style="padding: 20px">
-                                                        {% if not is_provided %}
+                                                        {% if not is_provided and not user.profile.is_premium %}
                                                         <div style="font-size: 32px; float: left">
                                                             <b>{{ record.price }}</b>
                                                         </div>
@@ -256,6 +256,7 @@
                                                         {% endif %}
                                                         {% if is_provided %}
                                                         <h3 style="color:green"> Курс куплен </h3>
+                                                        {% elif user.profile.is_premium %}
                                                         {% endif %}
                                                         <div style="font-size: 16px;">
                                                             <b>Этот курс включает</b>
@@ -286,7 +287,7 @@
                                                                 <ul>
                                                                     {% for data in parts.1 %}
                                                                       <li>
-                                                                        {% if is_provided %}
+                                                                        {% if is_provided or user.profile.is_premium  %}
                                                                         {% if data.0 == 'A' %}
                                                                             <a class="audio-link" href="/media/{{ data|split:'A/'|last}}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                             <a href="/media/{{ data|split:'A/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">

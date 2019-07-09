@@ -119,7 +119,17 @@ class Profile(django.db.models.Model):
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
     bio = django.db.models.TextField(max_length=500, null=True, blank=True)
     balance = django.db.models.IntegerField(default=0)
+    is_premium = django.db.models.BooleanField(default=False)
 
+class Premium(django.db.models.Model):
+    premium_cost = django.db.models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name = "Премиум подписка" 
+        verbose_name_plural = "Премиум подписка"
+
+    def __int__(self):
+        return self.premium_cost
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -130,3 +140,5 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+

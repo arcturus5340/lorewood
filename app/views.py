@@ -234,7 +234,8 @@ def save_personal_data(request: django.http.HttpRequest):
 
 def cabinet(request: django.http.HttpRequest, username: str):
     if request.user.username == username:
-        return django.shortcuts.render(request, 'user/cabinet.html')
+        premium = app.models.Premium.objects.get(id=1)
+        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : premium.premium_cost })
     return django.shortcuts.redirect('/')
 
 
@@ -643,3 +644,36 @@ def buy(request, record_id):
         message = "ACTIVATE"
 
     return django.shortcuts.redirect('/r{}/?message={}'.format(record_id, message))
+
+
+
+# TODO: double buy
+# TODO: is user active
+def buy_premium(request):
+    message = 0
+    if request.user.is_active:
+        premium = app.models.Premium.objects.get(id=1)
+        cost = premium.premium_cost
+        balance = request.user.profile.balance
+        new_balance = balance - cost
+        if new_balance < 0:
+            message = "NOT_ENOUGH"
+        else :    
+            request.user.profile.balance = new_balance
+            request.user.save()
+
+            request.user.profile.is_premium = True
+            request.user.save()
+
+            today = datetime.date.today() + datetime.timedelta(days=1)
+            try:
+                obj = app.models.Revenue.objects.get(date=today)
+                obj.income += cost
+                obj.save()
+            except django.core.exceptions.ObjectDoesNotExist:
+                app.models.Revenue.objects.create(date=today, income=cost)
+
+    else:
+        message = "ACTIVATE"
+
+    return django.shortcuts.redirect('/user/{}/cabinet#list-buy-premium?message={}'.format(request.user.username, message))

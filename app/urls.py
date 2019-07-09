@@ -30,4 +30,5 @@ urlpatterns = [
     path('api/<str:data>', views.api, name='api-data'),
     path('statistics/', views.statistics),
     path('r<int:record_id>/buy/', views.buy, name='buy'),
+    path('buy-premium/', views.buy_premium, name='buy_premium'),
 ]
