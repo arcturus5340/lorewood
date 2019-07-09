@@ -9,7 +9,7 @@
                 <a href="/r{{ record.id }}/">
                     <div class="grid">
                         <figure class="effect-duke">
-                            <img width="1366" height="768" src="{{ record.main_pic }}" class="img-responsive border-r post-1-cropped wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                            <img width="1366" height="768" src="{{ record.main_pic.url }}" class="img-responsive border-r post-1-cropped wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                             <figcaption>
                                 <a href="/r{{ record.id }}/"></a>
                             </figcaption>
@@ -42,7 +42,7 @@
 {% else %}
 <div class="post-block post-block-2">
     <article id="post-{{ record.id }}" class="post-{{ record.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general{% for tag in record.tags|split:', ' %} tag-{{ tag }}{% endfor %}">
-        <div class="row border-r post-2-cropped post-2-overlay" style="margin: 0; background: url('{{ record.main_pic }}')no-repeat;background-size: cover;">
+        <div class="row border-r post-2-cropped post-2-overlay" style="margin: 0; background: url('{{ record.main_pic.url }}')no-repeat;background-size: cover;">
             <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 border-l">
                 <div class="name-cat"></div>
             </div>
