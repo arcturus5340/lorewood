@@ -2,6 +2,7 @@ from django.contrib import admin
 from app.models import Records
 from app.models import Media
 from app.models import Premium
+from app.models import Profile
 import social_django.models
 
 class RecordsAdmin(admin.ModelAdmin):
@@ -22,8 +23,13 @@ class MediaAdmin(admin.ModelAdmin):
 class PremiumAdmin(admin.ModelAdmin):
 	list_display = ('id', 'premium_cost')
 
+class ProfileAdmin(admin.ModelAdmin):
+	list_display = ('user', 'avatar', 'bio', 'balance', 'is_premium')
+	search_fields = ('user', 'bio')
+
 admin.site.site_header = "Sharewood"
 admin.site.register(Records, RecordsAdmin)
+admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Premium, PremiumAdmin)
 admin.site.register(Media, MediaAdmin)
 admin.site.unregister(social_django.models.Association)

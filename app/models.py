@@ -121,6 +121,14 @@ class Profile(django.db.models.Model):
     balance = django.db.models.IntegerField(default=0)
     is_premium = django.db.models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name = "Профиль" 
+        verbose_name_plural = "Профили"
+
+    def __str__(self):
+        return self.bio
+
+
 class Premium(django.db.models.Model):
     premium_cost = django.db.models.IntegerField(default=0)
 
