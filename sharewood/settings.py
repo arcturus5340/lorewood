@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware', 
 ]
 
 ROOT_URLCONF = 'sharewood.urls'
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -114,7 +116,7 @@ LOGIN_REDIRECT_URL = "/"
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.vk.VKOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
-    #'social_core.backends.twitter.TwitterOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend',
     'django.contrib.auth.backends.AllowAllUsersModelBackend'
 ]
@@ -129,8 +131,8 @@ SOCIAL_AUTH_FACEBOOK_KEY = '2337877396434591'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'dc47e6dec09c54a09c09e0f37125c982'
 SOCIAL_AUTH_FACEBOOK_SCOPE = []
 
-SOCIAL_AUTH_TWITTER_KEY = 'XXXXXXXXX'
-SOCIAL_AUTH_TWITTER_SECRET = 'XXXXXXXXX'
+SOCIAL_AUTH_TWITTER_KEY = 'PiNRffwXtKcCQQ8udFsdQmVOG'
+SOCIAL_AUTH_TWITTER_SECRET = 'fFinacLTmcubfSL7exgDY7oS7SweyFAJI8KnYc8sUqUaPUNEZG'
 SOCIAL_AUTH_TWITTER_SCOPE = []
 
 # Internationalization
