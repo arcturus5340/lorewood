@@ -6,7 +6,7 @@ import datetime
 
 
 class Records(django.db.models.Model):
-    path = "media/record_src/"
+    path = "record_src/"
     title = django.db.models.TextField()
     text = django.db.models.TextField()
     description = django.db.models.CharField(max_length=300)
@@ -37,10 +37,9 @@ class Records(django.db.models.Model):
 
 # TODO: automate media paths
 class Media(django.db.models.Model):
+    record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
     path = "record_src/"
     title = django.db.models.CharField(max_length=30)
-    record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
-    part_num = django.db.models.IntegerField(default=1)
 
     file1 = django.db.models.FileField(upload_to=path, null=True, blank=True)
     file2 = django.db.models.FileField(upload_to=path, null=True, blank=True)

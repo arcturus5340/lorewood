@@ -49,7 +49,7 @@
 <section>
     <div class="container">
         <div class="row" style="padding: 15px;">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border-top no-gutters post-top-overlay post-block-top" style="margin: 0; background: url('{{ last_records.0.main_pic }}') no-repeat; background-size: 100%; background-position: top center; object-fit: cover; object-position: top; height: 380px;width: 100%;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border-top no-gutters post-top-overlay post-block-top" style="margin: 0; background: url('{{ last_records.0.main_pic.url }}') no-repeat; background-size: 100%; background-position: top center; object-fit: cover; object-position: top; height: 380px;width: 100%;">
                 <div class="meta-block"> {{ last_records.0.date|strftime:"%d %m" }} </div>
                 <div class="post-wrap">
                     <div class="post-wrap-h2">
@@ -68,7 +68,7 @@
                 <div id="post-{{ last_records.1.id }}" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters">
                     <div class="post-middle-img grid1">
                         <figure class="effect-duke">
-                            <img width="2542" height="1010" src="{{ last_records.1.main_pic }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 2542px) 100vw, 2542px" />
+                            <img width="2542" height="1010" src="{{ last_records.1.main_pic.url }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 2542px) 100vw, 2542px" />
                             <div class="post-middle-wrap">
                                 <div class="post-wrap-h2">
                                     <h2><a href="/r{{ last_records.1.id }}"> {{ last_records.1.title }} </a></h2></div>
@@ -83,7 +83,7 @@
                 <div id="post-{{ last_records.2.id }}" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters">
                     <div class="post-middle-img grid1">
                         <figure class="effect-duke">
-                            <img width="825" height="388" src="{{ last_records.2.main_pic }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 825px) 100vw, 825px" />
+                            <img width="825" height="388" src="{{ last_records.2.main_pic.url }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 825px) 100vw, 825px" />
                             <div class="post-middle-wrap">
                                 <div class="post-wrap-h2">
                                     <h2><a href="/r{{ last_records.2.id }}">{{ last_records.2.title }}</a></h2></div>
@@ -98,7 +98,7 @@
                 <div id="post-{{ last_records.3.id }}" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 post-middle post-middle-overlay no-gutters">
                     <div class="post-middle-img grid1">
                         <figure class="effect-duke">
-                            <img width="1366" height="768" src="{{ last_records.3.main_pic }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                            <img width="1366" height="768" src="{{ last_records.3.main_pic.url }}" class="img-responsive cropped-middle-post wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                             <div class="post-middle-wrap">
                                 <div class="post-wrap-h2">
                                     <h2><a href="/r{{ last_records.3.id }}">{{ last_records.3.title }}</a></h2> </div>

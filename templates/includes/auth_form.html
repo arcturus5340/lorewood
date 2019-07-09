@@ -38,8 +38,8 @@
                     </div>
                     <div class="ulogin_block" style="text-align: center">
                         <a href="/social/login/vk-oauth2"><img src="/static/includes/images/vk-login.png" style="width:50px; height:50px;" data-toggle="tooltip" title=""></a>
-                        <a href="/social/login/twitter-oauth2"><img src="/static/includes/images/twitter-login.png" style="width:45px; height:45px; margin-right: 3px" data-toggle="tooltip" title=""></a>
-                        <a href="/social/login/facebook-oauth2"><img src="/static/includes/images/facebook-login.png" style="width:45px; height:45px" data-toggle="tooltip" title=""></a>
+                        <a href="{% url 'social:begin' 'twitter' %}"><img src="/static/includes/images/twitter-login.png" style="width:45px; height:45px; margin-right: 3px" data-toggle="tooltip" title=""></a>
+                        <a href="{% url 'social:begin' 'facebook' %}"><img src="/static/includes/images/facebook-login.png" style="width:45px; height:45px" data-toggle="tooltip" title=""></a>
                     </div>
                     <div class="lwa-links">
                         <div class="links-f lf-l">
