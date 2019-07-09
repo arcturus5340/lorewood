@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="/static/includes/auth_style.css" />
     <script type="text/javascript" src="/static/includes/js/jquery/jquery.js?ver=1.12.4"></script>
     <script type='text/javascript' src='/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type="text/javascript" src="/static/includes/jquery-latest.js"></script>
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
   
@@ -437,22 +436,6 @@
                         </div>
                         <div class="col col-md-6 col-xs-12">
                             <div class="social-wrapper">
-                                <script type="text/javascript">
-                                    (function(w, doc) {
-                                        if (!w.__utlWdgt) {
-                                            w.__utlWdgt = true;
-                                            let d = doc,
-                                                s = d.createElement('script'),
-                                                g = 'getElementsByTagName';
-                                            s.type = 'text/javascript';
-                                            s.charset = 'UTF-8';
-                                            s.async = true;
-                                            s.src = ('https:' === w.location.protocol ? 'https' : 'http') + '://w.uptolike.com/widgets/v1/uptolike.js';
-                                            let h = d[g]('body')[0];
-                                            h.appendChild(s);
-                                        }
-                                    })(window, document);
-                                </script>
                                 <div style="text-align:center;" data-lang="ru" data-url="/r{{ record.id }}" data-mobile-view="false" data-share-size="40" data-like-text-enable="false" data-background-alpha="0.0" data-pid="cmssharewoodonline" data-mode="share" data-background-color="#ffffff" data-share-shape="round-rectangle" data-share-counter-size="12" data-icon-color="#ffffff" data-mobile-sn-ids="fb.vk.tw.ok.wh.tm.vb." data-text-color="#ffffff" data-buttons-color="#FFFFFF" data-counter-background-color="#ffffff" data-share-counter-type="separate" data-orientation="horizontal" data-following-enable="false" data-sn-ids="tw.vk.fb." data-preview-mobile="false" data-selection-enable="false" data-exclude-show-more="false" data-share-style="1" data-counter-background-alpha="0.0" data-top-button="false" class="uptolike-buttons"></div>
                             </div>
                         </div>
@@ -481,15 +464,6 @@
                                 {% if comments %}
                                 <ul class="comment-list media-list">
                                     {% include page_template %}
-                                    <script src="/static/el-pagination/js/el-pagination.js"></script>
-
-                                    <script>
-                                        $.endlessPaginate({
-                                            paginateOnScroll: true,
-                                            paginateOnScrollMargin: 5000,
-                                            paginateOnScrollChunkSize: 20
-                                        });
-                                    </script>
                                 </ul>
                                 {% else %}
                                 <div class="comment-number-top">Пока нет комментариев</div>
@@ -622,6 +596,8 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src='/static/content/plugins/wp-postratings/js/postratings-js.js?ver=1.86.2'></script>
+    <script type="text/javascript" src="/static/includes/jquery-latest.js"></script>
+    <script type="text/javascript" src="/static/includes/jquery-for-search.js"></script>
     <script type='text/javascript' src='/static/includes/js/wp-embed.min.js?ver=5.1.1'></script>
     <script type='text/javascript' src='/static/content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1'></script>
     <script type='text/javascript' src='/static/content/themes/sharewood/js/main.js?ver=5.1.1'></script>
@@ -712,6 +688,30 @@
         );
 
         }
+    </script>
+    <script type="text/javascript">
+        (function(w, doc) {
+            if (!w.__utlWdgt) {
+                w.__utlWdgt = true;
+                let d = doc,
+                    s = d.createElement('script'),
+                    g = 'getElementsByTagName';
+                s.type = 'text/javascript';
+                s.charset = 'UTF-8';
+                s.async = true;
+                s.src = ('https:' === w.location.protocol ? 'https' : 'http') + '://w.uptolike.com/widgets/v1/uptolike.js';
+                let h = d[g]('body')[0];
+                h.appendChild(s);
+            }
+        })(window, document);
+    </script>
+    <script src="/static/el-pagination/js/el-pagination.js"></script>
+    <script>
+        $.endlessPaginate({
+            paginateOnScroll: true,
+            paginateOnScrollMargin: 5000,
+            paginateOnScrollChunkSize: 20
+        });
     </script>
 </body>
 
