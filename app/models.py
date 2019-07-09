@@ -39,7 +39,6 @@ class Records(django.db.models.Model):
 class Media(django.db.models.Model):
     record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
     path = "record_src/"
-    part_num = django.db.models.IntegerField(default=1)
     title = django.db.models.CharField(max_length=150)
 
     file1 = django.db.models.FileField(upload_to=path, null=True, blank=True)
@@ -118,7 +117,7 @@ class UserEmail(django.db.models.Model):
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
-    bio = django.db.models.TextField(max_length=500, blank=True)
+    bio = django.db.models.TextField(max_length=500, null=True, blank=True)
     balance = django.db.models.IntegerField(default=0)
 
 
