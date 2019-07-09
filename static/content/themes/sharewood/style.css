@@ -2230,7 +2230,7 @@ blockquote:before {
 .grid figure {
   position: relative;
   overflow: hidden;
-  background: #3085a3;
+  /*background: #3085a3;*/
   text-align: center;
   cursor: pointer;
   border-top-left-radius: 8px;
@@ -2261,7 +2261,7 @@ figure.effect-duke:hover img {
 .grid1 figure {
   position: relative;
   overflow: hidden;
-  background: #3085a3;
+  /*background: #3085a3;*/
   cursor: pointer;
 }
 
