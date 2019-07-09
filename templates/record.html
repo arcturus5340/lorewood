@@ -499,7 +499,146 @@
                                     <p>Авторизоваться, чтобы оставлять комментарии</p>
                                     <div class="lwa lwa-template-modal"> <a href="https://sharewood.online/wp-login.php" class="lwa-links-modal">Войти</a>
                                         <!-- WTF?! -->
-                                    {% include "includes/auth_form.html" %}
+                                    <div class="lwa-modal" id="auth" style="display:none;">
+                                        <form method="post">
+                                            <form name="lwa-form" class="lwa-form" method="post" id="login_form1">
+                                                {% csrf_token %}
+                                                <span class="lwa-status"></span>
+                                                <div>
+                                                    <div class="lwa-username">
+                                                        <div class="username_label">
+                                                            <label>введите логин</label>
+                                                        </div>
+                                                        <div class="username_input">
+                                                            <div id="lwa_user_login" class="input">
+                                                                <input type="text" name="username" id="id_username1" required autofocus>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lwa-password">
+                                                        <div class="password_label">
+                                                            <label>введите пароль</label>
+                                                        </div>
+                                                        <div class="password_input">
+                                                            <div id="lwa_user_pass" class="input" value="">
+                                                                <input type="password" name="password" id="id_password1" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <p id="error-login1" style="color:red" hidden>Введен неправильный логин или пароль</p>
+                                                    <div class="lwa-submit">
+                                                        <div class="lwa-submit-button">
+                                                            <button type="button" name="wp-submit" id="login_button1" class="lwa-wp-submit" value="выполнить вход" tabindex="100"> <strong>выполнить</strong> вход </button>
+                                                            <input type="hidden" name="lwa_profile_link" value="1" />
+                                                            <input type="hidden" name="login-with-ajax" value="login" />
+                                                        </div>
+                                                        <script type="text/javascript" src="/static/includes/reg_form.js"></script>
+                                                        <div>
+                                                        <p style="text-align: center;color:grey"> или войдите с помощью </p>
+                                                        </div>
+                                                        <div class="ulogin_block" style="text-align: center">
+                                                            <a href="/social/login/vk-oauth2"><img src="/static/includes/images/vk-login.png" style="width:50px; height:50px;" data-toggle="tooltip" title=""></a>
+                                                            <a href="{% url 'social:begin' 'twitter' %}"><img src="/static/includes/images/twitter-login.png" style="width:45px; height:45px; margin-right: 3px" data-toggle="tooltip" title=""></a>
+                                                            <a href="{% url 'social:begin' 'facebook' %}"><img src="/static/includes/images/facebook-login.png" style="width:45px; height:45px" data-toggle="tooltip" title=""></a>
+                                                        </div>
+                                                        <div class="lwa-links">
+                                                            <div class="links-f lf-l">
+                                                                <a class="lwa-links-remember" href="./wp-login.php?action=lostpassword" title="Забыли пароль?"> Забыли пароль? </a>
+                                                                <!-- WTF?! -->
+                                                            </div>
+                                                            <div class="links-f lf-r"> Нет аккаунта?
+                                                                <a href="./wp-login.php?action=register" class="lwa-links-register-inline"> <strong>Зарегистрировать</strong> </a>
+                                                                <!-- WTF?! -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <br>
+                                            <form name="lwa-remember" class="lwa-remember" id="remember-form1" method="post" style="display:none;">
+                                                <!-- WTF?! -->
+                                                {% csrf_token %}
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <strong>Восстановление пароля</strong>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="lwa-remember-email">
+                                                        <div>
+                                                            <input type="text" name="user_login" id="lwa_user_remember" placeholder="Введите имя пользователя или email" required />
+                                                            <!-- need label -->
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <br>
+                                                        <div id="remember-errors1" style="color:red"></div>
+                                                        <div>
+                                                            <input id="remember-button1" type="submit" value="Восстановить пароль" />
+                                                            <a href="#" class="lwa-links-remember-cancel"> Отмена </a>
+                                                            <input type="hidden" name="login-with-ajax" value="remember" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="lwa-register" style="display:none;">
+                                                <form name="lwa-register" id="registration-form" action="/register/" method="post">
+                                                    {% csrf_token %}
+                                                    <br>
+                                                    <br>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <strong>Зарегистрироваться</strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="lwa-username">
+                                                            <div>
+                                                                <label>Введите логин:</label>
+                                                                <input type="text" name="username" autofocus required maxlength="20" id="id_username">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="lwa-email">
+                                                            <div>
+                                                                <label>Введите E-mail:</label>
+                                                                <input type="email" name="email" required maxlength="254" id="id_email">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="lwa-email">
+                                                            <div>
+                                                                <label>Введите пароль:</label>
+                                                                <input type="password" name="password1" required id="id_password1">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="lwa-email">
+                                                            <div>
+                                                                <label>Введите пароль еще раз:</label>
+                                                                <input type="password" name="password2" required id="id_password2">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <br>
+                                                                <div id="errors" style="color:red"></div>
+                                                                <input type="submit" id="reg-submit" value="Регистрация" tabindex="100" />
+                                                                <a href="#" class="lwa-links-register-inline-cancel"> Отмена </a>
+                                                                <input type="hidden" name="login-with-ajax" value="register" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </form>
+                                    </div>
                                     </div>
                                 </div>
                                 {% endif %}

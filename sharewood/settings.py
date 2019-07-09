@@ -29,7 +29,7 @@ SECRET_KEY = 'i_6_gq)3)iq-m#(sync@yp$oq87u31rp+z9dr93qw8gtcuzjk5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['185.235.130.111', 'sharewood.online', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['185.235.130.111', 'sharewood.online', 'localhost', '127.0.0.1', 'www.sharewood.online']
 
 # Application definition
 
@@ -125,15 +125,12 @@ SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = '7033607'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = 'mHZ6n0XvxVY2nU1iz9Xy'
-SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['photos']
 
 SOCIAL_AUTH_FACEBOOK_KEY = '2337877396434591'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'dc47e6dec09c54a09c09e0f37125c982'
-SOCIAL_AUTH_FACEBOOK_SCOPE = []
 
 SOCIAL_AUTH_TWITTER_KEY = 'PiNRffwXtKcCQQ8udFsdQmVOG'
 SOCIAL_AUTH_TWITTER_SECRET = 'fFinacLTmcubfSL7exgDY7oS7SweyFAJI8KnYc8sUqUaPUNEZG'
-SOCIAL_AUTH_TWITTER_SCOPE = []
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
