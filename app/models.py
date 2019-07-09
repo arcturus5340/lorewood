@@ -117,7 +117,7 @@ class UserEmail(django.db.models.Model):
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
-    bio = django.db.models.TextField(max_length=500, blank=True)
+    bio = django.db.models.TextField(max_length=500, null=True, blank=True)
     balance = django.db.models.IntegerField(default=0)
     is_premium = django.db.models.BooleanField(default=False)
 
