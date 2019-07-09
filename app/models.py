@@ -7,25 +7,25 @@ import datetime
 
 class Records(django.db.models.Model):
     path = "record_src/"
-    title = django.db.models.CharField(max_length=150)
-    author = django.db.models.CharField(default='arcturus5340', max_length=60)
-    main_pic = django.db.models.FileField(upload_to=path)
-    description = django.db.models.TextField(default='', max_length=255)
+    title = django.db.models.TextField()
     text = django.db.models.TextField()
-    date = django.db.models.DateField(default=datetime.datetime.now())
+    description = django.db.models.CharField(max_length=300)
     rating = django.db.models.FloatField(default=0.0)
-    best_rating = django.db.models.IntegerField(default=1)
-    worst_rating = django.db.models.IntegerField(default=10)
+    main_pic = django.db.models.FileField(upload_to=path)
+    author = django.db.models.CharField(max_length=30)
+    tags = django.db.models.TextField()
+    comments_count = django.db.models.IntegerField(default=0)
+    best_rating = django.db.models.IntegerField(default=0)
     rating_count = django.db.models.IntegerField(default=0)
+    worst_rating = django.db.models.IntegerField(default=10)
     rating_sum = django.db.models.IntegerField(default=0)
     rated_users = django.db.models.TextField(default='')
-    tags = django.db.models.TextField(default='code, #ihatejs, abinba!', max_length=255)
-    comments_count = django.db.models.IntegerField(default=0)
-    price = django.db.models.IntegerField(default=0)
+    includes = django.db.models.TextField(default='-', max_length=300)
+    pre_video = django.db.models.FileField(upload_to=path)
+    price = django.db.models.IntegerField()
     sales = django.db.models.IntegerField(default=0)
-    pre_video = django.db.models.FileField(upload_to=path, blank=True)
-    includes = django.db.models.TextField(default="-", max_length=255)
-    provided_users = django.db.models.TextField(null=True, blank=True)
+    date = django.db.models.DateField(default=datetime.datetime.now())
+    provided_users = django.db.models.TextField(default='')
 
     class Meta:
         verbose_name = "Запись" 
@@ -85,7 +85,10 @@ class Comments(django.db.models.Model):
 
 
 class Revenue(django.db.models.Model):
-    pass
+    date = django.db.models.DateField(default=datetime.datetime.now())
+    income = django.db.models.IntegerField(default=0)
+    # visitors = django.db.models.IntegerField(default=0)
+
 
 class UserActivationManager(django.db.models.Manager):
     def create_user_key(self, username, activation_key):
@@ -115,7 +118,7 @@ class UserEmail(django.db.models.Model):
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
-    bio = django.db.models.TextField(max_length=500, null=True, blank=True)
+    bio = django.db.models.TextField(max_length=500, blank=True)
     balance = django.db.models.IntegerField(default=0)
 
 

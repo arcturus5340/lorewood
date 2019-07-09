@@ -104,6 +104,10 @@ def register(request: django.http.HttpRequest):
         response_data['result'] = 'Такой юзернейм уже зарегестрирован'
         logging.warning('failed registration attempt (existing username)')
 
+    elif len(username) > 30:
+        response_data['result'] = 'Слишком длинный логин'
+        logging.warning('failed registration attempt (username is too long)')
+
     elif django.contrib.auth.models.User.objects.filter(email=email).exists():
         response_data['result'] = 'Такой эмейл уже зарегестрирован'
         logging.warning('failed registration attempt (existing email)')
@@ -531,10 +535,10 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     found_records = []
     for r in records:
         if ((search_text.lower() in r.title.lower()) or
-                (search_text.lower() in r.description.lower()) or
-                (search_text.lower() in r.text.lower()) or
-                (search_text.lower() in r.author.lower()) or
-                (search_text.lower() in r.tags.lower())):
+            (search_text.lower() in r.description.lower()) or
+            (search_text.lower() in r.text.lower()) or
+            (search_text.lower() in r.author.lower()) or
+            (search_text.lower() in r.tags.lower())):
             found_records.append(r)
 
     context = {
@@ -602,6 +606,10 @@ def activation_key_generator(size: int = 40,
                              chars: string = string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
 
+
+
+# TODO: double buy
+# TODO: is user active
 def buy(request, record_id):
     message = 0
     if request.user.is_active:
@@ -620,6 +628,16 @@ def buy(request, record_id):
             else:
                 provided_users += ", {}".format(request.user.username)
             record.provided_users = provided_users
+
+            today = datetime.date.today() + datetime.timedelta(days=1)
+            try:
+                obj = app.models.Revenue.objects.get(date=today)
+                obj.income += record.price
+                obj.save()
+            except django.core.exceptions.ObjectDoesNotExist:
+                app.models.Revenue.objects.create(date=today, income=record.price)
+
+            record.sales += 1
             record.save()
     else:
         message = "ACTIVATE"

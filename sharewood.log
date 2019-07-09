@@ -2175,3 +2175,1383 @@ TypeError: registration() takes 0 positional arguments but 1 was given
 [2019-07-09 08:39:08,340] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
 [2019-07-09 08:39:08,427] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
 [2019-07-09 08:39:08,680] WARNING : Not Found: /favicon.ico
+[2019-07-09 08:58:40,708] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:41,292] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:41,505] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:41,628] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:42,093] WARNING : Not Found: /favicon.ico
+[2019-07-09 08:58:42,639] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:42,710] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:58:50,735] WARNING : failed login attempt
+[2019-07-09 08:58:57,768] INFO    : user 'login' logged in
+[2019-07-09 08:58:57,895] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 08:59:02,473] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 08:59:02,482] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:02,568] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:02,606] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 08:59:03,227] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:03,284] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:03,558] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:03,648] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 08:59:03,838] WARNING : Not Found: /favicon.ico
+[2019-07-09 09:07:13,750] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:07:37,641] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:08:21,023] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 09:08:21,024] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 09:08:21,657] WARNING : Not Found: /favicon.ico
+[2019-07-09 09:08:27,345] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:08:27,425] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:10:36,055] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:10:38,730] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:10:38,882] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:11:04,668] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:11:04,754] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:11:04,891] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:11:05,084] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:12:10,611] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:12:10,716] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:13:44,436] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:13:44,835] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:13:59,592] WARNING : Not Found: /favicon.ico
+[2019-07-09 09:13:59,632] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:13:59,700] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:14:47,628] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:15:19,497] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:15:20,349] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:16:57,701] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:26:36,332] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:30:23,886] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:30:56,280] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:32:57,960] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:34:23,744] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:34:36,157] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:34:53,758] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:35:14,673] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:35:27,042] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:35:36,234] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:35:47,519] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:36:08,283] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:40:07,252] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 09:40:07,457] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:40:07,590] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:40:07,599] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 09:40:07,701] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:40:11,039] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 09:40:11,044] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 09:40:11,113] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 09:40:11,153] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 09:40:54,103] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:40:54,107] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 09:40:54,197] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:40:54,207] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 09:52:01,673] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:52:53,725] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-09 09:56:16,986] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:56:16,989] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 09:56:17,098] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 09:56:17,103] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:01:39,946] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-09 10:02:04,013] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-09 10:07:18,338] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:14:35,690] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:16:11,881] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:16:11,884] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:16:11,885] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:16:11,951] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:16:11,998] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:16:12,000] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:16:12,003] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:16:17,011] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: app_revenue.visitors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 633, in buy
+    app.models.Revenue.objects.create(date=today)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: app_revenue.visitors
+[2019-07-09 10:16:42,273] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(datetime=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'datetime' into field. Choices are: date, id, income
+[2019-07-09 10:16:43,296] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(datetime=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'datetime' into field. Choices are: date, id, income
+[2019-07-09 10:17:42,441] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 399, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'datetime' into field. Choices are: date, id, income
+[2019-07-09 10:17:42,846] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:17:43,995] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 4!
+[2019-07-09 10:17:44,276] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 5!
+[2019-07-09 10:17:44,459] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 6!
+[2019-07-09 10:17:44,511] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 7!
+[2019-07-09 10:17:44,566] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 8!
+[2019-07-09 10:17:45,222] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 9!
+[2019-07-09 10:17:45,835] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 412, in get
+    (self.model._meta.object_name, num)
+app.models.Revenue.MultipleObjectsReturned: get() returned more than one Revenue -- it returned 10!
+[2019-07-09 10:18:23,164] ERROR   : Internal Server Error: /r1/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 635, in buy
+    app.models.Revenue.objects.get(date=today).sales += 1
+AttributeError: 'Revenue' object has no attribute 'sales'
+[2019-07-09 10:21:39,040] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:21:39,044] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:21:39,085] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:22:23,298] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:22:23,300] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:22:23,445] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:22:23,458] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:22:23,526] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:22:48,940] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:22:49,055] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:22:49,057] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:22:49,184] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:22:51,244] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:22:51,245] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:22:51,321] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:22:51,322] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:23:48,133] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:23:48,133] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:23:48,285] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:23:48,287] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:23:48,470] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:23:51,087] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:23:51,155] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:23:51,183] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:23:54,348] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:23:54,352] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:23:54,427] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:23:54,461] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:23:54,464] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:23:56,770] ERROR   : Internal Server Error: /r21/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 419, in record
+    author = django.contrib.auth.models.User.objects.get(username=current_record.author)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[2019-07-09 10:24:06,195] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:24:06,200] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:24:08,162] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:24:08,164] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:24:08,167] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:24:08,246] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:24:08,290] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:24:08,291] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:24:08,292] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:24:08,409] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:24:09,769] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:24:09,770] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:24:09,773] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:24:09,840] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:24:09,886] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:24:09,887] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:24:09,888] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:25:52,253] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:25:52,255] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:25:52,306] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:52,385] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:25:54,616] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:25:54,618] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:25:54,683] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:54,723] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:25:54,725] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:25:56,806] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:56,815] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:25:56,903] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:25:56,905] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:58,673] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:58,677] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:25:58,771] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:25:58,774] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:27:46,983] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:27:47,059] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:27:47,090] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:27:48,997] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:27:49,062] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:27:49,093] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:28:12,808] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:28:54,327] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:28:54,387] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:28:54,732] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:28:56,655] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:28:56,656] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:28:56,730] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:28:56,766] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:28:56,770] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:29:00,026] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:29:00,027] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:29:00,112] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:29:00,114] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:29:02,060] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:29:02,062] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:29:02,152] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:29:02,154] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:30:07,303] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:30:12,073] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:30:12,075] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:30:12,154] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:30:12,199] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:30:12,202] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:30:14,033] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:30:14,034] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:30:14,094] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:30:14,131] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:34:16,906] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:34:57,770] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:35:00,739] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:00,745] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:03,120] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:03,123] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:03,194] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:03,199] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:03,273] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:03,321] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:03,323] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:07,047] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:07,050] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:07,115] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:07,155] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:07,156] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:10,153] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:10,159] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:10,256] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:10,262] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:10,423] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:35:11,675] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:11,676] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:11,773] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:11,775] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:42,773] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:42,777] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:42,778] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:35:42,853] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:42,898] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:42,900] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:35:42,903] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:35:44,766] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:44,773] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:35:44,838] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:44,883] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:35:44,884] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:35:46,844] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:46,859] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:46,951] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:46,953] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:49,502] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:35:49,503] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:35:49,608] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:36:11,751] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:36:16,367] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:36:16,377] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:36:16,447] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:36:16,484] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:36:16,487] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:36:19,098] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:36:19,099] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:36:19,160] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:36:19,190] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:36:19,192] WARNING : Not Found: /media/static/record_src/r6/681a1e9a4fe740cf5346f8249bdec45d-1024x640.jpg
+[2019-07-09 10:37:43,746] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:37:43,749] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:27,261] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:27,263] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:38:27,349] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:38:27,410] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:27,413] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:38:28,953] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:38:28,964] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:28,965] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:38:29,023] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:38:29,066] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:29,071] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:38:29,073] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:38:29,130] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:38:31,005] ERROR   : Internal Server Error: /r23/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 415, in record
+    prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2019-07-09 10:38:33,738] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:38:38,407] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:38:38,411] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:38,483] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:38:38,489] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:38:38,640] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:38:39,017] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:38:43,190] ERROR   : Internal Server Error: /r23/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 415, in record
+    prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2019-07-09 10:39:00,193] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:39:00,197] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:39:00,201] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:00,261] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:00,305] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:00,311] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:39:00,313] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:39:03,698] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:03,707] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:03,777] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:03,808] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:03,809] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:06,346] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:06,353] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:39:06,409] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:06,438] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:06,440] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:39:08,749] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:08,758] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:08,830] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:08,863] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:08,865] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:10,223] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:10,228] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:10,297] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:39:10,326] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:39:10,332] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:39:36,416] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:39:40,493] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:39:40,494] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:39:40,560] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:39:40,598] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:39:40,599] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:39:45,291] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:40,721] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:41,503] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:41,985] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:52,554] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:53,069] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:53,311] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:53,466] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:53,639] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:53,660] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:40:53,745] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:40:56,661] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:40:56,668] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:40:56,728] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:40:56,764] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:40:56,765] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:40:58,611] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:21,227] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:22,131] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:22,650] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:23,073] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:27,815] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,328] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,535] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,827] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,862] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,901] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:28,936] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,031] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,074] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,112] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,150] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,185] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,272] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,311] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,346] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,388] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,441] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:41:29,491] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,620] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:29,987] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:30,336] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:30,664] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:41:31,044] ERROR   : Internal Server Error: /r10/buy/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 616, in buy
+    record = app.models.Records.objects.get(id=record_id)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+app.models.Records.DoesNotExist: Records matching query does not exist.
+[2019-07-09 10:42:00,963] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:42:00,966] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:42:01,615] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:42:03,081] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:42:03,083] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:03,149] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:03,188] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:42:03,190] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:06,407] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:06,420] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:42:06,423] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:06,486] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:42:06,530] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:06,533] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:06,537] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:42:06,667] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:42:08,976] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:42:08,980] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:09,042] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:09,072] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:09,074] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:42:11,429] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:11,430] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:42:11,501] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:11,537] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:42:11,538] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:42:13,527] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:13,541] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:13,543] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:42:13,604] WARNING : Not Found: /media/static/record_src/r5/5a89b01873bd3.jpg
+
+[2019-07-09 10:42:13,638] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:42:13,640] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:15,315] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:15,319] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:42:15,324] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:42:15,410] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:42:15,412] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:42:17,682] ERROR   : Internal Server Error: /r20/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 415, in record
+    prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2019-07-09 10:42:20,438] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:42:20,442] WARNING : Not Found: /record_src/wallpapers.jpg
+[2019-07-09 10:44:33,077] WARNING : Not Found: /record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:44:34,965] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:44:34,972] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:44:34,974] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:44:35,044] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:44:35,090] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:44:35,092] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:44:35,093] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:44:36,666] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:44:36,670] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:44:36,672] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:44:36,743] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:44:36,788] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:44:36,790] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:44:36,791] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:14,428] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:45:14,430] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:14,432] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:45:14,470] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:45:14,519] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:45:14,520] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:45:14,524] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:14,526] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:45:14,584] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:45:14,637] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:45:14,641] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:45:14,643] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:45:14,645] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:16,491] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:16,491] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:45:16,494] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:45:16,552] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:45:16,599] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:45:16,600] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:45:16,603] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:48:08,438] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:48:08,439] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:48:08,444] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:48:08,485] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:48:10,758] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:48:10,760] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:48:10,766] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:48:10,817] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:48:10,858] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:48:10,860] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:48:10,866] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:48:10,986] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:48:51,573] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:53:57,886] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:54:26,284] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:54:26,287] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:54:26,289] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:26,369] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:26,417] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:54:26,424] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:54:26,425] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:26,672] WARNING : Not Found: /favicon.ico
+[2019-07-09 10:54:27,756] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:54:27,757] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:54:27,758] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:27,813] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:27,858] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:54:27,859] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:54:27,861] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:49,809] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:49,820] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:54:49,890] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:49,926] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:54:49,929] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:51,314] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:54:51,315] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:51,385] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:54:51,417] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:54:51,419] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:55:17,218] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:56:05,470] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:56:10,772] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:56:10,775] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:10,860] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:10,895] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:10,897] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:56:15,779] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:56:15,785] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:15,848] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:15,882] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:15,885] WARNING : Not Found: /media/static/record_src/r4/eagle-3955951-1.png
+[2019-07-09 10:56:54,443] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:56:54,445] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:54,446] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:56:54,509] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:54,557] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:56:54,558] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:56:54,560] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:56,169] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:56:56,173] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:56,173] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:56:56,235] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:56:56,278] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:56:56,280] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:56:56,285] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:57:13,022] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-09 10:57:16,434] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:57:16,436] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:57:16,437] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:57:16,504] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:57:16,549] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:57:16,553] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:57:16,556] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:57:17,969] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:57:17,971] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:57:17,973] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:57:17,975] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:57:18,022] WARNING : Not Found: /media/media/record_src/python_main_pic.png
+[2019-07-09 10:57:18,070] WARNING : Not Found: /media/static/record_src/r1/look.com_.ua-264882.jpg
+[2019-07-09 10:57:18,077] WARNING : Not Found: /media/static/record_src/r2/13642413140-cr-1366x768-1024x576.jpg
+[2019-07-09 10:57:18,080] WARNING : Not Found: /media/record_src/DeepinScreenshot_20190629193610.png
+[2019-07-09 10:57:18,082] WARNING : Not Found: /media/static/record_src/r3/1o1ReuinXf.jpg
+[2019-07-09 10:58:25,780] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-09 10:58:28,701] ERROR   : Internal Server Error: /api/sales
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1768, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1504, in setup_joins
+    names[:pivot], opts, allow_many, fail_on_missing=True,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1420, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'income' into field. Choices are: author, best_rating, comments_count, date, description, id, includes, main_pic, media, pre_video, price, provided_users, rated_users, rating, rating_count, rating_sum, sales, tags, text, title, worst_rating
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 557, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 35, in sales
+    data = app.models.Records.objects.values_list('date', 'income')
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 825, in values_list
+    clone = self._values(*_fields, **expressions)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 793, in _values
+    clone.query.set_values(fields)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 2020, in set_values
+    self.add_fields(field_names, True)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1791, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'income' into field. Choices are: author, best_rating, comments_count, date, description, id, includes, main_pic, media, pre_video, price, provided_users, rated_users, rating, rating_count, rating_sum, sales, tags, text, title, worst_rating
+[2019-07-09 10:58:45,651] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-09 11:00:05,403] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.

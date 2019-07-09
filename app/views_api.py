@@ -1,6 +1,8 @@
 import django.http
 import django.contrib.auth.models
 
+import app.models
+
 import collections
 import datetime
 
@@ -30,7 +32,7 @@ def activity():
 
 
 def sales():
-    data = [{1: 10, 2: 20, 3: 30, 4: 5}, {1: 5, 2: 30, 3: 20, 4: 10}]
+    data = {format_date(key): val for key, val in app.models.Revenue.objects.values_list('date', 'income')}
     return django.http.JsonResponse(data, safe=False)
 
 
