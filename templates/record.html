@@ -31,11 +31,11 @@
     <link rel="stylesheet" href="/static/includes/auth_style.css" />
     <script type="text/javascript" src="/static/includes/js/jquery/jquery.js?ver=1.12.4"></script>
     <script type='text/javascript' src='/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
 
     <link rel="canonical" href="/r{{ record.id }}" />
-
     <style type="text/css">
         .recentcomments a {
             display: inline !important;
@@ -288,7 +288,7 @@
                                                                       <li>
                                                                         {% if is_provided %}
                                                                         {% if data.0 == 'A' %}
-                                                                            <a href="/media/{{ data|split:'A/'|last}}" style="float:left; width: 90%" class="audio-link"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a class="audio-link" href="/media/{{ data|split:'A/'|last}}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                             <a href="/media/{{ data|split:'A/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% elif data.0 == 'F' %}
@@ -296,13 +296,13 @@
                                                                             <a href="/media/{{ data|split:'F/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% elif data.0 == 'V' %}
-                                                                            <a href="/media/{{ data|split:'V/'|last}}" class="video-link" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a class="video-link" href="/media/{{ data|split:'V/'|last}}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                             <a href="/media/{{ data|split:'V/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% endif %}
                                                                         {% else %}
                                                                         {% if data.0 == 'A' %}
-                                                                            <a style="float:left; width: 90%" class="audio-link"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                             <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% elif data.0 == 'F' %}
@@ -310,7 +310,7 @@
                                                                             <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% elif data.0 == 'V' %}
-                                                                            <a class="video-link" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                            <a style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                             <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                             </a>
                                                                         {% endif %}
@@ -460,8 +460,8 @@
                                 {% if comments %}
                                 <ul class="comment-list media-list">
                                     {% include page_template %}
-                                    <script src="http://code.jquery.com/jquery-latest.js"></script>
                                     <script src="/static/el-pagination/js/el-pagination.js"></script>
+                                    <script src="http://code.jquery.com/jquery-latest.js"></script>
                                     <script>
                                         $.endlessPaginate({
                                             paginateOnScroll: true,
@@ -557,29 +557,12 @@
             <div class="modal-content">
                 <button type="button" id="video-close" data-dismiss="modal">&times;</button>
                 <div class="modal-body" style="background: #fff;">
-                    <video width="640" height="480" controls>
-                      <source id="video-source" src="">
+                    <video width="640" id="video-source" src="" height="480" autoplay controls>
                     </video>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        jQuery(".video-link").on("click", function(i) {
-            i.preventDefault();
-            let link = jQuery(this).attr("href");
-            jQuery("#video-source").attr("src", link);
-            jQuery("#video-view").css("visibility", "visible");
-            
-            let height = jQuery(window).scrollTop();
-            jQuery("#video-view").css("margin-top", height-100);
-        });
-
-        jQuery("#video-close").on("click", function() {
-            jQuery("#video-view").css("visibility", "hidden");
-        });
-    </script>
 
     <!-- audio view modal -->
     <div class="lwa-modal-audio" id="audio-view" tabindex="-2" role="dialog" hidden style="display: block;">
@@ -587,29 +570,12 @@
             <div class="modal-content">
                 <button type="button" id="audio-close" data-dismiss="modal">&times;</button>
                 <div class="modal-body" style="background: #fff; margin-left: 30px">
-                    <audio controls>
-                      <source id="audio-source" src="">
+                    <audio id="audio-source" src="" controls autoplay>
                     </audio>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        jQuery(".audio-link").on("click", function(i) {
-            i.preventDefault();
-            let link = jQuery(this).attr("href");
-            jQuery("#audio-source").attr("src", link);
-            jQuery("#audio-view").css("visibility", "visible");
-            
-            let height = jQuery(window).scrollTop();
-            jQuery("#audio-view").css("margin-top", height+100);
-        });
-
-        jQuery("#audio-close").on("click", function() {
-            jQuery("#audio-view").css("visibility", "hidden");
-        });
-    </script>
 
     {% include "includes/search_form.html" %}
 
@@ -640,6 +606,34 @@
     <script type='text/javascript' src='/static/content/themes/sharewood/js/main.js?ver=5.1.1'></script>
     <script type="text/javascript" src="/static/includes/auth_script.js"></script>
     <script>
+        $(".video-link").on("click", function(i) {
+            i.preventDefault();
+            let link = $(this).attr("href");
+            $("#video-source").attr("src", link);
+            $("#video-view").css("visibility", "visible");
+            
+            let height = $(window).scrollTop();
+            $("#video-view").css("margin-top", height-100);
+        });
+
+        $("#video-close").on("click", function() {
+            $("#video-view").css("visibility", "hidden");
+        });
+
+        $(".audio-link").on("click", function(i) {
+            i.preventDefault();
+            let link = $(this).attr("href");
+            $("#audio-source").attr("src", link);
+            $("#audio-view").css("visibility", "visible");
+            
+            let height = $(window).scrollTop();
+            $("#audio-view").css("margin-top", height+100);
+        });
+
+        $("#audio-close").on("click", function() {
+            $("#audio-view").css("visibility", "hidden");
+        });
+
         $(".jqr2c_quote").on('click', function (event) {
             event.preventDefault();
 
@@ -676,7 +670,6 @@
         });
 
         function initMenu() {
-
         $('#menu ul').hide();
 
         $('#menu li a').click(

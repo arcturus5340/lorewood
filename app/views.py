@@ -427,8 +427,8 @@ def record(request: django.http.HttpRequest,
         for file in rows:
             if file != None and file != '':
                 path = "{}/media/{}".format(django.conf.settings.BASE_DIR, file)
-                encoded_path = path.encode("utf-8")
-                kind = filetype.guess(encoded_path)
+                #encoded_path = path.encode("utf-8")
+                kind = filetype.guess(str(path))
                 filekind = str(kind)
                 if filekind.find(".video.") != -1:
                     file = "V/{}".format(file)
@@ -438,7 +438,7 @@ def record(request: django.http.HttpRequest,
                     file = "F/{}".format(file)
                 part_files[media_num].append(file)
         media_num += 1
-
+    print(part_files)
     content = []
     part_num = 0
     for part in media:
