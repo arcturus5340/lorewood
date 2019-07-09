@@ -22,6 +22,7 @@ class Records(django.db.models.Model):
     tags = django.db.models.TextField(default='code, #ihatejs, abinba!', max_length=255)
     comments_count = django.db.models.IntegerField(default=0)
     price = django.db.models.IntegerField(default=0)
+    sales = django.db.models.IntegerField(default=0)
     pre_video = django.db.models.FileField(upload_to=path, blank=True)
     includes = django.db.models.TextField(default="-", max_length=255)
 
@@ -81,6 +82,9 @@ class Comments(django.db.models.Model):
     date = django.db.models.DateField(default=datetime.datetime.now())
     record_id = django.db.models.IntegerField(default=1)
 
+
+class Revenue(django.db.models.Model):
+    pass
 
 class UserActivationManager(django.db.models.Manager):
     def create_user_key(self, username, activation_key):

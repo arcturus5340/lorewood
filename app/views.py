@@ -543,26 +543,16 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
 
 
 def api(request: django.http.HttpRequest, data: string):
-<<<<<<< HEAD
-    try:
-        return getattr(app.views_api, data)(request)
-    except AttributeError:
-=======
-    if data in ['registration', 'activity']:
-        return getattr(app.views_api, data)(request)
+    if data in ['registration', 'activity', 'sales']:
+        return getattr(app.views_api, data)()
     else:
->>>>>>> 481a2132ec989a3df0bfe9ef32e3bece2ece3baa
         response = django.shortcuts.render(request, '404.html')
         response.status_code = 404
         return response
 
 
 def statistics(request: django.http.HttpRequest):
-<<<<<<< HEAD
-    return django.shortcuts.render(request, 'charts.html', {"customers": 10})
-=======
-    return django.shortcuts.render(request, 'statistics.html', {"customers": 10})
->>>>>>> 481a2132ec989a3df0bfe9ef32e3bece2ece3baa
+    return django.shortcuts.render(request, 'statistics.html')
 
 
 # ----------------------------- functions -------------------------------
