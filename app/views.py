@@ -481,6 +481,11 @@ def record(request: django.http.HttpRequest,
 
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
 
+    if current_record.provided_users.find(request.user.username) != -1:
+        is_provided = True
+    else:
+        is_provided = False
+
     context = {
         'prev_record': prev_record,
         'record': current_record,
@@ -489,6 +494,7 @@ def record(request: django.http.HttpRequest,
         'similar_records': similar_records,
         'comments': comments,
         'content' : content,
+        'is_provided' : is_provided,
     }
 
     if extra_context is not None:
@@ -595,3 +601,27 @@ def send_activation_email(username: str, email: str):
 def activation_key_generator(size: int = 40,
                              chars: string = string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
+
+def buy(request, record_id):
+    message = 0
+    if request.user.is_active:
+        record = app.models.Records.objects.get(id=record_id)
+        balance = request.user.profile.balance
+        new_balance = balance - record.price
+        if new_balance < 0:
+            message = "NOT_ENOUGH"
+        else :    
+            request.user.profile.balance = new_balance
+            request.user.save()
+
+            provided_users = record.provided_users
+            if provided_users == None or provided_users == "":
+                provided_users = request.user.username
+            else:
+                provided_users += ", {}".format(request.user.username)
+            record.provided_users = provided_users
+            record.save()
+    else:
+        message = "ACTIVATE"
+
+    return django.shortcuts.redirect('/r{}/?message={}'.format(record_id, message))

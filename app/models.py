@@ -25,6 +25,7 @@ class Records(django.db.models.Model):
     sales = django.db.models.IntegerField(default=0)
     pre_video = django.db.models.FileField(upload_to=path, blank=True)
     includes = django.db.models.TextField(default="-", max_length=255)
+    provided_users = django.db.models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = "Запись" 
@@ -114,7 +115,7 @@ class UserEmail(django.db.models.Model):
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
-    bio = django.db.models.TextField(max_length=500, blank=True)
+    bio = django.db.models.TextField(max_length=500, null=True, blank=True)
     balance = django.db.models.IntegerField(default=0)
 
 
