@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/static/includes/auth_style.css" />
     <script type="text/javascript" src="/static/includes/js/jquery/jquery.js?ver=1.12.4"></script>
     <script type='text/javascript' src='/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="/static/includes/jquery-latest.js"></script>
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
   
@@ -235,48 +235,48 @@
                                                     <video src="{{ record.pre_video.url }}" style="width: 29rem" controls="controls" poster="">
                                                     </video>
                                                     <div class="card-body" style="padding: 20px">
-                                                        {% if not user.is_authorized %}
-                                                        <div style="font-size: 32px; float: left">
-                                                            <b>{{ record.price }}</b>
-                                                        </div>
-                                                        <div style="font-size: 14px; margin: 14px; padding-left: 10px; color: grey">
-                                                            <s>11990 руб</s>
-                                                        </div>
-                                                        <div style="font-size: 14px; color: grey">
-                                                            Скидка 92%
-                                                        </div>
-                                                        <div style="font-size: 14px; color: #CD5C5C">
-                                                            Данная цена доступна еще 5 дней!
-                                                        </div><br>
-                                                        <a href="buy/" class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
-                                                        Купить</a><br>
-                                                        <div style="font-size: 12px; color: grey; text-align: center;">
-                                                            Гарантия возврата денег - 30 дней
-                                                        </div><br>
+                                                        {% if user.is_authenticated %}
+                                                            {% if not is_provided and not user.profile.is_premium %}
+                                                            <div style="font-size: 32px; float: left">
+                                                                <b>{{ record.price }}</b>
+                                                            </div>
+                                                            <div style="font-size: 14px; margin: 14px; padding-left: 10px; color: grey">
+                                                                <s>11990 руб</s>
+                                                            </div>
+                                                            <div style="font-size: 14px; color: grey">
+                                                                Скидка 92%
+                                                            </div>
+                                                            <div style="font-size: 14px; color: #CD5C5C">
+                                                                Данная цена доступна еще 5 дней!
+                                                            </div><br>
+                                                            <a href="buy/" class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
+                                                            Купить</a><br>
+                                                            <div style="font-size: 12px; color: grey; text-align: center;">
+                                                                Гарантия возврата денег - 30 дней
+                                                            </div><br>
+                                                            {% endif %}
+                                                            {% if is_provided %}
+                                                            <h3 style="color:green"> Курс куплен </h3>
+                                                            {% elif user.profile.is_premium %}
+                                                            {% endif %}
                                                         {% else %}
-                                                        {% if not is_provided and not user.profile.is_premium %}
-                                                        <div style="font-size: 32px; float: left">
-                                                            <b>{{ record.price }}</b>
-                                                        </div>
-                                                        <div style="font-size: 14px; margin: 14px; padding-left: 10px; color: grey">
-                                                            <s>11990 руб</s>
-                                                        </div>
-                                                        <div style="font-size: 14px; color: grey">
-                                                            Скидка 92%
-                                                        </div>
-                                                        <div style="font-size: 14px; color: #CD5C5C">
-                                                            Данная цена доступна еще 5 дней!
-                                                        </div><br>
-                                                        <a href="buy/" class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
-                                                        Купить</a><br>
-                                                        <div style="font-size: 12px; color: grey; text-align: center;">
-                                                            Гарантия возврата денег - 30 дней
-                                                        </div><br>
-                                                        {% endif %}
-                                                        {% if is_provided %}
-                                                        <h3 style="color:green"> Курс куплен </h3>
-                                                        {% elif user.profile.is_premium %}
-                                                        {% endif %}
+                                                            <div style="font-size: 32px; float: left">
+                                                                <b>{{ record.price }}</b>
+                                                            </div>
+                                                            <div style="font-size: 14px; margin: 14px; padding-left: 10px; color: grey">
+                                                                <s>11990 руб</s>
+                                                            </div>
+                                                            <div style="font-size: 14px; color: grey">
+                                                                Скидка 92%
+                                                            </div>
+                                                            <div style="font-size: 14px; color: #CD5C5C">
+                                                                Данная цена доступна еще 5 дней!
+                                                            </div><br>
+                                                            <a href="buy/" class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
+                                                            Купить</a><br>
+                                                            <div style="font-size: 12px; color: grey; text-align: center;">
+                                                                Гарантия возврата денег - 30 дней
+                                                            </div><br>
                                                         {% endif %}
                                                         <div style="font-size: 16px;">
                                                             <b>Этот курс включает</b>
@@ -626,7 +626,6 @@
     <script type='text/javascript' src='/static/content/themes/sharewood/js/bootstrap.min.js?ver=5.1.1'></script>
     <script type='text/javascript' src='/static/content/themes/sharewood/js/main.js?ver=5.1.1'></script>
     <script type="text/javascript" src="/static/includes/auth_script.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(".video-link").on("click", function(i) {
             i.preventDefault();
