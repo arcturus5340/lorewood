@@ -477,7 +477,7 @@ def record(request: django.http.HttpRequest,
 
     comments = list(app.models.Comments.objects.filter(record_id=record_id))
 
-    if current_record.provided_users.find(request.user.username) != -1:
+    if request.user.username in current_record.provided_users.split(', '):
         is_provided = True
     else:
         is_provided = False

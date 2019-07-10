@@ -156,11 +156,107 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
         
+        .buy-modalWindow {
+            position: fixed;
+            font-family: arial;
+            font-size:80%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 99999;
+            opacity:0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
+        .buy-modalHeader h2 { color: #189CDA; border-bottom: 2px groove #efefef; }
+        .buy-modalWindow:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        .buy-modalWindow > div {
+            width: 500px;
+            position: relative;
+            margin: 10% auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .buy-modalWindow .buy-modalHeader { padding: 5px 20px 0px 20px; }
+        .buy-modalWindow .modalContent { padding: 0px 20px 5px 20px; }
+        .buy-modalWindow .buy-modalFooter { padding: 8px 20px 8px 20px; }
+        .buy-modalFooter {
+            background: #F1F1F1;
+            border-top: 1px solid #999;
+            -moz-box-shadow: inset 0px 13px 12px -14px #888;
+            -webkit-box-shadow: inset 0px 13px 12px -14px #888;
+            box-shadow: inset 0px 13px 12px -14px #888;
+        }
+        .buy-modalFooter p {
+            color:#D4482D;
+            text-align:right;
+            margin:0;
+            padding: 5px;
+        }
+        .buy-ok, .buy-close, .buy-cancel {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
+        .buy-close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 22px;
+            height: 22px;
+            font-size: 10px;
+
+        }
+        .buy-ok, .buy-cancel {
+            width:80px;
+            float:right;
+            margin-left:20px;
+        }
+        .buy-ok:hover { background: #189CDA; }
+        .buy-close:hover, .buy-cancel:hover { background: #D4482D; }
+        .clear { float:none; clear: both; }
     </style>
 
 </head>
 
 <body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over">
+
+    <div id="buy-modal" class="buy-modalWindow">
+        <div>
+            <div class="buy-modalHeader">
+                <h2>Подтвеждение покупки</h2>
+                <a href="#buy-close" title="buy-close" class="buy-close">X</a>
+            </div>
+    
+            <div class="modalContent">
+                <p style="font-size:14px;">Вы уверены, что хотите перечислить сумму в размере {{ record.price }} рублей и купить курс "{{ record.title }}"? </p>
+            </div>
+    
+            <div class="buy-modalFooter">
+                <a href="#buy-cancel" title="buy-cancel" class="buy-cancel">Назад</a>
+                <a href="/r{{ record.id }}/buy/" title="buy-ok" class="buy-ok">Подтвердить</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
 
     <header class="header-page">{% include "includes/header.html" %}</header>
 
@@ -234,38 +330,27 @@
                                                     <video src="{{ record.pre_video.url }}" style="width: 29rem" controls="controls" poster="">
                                                     </video>
                                                     <div class="card-body" style="padding: 20px">
-                                                        {% if user.is_authenticated %}
                                                             {% if not is_provided and not user.profile.is_premium %}
                                                             <div style="font-size: 32px; float: left">
                                                                 <b>{{ record.price }}</b> руб <br>
                                                             </div>
                                                             <br><br>
-                                                            <a href="/user/{{ user.username }}/cabinet#list-buy-premium" class="btn btn-success" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
+
+                                                            <a {% if user.is_authenticated %}href="/user/{{ user.username }}/cabinet#list-buy-premium"{% endif %} class="btn btn-success" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
                                                             Оформить подписку</a><br>
-                                                            <a href="buy/" class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
+                                                            <a {% if user.is_authenticated %}href="#buy-modal"{% endif %} class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
                                                             Купить</a><br>
                                                             <div style="font-size: 12px; color: grey; text-align: center;">
                                                                 Гарантия возврата денег - 30 дней
                                                             </div><br>
-                                                            {% elif is_provided %}
+                                                            {% elif is_provided and not user.profile.is_premium %}
                                                             <h3 style="color:green"> Курс куплен </h3>
-                                                            {% else %}
-                                                            <div style="font-size: 32px; float: left">
-                                                                <b>{{ record.price }}</b> руб <br>
-                                                            </div>
-                                                            <br><br>
-                                                            <a class="btn btn-success" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
-                                                            Оформить подписку</a><br>
-                                                            <a class="btn btn-danger" style="width: 100%;height: 40px;margin-bottom: 10px; text-align: center;border-radius: 0px;">
-                                                            Купить</a><br>
-                                                            <div style="font-size: 12px; color: grey; text-align: center;">
-                                                                Гарантия возврата денег - 30 дней
-                                                            </div><br>
+                                                            {% endif %}
+                                                            {% if not user.is_authenticated %}
                                                             <div style="font-size: 14px; text-align: center; color: #51B956">
                                                                 Авторизируйтесь, чтобы купить курс
                                                             </div><br>
                                                             {% endif %}
-                                                        {% endif %}
                                                         <div style="font-size: 16px;">
                                                             <b>Этот курс включает</b>
                                                         </div>
