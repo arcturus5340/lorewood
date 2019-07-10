@@ -33,7 +33,7 @@ import app.forms
 import app.models
 import app.views_api
 
-address = 'http://127.0.0.1:8000/'
+address = 'https://sharewood.online/'
 logging.getLogger(__name__)
 logging.basicConfig(format=u'[%(asctime)s] %(levelname)-8s: %(message)s',
                     filename=os.path.join(django.conf.settings.BASE_DIR, 'sharewood.log'), level=logging.NOTSET)

@@ -125,8 +125,8 @@ class Profile(django.db.models.Model):
         verbose_name = "Профиль" 
         verbose_name_plural = "Профили"
 
-    def __str__(self):
-        return self.bio
+    def __int__(self):
+        return self.balance
 
 
 class Premium(django.db.models.Model):
