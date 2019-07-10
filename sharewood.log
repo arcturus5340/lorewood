@@ -2217,3 +2217,299 @@ TypeError: 'tuple' object does not support item assignment
 [2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
 [2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
 [2019-07-10 14:02:49,086] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:11:45,615] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 14:11:45,621] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 14:11:45,710] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:15:13,835] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:15:13,836] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:15:13,836] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:15:14,062] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:15:18,841] INFO    : user 'root' logged out
+[2019-07-10 14:15:36,045] INFO    : user 'arcturus5340' logged in
+[2019-07-10 14:15:38,630] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:15:38,630] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:15:38,630] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:15:38,630] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:15:38,631] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:15:38,631] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:15:38,631] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:15:38,631] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:15:38,631] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:15:38,854] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:15:41,963] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:15:41,964] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:15:41,964] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:16:00,866] INFO    : user 'arcturus5340' logged out
+[2019-07-10 14:16:18,934] INFO    : user 'jenyasubbotina' logged in
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:16:23,015] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:16:23,229] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:16:27,093] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:16:27,094] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:16:27,094] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:16:47,328] INFO    : user 'jenyasubbotina' logged out
+[2019-07-10 14:16:58,611] INFO    : user 'true_coder' logged in
+[2019-07-10 14:17:04,185] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:17:04,185] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:17:04,185] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:17:04,185] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:17:04,185] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:17:04,186] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:17:04,186] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:17:04,186] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:17:04,186] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:17:04,420] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:17:07,097] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:17:07,097] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:17:07,097] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:17:07,097] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:17:07,098] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:17:07,098] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:17:07,098] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:17:07,098] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:17:07,098] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:17:29,197] INFO    : user 'true_coder' logged out
+[2019-07-10 14:17:34,866] ERROR   : Internal Server Error: /r17/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 419, in record
+    prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2019-07-10 14:17:35,155] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:17:46,411] INFO    : user 'abinba' logged in
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:17:51,272] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:17:51,502] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:17:53,729] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:17:53,729] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:17:53,729] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:17:53,729] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:17:53,729] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:17:53,730] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:17:53,730] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:17:53,730] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:17:53,730] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:18:17,820] WARNING : Not Found: /media/static/
+[2019-07-10 14:18:42,845] WARNING : Not Found: /media/static/
+[2019-07-10 14:19:12,800] WARNING : Not Found: /media/static/
+[2019-07-10 14:19:17,311] INFO    : user 'abinba' logged out
+[2019-07-10 14:19:32,777] INFO    : user 'arcturus5340' logged in
+[2019-07-10 14:19:40,545] WARNING : Not Found: /media/static/
+[2019-07-10 14:21:56,484] WARNING : Not Found: /media/static/
+[2019-07-10 14:21:59,658] INFO    : user 'arcturus5340' logged out
+[2019-07-10 14:22:25,330] INFO    : user 'jenyasubbotina' logged in
+[2019-07-10 14:22:29,274] WARNING : Not Found: /media/static/
+[2019-07-10 14:24:20,953] WARNING : Not Found: /media/static/
+[2019-07-10 14:24:24,035] INFO    : user 'jenyasubbotina' logged out
+[2019-07-10 14:24:41,196] INFO    : user 'somebody' logged in
+[2019-07-10 14:24:48,025] WARNING : Not Found: /media/static/
+[2019-07-10 14:25:07,400] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:25:07,400] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:25:29,038] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:25:29,039] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:25:49,237] INFO    : user 'somebody' logged out
+[2019-07-10 14:27:04,329] WARNING : Not Found: /media/static/
+[2019-07-10 14:27:32,923] WARNING : Not Found: /media/static/
+[2019-07-10 14:27:33,022] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:32:53,315] WARNING : Not Found: /media/static/
+[2019-07-10 14:32:53,923] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:32:54,378] WARNING : Not Found: /media/static/
+[2019-07-10 14:32:55,296] WARNING : Not Found: /media/static/
+[2019-07-10 14:32:56,282] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:04,989] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:05,280] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:33:09,585] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:10,559] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:11,718] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:11,975] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:33:33,133] WARNING : Not Found: /media/static/
+[2019-07-10 14:33:33,230] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:33:39,147] WARNING : Not Found: /media/static/
+[2019-07-10 14:34:33,736] WARNING : Not Found: /media/static/
+[2019-07-10 14:34:34,122] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:35:35,538] WARNING : Not Found: /media/static/
+[2019-07-10 14:40:04,795] WARNING : Not Found: /media/static/
+[2019-07-10 14:40:05,136] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:40:06,481] WARNING : Not Found: /r1/buy_premium/
+[2019-07-10 14:40:06,517] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:40:48,160] WARNING : Not Found: /media/static/
+[2019-07-10 14:40:48,421] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:40:50,243] WARNING : Not Found: /buy_premium
+[2019-07-10 14:41:13,906] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-10 14:41:14,748] WARNING : Not Found: /user//cabinet
+[2019-07-10 14:41:15,876] WARNING : Not Found: /user//cabinet
+[2019-07-10 14:41:15,894] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:41:16,919] WARNING : Not Found: /media/static/
+[2019-07-10 14:41:19,694] WARNING : Not Found: /media/static/
+[2019-07-10 14:41:20,821] WARNING : Not Found: /user//cabinet
+[2019-07-10 14:41:20,855] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:41:41,826] WARNING : Not Found: /media/static/
+[2019-07-10 14:41:42,354] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:41:43,125] WARNING : Not Found: /user//cabinet
+[2019-07-10 14:41:43,161] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:42:08,696] WARNING : Not Found: /user//cabinet
+[2019-07-10 14:42:08,891] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 14:42:11,031] WARNING : Not Found: /media/static/
+[2019-07-10 14:42:11,734] WARNING : Not Found: /buy_premium/user//cabinet
+[2019-07-10 14:42:16,121] WARNING : Not Found: /media/static/
+[2019-07-10 14:42:16,209] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:42:17,396] WARNING : Not Found: /buy_premium/user//cabinet
+[2019-07-10 14:49:10,192] WARNING : Not Found: /media/static/
+[2019-07-10 14:49:12,001] WARNING : Not Found: /buy_premium/user//cabinet
+[2019-07-10 14:49:57,772] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 14:55:39,168] WARNING : Not Found: /buy_premium/user//cabinet
+[2019-07-10 14:55:39,725] WARNING : Not Found: /buy_premium/user//cabinet
+[2019-07-10 14:55:44,050] WARNING : Not Found: /media/static/
+[2019-07-10 14:55:54,382] WARNING : Not Found: /media/static/
+[2019-07-10 14:55:58,982] WARNING : Not Found: /media/static/
+[2019-07-10 14:56:03,911] WARNING : Not Found: /media/static/
+[2019-07-10 15:06:18,758] WARNING : Not Found: /media/static/
+[2019-07-10 15:07:05,651] WARNING : Not Found: /media/static/
+[2019-07-10 15:07:07,395] WARNING : Not Found: /media/static/
+[2019-07-10 15:08:46,419] WARNING : Not Found: /media/static/
+[2019-07-10 15:08:47,352] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:09:32,557] WARNING : Not Found: /media/static/
+[2019-07-10 15:09:32,857] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:09:35,440] WARNING : Not Found: /media/static/
+[2019-07-10 15:10:28,225] INFO    : user 'root' logged in
+[2019-07-10 15:10:35,767] WARNING : Not Found: /media/static/
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 15:10:44,242] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 15:10:44,473] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 15:10:46,519] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 15:10:46,519] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 15:10:51,128] WARNING : Not Found: /media/static/
+[2019-07-10 15:11:01,835] WARNING : Not Found: /buy_premium/user/root/cabinet
+[2019-07-10 15:11:23,345] WARNING : Not Found: /media/static/
+[2019-07-10 15:13:43,180] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:13:52,598] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:13:58,299] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 15:13:58,299] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 15:14:05,245] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:14:06,563] WARNING : Not Found: /media/static/
+[2019-07-10 15:14:09,452] WARNING : Not Found: /buy_premium/user/root/cabinet
+[2019-07-10 15:14:09,680] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:15:52,721] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:15:55,888] WARNING : Not Found: /media/static/
+[2019-07-10 15:15:57,314] WARNING : Not Found: /media/static/
+[2019-07-10 15:15:58,072] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:16:24,144] WARNING : Not Found: /media/static/
+[2019-07-10 15:16:24,516] WARNING : Not Found: /media/static/
+[2019-07-10 15:16:24,710] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:16:31,989] WARNING : Not Found: /media/static/
+[2019-07-10 15:16:53,464] WARNING : Not Found: /media/static/
+[2019-07-10 15:19:54,286] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 500, in record
+    return django.shortcuts.render(request, template, context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 483, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 544, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 237: 'if'. Looking for one of: elif, else, endif.
+[2019-07-10 15:19:54,377] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:21:26,080] WARNING : Not Found: /media/static/
+[2019-07-10 15:21:27,156] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:21:54,565] WARNING : Not Found: /media/static/
+[2019-07-10 15:21:54,747] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:21:57,272] WARNING : Not Found: /media/static/
+[2019-07-10 15:21:57,332] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:22:00,134] WARNING : Not Found: /media/static/
+[2019-07-10 15:24:27,487] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:24:54,875] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:24:58,954] WARNING : Not Found: /buy-premium/
+[2019-07-10 15:24:58,984] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:25:15,812] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:26:03,427] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:26:07,867] WARNING : Not Found: /media/static/
+[2019-07-10 15:26:08,067] WARNING : Not Found: /favicon.ico
+[2019-07-10 15:26:09,064] WARNING : Not Found: /media/static/
+[2019-07-10 15:26:15,831] WARNING : Not Found: /buy-premium/
+[2019-07-10 15:28:00,136] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 15:41:47,712] WARNING : Not Found: /media/static/
+[2019-07-10 15:42:10,613] WARNING : Not Found: /media/static/
+[2019-07-10 15:42:36,821] WARNING : Not Found: /favicon.ico

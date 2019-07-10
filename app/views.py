@@ -638,11 +638,11 @@ def buy(request, record_id):
     return django.shortcuts.redirect('/r{}/?message={}'.format(record_id, message))
 
 
-
 # TODO: double buy
 # TODO: is user active
 def buy_premium(request):
     message = 0
+
     if request.user.is_active:
         premium = app.models.Premium.objects.get(id=1)
         cost = premium.premium_cost
@@ -650,7 +650,7 @@ def buy_premium(request):
         new_balance = balance - cost
         if new_balance < 0:
             message = "NOT_ENOUGH"
-        else :    
+        else :
             request.user.profile.balance = new_balance
             request.user.save()
 
@@ -668,4 +668,4 @@ def buy_premium(request):
     else:
         message = "ACTIVATE"
 
-    return django.shortcuts.redirect('/user/{}/cabinet#list-buy-premium?message={}'.format(request.user.username, message))
+    return django.shortcuts.redirect('/user/{}/cabinet#list-buy-premium'.format(request.user.username))

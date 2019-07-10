@@ -26,6 +26,7 @@
                         <td valign="top">
                             <div class="col-8" style="">
                                 <div class="tab-content" id="nav-tabContent">
+                                     <a name="list-personal-data"></a>
                                     <div id="personal-data-tabpanel">
                                         <form action="/save-personal-data/" id="personal-data-form" method="POST" enctype="multipart/form-data">
                                             {% csrf_token %}
@@ -84,7 +85,7 @@
                                             </table>
                                         </form>
                                     </div>
-
+                                    <a name="list-settings"></a>
                                     <div id="settings-tabpanel" hidden>
                                         <table class="data-table">
                                             <tr>
@@ -127,7 +128,7 @@
                                             </tr>
                                         </table>
                                     </div>
-
+                                    <a name="list-pay-in"></a>
                                     <div id="pay-in-tabpanel" hidden>
                                         <h2 style="color:green">Пополнить счет</h2>
                                         <form id="pay-in-form" method="post">
@@ -150,11 +151,12 @@
                                         </form>
                                     </div>
                                     <div id="buy-premium-tabpanel" hidden>
+                                    <a name="list-buy-premium"></a>
                                     <h2 style="color:green">Купить ПРЕМИУМ</h2>
                                     {% if user.profile.is_premium %}
                                     <h2 style="color:green">У вас неограниченный доступ ко всему контенту.</h2>
                                     {% else %}
-                                    <form id="pay-in-form" method="post" action="/buy-premium/">
+                                    <form id="pay-in-form" method="post" action="/buy_premium/">
                                         <p> <b>Баланс:</b> {{ user.profile.balance }} RUB</p>
                                         <p> <b>Стоимость:</b> {{ premium }} RUB</p>
                                         {% csrf_token %}
