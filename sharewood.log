@@ -1,1 +1,442 @@
 [2019-07-09 19:59:56,069] INFO    : user 'true_coder' logged out
+[2019-07-10 10:03:17,715] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 10:03:18,225] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:03:21,777] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:03:21,797] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(sorted(data.items()))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:03:24,596] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(sorted(data.items()))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:03:31,136] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(sorted(data.items()))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:03:54,369] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:05:16,304] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:05:17,395] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(obj.date_joined for obj in users)))
+TypeError: 'datetime.datetime' object is not iterable
+[2019-07-10 10:05:17,744] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(obj.date_joined for obj in users)))
+TypeError: 'datetime.datetime' object is not iterable
+[2019-07-10 10:05:18,168] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(obj.date_joined for obj in users)))
+TypeError: 'datetime.datetime' object is not iterable
+[2019-07-10 10:05:38,065] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+TypeError: 'datetime.datetime' object is not iterable
+[2019-07-10 10:05:38,337] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:05:39,211] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 12, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(str(obj.date_joined) for obj in users)))
+ValueError: too many values to unpack (expected 2)
+[2019-07-10 10:05:39,259] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:05:39,860] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 12, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(str(obj.date_joined) for obj in users)))
+ValueError: too many values to unpack (expected 2)
+[2019-07-10 10:05:40,405] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 12, in registration
+    data = collections.OrderedDict(sorted(collections.Counter(str(obj.date_joined) for obj in users)))
+ValueError: too many values to unpack (expected 2)
+[2019-07-10 10:08:57,519] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:09:00,856] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:49,177] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:09:51,126] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:51,152] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:09:52,482] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:53,089] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:53,330] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:53,501] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:53,674] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:53,863] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:54,000] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:54,170] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:54,356] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:55,657] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:55,983] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:56,296] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:56,560] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:56,726] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:09:56,750] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:10:04,246] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:10:04,922] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:10:05,199] ERROR   : Internal Server Error: /api/registration
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 560, in api
+    return getattr(app.views_api, data)()
+  File "/home/arcturus/Projects/sharewood/app/views_api.py", line 13, in registration
+    return django.http.JsonResponse(data)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/http/response.py", line 552, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2019-07-10 10:10:05,258] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:10:38,364] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:11:50,138] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:12:10,487] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:13:11,145] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:13:37,200] INFO    : /home/arcturus/Projects/sharewood/app/views_api.py changed, reloading.
+[2019-07-10 10:13:49,398] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:14:35,901] WARNING : Not Found: /favicon.ico
+[2019-07-10 10:14:58,427] WARNING : Not Found: /favicon.ico

@@ -9,7 +9,9 @@ import datetime
 
 def registration():
     users = django.contrib.auth.models.User.objects.all()
-    data = dict(collections.Counter(format_date(obj.date_joined) for obj in users))
+    data = collections.Counter(format_date(obj.date_joined) for obj in users).items()
+    print(data)
+    data = collections.OrderedDict({key: val for key, val in sorted(data)})
     return django.http.JsonResponse(data)
 
 
