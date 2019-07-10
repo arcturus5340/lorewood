@@ -824,3 +824,1396 @@ django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no p
 [2019-07-10 11:07:55,298] WARNING : Not Found: /media/static/
 [2019-07-10 11:07:55,712] WARNING : Not Found: /favicon.ico
 [2019-07-10 11:07:56,415] WARNING : Not Found: /media/static/
+[2019-07-10 11:36:17,106] WARNING : Not Found: /media/static/
+[2019-07-10 11:36:22,720] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 11:36:22,726] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 11:36:25,758] WARNING : Not Found: /media/static/
+[2019-07-10 11:38:16,426] INFO    : user 'root' logged in
+[2019-07-10 11:38:16,598] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 11:38:16,601] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 12:47:59,806] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 12:54:38,272] INFO    : /home/arcturus/Projects/sharewood/app/templatetags/filters.py changed, reloading.
+[2019-07-10 12:55:02,342] INFO    : /home/arcturus/Projects/sharewood/app/templatetags/filters.py changed, reloading.
+[2019-07-10 12:56:03,620] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 12:56:03,623] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 12:56:04,043] WARNING : Not Found: /favicon.ico
+[2019-07-10 12:56:06,063] WARNING : Not Found: /media/static/
+[2019-07-10 12:56:37,724] WARNING : Not Found: /media/static/
+[2019-07-10 12:56:37,827] WARNING : Not Found: /favicon.ico
+[2019-07-10 12:56:47,953] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 12:56:50,657] WARNING : Not Found: /media/static/
+[2019-07-10 12:56:50,985] WARNING : Not Found: /favicon.ico
+[2019-07-10 12:56:53,806] WARNING : Not Found: /media/media/record_src/videoplayback
+[2019-07-10 12:56:54,236] WARNING : Not Found: /favicon.ico
+[2019-07-10 12:56:58,083] WARNING : Not Found: /media/static/
+[2019-07-10 12:57:00,657] WARNING : Not Found: /media/static/
+[2019-07-10 12:57:06,936] WARNING : Not Found: /media/static/
+[2019-07-10 12:57:10,605] WARNING : Not Found: /media/media/record_src/videoplayback
+[2019-07-10 12:57:35,805] WARNING : Not Found: /favicon.ico
+[2019-07-10 12:57:35,896] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 12:57:35,903] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 13:01:56,822] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:03:25,283] WARNING : Not Found: /media/media/record_src/videoplayback
+[2019-07-10 13:03:25,361] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:11:43,440] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:11:51,142] ERROR   : Internal Server Error: /r6/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 503, in record
+    'content': content,
+NameError: name 'content' is not defined
+[2019-07-10 13:11:51,170] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:11:52,048] ERROR   : Internal Server Error: /r6/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 503, in record
+    'content': content,
+NameError: name 'content' is not defined
+[2019-07-10 13:11:52,580] ERROR   : Internal Server Error: /r6/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 503, in record
+    'content': content,
+NameError: name 'content' is not defined
+[2019-07-10 13:12:07,186] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 503, in record
+    'content': content,
+NameError: name 'content' is not defined
+[2019-07-10 13:12:07,251] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:17:02,981] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:18:34,408] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:23:27,055] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:23:47,637] WARNING : Not Found: /media/static/
+[2019-07-10 13:23:48,278] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:27:00,580] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,363] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,364] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,365] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,366] ERROR   : can't guess file type: 
+[2019-07-10 13:27:01,999] WARNING : Not Found: /media/static/
+[2019-07-10 13:27:02,592] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:27:16,228] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:27:17,151] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,152] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,153] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,154] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,155] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,156] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,157] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,158] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,159] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,420] WARNING : Not Found: /media/static/
+[2019-07-10 13:27:17,440] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,441] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,442] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:27:17,443] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,444] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,675] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,676] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,677] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,678] ERROR   : can't guess file type: 
+[2019-07-10 13:27:17,886] WARNING : Not Found: /media/static/
+[2019-07-10 13:28:08,563] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,473] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,474] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,475] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,476] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,477] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,478] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,479] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,479] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,479] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,479] ERROR   : can't guess file type: 
+[2019-07-10 13:28:09,479] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,069] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,070] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,071] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,072] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,073] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,074] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,075] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,075] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,075] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,075] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,075] ERROR   : can't guess file type: 
+[2019-07-10 13:28:10,695] WARNING : Not Found: /media/static/
+[2019-07-10 13:28:11,408] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:28:24,153] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:28:24,153] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:28:24,153] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,154] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,155] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,156] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,157] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,158] ERROR   : can't guess file type: 
+[2019-07-10 13:28:24,502] WARNING : Not Found: /media/static/
+[2019-07-10 13:28:24,666] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:28:37,839] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,840] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,841] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,842] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,843] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:37,844] ERROR   : can't guess file type: 
+[2019-07-10 13:28:38,136] WARNING : Not Found: /media/static/
+[2019-07-10 13:28:38,400] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:28:58,656] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:28:59,790] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:28:59,791] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,792] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,793] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,794] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:28:59,795] ERROR   : can't guess file type: 
+[2019-07-10 13:29:00,189] WARNING : Not Found: /media/static/
+[2019-07-10 13:29:00,474] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:29:36,711] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:29:37,800] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:29:37,800] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:29:37,800] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,800] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,801] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,802] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,803] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,804] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,805] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,806] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,807] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,807] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,807] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,807] ERROR   : can't guess file type: 
+[2019-07-10 13:29:37,807] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,073] WARNING : Not Found: /media/static/
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,106] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:29:38,107] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:29:38,108] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,109] ERROR   : can't guess file type: 
+[2019-07-10 13:29:38,482] WARNING : Not Found: /media/static/
+[2019-07-10 13:29:38,711] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:30:43,327] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:30:43,748] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:30:43,748] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:30:43,748] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:30:43,749] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:30:43,749] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:30:43,749] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:30:45,463] WARNING : Not Found: /media/static/
+[2019-07-10 13:30:45,997] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:31:23,564] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:31:24,685] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:31:24,686] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:31:24,686] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:31:24,686] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:31:24,686] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:31:24,686] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:31:24,986] WARNING : Not Found: /media/static/
+[2019-07-10 13:31:25,252] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:31:44,755] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:31:45,650] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:31:45,950] WARNING : Not Found: /media/static/
+[2019-07-10 13:31:46,049] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:31:46,049] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:31:46,049] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:31:46,049] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:31:46,049] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:31:46,050] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:31:46,407] WARNING : Not Found: /media/static/
+[2019-07-10 13:31:46,625] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:32:14,831] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:32:15,131] WARNING : Not Found: /media/static/
+[2019-07-10 13:32:15,209] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:32:30,307] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 436, in record
+    print(type.split('/')[0])
+AttributeError: 'NoneType' object has no attribute 'split'
+[2019-07-10 13:32:30,336] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:32:54,226] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:32:55,360] ERROR   : can't guess file type: record_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:32:55,360] ERROR   : can't guess file type: record_src/file_MZrIKBW_cGXjMBG.mp4
+[2019-07-10 13:32:55,360] ERROR   : can't guess file type: record_src/code.py
+[2019-07-10 13:32:55,361] ERROR   : can't guess file type: record_src/code_p8LcBdd.py
+[2019-07-10 13:32:55,646] WARNING : Not Found: /media/static/
+[2019-07-10 13:32:56,044] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:33:16,428] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:33:17,309] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:18,020] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:18,464] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:18,533] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:33:18,692] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:18,894] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:19,065] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:19,238] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    flist[i] = 'F{}'.format(file)
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:56,344] ERROR   : Internal Server Error: /r1/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 441, in record
+    elif type.split('/')[0] == 'text':
+TypeError: 'tuple' object does not support item assignment
+[2019-07-10 13:33:56,536] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:33:58,732] WARNING : Not Found: /media/static/
+[2019-07-10 13:33:59,539] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:34:02,026] WARNING : Not Found: /media/Frecord_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:34:02,080] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:34:08,173] WARNING : Not Found: /media/static/
+[2019-07-10 13:35:32,061] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:40:39,335] WARNING : Not Found: /media/static/
+[2019-07-10 13:40:39,722] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:40:51,446] WARNING : Not Found: /media/static/
+[2019-07-10 13:40:51,771] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:40:53,528] WARNING : Not Found: /media/Frecord_src/my_first_python_program.py_wpbX0cy.txt
+[2019-07-10 13:40:53,551] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:41:01,395] WARNING : Not Found: /media/static/
+[2019-07-10 13:41:37,552] WARNING : Not Found: /media/static/
+[2019-07-10 13:41:37,879] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:41:55,509] WARNING : Not Found: /media/static/
+[2019-07-10 13:41:55,800] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:43:18,051] WARNING : Not Found: /media/static/
+[2019-07-10 13:43:18,284] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:44:38,985] WARNING : Not Found: /media/static/
+[2019-07-10 13:44:58,864] WARNING : Not Found: /media/static/
+[2019-07-10 13:44:59,162] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:45:23,358] WARNING : Not Found: /media/static/
+[2019-07-10 13:45:23,594] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:45:27,421] WARNING : Not Found: /media/static/
+[2019-07-10 13:46:13,749] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:46:15,645] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,646] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,647] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,648] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,649] ERROR   : can't guess file type: 
+[2019-07-10 13:46:15,977] WARNING : Not Found: /media/static/
+[2019-07-10 13:46:16,264] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:46:16,779] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:16,779] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,779] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,779] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,780] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,781] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,782] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:16,783] ERROR   : can't guess file type: 
+[2019-07-10 13:46:17,032] WARNING : Not Found: /media/static/
+[2019-07-10 13:46:44,725] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:46:45,818] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:45,818] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:46,129] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:46,129] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:46,546] WARNING : Not Found: /media/static/
+[2019-07-10 13:46:47,840] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:47,841] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:48,164] WARNING : Not Found: /media/static/
+[2019-07-10 13:46:48,387] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:46:48,670] ERROR   : can't guess file type: record_src/videoplayback_3aen8kk
+[2019-07-10 13:46:48,671] ERROR   : can't guess file type: record_src/videoplayback_tjyDgT5
+[2019-07-10 13:46:48,917] WARNING : Not Found: /media/static/
+[2019-07-10 13:51:14,969] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:52:23,650] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:54:18,380] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:54:34,243] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 13:54:34,250] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 13:54:34,324] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:54:36,122] WARNING : Not Found: /media/static/
+[2019-07-10 13:54:36,177] WARNING : Not Found: /favicon.ico
+[2019-07-10 13:54:52,545] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 13:54:52,545] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 13:55:42,817] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 13:55:42,826] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 13:55:45,171] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 13:55:45,171] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 13:57:51,600] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-10 13:57:54,277] WARNING : Not Found: /record_src/ext.jpg
+[2019-07-10 13:57:54,282] WARNING : Not Found: /record_src/python_main_pic.png
+[2019-07-10 13:57:55,579] WARNING : Not Found: /media/static/
+[2019-07-10 14:01:09,299] WARNING : Not Found: /media/static/
+[2019-07-10 14:01:09,369] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:01:20,668] WARNING : Not Found: /media/static/
+[2019-07-10 14:01:25,101] WARNING : Not Found: /media/static/
+[2019-07-10 14:01:25,166] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:01:27,342] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:01:27,342] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:01:32,977] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:01:32,977] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:05,297] WARNING : Not Found: /media/static/
+[2019-07-10 14:02:09,033] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:02:09,033] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:09,547] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:02:28,836] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:02:28,836] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:30,113] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:02:30,113] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:31,272] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:02:31,522] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:02:31,522] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:34,001] WARNING : Not Found: /media/static/
+[2019-07-10 14:02:36,980] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 14:02:36,980] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 14:02:39,061] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:02:39,062] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:02:39,275] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 14:02:43,877] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:02:43,878] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:02:43,878] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:02:43,878] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:02:43,878] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:02:43,879] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:02:43,879] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:02:43,879] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:02:43,879] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:02:47,060] WARNING : Not Found: /media/static/
+[2019-07-10 14:02:47,112] WARNING : Not Found: /favicon.ico
+[2019-07-10 14:02:48,890] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 14:02:48,890] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 14:02:48,890] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 14:02:48,890] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 14:02:48,891] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 14:02:49,086] WARNING : Not Found: /media/media/record_src/Background_08.mov

@@ -402,6 +402,7 @@ def change_email_confirm(request: django.http.HttpRequest, username, activation_
     return django.shortcuts.redirect(request, '/user/profile.html')
 
 
+import mimetypes
 # TODO: output date and time for client time zone
 # TODO: optimize search of similar records
 # TODO: optimize search of media-content
@@ -418,7 +419,6 @@ def record(request: django.http.HttpRequest,
     prev_record = records[(record_id-1 or app.models.Records.objects.count()) - 1]
     current_record = records[record_id-1]
     next_record = records[record_id % app.models.Records.objects.count()]
-    print(current_record.author)
     author = django.contrib.auth.models.User.objects.get(username=current_record.author)
 
     files = app.models.Media.objects.values_list('file1', 'file2', 'file3', 'file4', 'file5', 'file6',
@@ -427,33 +427,23 @@ def record(request: django.http.HttpRequest,
 
     media = app.models.Media.objects.values_list('title').filter(record_id=current_record.id)
 
-    part_files = []
-    media_num = 0
-    for rows in files:
-        part_files.append([])
-        for file in rows:
-            if file != None and file != '':
-                path = "{}/media/{}".format(django.conf.settings.BASE_DIR, file)
-                kind = filetype.guess(path)
-                filekind = str(kind)
-                if filekind.find(".video.") != -1:
-                    file = "V/{}".format(file)
-                elif filekind.find(".audio.") != -1:
-                    file = "A/{}".format(file)
-                else:
-                    file = "F/{}".format(file)
-                part_files[media_num].append(file)
-        media_num += 1
-    print(part_files)
     content = []
-    part_num = 0
-    for part in media:
-        content.append([])
-        content[part_num].append([])
-        content[part_num].append([])
-        content[part_num][0] = part[0]
-        content[part_num][1] = part_files[part_num]
-        part_num += 1
+    for title, flist in zip(media, files):
+        flist = list(flist)
+        for i, file in enumerate(flist):
+            type, _ = mimetypes.guess_type(file)
+            if not type:
+                if file: logging.error('can\'t guess file type: {}'.format(file))
+                continue
+            if type.split('/')[0] == 'video':
+                flist[i] = 'V{}'.format(file)
+            elif type.split('/')[0] == 'audio':
+                flist[i] = 'A{}'.format(file)
+            elif type.split('/')[0] == 'text':
+                flist[i] = 'F{}'.format(file)
+            else:
+                logging.error('can\'t guess file type: {}'.format(file))
+        content.append([*title, flist])
     
     similar_records = []
     for tag in current_record.tags.split(', '):
@@ -500,8 +490,8 @@ def record(request: django.http.HttpRequest,
         'profile': app.models.Profile.objects.get(user_id=author.id),
         'similar_records': similar_records,
         'comments': comments,
-        'content' : content,
-        'is_provided' : is_provided,
+        'content': content,
+        'is_provided': is_provided,
     }
 
     if extra_context is not None:

@@ -291,33 +291,33 @@
                                                                     {% for data in parts.1 %}
                                                                       <li>
                                                                         {% if is_provided or user.profile.is_premium  %}
-                                                                        {% if data.0 == 'A' %}
-                                                                            <a class="audio-link" href="/media/{{ data|split:'A/'|last}}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a href="/media/{{ data|split:'A/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% elif data.0 == 'F' %}
-                                                                            <a href="/media/{{ data|split:'F/'|last}}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a href="/media/{{ data|split:'F/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% elif data.0 == 'V' %}
-                                                                            <a class="video-link" href="/media/{{ data|split:'V/'|last}}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a href="/media/{{ data|split:'V/'|last}}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% endif %}
-                                                                        {% else %}
-                                                                        {% if data.0 == 'A' %}
-                                                                            <a style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% elif data.0 == 'F' %}
-                                                                            <a style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% elif data.0 == 'V' %}
-                                                                            <a style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
-                                                                            <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                            </a>
-                                                                        {% endif %}
+                                                                          {% if data.0 == 'A' %}
+                                                                              <a class="audio-link" href="/media/{{ data|slice:"1:" }}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% elif data.0 == 'F' %}
+                                                                              <a href="/media/{{ data|slice:"1:" }}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% elif data.0 == 'V' %}
+                                                                              <a class="video-link" href="/media/{{ data|slice:"1:" }}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% endif %}
+                                                                          {% else %}
+                                                                          {% if data.0 == 'A' %}
+                                                                              <a style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% elif data.0 == 'F' %}
+                                                                              <a style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% elif data.0 == 'V' %}
+                                                                              <a style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% endif %}
                                                                         {% endif %}
                                                                       </li>
                                                                     {% endfor %}
@@ -632,6 +632,7 @@
                     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <!-- Похожие записи-->
                         <div class="related-block">
+                            {% if similar_records|length %}
                             <h3>Может быть <span>интересно</span></h3>
                             <ul>
                                 {% for similar_record in similar_records %}
@@ -657,6 +658,7 @@
                                 </li>
                                 {% endfor %}
                             </ul>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
