@@ -114,12 +114,25 @@ class UserEmail(django.db.models.Model):
     objects = UserEmailManager()
 
 
+class UserTwoVerificationManager(django.db.models.Manager):
+    def create_user_key(self, username, activation_key, email):
+        user_key = self.create(username=username, activation_key=activation_key, email=email)
+        return user_key
+
+class UserTwoVerification(django.db.models.Model):
+    username = django.db.models.TextField()
+    activation_key = django.db.models.TextField()
+    email = django.db.models.TextField()
+
+    objects = UserTwoVerificationManager()
+
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
     bio = django.db.models.TextField(max_length=500, null=True, blank=True)
     balance = django.db.models.IntegerField(default=0)
     is_premium = django.db.models.BooleanField(default=False)
+    two_verif = django.db.models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Профиль" 

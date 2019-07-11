@@ -13,13 +13,13 @@
                         <td valign="top">
                             <div class="col-4">
                                 <div class="list-group" id="list-tab" role="tablist" style="width: 250px; padding-right: 40px">
-                                    <a class="list-group-item list-group-item-action active" id="list-personal-data-list" data-toggle="list" href="#list-personal-data" role="tab" aria-controls="personal-data">Личные данные</a>
+                                    <a class="list-group-item list-group-item-action {% if list == 'default' %} active {% endif %}" id="list-personal-data-list" data-toggle="list" href="#list-personal-data" role="tab" aria-controls="personal-data">Личные данные</a>
 
-                                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
+                                    <a class="list-group-item list-group-item-action {% if list == 'list-settings' %} active {% endif %}" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
 
-                                    <a class="list-group-item list-group-item-action" id="list-pay-in-list" data-toggle="list" href="#list-pay-in" role="tab" aria-controls="pay-in">Пополнить счет</a>
+                                    <a class="list-group-item list-group-item-action {% if list == 'list-pay-in' %} active {% endif %}" id="list-pay-in-list" data-toggle="list" href="#list-pay-in" role="tab" aria-controls="pay-in">Пополнить счет</a>
 
-                                    <a class="list-group-item list-group-item-action" id="list-buy-premium-list" data-toggle="list" href="#list-buy-premium" role="tab" aria-controls="buy-premium">Купить ПРЕМИУМ</a>
+                                    <a class="list-group-item list-group-item-action {% if list == 'list-buy-premium' %} active {% endif %}" id="list-buy-premium-list" data-toggle="list" href="#list-buy-premium" role="tab" aria-controls="buy-premium">Купить ПРЕМИУМ</a>
                                 </div>
                             </div>
                         </td>
@@ -27,7 +27,11 @@
                             <div class="col-8" style="">
                                 <div class="tab-content" id="nav-tabContent">
                                      <a name="list-personal-data"></a>
+                                    {% if list == "default" %}
                                     <div id="personal-data-tabpanel">
+                                    {% else %}
+                                    <div id="personal-data-tabpanel" hidden>
+                                    {% endif %}
                                         <form action="/save-personal-data/" id="personal-data-form" method="POST" enctype="multipart/form-data">
                                             {% csrf_token %}
                                             <div>
@@ -86,7 +90,11 @@
                                         </form>
                                     </div>
                                     <a name="list-settings"></a>
+                                    {% if list == "list-settings" %}
+                                    <div id="settings-tabpanel">
+                                    {% else %}
                                     <div id="settings-tabpanel" hidden>
+                                    {% endif %}
                                         <table class="data-table">
                                             <tr>
                                                 <td valign="top">
@@ -123,13 +131,33 @@
                                                             </div>
                                                         </div>
                                                     </form>
-
+                                                </td>
+                                                <td valign="top">
+                                                    {% if user.profile.two_verif %}
+                                                    <form id="new-email-form" method="post" action="/two_verif_off/">
+                                                    {% else %}
+                                                    <form id="new-email-form" method="post" action="/two_verif_on/">
+                                                    {% endif %}
+                                                        <h4 style="color:green"> Двухфакторная<br>авторизация </h4>      
+                                                        {% csrf_token %}
+                                                        <div>
+                                                         {% if not user.profile.two_verif %}
+                                                            <input name="turn_on" id="new-email-button" type="submit" value="Включить" style="width:150px" />
+                                                         {% else %}
+                                                            <input name="turn_off" id="new-email-button" type="submit" value="Выключить" style="background-color: #B22222;width:150px" />
+                                                         {% endif %}
+                                                        </div>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         </table>
                                     </div>
                                     <a name="list-pay-in"></a>
+                                    {% if list == "list-pay-in" %}
+                                    <div id="pay-in-tabpanel">
+                                    {% else %}
                                     <div id="pay-in-tabpanel" hidden>
+                                    {% endif %}
                                         <h2 style="color:green">Пополнить счет</h2>
                                         <form id="pay-in-form" method="post">
                                             <p> <b>Баланс:</b> {{ user.profile.balance }} RUB</p>
@@ -150,7 +178,11 @@
                                             </div>
                                         </form>
                                     </div>
+                                    {% if list == "list-buy-premium" %}
+                                    <div id="buy-premium-tabpanel">
+                                    {% else %}
                                     <div id="buy-premium-tabpanel" hidden>
+                                    {% endif %}
                                     <a name="list-buy-premium"></a>
                                     <h2 style="color:green">Купить ПРЕМИУМ</h2>
                                     {% if user.profile.is_premium %}

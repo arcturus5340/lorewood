@@ -13,8 +13,9 @@ urlpatterns = [
     path('rightholder/', views.rightholder, name='rightholder'),
 
     path('user/<str:username>/activate/<str:activation_key>', views.activate_account, name='activate_account'),
+    path('user/<str:username>/verificate/<str:activation_key>', views.verificate_login, name='verificate_login'),
     path('save-personal-data/', views.save_personal_data, name="save_personal_data"),
-    path('user/<str:username>/cabinet', views.cabinet, name="cabinet"),
+    path('user/<str:username>/cabinet/<str:list>', views.cabinet, name="cabinet"),
     path('user/<str:username>/remember/<str:activation_key>', views.password_change_view, name='password_change_view'),
     path('user/<str:username>/change-password/', views.change_password, name="change_password"),
     path('change-cabinet-password/', views.change_cabinet_password, name="change_cabinet_password"),
@@ -31,4 +32,6 @@ urlpatterns = [
     path('statistics/', views.statistics),
     path('r<int:record_id>/buy/', views.buy, name='buy'),
     path('buy_premium/', views.buy_premium, name='buy_premium'),
+    path('two_verif_on/', views.two_verif_on, name='two_verif_on'),
+    path('two_verif_off/', views.two_verif_off, name='two_verif_off'),
 ]
