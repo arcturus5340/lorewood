@@ -244,6 +244,8 @@ def save_personal_data(request: django.http.HttpRequest):
         logging.error('image-file could not be open/written')
     except KeyError:
         logging.error('output format could not be determined from the file name')
+    except AttributeError:
+        logging.error('image is not uploaded')
 
     user = django.contrib.auth.models.User.objects.get(username=username)
     user.first_name = request.POST.get('first_name')
@@ -254,13 +256,13 @@ def save_personal_data(request: django.http.HttpRequest):
         user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
     user.save()
 
-    return django.shortcuts.redirect("/user/{}/cabinet".format(username))
+    return django.shortcuts.redirect("/user/{}/cabinet/default".format(username))
 
 
-def cabinet(request: django.http.HttpRequest, username: str):
+def cabinet(request: django.http.HttpRequest, username: str, list: str):
     if request.user.username == username:
         premium = app.models.Premium.objects.get(id=1)
-        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : premium.premium_cost })
+        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : premium.premium_cost, 'list' : list })
     return django.shortcuts.redirect('/')
 
 
@@ -705,7 +707,7 @@ def buy_premium(request):
     else:
         message = "ACTIVATE"
 
-    return django.shortcuts.redirect('/user/{}/cabinet#list-buy-premium'.format(request.user.username))
+    return django.shortcuts.redirect('/user/{}/cabinet/list-buy-premium'.format(request.user.username))
 
 def two_verif_on(request):
     message = "SUCCESS"
@@ -715,10 +717,10 @@ def two_verif_on(request):
     else:
         message = "ACTIVATE"
 
-    return django.shortcuts.redirect('/user/{}/cabinet#list-settings?message={}'.format(request.user.username, message))
+    return django.shortcuts.redirect('/user/{}/cabinet/list-settings?message={}'.format(request.user.username, message))
 
 def two_verif_off(request):
     request.user.profile.two_verif = False
     request.user.save()
 
-    return django.shortcuts.redirect('/user/{}/cabinet#list-settings'.format(request.user.username))
+    return django.shortcuts.redirect('/user/{}/cabinet/list-settings'.format(request.user.username))
