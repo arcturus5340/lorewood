@@ -556,7 +556,7 @@
                                                             <b>Этот курс включает</b>
                                                         </div>
                                                         <div style="font-size: 14px">
-                                                            {{ record.includes }}
+                                                            {{ record.includes|safe }}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -566,9 +566,9 @@
                                         <td valign="top">
                                         
                                             <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10">
-                                                <div class="row mt-25">
+                                                <div class="row mt-25">{% load filters %}
                                                     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                        {{ record.text }} {% load filters %}
+                                                        {{ record.text|safe }} 
 
                                                         <h4>Материалы курса</h4>
                                                         <ul id="menu">
@@ -678,7 +678,7 @@
                                 <div class="post-rating__item post-rating__item-9"><img id="rating_{{ record.id }}_9" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="9" title="9" onmouseover="current_rating({{ record.id }}, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">9</span></div>
                                 <div class="post-rating__item post-rating__item-10"><img id="rating_{{ record.id }}_10" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="10" title="10" onmouseover="current_rating({{ record.id }}, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">10</span></div>
                                 <meta itemprop="headline" content="{{ record.title }}" />
-                                <meta itemprop="description" content="{{ record.description }}" />
+                                <meta itemprop="description" content="{{ record.description|safe }}" />
                                 <meta itemprop="datePublished" content="{{ record.date }}" />
                                 <meta itemprop="url" content="/r{{ record.id }}" />
                                 <meta itemprop="author" content="{{ author.username }}" />

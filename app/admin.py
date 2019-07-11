@@ -3,9 +3,18 @@ from app.models import Records
 from app.models import Media
 from app.models import Premium
 from app.models import Profile
+from django import forms
+from ckeditor.widgets import CKEditorWidget
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 import social_django.models
 
+class RecordsAdminForm(forms.ModelForm):
+	text = forms.CharField(widget=CKEditorUploadingWidget())
+	description = forms.CharField(widget=CKEditorUploadingWidget())
+	includes = forms.CharField(widget=CKEditorUploadingWidget())
+
 class RecordsAdmin(admin.ModelAdmin):
+	form = RecordsAdminForm
 	list_display = ('title', 'author', 'description', 'includes', 'text', 'price', 'date', 'tags', 
 		'pre_video', 'main_pic')
 	list_filter = ('date', 'tags')
