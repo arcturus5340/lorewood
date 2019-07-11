@@ -69,9 +69,15 @@ def login(request: django.http.HttpRequest):
 
     response_data = {}
     if user:
-        django.contrib.auth.login(request, user)
-        response_data['result'] = 'Success!'
-        logging.info('user \'{}\' logged in'.format(user_login))
+        this_user = django.contrib.auth.models.User.objects.get(username=user_login)
+        if this_user.profile.two_verif:
+            send_verification_email(this_user.username, this_user.email)
+            response_data['result'] = 'Verificate!'
+            logging.info('user \'{}\' verification required'.format(user_login))
+        else:
+            django.contrib.auth.login(request, user)
+            response_data['result'] = 'Success!'
+            logging.info('user \'{}\' logged in'.format(user_login))
     else:
         response_data['result'] = 'Failed!'
         logging.warning('failed login attempt')
@@ -178,6 +184,23 @@ def activate_account(request: django.http.HttpRequest, username: str, activation
     template = django.template.loader.get_template('../templates/invalid_activation_key.html')
     return django.http.HttpResponse(template.render())
 
+def verificate_login(request: django.http.HttpRequest, username: str, activation_key: str):
+    try:
+        if app.models.UserTwoVerification.objects.get(username=username).activation_key == activation_key:
+            this_user = django.contrib.auth.models.User.objects.get(username=username)
+            logging.info('user \'{}\' is verificated'.format(username))
+
+            django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
+            logging.info('user \'{}\' logged in'.format(username))
+
+            app.models.UserTwoVerification.objects.get(username=username).delete()
+            return django.shortcuts.redirect('/')
+        logging.warning('failed account verification attempt (keys do not match)')
+    except django.core.exceptions.ObjectDoesNotExist:
+        logging.error('failed account verification attempt (user \'{}\' does not exist)'.format(username))
+
+    template = django.template.loader.get_template('../templates/invalid_activation_key.html')
+    return django.http.HttpResponse(template.render())
 
 #TODO: refucktor this plz, @abinba
 def save_personal_data(request: django.http.HttpRequest):
@@ -594,6 +617,20 @@ def send_activation_email(username: str, email: str):
     from_email = django.conf.settings.EMAIL_HOST_USER
     return django.core.mail.send_mail(subject, message, from_email, [email])
 
+def send_verification_email(username: str, email: str):
+    activation_key = activation_key_generator()
+    app.models.UserTwoVerification.objects.filter(username=username).all().delete()
+    app.models.UserTwoVerification.objects.create_user_key(username, activation_key, email)
+
+    subject = 'Двойная верификация аккаунта sharewood.online'
+    message = ('Здравствуйте! \n'
+               'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти '
+               'в свой аккаунт: {}user/{}/verificate/{} \n\n'
+               'С уважением, команда Sharewood').format(address, username, activation_key)
+
+    from_email = django.conf.settings.EMAIL_HOST_USER
+    return django.core.mail.send_mail(subject, message, from_email, [email])
+
 
 def activation_key_generator(size: int = 40,
                              chars: string = string.ascii_uppercase + string.digits + string.ascii_lowercase):
@@ -669,3 +706,19 @@ def buy_premium(request):
         message = "ACTIVATE"
 
     return django.shortcuts.redirect('/user/{}/cabinet#list-buy-premium'.format(request.user.username))
+
+def two_verif_on(request):
+    message = "SUCCESS"
+    if request.user.is_active:
+        request.user.profile.two_verif = True
+        request.user.save()
+    else:
+        message = "ACTIVATE"
+
+    return django.shortcuts.redirect('/user/{}/cabinet#list-settings?message={}'.format(request.user.username, message))
+
+def two_verif_off(request):
+    request.user.profile.two_verif = False
+    request.user.save()
+
+    return django.shortcuts.redirect('/user/{}/cabinet#list-settings'.format(request.user.username))

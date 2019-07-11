@@ -13,6 +13,9 @@ $('#login_button').on("click", function() {
             if (response['result'] === "Success!") {
                 let url = "/";
                 $(location).attr('href', url);
+            } else if (response['result'] === "Verificate!") {
+                let url = "/?message=VERIFICATE";
+                $(location).attr('href', url);
             } else {
                 $('#error-login').show();
                 $(".lwa-loading").remove()
@@ -35,6 +38,9 @@ $('#login_button1').on("click", function() {
             // do something with response
             if (response['result'] === "Success!") {
                 let url = "/";
+                $(location).attr('href', url);
+            } else if (response['result'] === "Verificate!") {
+                let url = "/?message=VERIFICATE";
                 $(location).attr('href', url);
             } else {
                 $('#error-login1').show();
