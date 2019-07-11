@@ -2735,3 +2735,316 @@ IndexError: list index out of range
 [2019-07-10 18:01:57,434] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
 [2019-07-10 18:01:57,434] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
 [2019-07-10 18:01:57,682] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 18:44:52,138] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 18:44:52,139] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 18:44:52,139] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 18:44:52,139] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 18:44:52,139] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 18:44:52,139] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 18:44:52,140] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 18:44:52,140] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 18:44:52,140] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 18:44:52,418] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 18:44:53,026] WARNING : Not Found: /favicon.ico
+[2019-07-10 18:45:06,798] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 18:45:06,798] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 18:45:06,798] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 18:45:06,798] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 18:45:06,799] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 18:45:06,799] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 18:45:06,799] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 18:45:06,799] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 18:45:06,799] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 18:45:07,041] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 18:46:32,098] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 18:46:32,099] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 18:46:32,337] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 18:46:32,411] WARNING : Not Found: /favicon.ico
+[2019-07-10 18:46:34,632] ERROR   : can't guess file type: record_src/Linux_Format_2016_01204.pdf
+[2019-07-10 18:46:34,632] ERROR   : can't guess file type: record_src/Linux_Format_2016_02205-206.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2016_03207.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2016_04208.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2016_05209.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2005_0970.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2005_1071.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2005_1172.pdf
+[2019-07-10 18:46:34,633] ERROR   : can't guess file type: record_src/Linux_Format_2005_1273.pdf
+[2019-07-10 18:46:34,873] WARNING : Not Found: /media/media/record_src/Background_08.mov
+[2019-07-10 18:46:34,947] WARNING : Not Found: /favicon.ico
+[2019-07-10 18:50:28,988] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 18:50:28,988] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 18:56:22,257] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 18:56:22,258] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 18:56:22,364] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 18:56:22,368] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 18:56:22,372] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 18:56:22,444] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 18:56:22,448] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 18:56:22,453] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 18:58:54,115] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 18:58:54,115] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 18:58:54,214] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 18:58:54,220] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 18:58:54,225] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 18:58:54,287] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 18:58:54,291] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 18:58:54,304] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 18:58:54,377] WARNING : Not Found: /r3/fonts/fontawesome-webfont.woff
+[2019-07-10 18:58:54,432] WARNING : Not Found: /r3/fonts/fontawesome-webfont.ttf
+[2019-07-10 19:45:43,725] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 19:45:43,725] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 19:45:43,839] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 19:45:43,851] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 19:45:43,854] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 19:45:43,918] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 19:45:43,922] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 19:45:43,929] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 19:45:43,997] WARNING : Not Found: /r3/fonts/fontawesome-webfont.woff
+[2019-07-10 19:45:44,065] WARNING : Not Found: /r3/fonts/fontawesome-webfont.ttf
+[2019-07-10 19:59:16,176] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 19:59:16,176] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 19:59:16,283] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 19:59:16,288] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 19:59:16,291] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 19:59:16,355] WARNING : Not Found: /r3/css/style.css
+[2019-07-10 19:59:16,358] WARNING : Not Found: /r3/js/jquery.js
+[2019-07-10 19:59:16,365] WARNING : Not Found: /r3/js/jquery.jplayer.min.js
+[2019-07-10 19:59:16,442] WARNING : Not Found: /r3/fonts/fontawesome-webfont.woff
+[2019-07-10 19:59:16,502] WARNING : Not Found: /r3/fonts/fontawesome-webfont.ttf
+[2019-07-10 20:02:43,171] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 20:02:43,171] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-10 20:02:43,267] WARNING : Not Found: /r3/media-player.css
+[2019-07-10 20:02:43,284] WARNING : Not Found: /r3/media-player.js
+[2019-07-10 20:02:43,373] WARNING : Not Found: /r3/media-player.js
+[2019-07-10 20:02:43,377] WARNING : Not Found: /r3/media-player.css
+[2019-07-10 20:02:43,424] WARNING : Not Found: /r3/parrots.mp4
+[2019-07-10 20:02:43,522] WARNING : Not Found: /r3/parrots.webm
+[2019-07-10 20:03:13,626] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-10 20:03:13,626] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:00:23,750] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:00:23,750] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:00:28,061] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:00:28,061] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:01:45,202] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:01:45,202] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:09:57,644] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:09:57,644] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:10:35,186] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:10:35,187] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:12:10,706] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:12:10,706] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:12:11,294] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:12:11,294] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:12:11,307] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:12:11,307] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:12:12,134] WARNING : Not Found: /favicon.ico
+[2019-07-11 08:21:28,807] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:21:28,808] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:21:29,082] WARNING : Not Found: /media/record_src/WE_BUTTER_1amW9VY.mp
+[2019-07-11 08:21:29,108] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:21:29,108] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:21:29,109] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:21:29,109] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:22:05,771] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:22:05,771] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:22:06,080] WARNING : Not Found: /media/record_src/WE_BUTTER_1amW9VY.mp
+[2019-07-11 08:22:06,102] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:22:06,102] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:22:06,109] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:22:06,109] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:22:43,481] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:22:43,481] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:23:06,807] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:23:06,808] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:23:07,132] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:23:07,133] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:23:07,136] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:23:07,136] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:23:52,476] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:23:52,476] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:33:38,911] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:33:38,911] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:33:41,085] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:33:41,085] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:20,641] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:20,641] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:21,000] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:21,000] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:21,001] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:21,002] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:28,970] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:28,970] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:30,042] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:30,042] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:30,786] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:30,786] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:34:30,788] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:34:30,788] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:35:35,846] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:35:35,847] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:35:44,545] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:35:44,545] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:35:45,362] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:35:45,362] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:35:45,387] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:35:45,387] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:38:35,704] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:38:35,704] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:38:36,880] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:38:36,881] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:38:41,082] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:38:41,082] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:11,186] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:11,186] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:11,541] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:11,541] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:11,543] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:11,543] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:41,916] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:41,917] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:42,298] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:42,298] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:40:42,302] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:40:42,302] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:41:11,621] WARNING : Not Found: /media/static/
+[2019-07-11 08:47:38,467] WARNING : Not Found: /media/static/
+[2019-07-11 08:47:38,868] WARNING : Not Found: /favicon.ico
+[2019-07-11 08:47:44,035] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:47:44,035] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:47:52,132] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:47:52,133] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:48:00,973] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:48:00,973] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:48:15,115] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:48:15,115] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:50:32,443] INFO    : /home/arcturus/Projects/sharewood/app/views.py changed, reloading.
+[2019-07-11 08:50:34,917] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:50:34,917] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:50:37,620] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:50:37,620] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:50:37,621] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:50:37,622] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:56:14,593] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:56:14,593] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:56:37,553] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:56:37,553] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:56:38,762] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:56:38,762] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:56:38,772] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:56:38,773] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:02,095] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:02,095] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:04,509] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:04,509] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:04,543] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:04,543] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:40,093] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:40,093] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:40,707] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:40,707] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 08:57:40,708] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 08:57:40,708] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:05:13,265] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:05:13,265] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:05:14,166] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:05:14,167] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:05:14,289] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:05:14,289] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:14,520] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:14,520] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:15,077] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:15,077] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:15,085] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:15,085] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:21,449] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:21,449] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:22,042] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:22,043] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:22,046] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:22,046] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:34,484] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:34,484] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:34,905] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:34,905] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:06:35,002] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:06:35,002] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:09:51,437] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:09:51,438] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:11:31,580] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:11:31,580] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:11:31,991] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:11:31,992] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:11:32,093] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:11:32,093] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:17:14,229] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:17:14,229] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:19:45,583] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:19:45,583] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:19:46,157] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:19:46,158] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:19:46,241] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:19:46,242] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:19:54,363] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:19:54,368] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:20:03,306] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:20:03,307] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:20:09,279] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:20:09,280] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:23:55,830] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:23:55,830] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:23:56,699] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:23:56,699] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:23:56,705] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:23:56,705] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:24:20,394] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:24:20,395] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:24:31,690] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:24:31,690] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 09:24:42,178] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 09:24:42,178] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:53:48,141] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:53:48,141] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:53:48,710] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:53:48,710] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:53:48,718] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:53:48,718] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:58:29,314] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:58:29,314] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:58:29,851] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:58:29,851] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 10:58:29,854] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 10:58:29,854] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:00:17,325] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:00:17,325] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:00:17,768] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:00:17,768] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:00:17,773] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:00:17,773] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:03:50,629] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:03:50,629] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:03:51,146] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:03:51,147] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:03:51,164] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:03:51,164] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:06:23,776] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:06:23,777] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:06:24,354] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:06:24,354] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:06:47,489] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:06:47,489] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:09:26,995] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:09:26,995] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:11:49,070] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:11:49,070] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:12:43,265] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:12:43,266] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:14:47,611] WARNING : Not Found: /favicon.ico
+[2019-07-11 11:22:02,592] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:22:02,592] ERROR   : can't guess file type: record_src/hi.bf

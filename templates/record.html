@@ -33,7 +33,6 @@
     <script type='text/javascript' src='/static/includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
     <script type='text/javascript' src='/static/content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.7'></script>
     <script type='text/javascript' src='/static/content/plugins/mobile-menu/includes/js/mobmenu.js?ver=5.1.1'></script>
-  
 
     <link rel="canonical" href="/r{{ record.id }}" />
     <style type="text/css">
@@ -79,13 +78,13 @@
         ul#menu li a {
             background: #F7F7F7;
             border: 1px solid #EEEEEE;
-            color: #757575;  
+            color: #757575;
             padding: 12px;
             -webkit-transition: 0.1s;
             -moz-transition: 0.1s;
             transition: 0.1s;
             font-family: 'Roboto', sans-serif;
-            font-size: 14px; 
+            font-size: 14px;
         }
 
         ul#menu li a:hover {
@@ -106,56 +105,56 @@
             color: #3394B8;
         }
 
-        .lwa-modal-video { 
-            visibility: hidden; 
-            top: 100px; 
-            left: 40%; 
-            margin-left: -240px; 
-            width: 400px; 
-            position: absolute; 
-            z-index: 101; 
-            padding: 30px 40px 34px; 
-            border-radius: 5px; 
-            -moz-border-radius: 5px; 
-            -webkit-border-radius: 5px; 
-            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); 
-            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); 
-            -box-shadow: 0 0 10px rgba(0,0,0,.4); 
+        .lwa-modal-video {
+            visibility: hidden;
+            top: 100px;
+            left: 40%;
+            margin-left: -240px;
+            width: 400px;
+            position: absolute;
+            z-index: 101;
+            padding: 30px 40px 34px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -box-shadow: 0 0 10px rgba(0,0,0,.4);
             background-color: rgba(0, 0, 0, 0.7);
         }
-        
-        .lwa-modal-video h4, .lwa-modal-video p { 
-            margin-bottom:10px; 
-        }
-        
-        .lwa-modal-video .lwa-modal-close { 
-            font-size: 30px; 
-            line-height: .5; 
-            position: absolute; 
-            top: 8px; right: 11px; 
-            color: #aaa; 
-            text-shadow: 0 -1px 1px rgba(0,0,0,.6);
-            font-weight: bold; 
-            cursor: pointer; 
-        } 
 
-        .lwa-modal-audio { 
-            visibility: hidden; 
-            top: 100px; 
-            left: 50%; 
-            margin-left: -240px; 
-            width: 400px; 
+        .lwa-modal-video h4, .lwa-modal-video p {
+            margin-bottom:10px;
+        }
+
+        .lwa-modal-video .lwa-modal-close {
+            font-size: 30px;
+            line-height: .5;
+            position: absolute;
+            top: 8px; right: 11px;
+            color: #aaa;
+            text-shadow: 0 -1px 1px rgba(0,0,0,.6);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lwa-modal-audio {
+            visibility: hidden;
+            top: 100px;
+            left: 50%;
+            margin-left: -240px;
+            width: 400px;
             padding: 20px;
-            position: absolute; 
-            z-index: 101; 
-            -moz-border-radius: 5px; 
-            -webkit-border-radius: 5px; 
-            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); 
-            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); 
-            -box-shadow: 0 0 10px rgba(0,0,0,.4); 
+            position: absolute;
+            z-index: 101;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+            -box-shadow: 0 0 10px rgba(0,0,0,.4);
             background-color: rgba(0, 0, 0, 0.7);
         }
-        
+
         .buy-modalWindow {
             position: fixed;
             font-family: arial;
@@ -233,6 +232,160 @@
         .buy-ok:hover { background: #189CDA; }
         .buy-close:hover, .buy-cancel:hover { background: #D4482D; }
         .clear { float:none; clear: both; }
+
+        .video-modalWindow {
+            position: fixed;
+            font-family: arial;
+            font-size:80%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 99999;
+            opacity:0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
+        .video-modalHeader h2 { color: #189CDA; border-bottom: 2px groove #efefef; }
+        .video-modalWindow:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        .video-modalWindow > div {
+            width: 840px;
+            position: relative;
+            margin: 10% auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .video-modalWindow .video-modalHeader { padding: 5px 20px 0px 20px; }
+        .video-modalWindow .modalContent { padding: 0px 20px 5px 20px; }
+        .video-modalWindow .video-modalFooter { padding: 8px 20px 8px 20px; }
+        .video-modalFooter {
+            background: #F1F1F1;
+            border-top: 1px solid #999;
+            -moz-box-shadow: inset 0px 13px 12px -14px #888;
+            -webkit-box-shadow: inset 0px 13px 12px -14px #888;
+            box-shadow: inset 0px 13px 12px -14px #888;
+        }
+        .video-modalFooter p {
+            color:#D4482D;
+            text-align:right;
+            margin:0;
+            padding: 5px;
+        }
+        .video-ok, .video-close, .video-cancel {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
+        .video-close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 22px;
+            height: 22px;
+            font-size: 10px;
+
+        }
+        .video-ok, .video-cancel {
+            width:80px;
+            float:right;
+            margin-left:20px;
+        }
+        .video-ok:hover { background: #189CDA; }
+        .video-close:hover, .video-cancel:hover { background: #D4482D; }
+
+        .audio-modalWindow {
+            position: fixed;
+            font-family: arial;
+            font-size:80%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 99999;
+            opacity:0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
+        .audio-modalHeader h2 { color: #189CDA; border-bottom: 2px groove #efefef; }
+        .audio-modalWindow:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        .audio-modalWindow > div {
+            width: 310px;
+            position: relative;
+            margin: 10% auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .audio-modalWindow .audio-modalHeader { padding: 5px 20px 0px 20px; }
+        .audio-modalWindow .modalContent { padding: 0px 20px 5px 20px; }
+        .audio-modalWindow .audio-modalFooter { padding: 8px 20px 8px 20px; }
+        .audio-modalFooter {
+            background: #F1F1F1;
+            border-top: 1px solid #999;
+            -moz-box-shadow: inset 0px 13px 12px -14px #888;
+            -webkit-box-shadow: inset 0px 13px 12px -14px #888;
+            box-shadow: inset 0px 13px 12px -14px #888;
+        }
+        .audio-modalFooter p {
+            color:#D4482D;
+            text-align:right;
+            margin:0;
+            padding: 5px;
+        }
+        .audio-ok, .audio-close, .audio-cancel {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
+        .audio-close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 22px;
+            height: 22px;
+            font-size: 10px;
+
+        }
+        .audio-ok, .audio-cancel {
+            width:80px;
+            float:right;
+            margin-left:20px;
+        }
+        .audio-ok:hover { background: #189CDA; }
+        .audio-close:hover, .audio-cancel:hover { background: #D4482D; }
     </style>
 
 </head>
@@ -257,6 +410,54 @@
             </div>
         </div>
     </div>
+
+    {% for parts in content %}
+        {% for data in parts.1 %}
+            {% if is_provided or user.profile.is_premium  %}
+                {% if data.0 == 'A' %}
+                    <div id="audio-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" class="audio-modalWindow">
+                        <div>
+                            <div class="audio-modalHeader">
+                                <h2 style="font-size: 18px">{{ parts.0 }}</h2>
+                                <a href="#audio-cancel" title="audio-close" class="audio-close" id="audio-close-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}">X</a>
+                            </div>
+
+                            <div class="modalContent">
+                               <audio id="audio-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" controls>
+                                 <source src="/media/{{ data|slice:"1:" }}">
+                               </audio>
+                            </div>
+
+                            <div class="audio-modalFooter">
+                                <a href="#audio-cancel" title="audio-cancel" class="audio-cancel" id="audio-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}">Назад</a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                {% elif data.0 == 'V' %}
+                    <div id="video-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" class="video-modalWindow">
+                        <div>
+                            <div class="video-modalHeader">
+                                <h2>{{ parts.0 }}</h2>
+                                <a href="#video-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" title="video-close" class="video-close" id="video-close-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}">X</a>
+                            </div>
+
+                            <div class="modalContent">
+                               <video width="800" height="600" id="video-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" controls>
+                                 <source src="/media/{{ data|slice:"1:" }}">
+                               </video>
+                            </div>
+
+                            <div class="video-modalFooter">
+                                <a href="#video-cancel" title="video-cancel" class="video-cancel" id="video-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}">Назад</a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 
     <header class="header-page">{% include "includes/header.html" %}</header>
 
@@ -378,7 +579,7 @@
                                                                       <li>
                                                                         {% if is_provided or user.profile.is_premium  %}
                                                                           {% if data.0 == 'A' %}
-                                                                              <a class="audio-link" href="/media/{{ data|slice:"1:" }}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a class="audio-link" href="#audio-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                               <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% elif data.0 == 'F' %}
@@ -386,7 +587,7 @@
                                                                               <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% elif data.0 == 'V' %}
-                                                                              <a class="video-link" href="/media/{{ data|slice:"1:" }}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
+                                                                              <a class="video-modal" href="#video-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ data|split:"/"|last }}</a>
                                                                               <a href="/media/{{ data|slice:"1:" }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% endif %}
@@ -681,7 +882,7 @@
                                                         <div class="lwa-email">
                                                             <div>
                                                                 <label>Введите пароль:</label>
-                                                                <input type="password" name="password1" required id="id_password1">
+                                                                <input type="pas sword" name="password1" required id="id_password1">
                                                             </div>
                                                         </div>
                                                         <br>
@@ -814,33 +1015,27 @@
     <script type='text/javascript' src='/static/content/themes/sharewood/js/main.js?ver=5.1.1'></script>
     <script type="text/javascript" src="/static/includes/auth_script.js"></script>
     <script>
-        $(".video-link").on("click", function(i) {
-            i.preventDefault();
-            let link = $(this).attr("href");
-            $("#video-source").attr("src", link);
-            $("#video-view").css("visibility", "visible");
-            
-            let height = $(window).scrollTop();
-            $("#video-view").css("margin-top", height-100);
-        });
-
-        $("#video-close").on("click", function() {
-            $("#video-view").css("visibility", "hidden");
-        });
-
-        $(".audio-link").on("click", function(i) {
-            i.preventDefault();
-            let link = $(this).attr("href");
-            $("#audio-source").attr("src", link);
-            $("#audio-view").css("visibility", "visible");
-            
-            let height = $(window).scrollTop();
-            $("#audio-view").css("margin-top", height+100);
-        });
-
-        $("#audio-close").on("click", function() {
-            $("#audio-view").css("visibility", "hidden");
-        });
+        {% for parts in content %}
+            {% for data in parts.1 %}
+                {% if is_provided or user.profile.is_premium  %}
+                    {% if data.0 == 'A' %}
+                        $("#audio-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
+                            $("#audio-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
+                        });
+                        $("#audio-close-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
+                            $("#audio-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
+                        });
+                    {% elif data.0 == 'V' %}
+                        $("#video-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
+                            $("#video-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
+                        });
+                        $("#video-close-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
+                            $("#video-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
+                        });
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
 
         $(".jqr2c_quote").on('click', function (event) {
             event.preventDefault();

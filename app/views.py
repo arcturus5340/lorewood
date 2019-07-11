@@ -429,21 +429,21 @@ def record(request: django.http.HttpRequest,
 
     content = []
     for title, flist in zip(media, files):
-        flist = list(flist)
+        file_list = []
         for i, file in enumerate(flist):
             type, _ = mimetypes.guess_type(file)
             if not type:
                 if file: logging.error('can\'t guess file type: {}'.format(file))
                 continue
             if type.split('/')[0] == 'video':
-                flist[i] = 'V{}'.format(file)
+                file_list.append('V{}'.format(file))
             elif type.split('/')[0] == 'audio':
-                flist[i] = 'A{}'.format(file)
+                file_list.append('A{}'.format(file))
             elif type.split('/')[0] == 'text':
-                flist[i] = 'F{}'.format(file)
+                file_list.append('F{}'.format(file))
             else:
                 logging.error('can\'t guess file type: {}'.format(file))
-        content.append([*title, flist])
+        content.append([*title, file_list])
     
     similar_records = []
     for tag in current_record.tags.split(', '):
