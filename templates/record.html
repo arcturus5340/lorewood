@@ -390,7 +390,7 @@
 
 </head>
 
-<body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over">
+<body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over" style="min-height: 100%">
 
     <div id="buy-modal" class="buy-modalWindow">
         <div>
@@ -462,7 +462,7 @@
     <header class="header-page">{% include "includes/header.html" %}</header>
 
     <div class="post-featured post-featured-cropped" style="background: url('{{ record.main_pic.url }}')no-repeat;background-size: cover;">
-        <div class="post-featured-wrap">
+        <div class="post-featured-wrap"  >
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-8">
@@ -712,20 +712,24 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="post-next-container">
                     <div id="" class="row navigation">
+                        <a href="/r{{ prev_record.id }}" rel="prev">
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box previous">
                             <div class="nav-wrap">
-                                <a href="/r{{ prev_record.id }}" rel="prev"><img width="1366" height="768" src="{{ prev_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                <img width="1366" height="768" src="{{ prev_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ prev_record.title }}</div>
-                                </a><span class="meta-nav" aria-hidden="true">Предыдущий пост</span> </div>
-                        </div>
+                                <span class="meta-nav" aria-hidden="true">Предыдущий пост</span> </div>
+                        </div></a>
+                        <a href="/r{{ next_record.id }}" rel="next">
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box next" style="float:right;">
                             <div class="nav-wrap">
-                                <a href="/r{{ next_record.id }}" rel="next"><img width="1366" height="768" src="{{ next_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                
+                                <img width="1366" height="768" src="{{ next_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ next_record.title }}</div>
-                                </a><span class="meta-nav" aria-hidden="true">Следующий пост</span> </div>
-                        </div>
+                                <span class="meta-nav" aria-hidden="true">Следующий пост</span> </div>
+                        </div></a>
                     </div>
                 </div>
                 <div class="row">
@@ -1094,6 +1098,18 @@
         );
 
         }
+
+        $('#comment_field').on('click', function(){
+            $(this).css('background-color', 'white')
+        });
+
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $("#comment_field"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $('#comment_field').css('background-color', '#d1d8da');
+            }
+        });
     </script>
     <script type="text/javascript">
         (function(w, doc) {
