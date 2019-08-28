@@ -34,4 +34,5 @@ urlpatterns = [
     path('buy_premium/', views.buy_premium, name='buy_premium'),
     path('two_verif_on/', views.two_verif_on, name='two_verif_on'),
     path('two_verif_off/', views.two_verif_off, name='two_verif_off'),
+    path('locale/', views.locale),
 ]

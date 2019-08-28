@@ -38,6 +38,10 @@ logging.getLogger(__name__)
 logging.basicConfig(format=u'[%(asctime)s] %(levelname)-8s: %(message)s',
                     filename=os.path.join(django.conf.settings.BASE_DIR, 'sharewood.log'), level=logging.NOTSET)
 
+import sys
+def locale(request: django.http.HttpRequest):
+    return django.http.HttpResponse(sys.getfilesystemencoding())
+
 
 @el_pagination.decorators.page_template('records_list.html')
 def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):

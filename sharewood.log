@@ -3048,3 +3048,244 @@ IndexError: list index out of range
 [2019-07-11 11:14:47,611] WARNING : Not Found: /favicon.ico
 [2019-07-11 11:22:02,592] ERROR   : can't guess file type: record_src/mandelbrot.bf
 [2019-07-11 11:22:02,592] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:23:59,867] INFO    : /home/arcturus/Projects/sharewood/app/urls.py changed, reloading.
+[2019-07-11 11:24:18,990] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:24:18,990] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:24:19,058] ERROR   : Internal Server Error: /r3/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: app_profile.two_verif
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 515, in record
+    'profile': app.models.Profile.objects.get(user_id=author.id),
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 402, in get
+    num = len(clone)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: app_profile.two_verif
+[2019-07-11 11:24:25,193] ERROR   : Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/fields/related_descriptors.py", line 393, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/fields/mixins.py", line 13, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: app_profile.two_verif
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/el_pagination/decorators.py", line 36, in decorated
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/app/views.py", line 62, in index
+    return django.shortcuts.render(request, template, context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 188, in render
+    return template.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/utils/functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/fields/related_descriptors.py", line 401, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 402, in get
+    num = len(clone)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: app_profile.two_verif
+[2019-07-11 11:25:21,463] ERROR   : can't guess file type: record_src/mandelbrot.bf
+[2019-07-11 11:25:21,464] ERROR   : can't guess file type: record_src/hi.bf
+[2019-07-11 11:26:21,215] WARNING : Not Found: /media/static/
+[2019-07-11 11:26:27,543] WARNING : Not Found: /favicon.ico
+[2019-07-11 11:26:32,548] WARNING : Not Found: /media/static/
+[2019-07-11 11:26:50,367] WARNING : Not Found: /favicon.ico
+[2019-07-11 11:26:52,449] WARNING : Not Found: /favicon.ico
+[2019-07-11 11:27:24,908] WARNING : Not Found: /media/static/
+[2019-07-11 11:27:31,338] ERROR   : can't guess file type: record_src/Тесты.odt
+[2019-07-11 11:27:31,516] WARNING : Not Found: /media/static/
+[2019-07-11 11:27:45,509] ERROR   : can't guess file type: record_src/Тесты.odt
+[2019-07-11 11:32:13,623] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 11:58:42,130] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 11:59:27,311] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 11:59:40,693] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 12:00:30,290] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 12:01:04,428] ERROR   : Internal Server Error: /admin/app/media/
+Traceback (most recent call last):
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1672, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/options.py", line 744, in get_changelist_instance
+    sortable_by,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/views/main.py", line 81, in __init__
+    self.queryset = self.get_queryset(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/views/main.py", line 405, in get_queryset
+    filters_use_distinct) = self.get_filters(request)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/views/main.py", line 135, in get_filters
+    self.model, self.model_admin, field_path=field_path,
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/filters.py", line 159, in create
+    return list_filter_class(field, request, params, model, model_admin, field_path=field_path)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/filters.py", line 170, in __init__
+    self.lookup_choices = self.field_choices(field, request, model_admin)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/contrib/admin/filters.py", line 201, in field_choices
+    return field.get_choices(include_blank=False, ordering=ordering)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 831, in get_choices
+    for x in rel_model._default_manager.complex_filter(limit_choices_to).order_by(*ordering)
+  File "/home/arcturus/Projects/sharewood/venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 831, in <listcomp>
+    for x in rel_model._default_manager.complex_filter(limit_choices_to).order_by(*ordering)
+  File "/home/arcturus/Projects/sharewood/app/models.py", line 40, in __str__
+    return self.unicode(self.title, 'utf-8')
+AttributeError: 'Records' object has no attribute 'unicode'
+[2019-07-11 12:01:15,815] INFO    : /home/arcturus/Projects/sharewood/app/models.py changed, reloading.
+[2019-07-11 15:39:46,451] WARNING : Not Found: /media/static/
+[2019-07-11 15:39:48,145] WARNING : Not Found: /favicon.ico
+[2019-07-11 15:39:49,945] WARNING : Not Found: /media/static/
+[2019-08-28 11:25:33,314] WARNING : Not Found: /favicon.ico
+[2019-08-28 11:25:43,267] WARNING : failed login attempt
+[2019-08-28 11:41:37,304] WARNING : Not Found: /favicon.ico
+[2019-08-28 11:41:38,965] WARNING : Not Found: /favicon.ico
+[2019-08-28 11:41:42,279] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:04:20,421] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:06:40,934] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:07:06,083] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:08:57,213] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:12:20,225] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:13:03,007] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:13:56,169] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:15:51,861] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:16:55,859] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:18:36,835] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:18:38,954] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:19:43,422] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:20:30,256] WARNING : Not Found: /favicon.ico
+[2019-08-28 12:59:22,712] WARNING : Not Found: /favicon.ico
