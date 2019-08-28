@@ -3289,3 +3289,4 @@ AttributeError: 'Records' object has no attribute 'unicode'
 [2019-08-28 12:19:43,422] WARNING : Not Found: /favicon.ico
 [2019-08-28 12:20:30,256] WARNING : Not Found: /favicon.ico
 [2019-08-28 12:59:22,712] WARNING : Not Found: /favicon.ico
+[2019-08-28 13:01:04,093] INFO    : /home/arcturus/Projects/sharewood/app/admin.py changed, reloading.
