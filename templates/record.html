@@ -390,7 +390,7 @@
 
 </head>
 
-<body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over">
+<body class="post-template-default single single-post postid-{{ record.id }} single-format-standard mob-menu-slideout-over" style="min-height: 100%">
 
     <div id="buy-modal" class="buy-modalWindow">
         <div>
@@ -462,7 +462,7 @@
     <header class="header-page">{% include "includes/header.html" %}</header>
 
     <div class="post-featured post-featured-cropped" style="background: url('{{ record.main_pic.url }}')no-repeat;background-size: cover;">
-        <div class="post-featured-wrap">
+        <div class="post-featured-wrap"  >
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-8">
@@ -556,7 +556,7 @@
                                                             <b>Этот курс включает</b>
                                                         </div>
                                                         <div style="font-size: 14px">
-                                                            {{ record.includes }}
+                                                            {{ record.includes|safe }}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -566,9 +566,9 @@
                                         <td valign="top">
                                         
                                             <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10">
-                                                <div class="row mt-25">
+                                                <div class="row mt-25">{% load filters %}
                                                     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                        {{ record.text }} {% load filters %}
+                                                        {{ record.text|safe }} 
 
                                                         <h4>Материалы курса</h4>
                                                         <ul id="menu">
@@ -678,7 +678,7 @@
                                 <div class="post-rating__item post-rating__item-9"><img id="rating_{{ record.id }}_9" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="9" title="9" onmouseover="current_rating({{ record.id }}, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 9, '9');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">9</span></div>
                                 <div class="post-rating__item post-rating__item-10"><img id="rating_{{ record.id }}_10" src="/static/content/plugins/wp-postratings/images/squares/rating_off.png" alt="10" title="10" onmouseover="current_rating({{ record.id }}, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 10, '10');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">10</span></div>
                                 <meta itemprop="headline" content="{{ record.title }}" />
-                                <meta itemprop="description" content="{{ record.description }}" />
+                                <meta itemprop="description" content="{{ record.description|safe }}" />
                                 <meta itemprop="datePublished" content="{{ record.date }}" />
                                 <meta itemprop="url" content="/r{{ record.id }}" />
                                 <meta itemprop="author" content="{{ author.username }}" />
@@ -712,20 +712,24 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="post-next-container">
                     <div id="" class="row navigation">
+                        <a href="/r{{ prev_record.id }}" rel="prev">
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box previous">
                             <div class="nav-wrap">
-                                <a href="/r{{ prev_record.id }}" rel="prev"><img width="1366" height="768" src="{{ prev_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                <img width="1366" height="768" src="{{ prev_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ prev_record.title }}</div>
-                                </a><span class="meta-nav" aria-hidden="true">Предыдущий пост</span> </div>
-                        </div>
+                                <span class="meta-nav" aria-hidden="true">Предыдущий пост</span> </div>
+                        </div></a>
+                        <a href="/r{{ next_record.id }}" rel="next">
                         <div class="col-xs-12 col-sm-6 col-md-6 nav-box next" style="float:right;">
                             <div class="nav-wrap">
-                                <a href="/r{{ next_record.id }}" rel="next"><img width="1366" height="768" src="{{ next_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
+                                
+                                <img width="1366" height="768" src="{{ next_record.main_pic.url }}" class="attachment-full size-full wp-post-image" alt="" sizes="(max-width: 1366px) 100vw, 1366px" />
                                     <div>{{ next_record.title }}</div>
-                                </a><span class="meta-nav" aria-hidden="true">Следующий пост</span> </div>
-                        </div>
+                                <span class="meta-nav" aria-hidden="true">Следующий пост</span> </div>
+                        </div></a>
                     </div>
                 </div>
                 <div class="row">
@@ -1094,6 +1098,18 @@
         );
 
         }
+
+        $('#comment_field').on('click', function(){
+            $(this).css('background-color', 'white')
+        });
+
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $("#comment_field"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $('#comment_field').css('background-color', '#d1d8da');
+            }
+        });
     </script>
     <script type="text/javascript">
         (function(w, doc) {

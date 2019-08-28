@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'social_django',
     'app',
     'rest_framework',
+    'django_wysiwyg',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +81,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sharewood.wsgi.application'
-
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -150,10 +153,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     '{}/Projects/sharewood/static/'.format(os.getenv("HOME")),
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
+
+CKEDITOR_UPLOAD_PATH = 'uploads'
+

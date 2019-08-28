@@ -302,19 +302,23 @@ jQuery("#list-personal-data-list").on("click", function() {
 jQuery("#settings-tabpanel").hide();
 jQuery("#pay-in-tabpanel").hide();
 jQuery("#buy-premium-tabpanel").hide();
-jQuery("#personal-data-tabpanel").show("slow");
+jQuery("#personal-data-tabpanel").fadeIn();
+jQuery('body').scrollTop(0);
 
 jQuery("#list-settings-list").removeClass("active");
 jQuery("#list-pay-in-list").removeClass("active");
 jQuery("#list-buy-premium-list").removeClass("active");
 jQuery(this).addClass("active");
+
 });
 
 jQuery("#list-settings-list").on("click", function() {
 jQuery("#pay-in-tabpanel").hide();
 jQuery("#buy-premium-tabpanel").hide();
 jQuery("#personal-data-tabpanel").hide();
-jQuery("#settings-tabpanel").show("slow");
+jQuery("#settings-tabpanel").fadeIn();
+
+
 
 jQuery("#list-personal-data-list").removeClass("active");
 jQuery("#list-pay-in-list").removeClass("active");
@@ -326,7 +330,8 @@ jQuery("#list-pay-in-list").on("click", function() {
 jQuery("#buy-premium-tabpanel").hide();
 jQuery("#personal-data-tabpanel").hide();
 jQuery("#settings-tabpanel").hide();
-jQuery("#pay-in-tabpanel").show("slow");
+jQuery("#pay-in-tabpanel").fadeIn();
+jQuery('body').scrollTop(0);
 
 jQuery("#list-personal-data-list").removeClass("active");
 jQuery("#list-settings-list").removeClass("active");
@@ -338,7 +343,8 @@ jQuery("#list-buy-premium-list").on("click", function() {
 jQuery("#personal-data-tabpanel").hide();
 jQuery("#settings-tabpanel").hide();
 jQuery("#pay-in-tabpanel").hide();
-jQuery("#buy-premium-tabpanel").show("slow");
+jQuery("#buy-premium-tabpanel").fadeIn();
+jQuery('body').scrollTop(0);
 
 jQuery("#list-personal-data-list").removeClass("active");
 jQuery("#list-settings-list").removeClass("active");
