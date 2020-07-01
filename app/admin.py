@@ -4,7 +4,6 @@ from app.models import Media
 from app.models import Premium
 from app.models import Profile
 from django import forms
-from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 import social_django.models
 

@@ -27,7 +27,6 @@ import random
 import re
 import string
 import typing
-import filetype
 
 import app.forms
 import app.models
