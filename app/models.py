@@ -86,7 +86,6 @@ class Comments(django.db.models.Model):
 class Revenue(django.db.models.Model):
     date = django.db.models.DateField(default=datetime.datetime.now())
     income = django.db.models.IntegerField(default=0)
-    # visitors = django.db.models.IntegerField(default=0)
 
 
 class UserActivationManager(django.db.models.Manager):
@@ -119,12 +118,13 @@ class UserTwoVerificationManager(django.db.models.Manager):
         user_key = self.create(username=username, activation_key=activation_key, email=email)
         return user_key
 
+
 class UserTwoVerification(django.db.models.Model):
     username = django.db.models.TextField()
     activation_key = django.db.models.TextField()
     email = django.db.models.TextField()
-
     objects = UserTwoVerificationManager()
+
 
 class Profile(django.db.models.Model):
     user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
@@ -152,6 +152,7 @@ class Premium(django.db.models.Model):
     def __int__(self):
         return self.premium_cost
 
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
@@ -161,5 +162,3 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
-
-

@@ -140,6 +140,11 @@ SOCIAL_AUTH_TWITTER_SECRET = 'fFinacLTmcubfSL7exgDY7oS7SweyFAJI8KnYc8sUqUaPUNEZG
 
 LANGUAGE_CODE = 'ru'
 
+# export LC_ALL="ru_RU.UTF-8"
+#  export LC_CTYPE="ru_RU.UTF-8"
+import locale
+locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
