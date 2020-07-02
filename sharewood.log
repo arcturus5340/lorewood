@@ -3379,3 +3379,5 @@ AttributeError: 'Records' object has no attribute 'unicode'
 [2020-07-01 15:48:10,556] DEBUG   : Using selector: EpollSelector
 [2020-07-01 16:56:30,449] INFO    : /home/arcturus/Projects/sharewood/sharewood/settings.py changed, reloading.
 [2020-07-01 16:56:30,450] DEBUG   : Using selector: EpollSelector
+[2020-07-02 18:24:56,487] WARNING : Not Found: /favicon.ico
+[2020-07-02 21:32:45,745] WARNING : Not Found: /favicon.ico
