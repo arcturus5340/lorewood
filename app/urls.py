@@ -4,6 +4,8 @@ from .views import api, auth, cabinet, menu
 urlpatterns = [
     path('', menu.index, name='index'),
     path('login/', auth.login, name='login'),
+    path('remember/', auth.remember, name='remember'),
+
     path('logout/', auth.logout, name='logout'),
     path('register/', auth.register, name='register'),
     path('advertising/', menu.advertising, name='advertising'),
@@ -19,7 +21,6 @@ urlpatterns = [
     path('user/<str:username>/remember/<str:activation_key>', cabinet.password_change_view, name='password_change_view'),
     path('user/<str:username>/change-password/', cabinet.change_password, name="change_password"),
     path('change-cabinet-password/', cabinet.change_cabinet_password, name="change_cabinet_password"),
-    path('remember/', auth.remember, name='remember'),
     path('change-email/', auth.change_email, name="change_email"),
     path('user/<str:username>/change-email/<str:activation_key>',
          cabinet.change_email_confirm,

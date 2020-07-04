@@ -70,12 +70,12 @@ $('#remember-button').on("click", function(i) {
         data: $("#remember-form").serialize(),
         success: function(response) {
             // do something with response
-            if (response['status'] === "Success!") {
+            if (response['status'] === 'ok') {
                 let url = "/";
                 $(location).attr('href', url);
-            } else {
+            } else if(resposne['status'] === 'fail'){
                 $('#remember-errors').show();
-                $('#remember-errors').html(response["status"]);
+                $('#remember-errors').html(response['message']);
             }
         }
     });
@@ -90,12 +90,12 @@ $('#remember-button1').on("click", function(i) {
         data: $("#remember-form1").serialize(),
         success: function(response) {
             // do something with response
-            if (response['status'] === "Success!") {
+            if (response['status'] === 'ok') {
                 let url = "/";
                 $(location).attr('href', url);
-            } else {
+            } else if(response['status'] === 'fail'){
                 $('#remember-errors1').show();
-                $('#remember-errors1').html(response["status"]);
+                $('#remember-errors1').html(response['message']);
             }
         }
     });

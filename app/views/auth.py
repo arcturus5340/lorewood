@@ -6,13 +6,20 @@ import django.core.mail
 import django.http
 import django.shortcuts
 
+from django.contrib.auth.models import User
+
 import random
 import re
 import smtplib
 import string
 
 import app.models
-from app.models import UserTwoVerification
+from app.models import UserActivation, UserTwoVerification
+
+
+def activation_key_generator():
+    """Returns a string of 40 random characters"""
+    return ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(40))
 
 
 def login(request: django.http.HttpRequest):
@@ -48,8 +55,8 @@ def send_verification_email(username: str, email: str):
 
     subject = 'Двойная верификация аккаунта sharewood.online'
     message = ('Здравствуйте! \n'
-               'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти '
-               'в свой аккаунт: https://sharewood.online/user/{}/verificate/{} \n\n'
+               'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
+               'https://sharewood.online/user/{}/verificate/{} \n\n'
                'С уважением, команда Sharewood').format(username, activation_key)
     from_email = django.conf.settings.EMAIL_HOST_USER
 
@@ -59,48 +66,52 @@ def send_verification_email(username: str, email: str):
         pass
 
 
-def activation_key_generator():
-    """Returns a string of 40 random characters"""
-    return ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(40))
-
-
 def remember(request: django.http.HttpRequest):
-    user_login = request.POST.get('user_login')
-    response_data = {}
-
     try:
-        this_user = django.contrib.auth.models.User.objects.get(username=user_login)
-        if this_user.is_active:
+        user = User.objects.get(email=request.POST.get('email'))
+        if user.is_active:
             activation_key = activation_key_generator()
-            app.models.UserActivation.objects.create_user_key(this_user.username, activation_key)
+
+            UserActivation.objects.update_or_create(
+                username=user.username,
+                defaults={'activation_key': activation_key},
+            )
 
             subject = 'Восстановление аккаунта sharewood.online'
             message = ('Здравствуйте!\n'
-                       'Перейдите по ссылке, чтобы поменять ваш пароль: https://sharewood.online/user/{}/remember/{}\n\n'
-                       'С уважением, команда Sharewood').format(this_user.username, activation_key)
-
+                       'Перейдите по ссылке, чтобы поменять ваш пароль: '
+                       'https://sharewood.online/user/{}/remember/{}\n\n'
+                       'С уважением, команда Sharewood').format(user.username, activation_key)
             from_email = django.conf.settings.EMAIL_HOST_USER
-            send_email = django.core.mail.send_mail(subject, message, from_email, [this_user.email])
 
-            if send_email:
-                response_data['result'] = 'Success!'
-                # logging.info('password recovered (username: \'{}\')'.format(user_login))
-            else:
-                response_data['result'] = 'Ошибка при отправке активационного письма'
-                # logging.error('failed password recovery attempt (error while sending a letter)')
+            try:
+                django.core.mail.send_mail(subject, message, from_email, [user.email])
+            except smtplib.SMTPException:
+                return django.http.JsonResponse({
+                    'status': 'fail',
+                    'message': 'Ошибка при отправке активационного письма'
+                })
+
+            return django.http.JsonResponse({
+                'status': 'ok',
+            })
+
         else:
-            response_data['result'] = 'Пользователь не подтвердил свою электронную почту'
-            # logging.warning('failed password recovery attempt (user \'{}\' account is not activated)'.format(user_login))
-    except django.core.exceptions.MultipleObjectsReturned:
-        response_data['result'] = ('Ошибка безопасности. '
-                                   'Зарегистрирован еще один пользователь с такими данными. '
-                                   'Обратитесь к администратору сайта')
-        # logging.error('failed password recovery attempt (there are two identical users in the system)')
-    except django.core.exceptions.ObjectDoesNotExist:
-        response_data['result'] = 'Пользователь с такими данными не зарегестрирован'
-        # logging.error('failed password recovery attempt (user \'{}\' does not exist)'.format(user_login))
+            return django.http.JsonResponse({
+                'status': 'fail',
+                'message': 'Пользователь не подтвердил свою электронную почту'
+            })
 
-    return django.http.JsonResponse(response_data)
+    except django.core.exceptions.MultipleObjectsReturned:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Ошибка безопасности. Обратитесь к администратору сайта'
+        })
+    except django.core.exceptions.ObjectDoesNotExist:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Пользователь с такими данными не зарегестрирован'
+        })
 
 
 # @abinba response_data['result'] or response_data?
