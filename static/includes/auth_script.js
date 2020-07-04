@@ -10,13 +10,13 @@ $('#login_button').on("click", function() {
         },
         success: function(response) {
             // do something with response
-            if (response['result'] === "Success!") {
+            if (response['status'] === "ok") {
                 let url = "/";
                 $(location).attr('href', url);
-            } else if (response['result'] === "Verificate!") {
+            } else if (response['status'] === "verification_required") {
                 let url = "/?message=VERIFICATE";
                 $(location).attr('href', url);
-            } else {
+            } else if (response['status'] === 'fail'){
                 $('#error-login').show();
                 $(".lwa-loading").remove()
             }
@@ -36,13 +36,13 @@ $('#login_button1').on("click", function() {
         },
         success: function(response) {
             // do something with response
-            if (response['result'] === "Success!") {
+            if (response['status'] === "success") {
                 let url = "/";
                 $(location).attr('href', url);
-            } else if (response['result'] === "Verificate!") {
+            } else if (response['status'] === "verification_required") {
                 let url = "/?message=VERIFICATE";
                 $(location).attr('href', url);
-            } else {
+            } else if (response['status'] === 'fail'){
                 $('#error-login1').show();
                 $(".lwa-loading").remove()
             }
@@ -70,12 +70,12 @@ $('#remember-button').on("click", function(i) {
         data: $("#remember-form").serialize(),
         success: function(response) {
             // do something with response
-            if (response['result'] === "Success!") {
+            if (response['status'] === "Success!") {
                 let url = "/";
                 $(location).attr('href', url);
             } else {
                 $('#remember-errors').show();
-                $('#remember-errors').html(response["result"]);
+                $('#remember-errors').html(response["status"]);
             }
         }
     });
@@ -90,12 +90,12 @@ $('#remember-button1').on("click", function(i) {
         data: $("#remember-form1").serialize(),
         success: function(response) {
             // do something with response
-            if (response['result'] === "Success!") {
+            if (response['status'] === "Success!") {
                 let url = "/";
                 $(location).attr('href', url);
             } else {
                 $('#remember-errors1').show();
-                $('#remember-errors1').html(response["result"]);
+                $('#remember-errors1').html(response["status"]);
             }
         }
     });

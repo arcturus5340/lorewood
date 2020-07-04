@@ -113,17 +113,10 @@ class UserEmail(django.db.models.Model):
     objects = UserEmailManager()
 
 
-class UserTwoVerificationManager(django.db.models.Manager):
-    def create_user_key(self, username, activation_key, email):
-        user_key = self.create(username=username, activation_key=activation_key, email=email)
-        return user_key
-
-
 class UserTwoVerification(django.db.models.Model):
     username = django.db.models.TextField()
     activation_key = django.db.models.TextField()
     email = django.db.models.TextField()
-    objects = UserTwoVerificationManager()
 
 
 class Profile(django.db.models.Model):

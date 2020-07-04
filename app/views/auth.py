@@ -8,50 +8,55 @@ import django.shortcuts
 
 import random
 import re
+import smtplib
 import string
 
 import app.models
+from app.models import UserTwoVerification
 
 
 def login(request: django.http.HttpRequest):
     user_login = request.POST.get('login')
     user_password = request.POST.get('password')
-
     user = django.contrib.auth.authenticate(username=user_login, password=user_password)
 
-    if user:
-        if user.profile.two_verif:
-            send_verification_email(user.username, user.email)
-            # logging.info('user \'{}\' verification required'.format(user_login))
-            return django.http.JsonResponse({
-                'result': 'Verificate!',
-            })
-        else:
-            django.contrib.auth.login(request, user)
-            # logging.info('user \'{}\' logged in'.format(user_login))
-            return django.http.JsonResponse({
-                'result': 'Success!',
-            })
+    if user is None:
+        return django.http.JsonResponse({
+            'status': 'fail',
+        })
 
-    # logging.warning('failed login attempt')
+    if user.profile.two_verif:
+        send_verification_email(user.username, user.email)
+        return django.http.JsonResponse({
+            'status': 'verification_required',
+        })
+
+    django.contrib.auth.login(request, user)
     return django.http.JsonResponse({
-        'result': 'Failed!',
+        'status': 'ok',
     })
 
 
 def send_verification_email(username: str, email: str):
+    """Sends a message with a unique key for passing the second stage of verification"""
     activation_key = activation_key_generator()
-    app.models.UserTwoVerification.objects.filter(username=username).all().delete()
-    app.models.UserTwoVerification.objects.create_user_key(username, activation_key, email)
+
+    UserTwoVerification.objects.update_or_create(
+        username=username,
+        defaults={'activation_key': activation_key},
+    )
 
     subject = 'Двойная верификация аккаунта sharewood.online'
     message = ('Здравствуйте! \n'
                'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти '
                'в свой аккаунт: https://sharewood.online/user/{}/verificate/{} \n\n'
                'С уважением, команда Sharewood').format(username, activation_key)
-
     from_email = django.conf.settings.EMAIL_HOST_USER
-    return django.core.mail.send_mail(subject, message, from_email, [email])
+
+    try:
+        django.core.mail.send_mail(subject, message, from_email, [email])
+    except smtplib.SMTPException:
+        pass
 
 
 def activation_key_generator():
@@ -217,7 +222,7 @@ def validate_password(password: str):
 
 
 def logout(request: django.http.HttpRequest):
-    # django.contrib.auth.logout(request)
+    django.contrib.auth.logout(request)
     # logging.info('user \'{}\' logged out'.format(request.user.username))
     return django.shortcuts.redirect("/")
 

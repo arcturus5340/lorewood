@@ -9,13 +9,6 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-#for gmail
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'abinba28@gmail.com'
-EMAIL_HOST_PASSWORD = 'MobyDick228'
-EMAIL_PORT = 587
-
 import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -167,4 +160,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
 
 CKEDITOR_UPLOAD_PATH = 'uploads'
+
+# Mail server data
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'abinba28@gmail.com'
+EMAIL_HOST_PASSWORD = 'MobyDick228'
+EMAIL_PORT = 587
+
 
