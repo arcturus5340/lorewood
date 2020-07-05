@@ -1,5 +1,6 @@
 import django.conf
 import django.contrib.auth
+import django.contrib.auth.password_validation
 import django.core
 import django.core.exceptions
 import django.core.mail
@@ -146,8 +147,78 @@ def change_email(request: django.http.HttpRequest):
     })
 
 
-# TODO: handle secret_keys identity exception
-def send_activation_email(username: str, email: str):
+def register(request: django.http.HttpRequest):
+    username = request.POST.get('username')
+    email = request.POST.get('email')
+    password = request.POST.get('password1')
+    password_copy = request.POST.get('password2')
+
+    if password != password_copy:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Пароли не совпадают',
+        })
+
+    elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Логин должен начинаться с латинской буквы, а также состоять только из латинских букв, цифр и символов . и _ ',
+        })
+
+    elif User.objects.filter(username=username).exists():
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Такой логин уже зарегестрирован',
+        })
+
+    elif len(username) > 30:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Слишком длинный логин',
+        })
+
+    elif User.objects.filter(email=email).exists():
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Такой эмейл уже зарегестрирован',
+        })
+
+    try:
+        django.contrib.auth.password_validation.validate_password(password)
+    except django.core.exceptions.ValidationError as err:
+        print(django.contrib.auth.password_validation.password_validators_help_texts())
+        minimum_length = re.compile(r'This password is too short. It must contain at least [0-9]* characters?\.')
+        attribute_similarity = re.compile(r'The password is too similar to the (username|first_name|last_name|email)\.')
+
+        if list(filter(minimum_length.match, err)):
+            return django.http.JsonResponse({
+                'status': 'fail',
+                'message': 'Пароль слишком короткий. Минимальное количество - {} символов'.format(
+                    django.contrib.auth.password_validation.MinimumLengthValidator().min_length
+                ),
+            })
+        elif list(filter(attribute_similarity.match, err)):
+            return django.http.JsonResponse({
+                'status': 'fail',
+                'message': 'Пароль схож с Вашими личными данными',
+            })
+        elif 'This password is too common.' in err:
+            return django.http.JsonResponse({
+                'status': 'fail',
+                'message': 'Пароль слишком предсказуемый',
+            })
+        elif 'This password is entirely numeric.' in err:
+            return django.http.JsonResponse({
+                'status': 'fail',
+                'message': 'Пароль не может состоять лишь из цифр',
+            })
+
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Ошибка при валидации пароля',
+        })
+
+    reguser = django.contrib.auth.models.User.objects.create_user(username, email, password)
     activation_key = activation_key_generator()
     app.models.UserActivation.objects.create_user_key(username, activation_key)
 
@@ -156,82 +227,30 @@ def send_activation_email(username: str, email: str):
                'Вы зарегестирорвались на сайте sharewood.online. Перейдите по ссылке, чтобы активировать '
                'ваш аккаунт: https://sharewood.online/user/{}/activate/{} \n\n'
                'С уважением, команда Sharewood').format(username, activation_key)
-
     from_email = django.conf.settings.EMAIL_HOST_USER
-    return django.core.mail.send_mail(subject, message, from_email, [email])
 
-
-def register(request: django.http.HttpRequest):
-    username = request.POST.get('username')
-    email = request.POST.get('email')
-    password1 = request.POST.get('password1')
-    password2 = request.POST.get('password2')
-
-    response_data = {}
-    if password1 != password2:
-        response_data['result'] = 'Пароли не совпадают'
-        # logging.warning('failed registration attempt (passwords do not match)')
-
-    elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
-        response_data['result'] = ('Логин должен начинаться с латинской буквы, '
-                                   'а также состоять только из латинских букв, цифр и символов . и _ ')
-        # logging.warning('failed registration attempt (wrong login format)')
-
-    elif django.contrib.auth.models.User.objects.filter(username=username).exists():
-        response_data['result'] = 'Такой юзернейм уже зарегестрирован'
-        # logging.warning('failed registration attempt (existing username)')
-
-    elif len(username) > 30:
-        response_data['result'] = 'Слишком длинный логин'
-        # logging.warning('failed registration attempt (username is too long)')
-
-    elif django.contrib.auth.models.User.objects.filter(email=email).exists():
-        response_data['result'] = 'Такой эмейл уже зарегестрирован'
-        # logging.warning('failed registration attempt (existing email)')
-
-    else:
-        response_data['result'] = validate_password(password1)
-        if not response_data['result']:
-            reguser = django.contrib.auth.models.User.objects.create_user(username, email, password1)
-            if send_activation_email(username=username, email=email):
-                reguser.is_active = False
-                reguser.save()
-                response_data['result'] = 'Success!'
-                # logging.info('registration success (username: \'{}\')'.format(username))
-
-                user = django.contrib.auth.authenticate(username=username, password=password1)
-                if user:
-                    django.contrib.auth.login(request, user)
-                    # logging.info('user \'{}\' logged in'.format(username))
-                else:
-                    response_data['result'] = 'Failed!'
-                    # logging.warning('failed login attempt')
-            else:
-                response_data['result'] = 'Ошибка при отправке письма с активацией'
-                # logging.error('failed registration attempt (no email was sent)')
-
-    return django.http.JsonResponse(response_data)
-
-
-def validate_password(password: str):
     try:
-        django.contrib.auth.password_validation.validate_password(password)
-    except django.core.exceptions.ValidationError as err:
-        minimum_length = re.compile(r'This password is too short. It must contain at least [0-9]* characters?\.')
-        attribute_similarity = re.compile(r'The password is too similar to the (username|first_name|last_name|email)\.')
+        django.core.mail.send_mail(subject, message, from_email, [email])
+    except smtplib.SMTPException:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Ошибка при отправке активационного письма',
+        })
 
-        if list(filter(minimum_length.match, err)):
-            return 'Пароль слишком короткий. Минимальное количество - {} символов'.format(
-                django.contrib.auth.password_validation.MinimumLengthValidator().min_length
-            )
-        elif list(filter(attribute_similarity.match, err)):
-            return 'Пароль схож с Вашими личными данными'
-        elif 'This password is too common.' in err:
-            return 'Пароль слишком предсказуемый'
-        elif 'This password is entirely numeric.' in err:
-            return 'Пароль не может состоять лишь из цифр'
-        return 'Ошибка при валидации пароля'
-    return
+    reguser.is_active = False
+    reguser.save()
+
+    user = django.contrib.auth.authenticate(username=username, password=password)
+    if not user:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': '???',
+        })
+
+    django.contrib.auth.login(request, user)
+    return django.http.JsonResponse({
+        'status': 'ok',
+    })
 
 
 def logout(request: django.http.HttpRequest):

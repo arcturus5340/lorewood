@@ -265,7 +265,7 @@ jQuery.ajax({
     data: jQuery("#new_password_form").serialize(),
     success: function(response) {
         // do something with response
-        if (response['result'] === "Success!") {
+        if (response['status'] === "Success!") {
             jQuery("#password-errors").show();
             jQuery("#password-errors").css("color", "green");
             jQuery('#password-errors').html("Успешно сохранено");
@@ -285,14 +285,14 @@ jQuery.ajax({
     url: '/change-email/',
     data: jQuery("#new-email-form").serialize(),
     success: function(response) {
-        if (response == "Success!") {
+        if (response['status'] === 'ok') {
             jQuery("#new-email-status").show();
             jQuery("#new-email-status").css("color", "green");
             jQuery('#new-email-status').html("Активация была отправлена на указанный эмейл");
-        } else {
+        } else if(response['status'] === 'fail'){
             jQuery("#new-email-status").show();
             jQuery("#new-email-status").css("color", "red");
-            jQuery('#new-email-status').html(response);
+            jQuery('#new-email-status').html(response['message']);
         }
     }
 });
