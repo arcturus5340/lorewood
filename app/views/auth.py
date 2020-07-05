@@ -261,41 +261,31 @@ def logout(request: django.http.HttpRequest):
 
 def activate_account(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        if app.models.UserActivation.objects.get(username=username).activation_key == activation_key:
-            this_user = django.contrib.auth.models.User.objects.get(username=username)
+        if UserActivation.objects.get(username=username).activation_key == activation_key:
+            this_user = User.objects.get(username=username)
             this_user.is_active = True
-            # logging.info('user \'{}\' is activated'.format(username))
             this_user.save()
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
-            # logging.info('user \'{}\' logged in'.format(username))
 
-            app.models.UserActivation.objects.get(username=username).delete()
+            UserActivation.objects.get(username=username).delete()
             return django.shortcuts.redirect('/')
-        # logging.warning('failed account activation attempt (keys do not match)')
     except django.core.exceptions.ObjectDoesNotExist:
         pass
-        # logging.error('failed account activation attempt (user \'{}\' does not exist)'.format(username))
 
-    template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, 'invalid_activation_key.html')
 
 
 def verificate_login(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        if app.models.UserTwoVerification.objects.get(username=username).activation_key == activation_key:
+        if UserTwoVerification.objects.get(username=username).activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
-            # logging.info('user \'{}\' is verificated'.format(username))
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
-            # logging.info('user \'{}\' logged in'.format(username))
 
-            app.models.UserTwoVerification.objects.get(username=username).delete()
+            UserTwoVerification.objects.get(username=username).delete()
             return django.shortcuts.redirect('/')
-        # logging.warning('failed account verification attempt (keys do not match)')
     except django.core.exceptions.ObjectDoesNotExist:
         pass
-        # logging.error('failed account verification attempt (user \'{}\' does not exist)'.format(username))
 
-    template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-    return django.http.HttpResponse(template.render())
+    return django.shortcuts.render(request, 'invalid_activation_key.html')
