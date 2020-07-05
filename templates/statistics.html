@@ -63,32 +63,17 @@
     </script>
     <script>
         $(document).ready(function() {
-            const endpoint = '/api/activity';
-            let default_data = [];
-            let labels = [];
-            $.ajax({
-                method: "GET",
-                url: endpoint,
-                success: function(data) {
-                    labels = Object.keys(data);
-                    default_data = Object.values(data);
-                    setActChart();
-                },
-                error: function(error_data) {
-                    console.log("error: ", error_data);
-                }
-            });
-
+            setActChart();
             function setActChart() {
                 var ctx = document.getElementById("actChart");
                 var myLineChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: labels,
+                        labels: {{ last_login_dates|safe }},
                         datasets: [{
                             label: 'Колличество зарегистрированных пользователей',
                             backgroundColor: ["rgba(81, 185, 86, 1)", "rgb(255, 205, 86)", "rgba(3, 155, 229, 1)"],
-                            data: default_data,
+                            data: {{ last_login_count|safe }},
                         }]
                     },
                     options: {

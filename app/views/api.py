@@ -16,12 +16,12 @@ import django.db.utils
 import django.http
 import django.shortcuts
 import django.template.loader
+import django.utils.timezone
 import django.views.decorators.csrf
 
 import collections
 import datetime
 import string
-import sys
 
 
 def api(request: django.http.HttpRequest, data: string):
@@ -32,40 +32,37 @@ def api(request: django.http.HttpRequest, data: string):
 
 
 def statistics(request: django.http.HttpRequest):
-    dates_joined = django.contrib.auth.models.User.objects.order_by('date_joined').values_list('date_joined', flat=True)
+    dates = django.contrib.auth.models.User.objects.order_by('date_joined').values_list('date_joined', 'last_login')
 
     class OrderedCounter(collections.Counter, collections.OrderedDict):
         pass
 
     registration_dates = OrderedCounter()
-    for date in dates_joined:
-        registration_dates[date.strftime('%d %B %Y')] += 1
 
-    context = {
-        'registration_dates': list(registration_dates.keys()),
-        'registration_count': list(registration_dates.values()),
-    }
-    print(context)
-
-    return django.shortcuts.render(request, 'statistics.html', context)
-
-
-def activity():
-    users = django.contrib.auth.models.User.objects.all()
-    data = {
+    last_login_dates = {
         'За последнюю неделю': 0,
         'За последний месяц': 0,
         'За поледний год и более': 0,
     }
-    for user in users:
-        if (datetime.date.today() - datetime.timedelta(weeks=1)) < user.last_login.date():
-            data['За последнюю неделю'] += 1
-        elif (datetime.date.today() - datetime.timedelta(days=30)) < user.last_login.date():
-            data['За последний месяц'] += 1
-        else:
-            data['За поледний год и более'] += 1
 
-    return django.http.JsonResponse(data)
+    for join_date, login_date in dates:
+        registration_dates[join_date.strftime('%d %B %Y')] += 1
+        if (django.utils.timezone.now() - datetime.timedelta(weeks=1)) < login_date:
+            last_login_dates['За последнюю неделю'] += 1
+        elif (django.utils.timezone.now() - datetime.timedelta(days=30)) < login_date:
+            last_login_dates['За последний месяц'] += 1
+        else:
+            last_login_dates['За поледний год и более'] += 1
+
+    context = {
+        'registration_dates': list(registration_dates.keys()),
+        'registration_count': list(registration_dates.values()),
+        'last_login_dates': list(last_login_dates.keys()),
+        'last_login_count': list(last_login_dates.values()),
+    }
+    print(context)
+
+    return django.shortcuts.render(request, 'statistics.html', context)
 
 
 def sales():
