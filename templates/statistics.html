@@ -16,36 +16,21 @@
     <![endif]-->
     <script>
         $(document).ready(function() {
-            const endpoint = '/api/registration';
-            let default_data = [];
-            let labels = [];
-            $.ajax({
-                method: "GET",
-                url: endpoint,
-                success: function(data) {
-                    labels = Object.keys(data);
-                    default_data = Object.values(data);
-                    setRegChart();
-                },
-                error: function(error_data) {
-                    console.log("error: ", error_data);
-                }
-            });
-
+            setRegChart();
             function setRegChart() {
                 var ctx = document.getElementById("regChart");
                 var myLineChart = new Chart(ctx, {
                     type: 'line',
                     data: {
 
-                        labels: labels,
+                        labels: {{ registration_dates|safe }},
                         datasets: [{
                             label: 'Колличество зарегистрированных пользователей',
                             backgroundColor: 'rgba(0, 0, 0, 0)',
                             borderColor: 'rgba(81, 185, 86, 1)',
                             pointBackgroundColor: 'rgba(81, 185, 86, 1)',
                             pointHoverRadius: 5,
-                            data: default_data,
+                            data: {{ registration_count|safe }},
                         }]
                     },
                     options: {
@@ -65,7 +50,7 @@
                         scales: {
                             yAxes: [{
                                 ticks: {
-                                    max: Math.max.apply(null, default_data) + 1,
+                                    max: Math.max.apply(null, {{ registration_count|safe }}) + 1,
                                     min: 0,
                                     stepSize: 1,
                                 }

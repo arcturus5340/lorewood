@@ -29,10 +29,11 @@ urlpatterns = [
     path('r<int:record_id>/', menu.record, name='record'),
     path('tag/<str:tag>/', menu.records_by_tags, name='records_by_text'),
     path('search', menu.search, name='search'),
-    path('api/<str:data>', api.api, name='api-data'),
-    path('statistics/', api.statistics),
     path('r<int:record_id>/buy/', menu.buy, name='buy'),
     path('buy_premium/', cabinet.buy_premium, name='buy_premium'),
     path('two_verif_on/', cabinet.two_verif_on, name='two_verif_on'),
     path('two_verif_off/', cabinet.two_verif_off, name='two_verif_off'),
+
+    path('statistics/', api.statistics),
+    path('api/<str:data>', api.api, name='api-data'),
 ]
