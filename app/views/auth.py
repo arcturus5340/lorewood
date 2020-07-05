@@ -147,6 +147,7 @@ def change_email(request: django.http.HttpRequest):
     })
 
 
+# TODO: write own validators
 def register(request: django.http.HttpRequest):
     username = request.POST.get('username')
     email = request.POST.get('email')
@@ -255,8 +256,8 @@ def register(request: django.http.HttpRequest):
 
 def logout(request: django.http.HttpRequest):
     django.contrib.auth.logout(request)
-    # logging.info('user \'{}\' logged out'.format(request.user.username))
     return django.shortcuts.redirect("/")
+
 
 def activate_account(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
