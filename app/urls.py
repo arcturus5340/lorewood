@@ -35,5 +35,4 @@ urlpatterns = [
     path('two_verif_off/', cabinet.two_verif_off, name='two_verif_off'),
 
     path('statistics/', api.statistics),
-    path('api/<str:data>', api.api, name='api-data'),
 ]

@@ -15,165 +15,131 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-        $(document).ready(function() {
-            setRegChart();
-            function setRegChart() {
-                var ctx = document.getElementById("regChart");
-                var myLineChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
+        function setRegChart() {
+            var ctx = document.getElementById("regChart");
+            new Chart(ctx, {
+                type: 'line',
+                data: {
 
-                        labels: {{ registration_dates|safe }},
-                        datasets: [{
-                            label: 'Колличество зарегистрированных пользователей',
-                            backgroundColor: 'rgba(0, 0, 0, 0)',
-                            borderColor: 'rgba(81, 185, 86, 1)',
-                            pointBackgroundColor: 'rgba(81, 185, 86, 1)',
-                            pointHoverRadius: 5,
-                            data: {{ registration_count|safe }},
-                        }]
-                    },
-                    options: {
-                        layout: {
-                            padding: {
-                                left: 0,
-                                right: 0,
-                                top: 0,
-                                bottom: 0
-                            }
-                        },
-                        title: {
-                            text: 'Статистика регистрации',
-                            display: true,
-                            fontSize: 34,
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    max: Math.max.apply(null, {{ registration_count|safe }}) + 1,
-                                    min: 0,
-                                    stepSize: 1,
-                                }
-                            }],
-                        }
-                    }
-                });
-            }
-        })
-    </script>
-    <script>
-        $(document).ready(function() {
-            setActChart();
-            function setActChart() {
-                var ctx = document.getElementById("actChart");
-                var myLineChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: {{ last_login_dates|safe }},
-                        datasets: [{
-                            label: 'Колличество зарегистрированных пользователей',
-                            backgroundColor: ["rgba(81, 185, 86, 1)", "rgb(255, 205, 86)", "rgba(3, 155, 229, 1)"],
-                            data: {{ last_login_count|safe }},
-                        }]
-                    },
-                    options: {
-                        title: {
-                            text: 'Статистика посещений',
-                            display: true,
-                            fontSize: 34,
-                        },
-                    }
-                });
-            }
-        })
-    </script>
-    <script>
-        $(document).ready(function() {
-            const endpoint = '/api/sales';
-            let default_data = [];
-            let labels = [];
-            $.ajax({
-                method: "GET",
-                url: endpoint,
-                success: function(data) {
-                    labels = Object.keys(data);
-                    default_data = Object.values(data);
-                    setSaleChart();
+                    labels: {{ registration_dates|safe }},
+                    datasets: [{
+                        label: 'Колличество зарегистрированных пользователей',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(81, 185, 86, 1)',
+                        pointBackgroundColor: 'rgba(81, 185, 86, 1)',
+                        pointHoverRadius: 5,
+                        data: {{ registration_count|safe }},
+                    }]
                 },
-                error: function(error_data) {
-                    console.log("error: ", error_data);
+                options: {
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    title: {
+                        text: 'Статистика регистрации',
+                        display: true,
+                        fontSize: 34,
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                max: Math.max.apply(null, {{ registration_count|safe }}) + 1,
+                                min: 0,
+                                stepSize: 1,
+                            }
+                        }],
+                    }
                 }
             });
-
-            function setSaleChart() {
-                var ctx = document.getElementById("saleChart");
-                var myLineChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-
-                        labels: labels,
-                        datasets: [{
-                            label: 'Рублей',
-                            backgroundColor: 'rgba(0, 0, 0, 0)',
-                            borderColor: 'rgba(81, 185, 86, 1)',
-                            pointBackgroundColor: 'rgba(81, 185, 86, 1)',
-                            pointHoverRadius: 5,
-                            data: default_data,
-                        }]
+        }
+        function setActChart() {
+            var ctx = document.getElementById("actChart");
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: {{ last_login_dates|safe }},
+                    datasets: [{
+                        label: 'Колличество зарегистрированных пользователей',
+                        backgroundColor: ["rgba(81, 185, 86, 1)", "rgb(255, 205, 86)", "rgba(3, 155, 229, 1)"],
+                        data: {{ last_login_count|safe }},
+                    }]
+                },
+                options: {
+                    title: {
+                        text: 'Статистика посещений',
+                        display: true,
+                        fontSize: 34,
                     },
-                    options: {
-                        layout: {
-                            padding: {
-                                left: 0,
-                                right: 0,
-                                top: 0,
-                                bottom: 0
-                            }
-                        },
-                        title: {
-                            text: 'Общая стоимость покупок по дням',
-                            display: true,
-                            fontSize: 34,
-                        },
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    min: 0,
-                                    stepSize: 250,
-                                }
-                            }],
-                        }
-                    }
-                });
-            }
-        })
-    </script>
+                }
+            });
+        }
+        function setSaleChart() {
+            var ctx = document.getElementById("saleChart");
+            new Chart(ctx, {
+                type: 'line',
+                data: {
 
+                    labels: {{ revenue_dates|safe }},
+                    datasets: [{
+                        label: 'Рублей',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(81, 185, 86, 1)',
+                        pointBackgroundColor: 'rgba(81, 185, 86, 1)',
+                        pointHoverRadius: 5,
+                        data: {{ revenue_amount|safe }},
+                    }]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    title: {
+                        text: 'Общая стоимость покупок по дням',
+                        display: true,
+                        fontSize: 34,
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                                stepSize: 1000,
+                            }
+                        }],
+                    }
+                }
+            });
+        }
+        $(document).ready(function() {
+            setRegChart();
+            setActChart();
+            setSaleChart();
+        });
+    </script>
 </head>
 
 <body>
     <div>
         <div>
-          <table>
-            <tr>
             <h1 align="center">Статистика сайта sharewood.online</h1>
-            <div url-endpoint='/api/registration' style="float:left; width: 40%; margin: 100px">
-                <div>
+            <div style="float:left; width: 40%; margin: 100px">
                     <canvas id="regChart"></canvas>
-                </div>
             </div>
-            <div url-endpoint='/api/activity' style="float:right; width: 30%; margin: 100px">
-                <div>
+            <div style="float:right; width: 30%; margin: 100px">
                     <canvas id="actChart"></canvas>
-                </div>
             </div>
-            <div url-endpoint='/api/sales' style="width: 90%; margin: 50px">
-                <div>
+            <div style="width: 95%; margin: 50px">
                     <canvas id="saleChart"></canvas>
-                </div>
             </div>
-            </tr>
-          </table>
         </div>
     </div>
 </body>

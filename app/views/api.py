@@ -24,13 +24,6 @@ import datetime
 import string
 
 
-def api(request: django.http.HttpRequest, data: string):
-    if data == 'activity':
-        return activity()
-    if data == 'sales':
-        return sales()
-
-
 def statistics(request: django.http.HttpRequest):
     dates = django.contrib.auth.models.User.objects.order_by('date_joined').values_list('date_joined', 'last_login')
 
@@ -54,47 +47,16 @@ def statistics(request: django.http.HttpRequest):
         else:
             last_login_dates['За поледний год и более'] += 1
 
+    revenue = {date.strftime('%d %B %Y'): income for date, income in app.models.Revenue.objects.values_list('date', 'income')}
+
     context = {
         'registration_dates': list(registration_dates.keys()),
         'registration_count': list(registration_dates.values()),
         'last_login_dates': list(last_login_dates.keys()),
         'last_login_count': list(last_login_dates.values()),
+        'revenue_dates': list(revenue.keys()),
+        'revenue_amount': list(revenue.values()),
     }
     print(context)
 
     return django.shortcuts.render(request, 'statistics.html', context)
-
-
-def sales():
-    data = {format_date(key): val for key, val in app.models.Revenue.objects.values_list('date', 'income')}
-    return django.http.JsonResponse(data, safe=False)
-
-
-def format_date(date):
-    sdate = str(date)[:10].split('-')
-    month = int(sdate[1])
-    if month == 1:
-        sdate[1] = 'Января'
-    elif month == 2:
-        sdate[1] = 'Февраля'
-    elif month == 3:
-        sdate[1] = 'Марта'
-    elif month == 4:
-        sdate[1] = 'Апреля'
-    elif month == 5:
-        sdate[1] = 'Мая'
-    elif month == 6:
-        sdate[1] = 'Июня'
-    elif month == 7:
-        sdate[1] = 'Июля'
-    elif month == 8:
-        sdate[1] = 'Августа'
-    elif month == 9:
-        sdate[1] = 'Сентября'
-    elif month == 10:
-        sdate[1] = 'Октябрь'
-    elif month == 11:
-        sdate[1] = 'Ноябрь'
-    elif month == 12:
-        sdate[1] = 'Декабрь'
-    return " ".join(reversed(sdate))
