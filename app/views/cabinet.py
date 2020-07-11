@@ -33,8 +33,7 @@ import app.models
 
 def cabinet(request: django.http.HttpRequest, username: str, list: str):
     if request.user.username == username:
-        premium = app.models.Premium.objects.get(id=1)
-        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : premium.premium_cost, 'list' : list })
+        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : 1000, 'list' : list })
     return django.shortcuts.redirect('/')
 
 
@@ -155,8 +154,7 @@ def buy_premium(request):
     message = 0
 
     if request.user.is_active:
-        premium = app.models.Premium.objects.get(id=1)
-        cost = premium.premium_cost
+        cost = 1000
         balance = request.user.profile.balance
         new_balance = balance - cost
         if new_balance < 0:

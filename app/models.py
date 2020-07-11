@@ -5,6 +5,7 @@ import datetime
 
 
 class Records(django.db.models.Model):
+    id = django.db.models.AutoField(primary_key=True)
     path = "record_src/"
     title = django.db.models.TextField()
     text = django.db.models.TextField()
@@ -75,8 +76,7 @@ class Media(django.db.models.Model):
 
 
 class Comments(django.db.models.Model):
-    author = django.db.models.TextField()
-    avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
+    author = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
     text = django.db.models.TextField()
     date = django.db.models.DateField(default=datetime.datetime.now())
     record_id = django.db.models.IntegerField(default=1)
@@ -118,14 +118,3 @@ class Profile(django.db.models.Model):
 
     def __int__(self):
         return self.balance
-
-
-class Premium(django.db.models.Model):
-    premium_cost = django.db.models.IntegerField(default=0)
-
-    class Meta:
-        verbose_name = "Премиум подписка" 
-        verbose_name_plural = "Премиум подписка"
-
-    def __int__(self):
-        return self.premium_cost

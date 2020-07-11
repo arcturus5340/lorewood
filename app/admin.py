@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib import admin
 
-from app.models import Media, Records, Premium, Profile
+from app.models import Media, Records, Profile
 
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 import social_django.models
@@ -16,13 +16,6 @@ class MediaAdmin(admin.ModelAdmin):
 	list_filter = search_fields = (
 		'record',
 		'title',
-	)
-
-
-class PremiumAdmin(admin.ModelAdmin):
-	list_display = (
-		'id',
-		'premium_cost',
 	)
 
 
@@ -86,7 +79,6 @@ class RecordsAdmin(admin.ModelAdmin):
 
 admin.site.site_header = "Sharewood"
 admin.site.register(Media, MediaAdmin)
-admin.site.register(Premium, PremiumAdmin)
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Records, RecordsAdmin)
 admin.site.unregister(social_django.models.Association)
