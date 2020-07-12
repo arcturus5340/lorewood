@@ -1,120 +1,92 @@
+from django.db import models
+from django.utils import timezone
+
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-import django.db.models
-import datetime
 
 
-class Records(django.db.models.Model):
-    id = django.db.models.AutoField(primary_key=True)
-    path = "record_src/"
-    title = django.db.models.TextField()
-    text = django.db.models.TextField()
-    description = django.db.models.CharField(max_length=300)
-    rating = django.db.models.FloatField(default=0.0)
-    main_pic = django.db.models.FileField(upload_to=path)
-    author = django.db.models.CharField(max_length=30)
-    tags = django.db.models.TextField()
-    comments_count = django.db.models.IntegerField(default=0)
-    best_rating = django.db.models.IntegerField(default=0)
-    rating_count = django.db.models.IntegerField(default=0)
-    worst_rating = django.db.models.IntegerField(default=10)
-    rating_sum = django.db.models.IntegerField(default=0)
-    rated_users = django.db.models.TextField(default='')
-    includes = django.db.models.TextField(default='-', max_length=300)
-    pre_video = django.db.models.FileField(upload_to=path)
-    price = django.db.models.IntegerField()
-    sales = django.db.models.IntegerField(default=0)
-    date = django.db.models.DateField(default=datetime.datetime.now())
-    provided_users = django.db.models.TextField(default='')
+# TODO: abandon the field 'rating' in order to preserve the redundancy property
+class Records(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=128)
+    content = models.TextField()
+    description = models.CharField(max_length=256)
+    main_pic = models.FileField(upload_to='record_src/')
+    pre_video = models.FileField(upload_to='record_src/')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField(default=timezone.now())
+    rating = models.FloatField(default=0.0)
+    best_rating = models.IntegerField(default=0)
+    rating_count = models.IntegerField(default=0)
+    worst_rating = models.IntegerField(default=10)
+    rating_sum = models.IntegerField(default=0)
+    includes = models.TextField(default='-', max_length=256)
+    price = models.IntegerField()
+    sales = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = "Запись" 
         verbose_name_plural = "Записи"
 
-    def __str__(self):
-        return self.title
+
+class Provided_Users(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
 
-# TODO: automate media paths
-class Media(django.db.models.Model):
-    record = django.db.models.ForeignKey(Records, on_delete=django.db.models.CASCADE, null=True)
-    path = "record_src/"
-    title = django.db.models.CharField(max_length=30)
+class Rated_Users(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
-    file1 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file2 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file3 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file4 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file5 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file6 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file7 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file8 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file9 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file10 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file11 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file12 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file13 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file14 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file15 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file16 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file17 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file18 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file19 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file20 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file21 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file22 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file23 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file24 = django.db.models.FileField(upload_to=path, null=True, blank=True)
-    file25 = django.db.models.FileField(upload_to=path, null=True, blank=True)
+
+class Headers(models.Model):
+    id = models.AutoField(primary_key=True)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
+    title = models.CharField(max_length=128)
+    _order = models.IntegerField(default=0)
+
+
+class Files(models.Model):
+    id = models.AutoField(primary_key=True)
+    header = models.ForeignKey(Headers, on_delete=models.CASCADE)
+    src = models.FileField(upload_to='record_src/')
+    _order = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = "Материал" 
         verbose_name_plural = "Материалы"
 
-    def __str__(self):
-        return self.title
+
+class Tags(models.Model):
+    id = models.ManyToManyField(Records)
+    tag = models.CharField(max_length=32, unique=True)
 
 
-class Comments(django.db.models.Model):
-    author = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
-    text = django.db.models.TextField()
-    date = django.db.models.DateField(default=datetime.datetime.now())
-    record_id = django.db.models.IntegerField(default=1)
+class Comments(models.Model):
+    id = models.AutoField(primary_key=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField()
+    date = models.DateField(default=timezone.now())
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
 
-class Revenue(django.db.models.Model):
-    date = django.db.models.DateField(default=datetime.datetime.now())
-    income = django.db.models.IntegerField(default=0)
+class Revenue(models.Model):
+    date = models.DateField(default=timezone.now())
+    income = models.IntegerField(default=0)
 
 
-class UserActivation(django.db.models.Model):
-    username = django.db.models.TextField()
-    activation_key = django.db.models.TextField()
+class Activation(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    activation_key = models.TextField(unique=True)
 
 
-class UserEmail(django.db.models.Model):
-    username = django.db.models.TextField()
-    activation_key = django.db.models.TextField()
-    email = django.db.models.TextField()
-
-
-class UserTwoVerification(django.db.models.Model):
-    username = django.db.models.TextField()
-    activation_key = django.db.models.TextField()
-    email = django.db.models.TextField()
-
-
-class Profile(django.db.models.Model):
-    user = django.db.models.OneToOneField(User, on_delete=django.db.models.CASCADE)
-    avatar = django.db.models.TextField(null=True, blank=True, default='/media/avatars/avatar-default.png')
-    bio = django.db.models.TextField(max_length=500, null=True, blank=True)
-    balance = django.db.models.IntegerField(default=0)
-    is_premium = django.db.models.BooleanField(default=False)
-    two_verif = django.db.models.BooleanField(default=False)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    avatar = models.FileField(default='/media/avatars/avatar-default.png')
+    bio = models.TextField(max_length=500, null=True, blank=True)
+    balance = models.IntegerField(default=0)
+    is_premium = models.BooleanField(default=False)
+    has_2stepverif = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Профиль" 
         verbose_name_plural = "Профили"
-
-    def __int__(self):
-        return self.balance
