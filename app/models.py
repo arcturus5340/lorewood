@@ -77,6 +77,7 @@ class Revenue(models.Model):
 class Activation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     activation_key = models.TextField(unique=True)
+    new_email = models.CharField(max_length=254, null=True, blank=True)
 
 
 class Profile(models.Model):

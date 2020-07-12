@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import django.conf
 import django.contrib.auth
 import django.contrib.auth.forms
@@ -13,25 +11,20 @@ import django.db.utils
 import django.http
 import django.shortcuts
 import django.template.loader
-# import django_registration.backends.activation.views
-# import django_registration.forms
 import django.views.decorators.csrf
 
 import el_pagination.decorators
 
 import datetime
-import json
 import logging
-import os
-import PIL.Image
 import random
-import re
-import string
-import sys
 import typing
 
 import app.forms
-import app.models
+from app.models import Files, Headers, Records
+from django.db.models.query import QuerySet
+from django.contrib.auth.models import User
+
 
 @el_pagination.decorators.page_template('records_list.html')
 def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):
@@ -63,54 +56,42 @@ import mimetypes
 # TODO: optimize search of media-content
 # TODO: number of similar records depending on the number of comments
 # TODO: more avatars load optimization
-@django.views.decorators.csrf.csrf_exempt
 @el_pagination.decorators.page_template('comments_list.html')
-def record(request: django.http.HttpRequest,
-           record_id: int,
-           template: str = "record.html",
-           extra_context: typing.Optional[dict] = None):
-    records = app.models.Records.objects.all()
-    prev_record = records[(record_id - 1 or app.models.Records.objects.count()) - 1]
-    current_record = records[record_id - 1]
-    next_record = records[record_id % app.models.Records.objects.count()]
-    author = django.contrib.auth.models.User.objects.get(username=current_record.author)
+def record(request: django.http.HttpRequest, record_id: int, template: str = "record.html", extra_context: typing.Optional[dict] = None):
+    records_qs = Records.objects.all()
+    current_record = records_qs.get(id=record_id)
+    prev_record = records_qs.filter(pk__gt=current_record.pk).order_by('-pk').first()
+    next_record = records_qs.filter(pk__gt=current_record.pk).order_by('pk').first()
 
-    files = app.models.Media.objects.values_list('file1', 'file2', 'file3', 'file4', 'file5', 'file6',
-                                                 'file7', 'file8', 'file9', 'file10', 'file11', 'file12', 'file13',
-                                                 'file14', 'file15', 'file16',
-                                                 'file17', 'file18', 'file19', 'file20', 'file21', 'file22', 'file23',
-                                                 'file24', 'file25').filter(record_id=current_record.id)
+    author = current_record.author
 
-    media = app.models.Media.objects.values_list('title').filter(record_id=current_record.id)
-
-    content = []
-    for title, flist in zip(media, files):
-        file_list = []
-        for i, file in enumerate(flist):
-            type, _ = mimetypes.guess_type(file)
+    content = dict()
+    for header in current_record.headers_set.all():
+        content[header.title] = list()
+        for file in header.files_set.all():
+            type, _ = mimetypes.guess_type(file.src.name)
             if not type:
                 if file: logging.error('can\'t guess file type: {}'.format(file))
                 continue
             if type.split('/')[0] == 'video':
-                file_list.append('V{}'.format(file))
+                content[header.title].append(('V', file))
             elif type.split('/')[0] == 'audio':
-                file_list.append('A{}'.format(file))
+                content[header.title].append(('A', file))
             elif type.split('/')[0] == 'text':
-                file_list.append('F{}'.format(file))
+                content[header.title].append(('F', file))
             else:
-                logging.error('can\'t guess file type: {}'.format(file))
-        content.append([*title, file_list])
+                content[header.title].append(('U', file))
 
-    similar_records = []
-    for tag in current_record.tags.split(', '):
-        for r in app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag)):
-            if r not in similar_records and r != current_record:
-                similar_records.append(r)
-    random.shuffle(similar_records)
-    if len(similar_records) > 1:
-        similar_records = similar_records[:2]
-    elif len(similar_records) > 0:
-        similar_records = similar_records[:1]
+    import pprint
+    pprint.pprint(content)
+
+    same_tag_records = Records.objects.filter(tags__id__tags__in=current_record.tags_set.all()).distinct()
+    similar_records = same_tag_records.exclude(pk=current_record.pk)
+
+    two_similar_records = [
+        next(iter(similar_records), random.choice(Records.objects.all())),
+        next(iter(similar_records), random.choice(Records.objects.all())),
+    ]
 
     if request.POST.get('add_comment'):
         app.models.Comments.objects.create(author=request.POST.get('username'),
@@ -133,20 +114,17 @@ def record(request: django.http.HttpRequest,
         current_record.rated_users += request.user.username + ' '
         current_record.save()
 
-    comments = list(app.models.Comments.objects.filter(record_id=record_id))
+    comments = current_record.comments_set.order_by('-date').all()
 
-    if request.user.username in current_record.provided_users.split(', '):
-        is_provided = True
-    else:
-        is_provided = False
+    is_provided = request.user in current_record.provided_users_set.all()
 
     context = {
-        'prev_record': prev_record,
         'record': current_record,
+        'prev_record': prev_record,
         'next_record': next_record,
         'author': author,
         'profile': app.models.Profile.objects.get(user_id=author.id),
-        'similar_records': similar_records,
+        'similar_records': two_similar_records,
         'comments': comments,
         'content': content,
         'is_provided': is_provided,
@@ -156,7 +134,6 @@ def record(request: django.http.HttpRequest,
         context.update(extra_context)
 
     return django.shortcuts.render(request, template, context)
-
 
 # TODO: double buy
 # TODO: is user active
