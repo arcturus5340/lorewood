@@ -12,11 +12,13 @@ import django.http
 import django.shortcuts
 import django.template.loader
 import django.views.decorators.csrf
+from django.utils import datetime_safe
 
 import el_pagination.decorators
 
 import datetime
 import logging
+import mimetypes
 import random
 import typing
 
@@ -48,61 +50,51 @@ def index(request: django.http.HttpRequest, template: str = 'index.html', extra_
     return django.shortcuts.render(request, template, context)
 
 
-import mimetypes
-
-
 # TODO: output date and time for client time zone
-# TODO: optimize search of similar records
 # TODO: optimize search of media-content
-# TODO: number of similar records depending on the number of comments
 # TODO: more avatars load optimization
 @el_pagination.decorators.page_template('comments_list.html')
-def record(request: django.http.HttpRequest, record_id: int, template: str = "record.html", extra_context: typing.Optional[dict] = None):
+def record(request: django.http.HttpRequest, record_id: int, template: str = "record.html",
+           extra_context: typing.Optional[dict] = None):
     records_qs = Records.objects.all()
     current_record = records_qs.get(id=record_id)
     prev_record = records_qs.filter(pk__gt=current_record.pk).order_by('-pk').first()
     next_record = records_qs.filter(pk__gt=current_record.pk).order_by('pk').first()
 
-    author = current_record.author
-
     content = dict()
     for header in current_record.headers_set.all():
         content[header.title] = list()
         for file in header.files_set.all():
-            type, _ = mimetypes.guess_type(file.src.name)
-            if not type:
-                if file: logging.error('can\'t guess file type: {}'.format(file))
+            file_type, _ = mimetypes.guess_type(file.src.name)
+            if (not file_type) and file:
+                if file:
+                    logging.error('can\'t guess file type: {}'.format(file))
                 continue
-            if type.split('/')[0] == 'video':
+            if file_type.split('/')[0] == 'video':
                 content[header.title].append(('V', file))
-            elif type.split('/')[0] == 'audio':
+            elif file_type.split('/')[0] == 'audio':
                 content[header.title].append(('A', file))
-            elif type.split('/')[0] == 'text':
+            elif file_type.split('/')[0] == 'text':
                 content[header.title].append(('F', file))
             else:
                 content[header.title].append(('U', file))
 
-    import pprint
-    pprint.pprint(content)
-
     same_tag_records = Records.objects.filter(tags__id__tags__in=current_record.tags_set.all()).distinct()
     similar_records = same_tag_records.exclude(pk=current_record.pk)
 
-    two_similar_records = [
-        next(iter(similar_records), random.choice(Records.objects.all())),
-        next(iter(similar_records), random.choice(Records.objects.all())),
-    ]
+    two_similar_records = (None, None)
+    while two_similar_records[0] == two_similar_records[1]:
+        similar_records_iterator = iter(similar_records)
+        two_similar_records = (
+            next(similar_records_iterator, random.choice(Records.objects.all())),
+            next(similar_records_iterator, random.choice(Records.objects.all())),
+        )
 
     if request.POST.get('add_comment'):
-        app.models.Comments.objects.create(author=request.POST.get('username'),
-                                           avatar=app.models.Profile.objects.get(
-                                               user_id=django.contrib.auth.models.User.objects.get(
-                                                   username=request.POST.get('username')).id).avatar,
-                                           text=request.POST.get('add_comment'),
+        app.models.Comments.objects.create(author=request.user,
+                                           content=request.POST.get('add_comment'),
                                            date=datetime.datetime.now(),
-                                           record_id=record_id)
-        current_record.comments_count += 1
-        current_record.save()
+                                           record=current_record)
 
     if request.POST.get('action') == 'postratings':
         rate = int(request.POST.get('rate'))
@@ -114,26 +106,23 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
         current_record.rated_users += request.user.username + ' '
         current_record.save()
 
-    comments = current_record.comments_set.order_by('-date').all()
-
-    is_provided = request.user in current_record.provided_users_set.all()
-
     context = {
         'record': current_record,
         'prev_record': prev_record,
         'next_record': next_record,
-        'author': author,
-        'profile': app.models.Profile.objects.get(user_id=author.id),
+        'author': current_record.author,
+        'profile': current_record.author.profile,
         'similar_records': two_similar_records,
-        'comments': comments,
+        'comments': current_record.comments_set.order_by('-date').all(),
         'content': content,
-        'is_provided': is_provided,
+        'is_provided': request.user in current_record.provided_users_set.all(),
     }
 
     if extra_context is not None:
         context.update(extra_context)
 
     return django.shortcuts.render(request, template, context)
+
 
 # TODO: double buy
 # TODO: is user active
@@ -145,7 +134,7 @@ def buy(request, record_id):
         new_balance = balance - record.price
         if new_balance < 0:
             message = "NOT_ENOUGH"
-        else :
+        else:
             request.user.profile.balance = new_balance
             request.user.save()
 
@@ -172,14 +161,11 @@ def buy(request, record_id):
     return django.shortcuts.redirect('/r{}/?message={}'.format(record_id, message))
 
 
-
-
 @el_pagination.decorators.page_template('records_list.html')
 def records_by_tags(request: django.http.HttpRequest,
                     tag: str,
                     template: str = 'records_by_tag.html',
                     extra_context: typing.Optional[dict] = None):
-
     records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
     context = {
         'tag': tag,
@@ -202,10 +188,10 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     found_records = []
     for r in records:
         if ((search_text.lower() in r.title.lower()) or
-            (search_text.lower() in r.description.lower()) or
-            (search_text.lower() in r.text.lower()) or
-            (search_text.lower() in r.author.lower()) or
-            (search_text.lower() in r.tags.lower())):
+                (search_text.lower() in r.description.lower()) or
+                (search_text.lower() in r.text.lower()) or
+                (search_text.lower() in r.author.lower()) or
+                (search_text.lower() in r.tags.lower())):
             found_records.append(r)
 
     context = {
@@ -217,7 +203,6 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
         context.update(extra_context)
 
     return django.shortcuts.render(request, template, context)
-
 
 
 def advertising(request: django.http.HttpRequest):
