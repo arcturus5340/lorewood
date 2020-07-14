@@ -14,8 +14,7 @@ import re
 import smtplib
 import string
 
-import app.models
-from app.models import UserActivation, UserEmail, UserTwoVerification
+from app.models import Activation
 
 
 def activation_key_generator():
@@ -34,7 +33,24 @@ def login(request: django.http.HttpRequest):
         })
 
     if user.profile.two_verif:
-        send_verification_email(user.username, user.email)
+        activation_key = activation_key_generator()
+
+        Activation.objects.update_or_create(
+            username=user.username,
+            defaults={'activation_key': activation_key},
+        )
+
+        subject = 'Двойная верификация аккаунта sharewood.online'
+        message = ('Здравствуйте! \n'
+                   'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
+                   'https://sharewood.online/user/{}/verificate/{} \n\n'
+                   'С уважением, команда Sharewood').format(user.username, activation_key)
+        from_email = django.conf.settings.EMAIL_HOST_USER
+
+        try:
+            django.core.mail.send_mail(subject, message, from_email, [user.email])
+        except smtplib.SMTPException:
+            pass
         return django.http.JsonResponse({
             'status': 'verification_required',
         })
@@ -43,28 +59,6 @@ def login(request: django.http.HttpRequest):
     return django.http.JsonResponse({
         'status': 'ok',
     })
-
-
-def send_verification_email(username: str, email: str):
-    """Sends a message with a unique key for passing the second stage of verification"""
-    activation_key = activation_key_generator()
-
-    UserTwoVerification.objects.update_or_create(
-        username=username,
-        defaults={'activation_key': activation_key},
-    )
-
-    subject = 'Двойная верификация аккаунта sharewood.online'
-    message = ('Здравствуйте! \n'
-               'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
-               'https://sharewood.online/user/{}/verificate/{} \n\n'
-               'С уважением, команда Sharewood').format(username, activation_key)
-    from_email = django.conf.settings.EMAIL_HOST_USER
-
-    try:
-        django.core.mail.send_mail(subject, message, from_email, [email])
-    except smtplib.SMTPException:
-        pass
 
 
 def remember(request: django.http.HttpRequest):
@@ -78,7 +72,7 @@ def remember(request: django.http.HttpRequest):
 
         activation_key = activation_key_generator()
 
-        UserActivation.objects.update_or_create(
+        Activation.objects.update_or_create(
             username=user.username,
             defaults={'activation_key': activation_key},
         )
@@ -115,7 +109,7 @@ def remember(request: django.http.HttpRequest):
 
 
 def change_email(request: django.http.HttpRequest):
-    username = request.user.username
+    user = request.user
     new_email = request.POST.get('email')
 
     if User.objects.filter(email=new_email).exists():
@@ -125,13 +119,16 @@ def change_email(request: django.http.HttpRequest):
         })
 
     activation_key = activation_key_generator()
-    UserEmail.objects.create(username, activation_key, new_email)
+    Activation.objects.update_or_create(
+        username=user.username,
+        defaults={'activation_key': activation_key, 'new_email': new_email}
+    )
 
     subject = 'Изменение email аккаунта sharewood.online'
     message = ('Здравствуйте!\n'
                'Перейдите по ссылке, чтобы подтвердить данный email: '
                'https://sharewood.online/user/{}/change-email/\n\n'
-               'С уважением, команда Sharewood').format(username, activation_key)
+               'С уважением, команда Sharewood').format(user.username, activation_key)
     from_email = django.conf.settings.EMAIL_HOST_USER
 
     try:
@@ -221,7 +218,7 @@ def register(request: django.http.HttpRequest):
 
     reguser = django.contrib.auth.models.User.objects.create_user(username, email, password)
     activation_key = activation_key_generator()
-    app.models.UserActivation.objects.create_user_key(username, activation_key)
+    Activation.objects.create_user_key(username, activation_key)
 
     subject = 'Активация аккаунта sharewood.online'
     message = ('Здравствуйте! \n'
@@ -261,14 +258,14 @@ def logout(request: django.http.HttpRequest):
 
 def activate_account(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        if UserActivation.objects.get(username=username).activation_key == activation_key:
+        if Activation.objects.get(username=username).activation_key == activation_key:
             this_user = User.objects.get(username=username)
             this_user.is_active = True
             this_user.save()
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
 
-            UserActivation.objects.get(username=username).delete()
+            Activation.objects.get(username=username).delete()
             return django.shortcuts.redirect('/')
     except django.core.exceptions.ObjectDoesNotExist:
         pass
@@ -278,12 +275,12 @@ def activate_account(request: django.http.HttpRequest, username: str, activation
 
 def verificate_login(request: django.http.HttpRequest, username: str, activation_key: str):
     try:
-        if UserTwoVerification.objects.get(username=username).activation_key == activation_key:
+        if Activation.objects.get(username=username).activation_key == activation_key:
             this_user = django.contrib.auth.models.User.objects.get(username=username)
 
             django.contrib.auth.login(request, this_user, backend='django.contrib.auth.backends.ModelBackend')
 
-            UserTwoVerification.objects.get(username=username).delete()
+            Activation.objects.get(username=username).delete()
             return django.shortcuts.redirect('/')
     except django.core.exceptions.ObjectDoesNotExist:
         pass
