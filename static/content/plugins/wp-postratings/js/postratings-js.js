@@ -48,7 +48,7 @@ function rate_post() {
         // xhrFields: {withCredentials: !0},
         // dataType: "html",
         url: ratingsL10n.ajax_url,
-        data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce,
+        data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce + "&csrfmiddlewaretoken=" + jQuery("[name=csrfmiddlewaretoken]").val(),
         cache: !1,
         //success: rate_post_success
       })
@@ -57,7 +57,7 @@ function rate_post() {
       // xhrFields: {withCredentials: !0},
       // dataType: "html",
       url: ratingsL10n.ajax_url,
-      data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce,
+      data: "action=postratings&pid=" + post_id + "&rate=" + post_rating + "&postratings_" + post_id + "_nonce=" + post_ratings_nonce + "&csrfmiddlewaretoken=" + jQuery("[name=csrfmiddlewaretoken]").val(),
       cache: !1,
       //success: rate_post_success
     }))

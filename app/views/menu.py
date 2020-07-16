@@ -13,6 +13,7 @@ import django.shortcuts
 import django.template.loader
 import django.views.decorators.csrf
 from django.utils import datetime_safe
+from django.views.decorators.csrf import csrf_protect
 
 import el_pagination.decorators
 
@@ -23,8 +24,7 @@ import random
 import typing
 
 import app.forms
-from app.models import Files, Headers, Records
-from django.db.models.query import QuerySet
+from app.models import Files, Headers, Records, Rated_Users
 from django.contrib.auth.models import User
 
 
@@ -95,16 +95,16 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
                                            content=request.POST.get('add_comment'),
                                            date=datetime.datetime.now(),
                                            record=current_record)
-
+    print()
     if request.POST.get('action') == 'postratings':
-        rate = int(request.POST.get('rate'))
-        current_record.rating_sum += rate
+        new_rate = int(request.POST.get('rate'))
         current_record.rating_count += 1
-        current_record.rating = int((current_record.rating_sum / current_record.rating_count) * 10) / 10
-        current_record.best_rating = max(rate, current_record.best_rating)
-        current_record.worst_rating = min(rate, current_record.worst_rating)
-        current_record.rated_users += request.user.username + ' '
+        current_record.rating = round((current_record.rating + new_rate) / 2, 1)
+        current_record.best_rating = max(new_rate, current_record.best_rating)
+        current_record.worst_rating = min(new_rate, current_record.worst_rating)
         current_record.save()
+
+        Rated_Users.objects.create(user=request.user, record=current_record)
 
     context = {
         'record': current_record,
@@ -116,6 +116,7 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
         'comments': current_record.comments_set.order_by('-date').all(),
         'content': content,
         'is_provided': request.user in current_record.provided_users_set.all(),
+        'rated_user': request.user in User.objects.filter(rated_users__record=current_record),
     }
 
     if extra_context is not None:

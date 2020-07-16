@@ -664,7 +664,7 @@
                     </article>
                     <div class="social-container">
                         <div class="row">
-                            <div class="col col-md-6 col-xs-12"{% if user.get_username in record.rated_users|split:" " %} hidden{% endif %}>
+                            <div class="col col-md-6 col-xs-12"{% if not user.is_authenticated %} hidden{% elif rated_user %} hidden{% endif %}>
                                 <div class="post-ratings-wrapper">
                                     <span id="post-ratings-{{ record.id }}" class="post-ratings" itemscope itemtype="http://schema.org/Article" data-nonce="d2d295a659">
                                 <div class="post-rating__item post-rating__item-1"><img id="rating_{{ record.id }}_1" src="/static/content/plugins/wp-postratings/images/squares/rating_half.png" alt="1" title="1" onmouseover="current_rating({{ record.id }}, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();" style="cursor: pointer; border: 0;" /><span class="post-rating__item-text" onmouseover="current_rating({{ record.id }}, 1, '1');" onmouseout="ratings_off(0.9, 1, 0);" onclick="rate_post();" onkeypress="rate_post();">1</span></div>
@@ -760,7 +760,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="comment"></label>
-                                            <textarea class="form-control" id="comment_field" name="add_comment" placeholder="Введите сообщение" cols="45" rows="8" required>{{ quote }}</textarea>
+                                            <textarea class="form-control" id="comment_field" name="add_comment" placeholder="Введите сообщение" cols="45" rows="8" required></textarea>
                                         </div>
 
                                         <p class="form-submit">
