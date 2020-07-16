@@ -12,8 +12,6 @@ import django.http
 import django.shortcuts
 import django.template.loader
 import django.views.decorators.csrf
-from django.utils import datetime_safe
-from django.views.decorators.csrf import csrf_protect
 
 import el_pagination.decorators
 
@@ -24,7 +22,7 @@ import random
 import typing
 
 import app.forms
-from app.models import Files, Headers, Records, Rated_Users
+from app.models import Files, Headers, Records, Rated_Users, Tags
 from django.contrib.auth.models import User
 
 
@@ -52,7 +50,6 @@ def index(request: django.http.HttpRequest, template: str = 'index.html', extra_
 
 # TODO: output date and time for client time zone
 # TODO: optimize search of media-content
-# TODO: more avatars load optimization
 @el_pagination.decorators.page_template('comments_list.html')
 def record(request: django.http.HttpRequest, record_id: int, template: str = "record.html",
            extra_context: typing.Optional[dict] = None):
@@ -79,7 +76,7 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
             else:
                 content[header.title].append(('U', file))
 
-    same_tag_records = Records.objects.filter(tags__id__tags__in=current_record.tags_set.all()).distinct()
+    same_tag_records = Records.objects.filter(tags__in=current_record.tags.all()).distinct()
     similar_records = same_tag_records.exclude(pk=current_record.pk)
 
     two_similar_records = (None, None)
@@ -95,7 +92,7 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
                                            content=request.POST.get('add_comment'),
                                            date=datetime.datetime.now(),
                                            record=current_record)
-    print()
+
     if request.POST.get('action') == 'postratings':
         new_rate = int(request.POST.get('rate'))
         current_record.rating_count += 1

@@ -4,21 +4,25 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-# TODO: abandon the field 'rating' in order to preserve the redundancy property
+class Tags(models.Model):
+    id = models.AutoField(primary_key=True)
+    tag = models.CharField(max_length=32, unique=True)
+
+
 class Records(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=128)
     content = models.TextField()
     description = models.CharField(max_length=256)
+    tags = models.ManyToManyField(Tags)
     main_pic = models.FileField(upload_to='record_src/')
     pre_video = models.FileField(upload_to='record_src/')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateField(default=timezone.now())
+    date = models.DateTimeField(default=timezone.now())
     rating = models.FloatField(default=0.0)
     best_rating = models.IntegerField(default=0)
     rating_count = models.IntegerField(default=0)
     worst_rating = models.IntegerField(default=10)
-    rating_sum = models.IntegerField(default=0)
     includes = models.TextField(default='-', max_length=256)
     price = models.IntegerField()
     sales = models.IntegerField(default=0)
@@ -36,6 +40,9 @@ class Provided_Users(models.Model):
 class Rated_Users(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     record = models.ForeignKey(Records, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('user', 'record',)
 
 
 class Headers(models.Model):
@@ -56,16 +63,11 @@ class Files(models.Model):
         verbose_name_plural = "Материалы"
 
 
-class Tags(models.Model):
-    id = models.ManyToManyField(Records)
-    tag = models.CharField(max_length=32, unique=True)
-
-
 class Comments(models.Model):
     id = models.AutoField(primary_key=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    date = models.DateField(default=timezone.now())
+    date = models.DateTimeField(default=timezone.now())
     record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
 
