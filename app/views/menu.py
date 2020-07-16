@@ -160,14 +160,15 @@ def buy(request, record_id):
 
 
 @el_pagination.decorators.page_template('records_list.html')
-def records_by_tags(request: django.http.HttpRequest,
-                    tag: str,
-                    template: str = 'records_by_tag.html',
-                    extra_context: typing.Optional[dict] = None):
-    records = app.models.Records.objects.filter(django.db.models.Q(tags__contains=tag))
+def records_by_tags(
+        request: django.http.HttpRequest,
+        tag: str,
+        template: str = 'records_by_tag.html',
+        extra_context: typing.Optional[dict] = None,
+):
     context = {
         'tag': tag,
-        'records': records,
+        'records': Records.objects.filter(tags__tag=tag),
     }
 
     if extra_context is not None:
