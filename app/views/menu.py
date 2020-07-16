@@ -22,9 +22,10 @@ import random
 import typing
 
 import app.forms
-from app.models import Files, Headers, Records, Rated_Users, Tags
+from app.models import Files, Headers, Records, Rated_Users, Tags, Provided_Users, Revenue
 from django.contrib.auth.models import User
 from django.db.models import Q
+from django.http.response import JsonResponse
 
 @el_pagination.decorators.page_template('records_list.html')
 def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):
@@ -115,41 +116,49 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
     return django.shortcuts.render(request, template, context)
 
 
-# TODO: double buy
-# TODO: is user active
 def buy(request, record_id):
-    message = 0
-    if request.user.is_active:
-        record = app.models.Records.objects.get(id=record_id)
-        balance = request.user.profile.balance
-        new_balance = balance - record.price
-        if new_balance < 0:
-            message = "NOT_ENOUGH"
-        else:
-            request.user.profile.balance = new_balance
-            request.user.save()
+    if not request.user.is_active:
+        response = {
+            'status': 'fail',
+            'message': 'User account is not activated',
+        }
+        return JsonResponse(response)
 
-            provided_users = record.provided_users
-            if provided_users == None or provided_users == "":
-                provided_users = request.user.username
-            else:
-                provided_users += ", {}".format(request.user.username)
-            record.provided_users = provided_users
+    record = Records.objects.get(id=record_id)
+    user = request.user
 
-            today = datetime.date.today() + datetime.timedelta(days=1)
-            try:
-                obj = app.models.Revenue.objects.get(date=today)
-                obj.income += record.price
-                obj.save()
-            except django.core.exceptions.ObjectDoesNotExist:
-                app.models.Revenue.objects.create(date=today, income=record.price)
+    if (user.profile.balance - record.price) < 0:
+        response = {
+            'status': 'fail',
+            'message': 'User balance is not enough',
+        }
+        return JsonResponse(response)
 
-            record.sales += 1
-            record.save()
-    else:
-        message = "ACTIVATE"
+    if Provided_Users.objects.filter(user=user, record=record).exists():
+        response = {
+            'status': 'fail',
+            'message': 'User is provided with this record',
+        }
+        return JsonResponse(response)
 
-    return django.shortcuts.redirect('/r{}/?message={}'.format(record_id, message))
+    # Free-kassa code
+
+    user.profile.balance -= record.price
+    user.profile.save()
+
+    Provided_Users.objects.create(user=user, record=record)
+
+    obj, _ = Revenue.objects.get_or_create(date=datetime.date.today(), defaults={'income': 0})
+    obj.income += record.price
+    obj.save()
+
+    record.sales += 1
+    record.save()
+
+    response = {
+        'status': 'ok',
+    }
+    return JsonResponse(response)
 
 
 @el_pagination.decorators.page_template('records_list.html')
