@@ -24,22 +24,15 @@ import typing
 import app.forms
 from app.models import Files, Headers, Records, Rated_Users, Tags
 from django.contrib.auth.models import User
-
+from django.db.models import Q
 
 @el_pagination.decorators.page_template('records_list.html')
 def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):
-    # regform = django_registration.forms.RegistrationForm
-    # authform = django.contrib.auth.forms.AuthenticationForm
-    # authnext = "/"
-
-    records = app.models.Records.objects
+    records = Records.objects.order_by('-rating')
 
     context = {
-        # 'regform': regform,
-        # 'form': authform,
-        # 'next': authnext,
-        'records': records.all(),
-        'last_records': records.order_by('-rating')[:4],
+        'records': records[4:],
+        'last_records': records[:4],
     }
 
     if extra_context is not None:
@@ -160,12 +153,8 @@ def buy(request, record_id):
 
 
 @el_pagination.decorators.page_template('records_list.html')
-def records_by_tags(
-        request: django.http.HttpRequest,
-        tag: str,
-        template: str = 'records_by_tag.html',
-        extra_context: typing.Optional[dict] = None,
-):
+def records_by_tags(request: django.http.HttpRequest, tag: str, template: str = 'records_by_tag.html',
+                    extra_context: typing.Optional[dict] = None):
     context = {
         'tag': tag,
         'records': Records.objects.filter(tags__tag=tag),
@@ -177,24 +166,19 @@ def records_by_tags(
     return django.shortcuts.render(request, template, context)
 
 
-# TODO: improve search engine
+# TODO: port on PostgreSQL for more effective search
 @el_pagination.decorators.page_template('records_list.html')
 def search(request: django.http.HttpRequest, template: str = 'search.html',
            extra_context: typing.Optional[dict] = None):
-    search_text = request.GET.get('s', default=' ')
-    records = list(app.models.Records.objects.all())
 
-    found_records = []
-    for r in records:
-        if ((search_text.lower() in r.title.lower()) or
-                (search_text.lower() in r.description.lower()) or
-                (search_text.lower() in r.text.lower()) or
-                (search_text.lower() in r.author.lower()) or
-                (search_text.lower() in r.tags.lower())):
-            found_records.append(r)
+    search_text = request.GET.get('s')
+    found_records = Records.objects.filter(
+        Q(title__icontains=search_text) | Q(description__icontains=search_text) |
+        Q(content__icontains=search_text) | Q(includes__icontains=search_text) | Q(tags__tag__icontains=search_text)
+    )
 
     context = {
-        'search': search,
+        'search_text': search_text,
         'records': found_records,
     }
 
