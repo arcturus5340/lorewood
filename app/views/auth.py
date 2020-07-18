@@ -118,7 +118,7 @@ def remember(request: django.http.HttpRequest):
     message = ('Здравствуйте!\n'
                'Перейдите по ссылке, чтобы поменять ваш пароль: '
                'https://sharewood.online/user/{}/remember/{}\n\n'
-               'С уважением, команда Sharewood').format(user.username, activation_key)
+               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
 
     send_message(subject, message, user)
 
@@ -137,26 +137,25 @@ def change_email(request: django.http.HttpRequest):
             'message': 'Такой эмейл уже зарегестрирован',
         })
 
-    activation_key = activation_key_generator()
-    Activation.objects.update_or_create(
-        username=user.username,
-        defaults={'activation_key': activation_key, 'new_email': new_email}
-    )
+    obj, created = Activation.objects.update_or_create(user=user)
+    if obj.is_registration:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'User has not verified the account',
+        })
+
+    obj.activation_key = activation_key_generator()
+    obj.new_email = new_email
+    obj.is_email_change = True
+    obj.save()
 
     subject = 'Изменение email аккаунта sharewood.online'
     message = ('Здравствуйте!\n'
                'Перейдите по ссылке, чтобы подтвердить данный email: '
                'https://sharewood.online/user/{}/change-email/\n\n'
-               'С уважением, команда Sharewood').format(user.username, activation_key)
-    from_email = django.conf.settings.EMAIL_HOST_USER
+               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
 
-    try:
-        django.core.mail.send_mail(subject, message, from_email, [new_email])
-    except smtplib.SMTPException:
-        return django.http.JsonResponse({
-            'status': 'fail',
-            'message': 'Ошибка при отправке активационного письма',
-        })
+    send_message(subject, message, user)
 
     return django.http.JsonResponse({
         'status': 'ok',
