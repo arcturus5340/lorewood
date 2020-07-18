@@ -202,7 +202,6 @@ def register(request: django.http.HttpRequest):
     try:
         django.contrib.auth.password_validation.validate_password(password)
     except django.core.exceptions.ValidationError as err:
-        print(django.contrib.auth.password_validation.password_validators_help_texts())
         minimum_length = re.compile(r'This password is too short. It must contain at least [0-9]* characters?\.')
         attribute_similarity = re.compile(r'The password is too similar to the (username|first_name|last_name|email)\.')
 
@@ -234,33 +233,25 @@ def register(request: django.http.HttpRequest):
             'message': 'Ошибка при валидации пароля',
         })
 
-    reguser = django.contrib.auth.models.User.objects.create_user(username, email, password)
-    activation_key = activation_key_generator()
-    Activation.objects.create_user_key(username, activation_key)
+    user = django.contrib.auth.models.User.objects.create_user(username, email, password)
+    obj, _ = Activation.objects.update_or_create(
+        user=user,
+        defaults={'is_registration': True, 'activation_key': activation_key_generator()},
+    )
 
     subject = 'Активация аккаунта sharewood.online'
     message = ('Здравствуйте! \n'
                'Вы зарегестирорвались на сайте sharewood.online. Перейдите по ссылке, чтобы активировать '
                'ваш аккаунт: https://sharewood.online/user/{}/activate/{} \n\n'
-               'С уважением, команда Sharewood').format(username, activation_key)
-    from_email = django.conf.settings.EMAIL_HOST_USER
+               'С уважением, команда Sharewood').format(username, obj.activation_key)
 
-    try:
-        django.core.mail.send_mail(subject, message, from_email, [email])
-    except smtplib.SMTPException:
-        return django.http.JsonResponse({
-            'status': 'fail',
-            'message': 'Ошибка при отправке активационного письма',
-        })
-
-    reguser.is_active = False
-    reguser.save()
+    send_message(subject, message, user)
 
     user = django.contrib.auth.authenticate(username=username, password=password)
     if not user:
         return django.http.JsonResponse({
             'status': 'fail',
-            'message': '???',
+            'message': 'Authentication error',
         })
 
     django.contrib.auth.login(request, user)
