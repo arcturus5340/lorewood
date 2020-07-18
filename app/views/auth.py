@@ -17,19 +17,15 @@ import string
 from app.models import Activation
 
 
-def send_message(user: User, activation_key):
-    subject = 'Двойная верификация аккаунта sharewood.online'
-    message = ('Здравствуйте! \n'
-               'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
-               'https://sharewood.online/user/{}/verificate/{} \n\n'
-               'С уважением, команда Sharewood').format(user.username, activation_key)
+def send_message(subject: str, message: str, user: User):
     from_email = django.conf.settings.EMAIL_HOST_USER
-
     try:
         django.core.mail.send_mail(subject, message, from_email, [user.email])
     except smtplib.SMTPException:
-        pass
-
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Ошибка при отправке активационного письма',
+        })
 
 def activation_key_generator():
     """Returns a string of 40 random characters"""
@@ -54,7 +50,7 @@ def login(request: django.http.HttpRequest):
                 'status': 'fail',
                 'message': 'User has not verified the account',
             })
-        if obj.is_email_change:
+        elif obj.is_email_change:
             return django.http.JsonResponse({
                 'status': 'fail',
                 'message': 'User has not verified the new email address',
@@ -64,7 +60,13 @@ def login(request: django.http.HttpRequest):
         obj.is_2stepverif = True
         obj.save()
 
-        send_message(user, obj.activation_key)
+        subject = 'Двойная верификация аккаунта sharewood.online'
+        message = ('Здравствуйте! \n'
+                   'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
+                   'https://sharewood.online/user/{}/verificate/{} \n\n'
+                   'С уважением, команда Sharewood').format(user.username, obj.activation_key)
+
+        send_message(subject, message, user)
 
         return django.http.JsonResponse({
             'status': 'verification_required',
@@ -79,38 +81,6 @@ def login(request: django.http.HttpRequest):
 def remember(request: django.http.HttpRequest):
     try:
         user = User.objects.get(email=request.POST.get('email'))
-        if not user.is_active:
-            return django.http.JsonResponse({
-                'status': 'fail',
-                'message': 'Пользователь не подтвердил свою электронную почту',
-            })
-
-        activation_key = activation_key_generator()
-
-        Activation.objects.update_or_create(
-            username=user.username,
-            defaults={'activation_key': activation_key},
-        )
-
-        subject = 'Восстановление аккаунта sharewood.online'
-        message = ('Здравствуйте!\n'
-                   'Перейдите по ссылке, чтобы поменять ваш пароль: '
-                   'https://sharewood.online/user/{}/remember/{}\n\n'
-                   'С уважением, команда Sharewood').format(user.username, activation_key)
-        from_email = django.conf.settings.EMAIL_HOST_USER
-
-        try:
-            django.core.mail.send_mail(subject, message, from_email, [user.email])
-        except smtplib.SMTPException:
-            return django.http.JsonResponse({
-                'status': 'fail',
-                'message': 'Ошибка при отправке активационного письма',
-            })
-
-        return django.http.JsonResponse({
-            'status': 'ok',
-        })
-
     except django.core.exceptions.MultipleObjectsReturned:
         return django.http.JsonResponse({
             'status': 'fail',
@@ -121,6 +91,40 @@ def remember(request: django.http.HttpRequest):
             'status': 'fail',
             'message': 'Пользователь с такими данными не зарегестрирован',
         })
+
+    if not user.is_active:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'Пользователь не подтвердил свою электронную почту',
+        })
+
+    obj, created = Activation.objects.update_or_create(user=user)
+    if obj.is_registration:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'User has not verified the account',
+        })
+    elif obj.is_email_change:
+        return django.http.JsonResponse({
+            'status': 'fail',
+            'message': 'User has not verified the new email address',
+        })
+
+    obj.activation_key = activation_key_generator()
+    obj.is_remember = True
+    obj.save()
+
+    subject = 'Восстановление аккаунта sharewood.online'
+    message = ('Здравствуйте!\n'
+               'Перейдите по ссылке, чтобы поменять ваш пароль: '
+               'https://sharewood.online/user/{}/remember/{}\n\n'
+               'С уважением, команда Sharewood').format(user.username, activation_key)
+
+    send_message(subject, message, user)
+
+    return django.http.JsonResponse({
+        'status': 'ok',
+    })
 
 
 def change_email(request: django.http.HttpRequest):
