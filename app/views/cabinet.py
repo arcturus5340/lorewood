@@ -11,88 +11,52 @@ import django.db.utils
 import django.http
 import django.shortcuts
 import django.template.loader
-# import django_registration.backends.activation.views
-# import django_registration.forms
 import django.views.decorators.csrf
 
-import el_pagination.decorators
-
 import datetime
-import json
 import logging
-import os
 import PIL.Image
-import random
-import re
-import string
-import sys
-import typing
 
 import app.forms
 import app.models
 
-def cabinet(request: django.http.HttpRequest, username: str, list: str):
+
+def cabinet(request: django.http.HttpRequest, username: str, section: str):
     if request.user.username == username:
-        return django.shortcuts.render(request, 'user/cabinet.html', {'premium' : 1000, 'list' : list })
+        return django.shortcuts.render(request, 'user/cabinet.html', {'premium': 1000, 'section': section})
     return django.shortcuts.redirect('/')
 
 
-
-#TODO: refucktor this plz, @abinba
 def save_personal_data(request: django.http.HttpRequest):
-    username = request.user.username
-    filename = "default"
-
+    user = request.user
     try:
         im = PIL.Image.open(request.FILES.get('avatar'))
         width, height = im.size
+        new_size = min(height, width)
+        left = (width - new_size) / 2
+        top = (height - new_size) / 2
+        right = (width + new_size) / 2
+        bottom = (height + new_size) / 2
 
-        filename = django.conf.settings.MEDIA_ROOT + '/avatars/cropped/cropped-{}crop.jpg'.format(username)
-
-        if width > height:
-            diff = width - height
-            new_width = width - diff
-            new_height = height
-
-            left = int(diff / 2)
-            right = int(new_width + diff / 2)
-            top = 0
-            bottom = int(new_height)
-        elif height > width:
-            diff = height - width
-            new_height = height - diff
-            new_width = width
-
-            left = 0
-            right = int(new_width)
-            top = int(diff / 2)
-            bottom = int(new_height + diff / 2)
-        else:
-            left = 0
-            top = 0
-            right = width
-            bottom = height
+        filename = django.conf.settings.MEDIA_ROOT + '/avatars/cropped/cropped-{}crop.jpg'.format(user.username)
 
         image = im.crop((left, top, right, bottom))
         image.save(filename)
 
+        user.first_name = request.POST.get('first_name')
+        user.last_name = request.POST.get('last_name')
+        user.profile.bio = request.POST.get('bio')
+        user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(user.username)
+        user.save()
+
     except IOError:
-        logging.error('image-file could not be open/written')
+        pass
     except KeyError:
-        logging.error('output format could not be determined from the file name')
+        pass
     except AttributeError:
-        logging.error('image is not uploaded')
+        pass
 
-    user = django.contrib.auth.models.User.objects.get(username=username)
-    user.first_name = request.POST.get('first_name')
-    user.last_name = request.POST.get('last_name')
-    user.profile.bio = request.POST.get('bio')
-
-    if filename != "default":
-        user.profile.avatar = '/media/avatars/cropped/cropped-{}crop.jpg'.format(username)
-    user.save()
-
-    return django.shortcuts.redirect("/user/{}/cabinet/default".format(username))
+    return django.shortcuts.redirect("/user/{}/cabinet/default".format(user.username))
 
 
 def password_change_view(request: django.http.HttpRequest, username: str, activation_key: str):
@@ -189,7 +153,7 @@ def change_password(request: django.http.HttpRequest, username: str):
         response_data['result'] = 'Пароли не совпадают'
         # logging.warning('failed password change attempt (passwords do not match)')
     else:
-        response_data['result'] = validate_password(new_password1)
+        response_data['result'] = django.contrib.auth.password_validation.validate_password(new_password1)
         if not response_data['result']:
             try:
                 user = django.contrib.auth.models.User.objects.get(username=username)
@@ -219,7 +183,7 @@ def change_cabinet_password(request: django.http.HttpRequest):
         response_data['result'] = 'Пароли не совпадают'
         # logging.warning('failed cabinet password change attempt (passwords do not match)')
     else:
-        response_data['result'] = validate_password(new_password1)
+        response_data['result'] = django.contrib.auth.password_validation.validate_password(new_password1)
         if not response_data['result']:
             try:
                 user = django.contrib.auth.models.User.objects.get(username=username)

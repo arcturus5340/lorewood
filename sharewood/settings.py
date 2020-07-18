@@ -167,5 +167,3 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'abinba28@gmail.com'
 EMAIL_HOST_PASSWORD = 'MobyDick228'
 EMAIL_PORT = 587
-
-
