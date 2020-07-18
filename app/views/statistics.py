@@ -1,31 +1,16 @@
-import django.http
-import django.contrib.auth.models
-
-import app.models
-import app.forms
-
-import django.contrib.auth
-import django.contrib.auth.forms
-import django.contrib.auth.models
-import django.contrib.auth.password_validation
-import django.core.exceptions
-import django.core.mail
-import django.core.paginator
-import django.db.models
-import django.db.utils
-import django.http
-import django.shortcuts
-import django.template.loader
-import django.utils.timezone
-import django.views.decorators.csrf
+from django.contrib.auth.models import User
+from django.http import HttpRequest
+from django.shortcuts import render
+from django.utils import timezone
 
 import collections
 import datetime
-import string
+
+from app.models import Revenue
 
 
-def statistics(request: django.http.HttpRequest):
-    dates = django.contrib.auth.models.User.objects.order_by('date_joined').values_list('date_joined', 'last_login')
+def statistics(request: HttpRequest):
+    dates = User.objects.order_by('date_joined').values_list('date_joined', 'last_login')
 
     class OrderedCounter(collections.Counter, collections.OrderedDict):
         pass
@@ -40,14 +25,14 @@ def statistics(request: django.http.HttpRequest):
 
     for join_date, login_date in dates:
         registration_dates[join_date.strftime('%d %B %Y')] += 1
-        if (django.utils.timezone.now() - datetime.timedelta(weeks=1)) < login_date:
+        if (timezone.now() - datetime.timedelta(weeks=1)) < login_date:
             last_login_dates['За последнюю неделю'] += 1
-        elif (django.utils.timezone.now() - datetime.timedelta(days=30)) < login_date:
+        elif (timezone.now() - datetime.timedelta(days=30)) < login_date:
             last_login_dates['За последний месяц'] += 1
         else:
             last_login_dates['За поледний год и более'] += 1
 
-    revenue = {date.strftime('%d %B %Y'): income for date, income in app.models.Revenue.objects.values_list('date', 'income')}
+    revenue = {date.strftime('%d %B %Y'): income for date, income in Revenue.objects.values_list('date', 'income')}
 
     context = {
         'registration_dates': list(registration_dates.keys()),
@@ -57,6 +42,5 @@ def statistics(request: django.http.HttpRequest):
         'revenue_dates': list(revenue.keys()),
         'revenue_amount': list(revenue.values()),
     }
-    print(context)
 
-    return django.shortcuts.render(request, 'statistics.html', context)
+    return render(request, 'statistics.html', context)
