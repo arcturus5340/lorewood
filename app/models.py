@@ -79,6 +79,9 @@ class Revenue(models.Model):
 class Activation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     activation_key = models.TextField(unique=True)
+    is_registration = models.BooleanField(default=False)
+    is_2stepverif = models.BooleanField(default=False)
+    is_email_change = models.BooleanField(default=False)
     new_email = models.CharField(max_length=254, null=True, blank=True)
 
 
