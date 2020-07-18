@@ -1,34 +1,21 @@
-import django.conf
-import django.contrib.auth
-import django.contrib.auth.forms
-import django.contrib.auth.models
-import django.contrib.auth.password_validation
-import django.core.exceptions
-import django.core.mail
-import django.core.paginator
-import django.db.models
-import django.db.utils
-import django.http
-import django.shortcuts
-import django.template.loader
-import django.views.decorators.csrf
+from django.contrib.auth.models import User
+from django.db.models import Q
+from django.http import HttpRequest
+from django.http.response import JsonResponse
+from django.shortcuts import render
 
 import el_pagination.decorators
 
 import datetime
-import logging
 import mimetypes
 import random
-import typing
+from typing import Optional
 
-import app.forms
-from app.models import Files, Headers, Records, Rated_Users, Tags, Provided_Users, Revenue
-from django.contrib.auth.models import User
-from django.db.models import Q
-from django.http.response import JsonResponse
+from app.models import Comments, Records, Rated_Users, Provided_Users, Revenue
+
 
 @el_pagination.decorators.page_template('records_list.html')
-def index(request: django.http.HttpRequest, template: str = 'index.html', extra_context: typing.Optional[dict] = None):
+def index(request: HttpRequest, template: str = 'index.html', extra_context: Optional[dict] = None):
     records = Records.objects.order_by('-rating')
 
     context = {
@@ -39,14 +26,12 @@ def index(request: django.http.HttpRequest, template: str = 'index.html', extra_
     if extra_context is not None:
         context.update(extra_context)
 
-    return django.shortcuts.render(request, template, context)
+    return render(request, template, context)
 
 
 # TODO: output date and time for client time zone
-# TODO: optimize search of media-content
 @el_pagination.decorators.page_template('comments_list.html')
-def record(request: django.http.HttpRequest, record_id: int, template: str = "record.html",
-           extra_context: typing.Optional[dict] = None):
+def record(request: HttpRequest, record_id: int, template: str = "record.html", extra_context: Optional[dict] = None):
     records_qs = Records.objects.all()
     current_record = records_qs.get(id=record_id)
     prev_record = records_qs.filter(pk__gt=current_record.pk).order_by('-pk').first()
@@ -57,11 +42,9 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
         content[header.title] = list()
         for file in header.files_set.all():
             file_type, _ = mimetypes.guess_type(file.src.name)
-            if (not file_type) and file:
-                if file:
-                    logging.error('can\'t guess file type: {}'.format(file))
+            if not file_type:
                 continue
-            if file_type.split('/')[0] == 'video':
+            elif file_type.split('/')[0] == 'video':
                 content[header.title].append(('V', file))
             elif file_type.split('/')[0] == 'audio':
                 content[header.title].append(('A', file))
@@ -82,10 +65,12 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
         )
 
     if request.POST.get('add_comment'):
-        app.models.Comments.objects.create(author=request.user,
-                                           content=request.POST.get('add_comment'),
-                                           date=datetime.datetime.now(),
-                                           record=current_record)
+        Comments.objects.create(
+            author=request.user,
+            content=request.POST.get('add_comment'),
+            date=datetime.datetime.now(),
+            record=current_record
+        )
 
     if request.POST.get('action') == 'postratings':
         new_rate = int(request.POST.get('rate'))
@@ -101,8 +86,6 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
         'record': current_record,
         'prev_record': prev_record,
         'next_record': next_record,
-        'author': current_record.author,
-        'profile': current_record.author.profile,
         'similar_records': two_similar_records,
         'comments': current_record.comments_set.order_by('-date').all(),
         'content': content,
@@ -113,10 +96,10 @@ def record(request: django.http.HttpRequest, record_id: int, template: str = "re
     if extra_context is not None:
         context.update(extra_context)
 
-    return django.shortcuts.render(request, template, context)
+    return render(request, template, context)
 
 
-def buy(request, record_id):
+def buy(request: HttpRequest, record_id: int):
     if not request.user.is_active:
         response = {
             'status': 'fail',
@@ -124,7 +107,7 @@ def buy(request, record_id):
         }
         return JsonResponse(response)
 
-    record = Records.objects.get(id=record_id)
+    current_record = Records.objects.get(id=record_id)
     user = request.user
 
     if (user.profile.balance - record.price) < 0:
@@ -134,7 +117,7 @@ def buy(request, record_id):
         }
         return JsonResponse(response)
 
-    if Provided_Users.objects.filter(user=user, record=record).exists():
+    if Provided_Users.objects.filter(user=user, record=current_record).exists():
         response = {
             'status': 'fail',
             'message': 'User is provided with this record',
@@ -143,17 +126,17 @@ def buy(request, record_id):
 
     # Free-kassa code
 
-    user.profile.balance -= record.price
+    user.profile.balance -= current_record.price
     user.profile.save()
 
-    Provided_Users.objects.create(user=user, record=record)
+    Provided_Users.objects.create(user=user, record=current_record)
 
     obj, _ = Revenue.objects.get_or_create(date=datetime.date.today(), defaults={'income': 0})
-    obj.income += record.price
+    obj.income += current_record.price
     obj.save()
 
-    record.sales += 1
-    record.save()
+    current_record.sales += 1
+    current_record.save()
 
     response = {
         'status': 'ok',
@@ -162,8 +145,7 @@ def buy(request, record_id):
 
 
 @el_pagination.decorators.page_template('records_list.html')
-def records_by_tags(request: django.http.HttpRequest, tag: str, template: str = 'records_by_tag.html',
-                    extra_context: typing.Optional[dict] = None):
+def records_by_tags(request: HttpRequest, tag: str, template: str = 'records_by_tag.html', extra_context: Optional[dict] = None):
     context = {
         'tag': tag,
         'records': Records.objects.filter(tags__tag=tag),
@@ -172,14 +154,12 @@ def records_by_tags(request: django.http.HttpRequest, tag: str, template: str = 
     if extra_context is not None:
         context.update(extra_context)
 
-    return django.shortcuts.render(request, template, context)
+    return render(request, template, context)
 
 
 # TODO: port on PostgreSQL for more effective search
 @el_pagination.decorators.page_template('records_list.html')
-def search(request: django.http.HttpRequest, template: str = 'search.html',
-           extra_context: typing.Optional[dict] = None):
-
+def search(request: HttpRequest, template: str = 'search.html', extra_context: Optional[dict] = None):
     search_text = request.GET.get('s')
     found_records = Records.objects.filter(
         Q(title__icontains=search_text) | Q(description__icontains=search_text) |
@@ -194,24 +174,24 @@ def search(request: django.http.HttpRequest, template: str = 'search.html',
     if extra_context is not None:
         context.update(extra_context)
 
-    return django.shortcuts.render(request, template, context)
+    return render(request, template, context)
 
 
-def advertising(request: django.http.HttpRequest):
-    return django.shortcuts.render(request, 'advertising.html')
+def advertising(request: HttpRequest):
+    return render(request, 'advertising.html')
 
 
-def donations(request: django.http.HttpRequest):
-    return django.shortcuts.render(request, 'donations.html')
+def donations(request: HttpRequest):
+    return render(request, 'donations.html')
 
 
-def info(request: django.http.HttpRequest):
-    return django.shortcuts.render(request, 'info.html')
+def info(request: HttpRequest):
+    return render(request, 'info.html')
 
 
-def regulations(request: django.http.HttpRequest):
-    return django.shortcuts.render(request, 'regulations.html')
+def regulations(request: HttpRequest):
+    return render(request, 'regulations.html')
 
 
-def rightholder(request: django.http.HttpRequest):
-    return django.shortcuts.render(request, 'rightholder.html')
+def rightholder(request: HttpRequest):
+    return render(request, 'rightholder.html')
