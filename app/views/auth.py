@@ -162,7 +162,6 @@ def change_email(request: HttpRequest):
     })
 
 
-# TODO: write own validators
 def register(request: HttpRequest):
     username = request.POST.get('username')
     email = request.POST.get('email')
@@ -178,7 +177,8 @@ def register(request: HttpRequest):
     elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
         return JsonResponse({
             'status': 'fail',
-            'message': 'Логин должен начинаться с латинской буквы, а также состоять только из латинских букв, цифр и символов . и _ ',
+            'message': 'Логин должен начинаться с латинской буквы, '
+                       'а также состоять только из латинских букв, цифр и символов . и _ ',
         })
 
     elif User.objects.filter(username=username).exists():
@@ -187,7 +187,7 @@ def register(request: HttpRequest):
             'message': 'Такой логин уже зарегестрирован',
         })
 
-    elif len(username) > 30:
+    elif len(username) > 32:
         return JsonResponse({
             'status': 'fail',
             'message': 'Слишком длинный логин',
@@ -202,35 +202,9 @@ def register(request: HttpRequest):
     try:
         auth.password_validation.validate_password(password)
     except exceptions.ValidationError as err:
-        minimum_length = re.compile(r'This password is too short. It must contain at least [0-9]* characters?\.')
-        attribute_similarity = re.compile(r'The password is too similar to the (username|first_name|last_name|email)\.')
-
-        if list(filter(minimum_length.match, err)):
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'Пароль слишком короткий. Минимальное количество - {} символов'.format(
-                    auth.password_validation.MinimumLengthValidator().min_length
-                ),
-            })
-        elif list(filter(attribute_similarity.match, err)):
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'Пароль схож с Вашими личными данными',
-            })
-        elif 'This password is too common.' in err:
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'Пароль слишком предсказуемый',
-            })
-        elif 'This password is entirely numeric.' in err:
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'Пароль не может состоять лишь из цифр',
-            })
-
         return JsonResponse({
             'status': 'fail',
-            'message': 'Ошибка при валидации пароля',
+            'message': err.messages[0],
         })
 
     user = auth.models.User.objects.create_user(username, email, password)
