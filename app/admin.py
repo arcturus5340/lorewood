@@ -1,21 +1,22 @@
 from django import forms
 from django.contrib import admin
 
-from app.models import Media, Records, Profile
+from app.models import Files, Headers, Records, Profile
 
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 import social_django.models
 
 
-class MediaAdmin(admin.ModelAdmin):
-	list_display = (
-		'record',
-		'title',
-		*['file{}'.format(i) for i in range(1, 26)],
+class FilesAdmin(admin.ModelAdmin):
+	list_filter = search_fields = list_display = (
+		'header',
+		'src',
 	)
-	list_filter = search_fields = (
-		'record',
+
+class HeadersAdmin(admin.ModelAdmin):
+	list_filter = search_fields = list_display = (
 		'title',
+		'record',
 	)
 
 
@@ -46,10 +47,9 @@ class RecordsAdmin(admin.ModelAdmin):
 		'author',
 		'description',
 		'includes',
-		'text',
+		'content',
 		'price',
 		'date',
-		'tags',
 		'pre_video',
 		'main_pic',
 	)
@@ -72,13 +72,13 @@ class RecordsAdmin(admin.ModelAdmin):
 		'rating_count',
 		'rating_sum',
 		'rated_users',
-		'comments_count',
 		'sales',
 	)
 
 
 admin.site.site_header = "Sharewood"
-admin.site.register(Media, MediaAdmin)
+admin.site.register(Files, FilesAdmin)
+admin.site.register(Headers, HeadersAdmin)
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Records, RecordsAdmin)
 admin.site.unregister(social_django.models.Association)

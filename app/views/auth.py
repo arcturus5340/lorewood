@@ -308,3 +308,18 @@ def password_change(request: HttpRequest, username: str, activation_key: str):
         pass
 
     return render(request, 'invalid_activation_key.html')
+
+
+def change_email_confirm(request: HttpRequest, username, activation_key):
+    try:
+        activation_obj = Activation.objects.get(username=username)
+        if (activation_obj.activation_key == activation_key) and activation_obj.is_email_change:
+            user = User.objects.get(username=username)
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            activation_obj.delete()
+            return redirect('/')
+
+    except exceptions.ObjectDoesNotExist:
+        pass
+
+    return render(request, 'invalid_activation_key.html')
