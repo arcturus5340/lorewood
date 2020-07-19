@@ -11,12 +11,12 @@ import datetime
 import PIL.Image
 
 import app.forms
-from app.models import Activation
+from app.models import Activation, Global_Settings, Revenue
 
 
 def cabinet(request: HttpRequest, username: str, section: str):
     if request.user.username == username:
-        return render(request, 'user/cabinet.html', {'premium': 1000, 'section': section})
+        return render(request, 'user/cabinet.html', {'premium': Global_Settings.objects.get(setting='Premium').value, 'section': section})
     return redirect('/')
 
 
@@ -73,34 +73,35 @@ def two_verif_off(request):
     return redirect('/user/{}/cabinet/list-settings'.format(request.user.username))
 
 
-# TODO: double buy
-# TODO: is user active
 def buy_premium(request):
-    message = 0
+    user = request.user
 
-    if request.user.is_active:
-        cost = 1000
-        balance = request.user.profile.balance
-        new_balance = balance - cost
-        if new_balance < 0:
-            message = "NOT_ENOUGH"
-        else :
-            request.user.profile.balance = new_balance
-            request.user.save()
+    if not user.profile.is_verified:
+        JsonResponse({
+            'status': 'fail',
+            'message': 'User is not verified',
+        })
 
-            request.user.profile.is_premium = True
-            request.user.save()
+    if user.profile.is_premium:
+        JsonResponse({
+            'status': 'fail',
+            'message': 'User have premium',
+        })
 
-            today = datetime.date.today() + datetime.timedelta(days=1)
-            try:
-                obj = app.models.Revenue.objects.get(date=today)
-                obj.income += cost
-                obj.save()
-            except exceptions.ObjectDoesNotExist:
-                app.models.Revenue.objects.create(date=today, income=cost)
+    cost = Global_Settings.objects.get(setting='Premium').value
+    if user.profile.balance - cost < 0:
+        JsonResponse({
+            'status': 'fail',
+            'message': 'Balance is not enought',
+        })
 
-    else:
-        message = "ACTIVATE"
+    user.profile.balance -= cost
+    user.profile.is_premium = True
+    user.save()
+
+    obj, _ = Revenue.objects.get_or_create(date=datetime.date.today(), defaults={'income': 0})
+    obj.income += cost
+    obj.save()
 
     return redirect('/user/{}/cabinet/list-buy-premium'.format(request.user.username))
 
