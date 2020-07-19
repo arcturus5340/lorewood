@@ -1,10 +1,11 @@
-from django.contrib import auth
-from django.contrib.auth.models import User
-from django.http.request import HttpRequest
-from django.http.response import JsonResponse
 from django.conf import settings
+from django.contrib import auth
+from django.contrib.auth import password_validation
+from django.contrib.auth.models import User
 from django.core import mail
 from django.core import exceptions
+from django.http.request import HttpRequest
+from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 
 import random
@@ -283,6 +284,21 @@ def verificate_login(request: HttpRequest, username: str, activation_key: str):
     try:
         activation_obj = Activation.objects.get(username=username)
         if (activation_obj.activation_key == activation_key) and activation_obj.is_2stepverif:
+            user = User.objects.get(username=username)
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            activation_obj.delete()
+            return redirect('/')
+
+    except exceptions.ObjectDoesNotExist:
+        pass
+
+    return render(request, 'invalid_activation_key.html')
+
+
+def password_change(request: HttpRequest, username: str, activation_key: str):
+    try:
+        activation_obj = Activation.objects.get(username=username)
+        if (activation_obj.activation_key == activation_key) and activation_obj.is_remember:
             user = User.objects.get(username=username)
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()

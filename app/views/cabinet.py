@@ -59,18 +59,6 @@ def save_personal_data(request: django.http.HttpRequest):
     return django.shortcuts.redirect("/user/{}/cabinet/default".format(user.username))
 
 
-def password_change_view(request: django.http.HttpRequest, username: str, activation_key: str):
-    try:
-        if app.models.UserActivation.objects.get(username=username).activation_key != activation_key:
-            logging.warning('failed password change attempt (keys do not match)')
-            template = django.template.loader.get_template('../templates/invalid_activation_key.html')
-            return django.http.HttpResponse(template.render())
-    except django.core.exceptions.ObjectDoesNotExist:
-        logging.error('failed password change attempt (user \'{}\' does not exist)'.format(username))
-
-    return django.shortcuts.render(request, 'user/password_change.html', {'username': username})
-
-
 def change_email_confirm(request: django.http.HttpRequest, username, activation_key):
     try:
         compare_data = app.models.UserEmail.objects.get(username=username)
