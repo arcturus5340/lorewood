@@ -100,7 +100,8 @@ def record(request: HttpRequest, record_id: int, template: str = "record.html", 
 
 
 def buy(request: HttpRequest, record_id: int):
-    if not request.user.is_active:
+    user = request.user
+    if not user.is_verified:
         response = {
             'status': 'fail',
             'message': 'User account is not activated',
@@ -108,7 +109,6 @@ def buy(request: HttpRequest, record_id: int):
         return JsonResponse(response)
 
     current_record = Records.objects.get(id=record_id)
-    user = request.user
 
     if (user.profile.balance - record.price) < 0:
         response = {
@@ -123,8 +123,6 @@ def buy(request: HttpRequest, record_id: int):
             'message': 'User is provided with this record',
         }
         return JsonResponse(response)
-
-    # Free-kassa code
 
     user.profile.balance -= current_record.price
     user.profile.save()

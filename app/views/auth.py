@@ -92,7 +92,7 @@ def remember(request: HttpRequest):
             'message': 'Пользователь с такими данными не зарегестрирован',
         })
 
-    if not user.is_active:
+    if not user.profile.is_verified:
         return JsonResponse({
             'status': 'fail',
             'message': 'Пользователь не подтвердил свою электронную почту',
@@ -270,6 +270,8 @@ def activate_account(request: HttpRequest, username: str, activation_key: str):
         activation_obj = Activation.objects.get(username=username)
         if (activation_obj.activation_key == activation_key) and activation_obj.is_registration:
             user = User.objects.get(username=username)
+            user.profile.is_verified = True
+            user.save()
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()
             return redirect('/')

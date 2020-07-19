@@ -81,6 +81,7 @@ class Activation(models.Model):
     activation_key = models.TextField(unique=True)
     is_registration = models.BooleanField(default=False)
     is_2stepverif = models.BooleanField(default=False)
+    is_remember = models.BooleanField(default=False)
     is_email_change = models.BooleanField(default=False)
     new_email = models.CharField(max_length=254, null=True, blank=True)
 
@@ -92,7 +93,12 @@ class Profile(models.Model):
     balance = models.IntegerField(default=0)
     is_premium = models.BooleanField(default=False)
     has_2stepverif = models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Профиль" 
         verbose_name_plural = "Профили"
+
+class Global_Settings(models.Model):
+    setting = models.TextField(unique=True)
+    value = models.IntegerField()
