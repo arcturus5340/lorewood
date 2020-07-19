@@ -1,16 +1,15 @@
 from django.conf import settings
-from django.http.request import HttpRequest
-from django.http.response import HttpResponse, JsonResponse
-from django.shortcuts import redirect, render
-from django.contrib.auth.models import User
-
-from django.core import exceptions
 from django.contrib import auth
+from django.contrib.auth import password_validation
+from django.contrib.auth.models import User
+from django.core import exceptions
+from django.http.request import HttpRequest
+from django.http.response import JsonResponse
+from django.shortcuts import redirect, render
 
 import datetime
 import PIL.Image
 
-import app.forms
 from app.models import Activation, Global_Settings, Revenue
 
 
@@ -77,20 +76,20 @@ def buy_premium(request):
     user = request.user
 
     if not user.profile.is_verified:
-        JsonResponse({
+        return JsonResponse({
             'status': 'fail',
             'message': 'User is not verified',
         })
 
     if user.profile.is_premium:
-        JsonResponse({
+        return JsonResponse({
             'status': 'fail',
             'message': 'User have premium',
         })
 
     cost = Global_Settings.objects.get(setting='Premium').value
     if user.profile.balance - cost < 0:
-        JsonResponse({
+        return JsonResponse({
             'status': 'fail',
             'message': 'Balance is not enought',
         })
@@ -109,24 +108,32 @@ def buy_premium(request):
 def change_password(request: HttpRequest, username: str):
     new_password1 = request.POST.get('new_password1')
     new_password2 = request.POST.get('new_password2')
-    response_data = {}
 
     if new_password1 != new_password2:
-        response_data['result'] = 'Пароли не совпадают'
-    else:
-        response_data['result'] = auth.password_validation.validate_password(new_password1)
-        if not response_data['result']:
-            try:
-                user = auth.models.User.objects.get(username=username)
-                user.set_password(new_password1)
-                user.save()
-            except exceptions.ObjectDoesNotExist:
-                pass
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Passwords mismatch',
+        })
 
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            # ???
-            Activation.objects.get(username=username).delete()
-            response_data['result'] = 'Success!'
+    if auth.password_validation.validate_password(new_password1):
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Password validation error',
+        })
 
-    return JsonResponse(response_data)
+    try:
+        user = User.objects.get(username=username)
+        user.set_password(new_password1)
+        user.save()
+        auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+        return JsonResponse({
+            'status': 'ok',
+        })
 
+    except exceptions.ObjectDoesNotExist:
+        pass
+
+    return JsonResponse({
+        'status': 'fail',
+        'message': 'Inner db error',
+    })
