@@ -183,12 +183,14 @@ def register(request: HttpRequest):
 
     send_message(subject, message, user)
 
-    # user = auth.authenticate(username=username, password=password)
-    # if not user:
-    #     return JsonResponse({
-    #         'status': 'fail',
-    #         'message': 'Authentication error',
-    #     })
+    user = auth.authenticate(username=username, password=password)
+    if not user:
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Authentication error',
+        })
+
+    auth.login(request, user)
 
     return JsonResponse({
         'status': 'ok',
