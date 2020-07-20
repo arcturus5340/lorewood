@@ -6,7 +6,7 @@ from django.core import mail
 from django.core import exceptions
 from django.http.request import HttpRequest
 from django.http.response import JsonResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 
 import logging
 import random
@@ -48,7 +48,7 @@ def login(request: HttpRequest):
             'message': 'Invalid credentials',
         })
 
-    if user.profile.has_2stepverif:
+    if user.profile.has_2step_verification:
         obj, created = Activation.objects.get_or_create(user=user)
         if obj.is_registration:
             logger.info('Authentication fail: User did not verify account')
@@ -64,13 +64,13 @@ def login(request: HttpRequest):
             })
 
         obj.activation_key = activation_key_generator()
-        obj.is_2stepverif = True
+        obj.is_2step_verification = True
         obj.save()
 
         subject = 'Двойная верификация аккаунта sharewood.online'
         message = ('Здравствуйте! \n'
                    'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
-                   'https://sharewood.online/user/{}/verificate/{} \n\n'
+                   'https://sharewood.online/user/{}/verify/{} \n\n'
                    'С уважением, команда Sharewood').format(user.username, obj.activation_key)
 
         send_message(subject, message, user)
@@ -84,60 +84,6 @@ def login(request: HttpRequest):
     return JsonResponse({
         'status': 'ok',
         'message': 'The User logged in'
-    })
-
-
-def remember(request: HttpRequest):
-    try:
-        user = User.objects.get(email=request.POST.get('email'))
-    except exceptions.MultipleObjectsReturned:
-        logger.warning('DataBase error: Multiple users are returned for one email address')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'Ошибка безопасности. Обратитесь к администратору сайта',
-        })
-    except exceptions.ObjectDoesNotExist:
-        logger.warning('Password recovery fail: No user with given email address was found')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'Пользователь с такими данными не зарегестрирован',
-        })
-
-    if not user.profile.is_verified:
-        logger.info('Password recovery fail: User did not verify account')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'Пользователь не подтвердил свою электронную почту',
-        })
-
-    obj, created = Activation.objects.update_or_create(user=user)
-    if obj.is_registration:
-        logger.info('Password recovery fail: User did not verify account after registration')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User has not verified the account',
-        })
-    elif obj.is_email_change:
-        logger.info('Password recovery fail: User did not verify account with new email')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User has not verified the new email address',
-        })
-
-    obj.activation_key = activation_key_generator()
-    obj.is_remember = True
-    obj.save()
-
-    subject = 'Восстановление аккаунта sharewood.online'
-    message = ('Здравствуйте!\n'
-               'Перейдите по ссылке, чтобы поменять ваш пароль: '
-               'https://sharewood.online/user/{}/remember/{}\n\n'
-               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
-
-    send_message(subject, message, user)
-
-    return JsonResponse({
-        'status': 'ok',
     })
 
 
@@ -256,89 +202,68 @@ def register(request: HttpRequest):
     })
 
 
+def remember(request: HttpRequest):
+    try:
+        email = request.POST.get('email')
+        if email:
+            user = User.objects.get(email=email)
+        else:
+            logger.warning('Password recovery fail: Invalid email address')
+            return JsonResponse({
+                'status': 'fail',
+                'message': 'Ошибка безопасности. Обратитесь к администратору сайта',
+            })
+    except exceptions.MultipleObjectsReturned:
+        logger.warning('DataBase error: Multiple users are returned for one email address')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Ошибка безопасности. Обратитесь к администратору сайта',
+        })
+    except exceptions.ObjectDoesNotExist:
+        logger.warning('Password recovery fail: No user with given email address was found')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Пользователь с такими данными не зарегестрирован',
+        })
+
+    if not user.profile.is_verified:
+        logger.info('Password recovery fail: User did not verify account')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Пользователь не подтвердил свою электронную почту',
+        })
+
+    obj, created = Activation.objects.update_or_create(user=user)
+    if obj.is_registration:
+        logger.info('Password recovery fail: User did not verify account after registration')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'User has not verified the account',
+        })
+    elif obj.is_email_change:
+        logger.info('Password recovery fail: User did not verify account with new email')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'User has not verified the new email address',
+        })
+
+    obj.activation_key = activation_key_generator()
+    obj.is_remember = True
+    obj.save()
+
+    subject = 'Восстановление аккаунта sharewood.online'
+    message = ('Здравствуйте!\n'
+               'Перейдите по ссылке, чтобы поменять ваш пароль: '
+               'https://sharewood.online/user/{}/remember/{}\n\n'
+               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
+
+    send_message(subject, message, user)
+
+    return JsonResponse({
+        'status': 'ok',
+    })
+
+
 def logout(request: HttpRequest):
     auth.logout(request)
     return redirect("/")
-
-
-def activate_account(request: HttpRequest, username: str, activation_key: str):
-    try:
-        user = User.objects.get(username=username)
-        activation_obj = Activation.objects.get(user=user)
-        if (activation_obj.activation_key == activation_key) and activation_obj.is_registration:
-            user.profile.is_verified = True
-            user.save()
-
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            activation_obj.delete()
-            return redirect('/')
-        else:
-            logger.warning('Account activation fail: Wrong activation key')
-
-    except exceptions.MultipleObjectsReturned:
-        logger.warning('DataBase error: Multiple activation objects are returned for one username')
-    except exceptions.ObjectDoesNotExist:
-        logger.warning('Account activation fail: Wrong username')
-
-    return render(request, 'invalid_activation_key.html')
-
-
-def verificate_login(request: HttpRequest, username: str, activation_key: str):
-    try:
-        user = User.objects.get(username=username)
-        activation_obj = Activation.objects.get(user=user)
-        if (activation_obj.activation_key == activation_key) and activation_obj.is_2stepverif:
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            activation_obj.delete()
-            return redirect('/')
-        else:
-            logger.warning('2-step-verification fail: Wrong activation key')
-
-    except exceptions.MultipleObjectsReturned:
-        logger.warning('DataBase error: Multiple activation objects are returned for one username')
-    except exceptions.ObjectDoesNotExist:
-        logger.warning('2-step-verification fail: Wrong username')
-
-    return render(request, 'invalid_activation_key.html')
-
-
-# TODO: Repair password change
-def password_change(request: HttpRequest, username: str, activation_key: str):
-    try:
-        user = User.objects.get(username=username)
-        activation_obj = Activation.objects.get(user=user)
-        if (activation_obj.activation_key == activation_key) and activation_obj.is_remember:
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            activation_obj.delete()
-            return redirect('/')
-        else:
-            logger.warning('Password change fail: Wrong activation key')
-
-    except exceptions.MultipleObjectsReturned:
-        logger.warning('DataBase error: Multiple activation objects are returned for one username')
-    except exceptions.ObjectDoesNotExist:
-        logger.warning('Password change fail: Wrong username')
-
-    return render(request, 'invalid_activation_key.html')
-
-
-def change_email_confirm(request: HttpRequest, username, activation_key):
-    try:
-        user = User.objects.get(username=username)
-        activation_obj = Activation.objects.get(user=user)
-        if (activation_obj.activation_key == activation_key) and activation_obj.is_email_change:
-            user.email = activation_obj.new_email
-            user.save()
-
-            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            activation_obj.delete()
-            return redirect('/')
-        else:
-            logger.warning('Email change fail: Wrong activation key')
-
-    except exceptions.MultipleObjectsReturned:
-        logger.warning('DataBase error: Multiple activation objects are returned for one username')
-    except exceptions.ObjectDoesNotExist:
-        logger.warning('Email change fail: Wrong username')
-
-    return render(request, 'invalid_activation_key.html')
