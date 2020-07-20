@@ -19,6 +19,18 @@ from app.models import Activation
 logger = logging.getLogger('app')
 
 
+def is_verified(func):
+    def wrapper(request: HttpRequest, *args, **kwargs):
+        if request.user.profile.is_verified:
+            return func(request, *args, **kwargs)
+        else:
+            return JsonResponse({
+                'status': 'fail',
+                'message': 'User has not verified the account',
+            })
+    return wrapper
+
+
 def send_message(subject: str, message: str, user: User):
     from_email = settings.EMAIL_HOST_USER
     try:
@@ -50,19 +62,6 @@ def login(request: HttpRequest):
 
     if user.profile.has_2step_verification:
         obj, created = Activation.objects.get_or_create(user=user)
-        if obj.is_registration:
-            logger.info('Authentication fail: User did not verify account')
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'User has not verified the account',
-            })
-        elif obj.is_email_change:
-            logger.info('Authentication fail: User has not verified the new email address')
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'User has not verified the new email address',
-            })
-
         obj.activation_key = activation_key_generator()
         obj.is_2step_verification = True
         obj.save()
@@ -87,6 +86,7 @@ def login(request: HttpRequest):
     })
 
 
+@is_verified
 def change_email(request: HttpRequest):
     user = request.user
     new_email = request.POST.get('email')
@@ -99,13 +99,6 @@ def change_email(request: HttpRequest):
         })
 
     obj, created = Activation.objects.update_or_create(user=user)
-    if obj.is_registration:
-        logger.info('Email change fail: User did not verify account after registration')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User has not verified the account',
-        })
-
     obj.activation_key = activation_key_generator()
     obj.new_email = new_email
     obj.is_email_change = True
@@ -202,6 +195,7 @@ def register(request: HttpRequest):
     })
 
 
+@is_verified
 def remember(request: HttpRequest):
     try:
         email = request.POST.get('email')
@@ -226,27 +220,7 @@ def remember(request: HttpRequest):
             'message': 'Пользователь с такими данными не зарегестрирован',
         })
 
-    if not user.profile.is_verified:
-        logger.info('Password recovery fail: User did not verify account')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'Пользователь не подтвердил свою электронную почту',
-        })
-
     obj, created = Activation.objects.update_or_create(user=user)
-    if obj.is_registration:
-        logger.info('Password recovery fail: User did not verify account after registration')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User has not verified the account',
-        })
-    elif obj.is_email_change:
-        logger.info('Password recovery fail: User did not verify account with new email')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User has not verified the new email address',
-        })
-
     obj.activation_key = activation_key_generator()
     obj.is_remember = True
     obj.save()

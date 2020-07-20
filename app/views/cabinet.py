@@ -11,10 +11,12 @@ import logging
 import PIL.Image
 
 from app.models import Activation, Global_Settings, Revenue
+from .auth import is_verified
 
 logger = logging.getLogger('app')
 
 
+@is_verified
 def cabinet(request: HttpRequest, username: str, section: str):
     if request.user.username == username:
         context = {
@@ -27,6 +29,7 @@ def cabinet(request: HttpRequest, username: str, section: str):
     return redirect('/')
 
 
+@is_verified
 def save_personal_data(request: HttpRequest):
     user = request.user
     try:
@@ -57,6 +60,7 @@ def save_personal_data(request: HttpRequest):
     return redirect("/user/{}/cabinet/default".format(user.username))
 
 
+@is_verified
 def two_verif_on(request: HttpRequest):
     user = request.user
     if Activation.objects.filter(user=user, is_registration=True).exists:
@@ -73,6 +77,7 @@ def two_verif_on(request: HttpRequest):
     })
 
 
+@is_verified
 def two_verif_off(request):
     user = request.user
     user.profile.two_verif = False
@@ -80,6 +85,7 @@ def two_verif_off(request):
     return redirect('/user/{}/cabinet/list-settings'.format(request.user.username))
 
 
+@is_verified
 def buy_premium(request):
     user = request.user
 
