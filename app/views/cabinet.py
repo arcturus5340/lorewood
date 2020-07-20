@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.contrib import auth
 from django.contrib.auth import password_validation
-from django.contrib.auth.models import User
 from django.core import exceptions
 from django.http.request import HttpRequest
 from django.http.response import JsonResponse
@@ -61,7 +60,7 @@ def save_personal_data(request: HttpRequest):
 def two_verif_on(request: HttpRequest):
     user = request.user
     if Activation.objects.filter(user=user, is_registration=True).exists:
-        user.profile.has_2stepverif = True
+        user.profile.has_2step_verification = True
         user.save()
         return JsonResponse({
             'status': 'ok',
@@ -117,7 +116,22 @@ def buy_premium(request):
     return redirect('/user/{}/cabinet/list-buy-premium'.format(request.user.username))
 
 
-def change_password(request: HttpRequest, username: str):
+def change_password(request: HttpRequest):
+    activation_key = request.POST.get('activation_key')
+    if request.user.is_anonymous and not Activation.objects.filter(activation_key=activation_key).exists():
+        logger.info('Password change fail: Wrong activation key')
+        return JsonResponse({
+            'status': 'fail',
+            'message': 'Wrong activation key',
+        })
+
+    elif request.user.is_authenticated:
+        user = request.user
+    else:
+        activation_obj = Activation.objects.get(activation_key=activation_key)
+        user = activation_obj.user
+        activation_obj.delete()
+
     new_password1 = request.POST.get('new_password1')
     new_password2 = request.POST.get('new_password2')
 
@@ -139,7 +153,6 @@ def change_password(request: HttpRequest, username: str):
         })
 
     try:
-        user = User.objects.get(username=username)
         user.set_password(new_password1)
         user.save()
         auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
