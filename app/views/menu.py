@@ -7,11 +7,14 @@ from django.shortcuts import render
 import el_pagination.decorators
 
 import datetime
+import logging
 import mimetypes
 import random
 from typing import Optional
 
 from app.models import Comments, Records, Rated_Users, Provided_Users, Revenue
+
+logger = logging.getLogger('app')
 
 
 @el_pagination.decorators.page_template('records_list.html')
@@ -64,6 +67,7 @@ def record(request: HttpRequest, record_id: int, template: str = "record.html", 
             next(similar_records_iterator, random.choice(Records.objects.all())),
         )
 
+    # TODO: Migrate on AJAX for comment system
     if request.POST.get('add_comment'):
         Comments.objects.create(
             author=request.user,
@@ -101,28 +105,28 @@ def record(request: HttpRequest, record_id: int, template: str = "record.html", 
 
 def buy(request: HttpRequest, record_id: int):
     user = request.user
-    if not user.is_verified:
-        response = {
+    if not user.profile.is_verified:
+        logger.info('Record purchase fail: Verification required')
+        return JsonResponse({
             'status': 'fail',
             'message': 'User account is not activated',
-        }
-        return JsonResponse(response)
+        })
 
     current_record = Records.objects.get(id=record_id)
 
     if (user.profile.balance - record.price) < 0:
-        response = {
+        logger.info('Record purchase fail: User balance is not enough')
+        return JsonResponse({
             'status': 'fail',
             'message': 'User balance is not enough',
-        }
-        return JsonResponse(response)
+        })
 
     if Provided_Users.objects.filter(user=user, record=current_record).exists():
-        response = {
+        logger.info('Record purchase fail: User is provided with this record')
+        return JsonResponse({
             'status': 'fail',
             'message': 'User is provided with this record',
-        }
-        return JsonResponse(response)
+        })
 
     user.profile.balance -= current_record.price
     user.profile.save()
@@ -136,10 +140,9 @@ def buy(request: HttpRequest, record_id: int):
     current_record.sales += 1
     current_record.save()
 
-    response = {
+    return JsonResponse({
         'status': 'ok',
-    }
-    return JsonResponse(response)
+    })
 
 
 @el_pagination.decorators.page_template('records_list.html')

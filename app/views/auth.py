@@ -75,17 +75,15 @@ def login(request: HttpRequest):
 
         send_message(subject, message, user)
 
-        logger.debug('Authentication success: A two-factor authorization email was sent')
         return JsonResponse({
             'status': 'ok',
             'message': 'A two-factor authorization email was sent',
         })
 
     auth.login(request, user)
-    logger.debug('Authentication success: The user logged in')
     return JsonResponse({
         'status': 'ok',
-        'message': 'The user logged in',
+        'message': 'The User logged in'
     })
 
 
@@ -138,10 +136,8 @@ def remember(request: HttpRequest):
 
     send_message(subject, message, user)
 
-    logger.debug('Password recovery success: A password recovery email was sent')
     return JsonResponse({
         'status': 'ok',
-        'message': 'A password recovery email was sent',
     })
 
 
@@ -177,10 +173,8 @@ def change_email(request: HttpRequest):
 
     send_message(subject, message, user)
 
-    logger.debug('Email change success: A confirmation email was sent')
     return JsonResponse({
         'status': 'ok',
-        'message': 'A confirmation email was sent',
     })
 
 
@@ -250,7 +244,6 @@ def register(request: HttpRequest):
 
     send_message(subject, message, user)
 
-    logger.debug('Registration success: A activation email was sent')
     # user = auth.authenticate(username=username, password=password)
     # if not user:
     #     return JsonResponse({
@@ -260,13 +253,11 @@ def register(request: HttpRequest):
 
     return JsonResponse({
         'status': 'ok',
-        'message': 'A activation email was sent',
     })
 
 
 def logout(request: HttpRequest):
     auth.logout(request)
-    logger.debug('Logout success: The user logged out')
     return redirect("/")
 
 
@@ -280,7 +271,6 @@ def activate_account(request: HttpRequest, username: str, activation_key: str):
 
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()
-            logger.debug('Account activation success: User account is activated')
             return redirect('/')
         else:
             logger.warning('Account activation fail: Wrong activation key')
@@ -300,7 +290,6 @@ def verificate_login(request: HttpRequest, username: str, activation_key: str):
         if (activation_obj.activation_key == activation_key) and activation_obj.is_2stepverif:
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()
-            logger.debug('2-step-verification success: The user logged in')
             return redirect('/')
         else:
             logger.warning('2-step-verification fail: Wrong activation key')
@@ -321,7 +310,6 @@ def password_change(request: HttpRequest, username: str, activation_key: str):
         if (activation_obj.activation_key == activation_key) and activation_obj.is_remember:
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()
-            logger.debug('Password change success: Password changed')
             return redirect('/')
         else:
             logger.warning('Password change fail: Wrong activation key')
@@ -344,7 +332,6 @@ def change_email_confirm(request: HttpRequest, username, activation_key):
 
             auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             activation_obj.delete()
-            logger.debug('Email change success: Email changed')
             return redirect('/')
         else:
             logger.warning('Email change fail: Wrong activation key')

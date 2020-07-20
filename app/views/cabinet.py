@@ -8,14 +8,23 @@ from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 
 import datetime
+import logging
 import PIL.Image
 
 from app.models import Activation, Global_Settings, Revenue
 
+logger = logging.getLogger('app')
+
 
 def cabinet(request: HttpRequest, username: str, section: str):
     if request.user.username == username:
-        return render(request, 'user/cabinet.html', {'premium': Global_Settings.objects.get(setting='Premium').value, 'section': section})
+        context = {
+            'premium': Global_Settings.objects.get(setting='Premium').value,
+            'section': section
+        }
+        return render(request, 'user/cabinet.html', context)
+
+    logger.warning('Cabinet login fail: An attempt to enter someone else\'s cabinet')
     return redirect('/')
 
 
@@ -42,27 +51,27 @@ def save_personal_data(request: HttpRequest):
         user.save()
 
     except IOError:
-        pass
-    except KeyError:
-        pass
-    except AttributeError:
-        pass
+        logger.warning('Image crop fail: File not found')
+    except Exception as exc:
+        logger.warning('Image crop fail: {}'.format(exc))
 
     return redirect("/user/{}/cabinet/default".format(user.username))
 
 
 def two_verif_on(request: HttpRequest):
-    response = dict()
     user = request.user
     if Activation.objects.filter(user=user, is_registration=True).exists:
         user.profile.has_2stepverif = True
         user.save()
-        response['status'] = 'ok'
-    else:
-        response['status'] = 'fail'
-        response['message'] = 'Verification required'
+        return JsonResponse({
+            'status': 'ok',
+        })
 
-    return JsonResponse(response)
+    logger.info('2-step-verification enable fail: Verification required')
+    return JsonResponse({
+        'status': 'fail',
+        'message': '2-step-verifiacion on: Verification required',
+    })
 
 
 def two_verif_off(request):
@@ -76,12 +85,14 @@ def buy_premium(request):
     user = request.user
 
     if not user.profile.is_verified:
+        logger.info('Premium  purchase fail: Verification required')
         return JsonResponse({
             'status': 'fail',
             'message': 'User is not verified',
         })
 
     if user.profile.is_premium:
+        logger.info('Premium  purchase fail: User have premium')
         return JsonResponse({
             'status': 'fail',
             'message': 'User have premium',
@@ -89,9 +100,10 @@ def buy_premium(request):
 
     cost = Global_Settings.objects.get(setting='Premium').value
     if user.profile.balance - cost < 0:
+        logger.info('Premium  purchase fail: User balance is not enough')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Balance is not enought',
+            'message': 'Balance is not enough',
         })
 
     user.profile.balance -= cost
@@ -110,15 +122,20 @@ def change_password(request: HttpRequest, username: str):
     new_password2 = request.POST.get('new_password2')
 
     if new_password1 != new_password2:
+        logger.info('Password change fail: Passwords mismatch')
         return JsonResponse({
             'status': 'fail',
             'message': 'Passwords mismatch',
         })
 
-    if auth.password_validation.validate_password(new_password1):
+    try:
+        auth.password_validation.validate_password(new_password1)
+    except exceptions.ValidationError as err:
+        # TODO: Log on English
+        logger.info('Password change fail: {}'.format(err.messages[0]))
         return JsonResponse({
             'status': 'fail',
-            'message': 'Password validation error',
+            'message': err.messages[0],
         })
 
     try:
@@ -129,9 +146,10 @@ def change_password(request: HttpRequest, username: str):
         return JsonResponse({
             'status': 'ok',
         })
-
+    except exceptions.MultipleObjectsReturned:
+        logger.warning('DataBase error: Multiple users are returned for one username')
     except exceptions.ObjectDoesNotExist:
-        pass
+        logger.warning('Password change fail: Wrong username')
 
     return JsonResponse({
         'status': 'fail',
