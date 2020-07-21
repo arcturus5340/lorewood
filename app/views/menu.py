@@ -109,23 +109,23 @@ def buy(request: HttpRequest, record_id: int):
         logger.info('Record purchase fail: Verification required')
         return JsonResponse({
             'status': 'fail',
-            'message': 'User account is not activated',
+            'message': _('Verify your account first'),
         })
 
     current_record = Records.objects.get(id=record_id)
-
-    if (user.profile.balance - record.price) < 0:
-        logger.info('Record purchase fail: User balance is not enough')
-        return JsonResponse({
-            'status': 'fail',
-            'message': 'User balance is not enough',
-        })
 
     if Provided_Users.objects.filter(user=user, record=current_record).exists():
         logger.info('Record purchase fail: User is provided with this record')
         return JsonResponse({
             'status': 'fail',
-            'message': 'User is provided with this record',
+            'message': _('You have already bought this record'),
+        })
+
+    if (user.profile.balance - current_record.price) < 0:
+        logger.info('Record purchase fail: User balance is not enough')
+        return JsonResponse({
+            'status': 'fail',
+            'message': _('There are not enough funds on your balance'),
         })
 
     user.profile.balance -= current_record.price

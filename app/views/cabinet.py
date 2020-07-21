@@ -5,6 +5,7 @@ from django.core import exceptions
 from django.http.request import HttpRequest
 from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
+from django.utils.translation import gettext as _
 
 import datetime
 import logging
@@ -17,11 +18,10 @@ logger = logging.getLogger('app')
 
 
 @is_verified
-def cabinet(request: HttpRequest, username: str, section: str):
+def cabinet(request: HttpRequest, username: str):
     if request.user.username == username:
         context = {
             'premium': Global_Settings.objects.get(setting='Premium').value,
-            'section': section
         }
         return render(request, 'user/cabinet.html', context)
 
@@ -73,7 +73,7 @@ def two_verif_on(request: HttpRequest):
     logger.info('2-step-verification enable fail: Verification required')
     return JsonResponse({
         'status': 'fail',
-        'message': '2-step-verifiacion on: Verification required',
+        'message': _('Verify your account first'),
     })
 
 
@@ -93,14 +93,14 @@ def buy_premium(request):
         logger.info('Premium  purchase fail: Verification required')
         return JsonResponse({
             'status': 'fail',
-            'message': 'User is not verified',
+            'message': _('Verify your account first'),
         })
 
     if user.profile.is_premium:
         logger.info('Premium  purchase fail: User have premium')
         return JsonResponse({
             'status': 'fail',
-            'message': 'User have premium',
+            'message': _('You already have a premium subscription'),
         })
 
     cost = Global_Settings.objects.get(setting='Premium').value
@@ -108,7 +108,7 @@ def buy_premium(request):
         logger.info('Premium  purchase fail: User balance is not enough')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Balance is not enough',
+            'message': _('There are not enough funds on your balance'),
         })
 
     user.profile.balance -= cost
@@ -128,7 +128,7 @@ def change_password(request: HttpRequest):
         logger.info('Password change fail: Wrong activation key')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Wrong activation key',
+            'message': _('Wrong activation key'),
         })
 
     elif request.user.is_authenticated:
@@ -145,7 +145,7 @@ def change_password(request: HttpRequest):
         logger.info('Password change fail: Passwords mismatch')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Passwords mismatch',
+            'message': _('Passwords mismatch'),
         })
 
     try:
@@ -172,5 +172,5 @@ def change_password(request: HttpRequest):
 
     return JsonResponse({
         'status': 'fail',
-        'message': 'Inner db error',
+        'message': _('Security error. Contact site administrator'),
     })

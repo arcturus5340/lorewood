@@ -7,6 +7,7 @@ from django.core import exceptions
 from django.http.request import HttpRequest
 from django.http.response import JsonResponse
 from django.shortcuts import redirect
+from django.utils.translation import gettext as _
 
 import logging
 import random
@@ -26,7 +27,7 @@ def is_verified(func):
         else:
             return JsonResponse({
                 'status': 'fail',
-                'message': 'User has not verified the account',
+                'message': _('Verify your account first'),
             })
     return wrapper
 
@@ -39,7 +40,7 @@ def send_message(subject: str, message: str, user: User):
         logger.warning('SMTP error: {}'.format(err.strerror))
         return JsonResponse({
             'status': 'fail',
-            'message': 'Ошибка при отправке активационного письма',
+            'message': _('Error sending activation email'),
         })
 
 
@@ -57,7 +58,7 @@ def login(request: HttpRequest):
         logger.info('Authentication fail: Invalid credentials')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Invalid credentials',
+            'message': _('Invalid credentials'),
         })
 
     if user.profile.has_2step_verification:
@@ -76,13 +77,11 @@ def login(request: HttpRequest):
 
         return JsonResponse({
             'status': 'ok',
-            'message': 'A two-factor authorization email was sent',
         })
 
     auth.login(request, user)
     return JsonResponse({
         'status': 'ok',
-        'message': 'The User logged in'
     })
 
 
@@ -95,7 +94,7 @@ def change_email(request: HttpRequest):
         logger.info('Email change fail: Attempting to register an existing email')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Такой эмейл уже зарегестрирован',
+            'message': _('This email address is already registered'),
         })
 
     obj, created = Activation.objects.update_or_create(user=user)
@@ -127,36 +126,35 @@ def register(request: HttpRequest):
         logger.info('Registration fail: Passwords mismatch')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Пароли не совпадают',
+            'message': _('Passwords mismatch'),
         })
 
-    elif not re.match(r'^[a-zA-z]+([a-zA-Z0-9]|_|\.)*$', username):
+    elif not re.match(r'^([a-zA-Z0-9]|_|\.)*$', username):
         logger.info('Registration fail: Invalid login format')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Логин должен начинаться с латинской буквы, '
-                       'а также состоять только из латинских букв, цифр и символов . и _ ',
+            'message': _('Username can contain only letters, numbers, and the \'_\' and \'.\' character'),
         })
 
     elif User.objects.filter(username=username).exists():
         logger.info('Registration fail: Attempting to register an existing username')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Такой логин уже зарегестрирован',
+            'message': _('This username is already registered'),
         })
 
     elif len(username) > 32:
         logger.info('Registration fail: Username is too long')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Слишком длинный логин',
+            'message': _('Username is too long'),
         })
 
     elif User.objects.filter(email=email).exists():
         logger.info('Registration fail: Attempting to register an existing email')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Такой эмейл уже зарегестрирован',
+            'message': _('This email address is already registered'),
         })
 
     try:
@@ -187,7 +185,7 @@ def register(request: HttpRequest):
     if not user:
         return JsonResponse({
             'status': 'fail',
-            'message': 'Authentication error',
+            'message': _('Authentication error'),
         })
 
     auth.login(request, user)
@@ -197,29 +195,21 @@ def register(request: HttpRequest):
     })
 
 
-@is_verified
 def remember(request: HttpRequest):
     try:
         email = request.POST.get('email')
-        if email:
-            user = User.objects.get(email=email)
-        else:
-            logger.warning('Password recovery fail: Invalid email address')
-            return JsonResponse({
-                'status': 'fail',
-                'message': 'Ошибка безопасности. Обратитесь к администратору сайта',
-            })
+        user = User.objects.get(email=email)
     except exceptions.MultipleObjectsReturned:
         logger.warning('DataBase error: Multiple users are returned for one email address')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Ошибка безопасности. Обратитесь к администратору сайта',
+            'message': _('Security error. Contact site administrator'),
         })
     except exceptions.ObjectDoesNotExist:
         logger.warning('Password recovery fail: No user with given email address was found')
         return JsonResponse({
             'status': 'fail',
-            'message': 'Пользователь с такими данными не зарегестрирован',
+            'message': _('User with this email address is not registered'),
         })
 
     obj, created = Activation.objects.update_or_create(user=user)

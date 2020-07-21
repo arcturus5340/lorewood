@@ -132,13 +132,18 @@ SOCIAL_AUTH_TWITTER_SECRET = 'fFinacLTmcubfSL7exgDY7oS7SweyFAJI8KnYc8sUqUaPUNEZG
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+from django.utils.translation import ugettext_lazy as _
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('ru', _('Russian')),
+)
 
 LANGUAGE_CODE = 'ru'
 
-# export LC_ALL="ru_RU.UTF-8"
-# export LC_CTYPE="ru_RU.UTF-8"
-import locale
-locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'app/locale'),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -189,12 +194,12 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'ERROR',
+            'level': 'WARNING',
             'propagate': True,
         },
         'app': {
             'handlers': ['file'],
-            'level': 'NOTSET',
+            'level': 'INFO',
             'propagate': True,
         },
     },
