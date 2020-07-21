@@ -1,86 +1,111 @@
 from django import forms
 from django.contrib import admin
 
-from app.models import Files, Headers, Records, Profile
+from app import models
 
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 import social_django.models
 
 
-class FilesAdmin(admin.ModelAdmin):
-	list_filter = search_fields = list_display = (
-		'header',
-		'src',
-	)
-
-class HeadersAdmin(admin.ModelAdmin):
-	list_filter = search_fields = list_display = (
-		'title',
-		'record',
-	)
-
-
-class ProfileAdmin(admin.ModelAdmin):
-	list_display = (
-		'user',
-		'avatar',
-		'bio',
-		'balance',
-		'is_premium',
-	)
-	search_fields = (
-		'user',
-		'bio',
-	)
+@admin.register(models.ActivationKey)
+class ActivationKeyAdmin(admin.ModelAdmin):
+    empty_value_display = '-empty-'
+    readonly_fields = (
+        'activation_key', 'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
+    )
+    list_display = (
+        'activation_key',  'new_email', 'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
+    )
+    list_filter = (
+        'new_email', 'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
+    )
 
 
-class RecordsAdminForm(forms.ModelForm):
-	text = forms.CharField(widget=CKEditorUploadingWidget())
-	description = forms.CharField(widget=CKEditorUploadingWidget())
-	includes = forms.CharField(widget=CKEditorUploadingWidget())
+@admin.register(models.Tags)
+class Tags(admin.ModelAdmin):
+    list_display = (
+        'tag',
+    )
 
 
-class RecordsAdmin(admin.ModelAdmin):
-	form = RecordsAdminForm
-	list_display = (
-		'title',
-		'author',
-		'description',
-		'includes',
-		'content',
-		'price',
-		'date',
-		'pre_video',
-		'main_pic',
-	)
-	list_filter = (
-		'date',
-		'tags',
-	)
-	search_fields = (
-		'title',
-		'author',
-		'description',
-		'date',
-		'tags',
-		'text',
-	)
-	exclude = (
-		'rating',
-		'best_rating',
-		'worst_rating',
-		'rating_count',
-		'rating_sum',
-		'rated_users',
-		'sales',
-	)
+class RecordsForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+    includes = forms.CharField(widget=CKEditorUploadingWidget())
+
+
+@admin.register(models.Records)
+class Records(admin.ModelAdmin):
+    date_hierarchy = 'date'
+    form = RecordsForm
+    list_display = (
+        'title', 'description', 'content', 'author', 'rating', 'price', 'date',
+    )
+    readonly_fields = (
+        'rating', 'best_rating', 'worst_rating', 'rating_count', 'sales',
+    )
+
+
+@admin.register(models.Header)
+class Header(admin.ModelAdmin):
+    list_display = (
+        'title', 'record', '_order',
+    )
+
+
+@admin.register(models.File)
+class File(admin.ModelAdmin):
+    list_display = (
+        'src', 'header', '_order',
+    )
+
+
+class CommentsForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+
+
+@admin.register(models.Comment)
+class Comment(admin.ModelAdmin):
+    date_hierarchy = 'date'
+    form = CommentsForm
+    list_display = (
+        'author', 'record', 'content', 'date',
+    )
+
+
+@admin.register(models.GlobalSettings)
+class GlobalSettings(admin.ModelAdmin):
+    readonly_fields = (
+        'setting',
+    )
+    list_display = (
+        'setting', 'value',
+    )
+
+
+@admin.register(models.Profile)
+class Profile(admin.ModelAdmin):
+    empty_value_display = '-empty-'
+    list_display = (
+        'user', 'bio', 'is_premium', 'is_verified', 'has_2step_verification', 'balance',
+    )
+    list_filter = (
+        'user', 'bio',
+    )
+
+
+@admin.register(models.Revenue)
+class Revenue(admin.ModelAdmin):
+    date_hierarchy = 'date'
+    list_display = (
+        'date', 'income',
+    )
+    readonly_fields = (
+        'date', 'income',
+    )
 
 
 admin.site.site_header = "Sharewood"
-admin.site.register(Files, FilesAdmin)
-admin.site.register(Headers, HeadersAdmin)
-admin.site.register(Profile, ProfileAdmin)
-admin.site.register(Records, RecordsAdmin)
 admin.site.unregister(social_django.models.Association)
 admin.site.unregister(social_django.models.UserSocialAuth)
 admin.site.unregister(social_django.models.Nonce)
