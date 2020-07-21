@@ -4,26 +4,25 @@ from django.utils import timezone
 from django.utils.translation import gettext as _
 
 
-class Tag(models.Model):
+class Tags(models.Model):
     id = models.AutoField(primary_key=True)
     tag = models.CharField(max_length=32, unique=True)
 
     class Meta:
-        db_table = 'app_tags'
-        verbose_name = _("Tag")
-        verbose_name_plural = _("Tags")
+        verbose_name = _('Tag')
+        verbose_name_plural = _('Tags')
 
 
-class Record(models.Model):
+class Records(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=128)
     content = models.TextField()
     description = models.CharField(max_length=256)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tags)
     main_pic = models.FileField(upload_to='record_src/')
     pre_video = models.FileField(upload_to='record_src/')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateTimeField(default=timezone.now())
+    date = models.DateTimeField(default=timezone.now)
     rating = models.FloatField(default=0.0)
     best_rating = models.IntegerField(default=0)
     rating_count = models.IntegerField(default=0)
@@ -33,43 +32,42 @@ class Record(models.Model):
     sales = models.IntegerField(default=0)
 
     class Meta:
-        db_table = 'app_records'
-        verbose_name = _("Record")
-        verbose_name_plural = _("Records")
+        verbose_name = _('Record')
+        verbose_name_plural = _('Records')
 
 
 class ProvidedUser(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    record = models.ForeignKey(Record, on_delete=models.CASCADE)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'app_provided_users'
         unique_together = ['user', 'record']
-        verbose_name = _("Provided User")
-        verbose_name_plural = _("Provided Users")
+        verbose_name = _('Provided User')
+        verbose_name_plural = _('Provided Users')
 
 
 class RatedUser(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    record = models.ForeignKey(Record, on_delete=models.CASCADE)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'app_rated_users'
         unique_together = ['user', 'record']
-        verbose_name = _("Rated User")
-        verbose_name_plural = _("Rated Users")
+        verbose_name = _('Rated User')
+        verbose_name_plural = _('Rated Users')
 
 
 class Header(models.Model):
     id = models.AutoField(primary_key=True)
-    record = models.ForeignKey(Record, on_delete=models.CASCADE)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
     title = models.CharField(max_length=128)
     _order = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'app_headers'
-        verbose_name = _("Header")
-        verbose_name_plural = _("Headers")
+        verbose_name = _('Header')
+        verbose_name_plural = _('Headers')
 
 
 class File(models.Model):
@@ -80,30 +78,31 @@ class File(models.Model):
 
     class Meta:
         db_table = 'app_files'
-        verbose_name = _("File")
-        verbose_name_plural = _("Files")
+        verbose_name = _('File')
+        verbose_name_plural = _('Files')
 
 
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    date = models.DateTimeField(default=timezone.now())
-    record = models.ForeignKey(Record, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)
+    record = models.ForeignKey(Records, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'app_comments'
-        verbose_name = _("Comment")
-        verbose_name_plural = _("Comments")
+        verbose_name = _('Comment')
+        verbose_name_plural = _('Comments')
 
 
 class Revenue(models.Model):
-    date = models.DateField(default=timezone.now())
+    date = models.DateField(default=timezone.now)
     income = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'app_revenue'
-        verbose_name = _("Revenue")
+        verbose_name = _('Revenue')
+        verbose_name_plural = _('Revenue')
 
 
 class ActivationKey(models.Model):
@@ -117,8 +116,8 @@ class ActivationKey(models.Model):
 
     class Meta:
         db_table = 'app_activation_keys'
-        verbose_name = _("Activation Key")
-        verbose_name_plural = _("Activation Keys")
+        verbose_name = _('Activation Key')
+        verbose_name_plural = _('Activation Keys')
 
 
 class Profile(models.Model):
@@ -132,8 +131,8 @@ class Profile(models.Model):
 
     class Meta:
         db_table = 'app_profile'
-        verbose_name = _("Profile")
-        verbose_name_plural = _("Profiles")
+        verbose_name = _('Profile')
+        verbose_name_plural = _('Profiles')
 
 
 class GlobalSettings(models.Model):
@@ -142,4 +141,5 @@ class GlobalSettings(models.Model):
 
     class Meta:
         db_table = 'app_global_settings'
-        verbose_name = _("Global Settings")
+        verbose_name = _('Global Settings')
+        verbose_name_plural = _('Global Settings')

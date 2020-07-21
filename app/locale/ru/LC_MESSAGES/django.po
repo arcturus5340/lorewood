@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 13:00+0200\n"
+"POT-Creation-Date: 2020-07-21 17:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,86 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: models.py:13
+msgid "Tag"
+msgstr "Тэг"
+
+#: models.py:14
+msgid "Tags"
+msgstr "Тэги"
+
+#: models.py:37
+msgid "Record"
+msgstr "Курс"
+
+#: models.py:38
+msgid "Records"
+msgstr "Курсы"
+
+#: models.py:48
+msgid "Provided User"
+msgstr "Обеспеченный пользователь"
+
+#: models.py:49
+msgid "Provided Users"
+msgstr "Обеспеченные пользователи"
+
+#: models.py:59
+msgid "Rated User"
+msgstr "Проголосовавший пользователь"
+
+#: models.py:60
+msgid "Rated Users"
+msgstr "Проголосовавшие пользователи"
+
+#: models.py:71
+msgid "Header"
+msgstr "Заголовок"
+
+#: models.py:72
+msgid "Headers"
+msgstr "Заголовки"
+
+#: models.py:83
+msgid "File"
+msgstr "Материал"
+
+#: models.py:84
+msgid "Files"
+msgstr "Материалы"
+
+#: models.py:96
+msgid "Comment"
+msgstr "Коментарий"
+
+#: models.py:97
+msgid "Comments"
+msgstr "Коментарии"
+
+#: models.py:106 models.py:107
+msgid "Revenue"
+msgstr "Прибыль"
+
+#: models.py:121
+msgid "Activation Key"
+msgstr "Активационный ключ"
+
+#: models.py:122
+msgid "Activation Keys"
+msgstr "Активационные ключи"
+
+#: models.py:136
+msgid "Profile"
+msgstr "Профиль"
+
+#: models.py:137
+msgid "Profiles"
+msgstr "Профили"
+
+#: models.py:146 models.py:147
+msgid "Global Settings"
+msgstr "Настройки"
 
 #: views/auth.py:30 views/cabinet.py:76 views/cabinet.py:96 views/menu.py:112
 msgid "Verify your account first"
@@ -40,8 +120,11 @@ msgid "Passwords mismatch"
 msgstr "Пароли не совпадают"
 
 #: views/auth.py:136
-msgid "Username can contain only letters, numbers, and the '_' and '.' character"
-msgstr "Имя пользователя может содержать только латинские буквы, цифры, в так же символы '_' и '.'"
+msgid ""
+"Username can contain only letters, numbers, and the '_' and '.' character"
+msgstr ""
+"Имя пользователя может содержать только латинские буквы, цифры, в так же "
+"символы '_' и '.'"
 
 #: views/auth.py:143
 msgid "This username is already registered"
