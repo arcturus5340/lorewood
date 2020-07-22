@@ -1,5 +1,5 @@
 /*   
-Theme Name: sharewood
+Theme Name: lorewood
 Theme URI: 
 Version: 1
 Tags: 
@@ -285,7 +285,7 @@ a img.aligncenter {
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url('/static/content/themes/sharewood/fonts/web/HelveticaNeue.ttf') format("truetype");
+  src: url('/static/content/themes/lorewood/fonts/web/HelveticaNeue.ttf') format("truetype");
 }
 
 
@@ -1321,7 +1321,7 @@ textarea.form-control {
 
 .btn-comment {
 
-  background: #51b956 url('/static/content/themes/sharewood/img/reply.png') no-repeat;
+  background: #51b956 url('/static/content/themes/lorewood/img/reply.png') no-repeat;
   background-position: center;
   position: absolute;
   right: 0;
@@ -1338,7 +1338,7 @@ textarea.form-control {
 }
 
 .btn-comment:hover {
-  background: #21a528 url('/static/content/themes/sharewood/img/reply.png') no-repeat;
+  background: #21a528 url('/static/content/themes/lorewood/img/reply.png') no-repeat;
 
   color: #fff;
   background-position: center;
@@ -1772,7 +1772,7 @@ blockquote:before {
 
 .contact-sidebar {
 
-  background: #94a1a9 url('/static/content/themes/sharewood/img/send-mail.png') no-repeat;
+  background: #94a1a9 url('/static/content/themes/lorewood/img/send-mail.png') no-repeat;
   background-position: top right;
   overflow: hidden;
   color: #fff;
@@ -2609,7 +2609,7 @@ input[type="submit"]{
   border-radius: 3px !important;
   width: 52px !important;
   height: 32px;
-  background: url(/static/content/themes/sharewood/img/tvitter2.png) 5px 4px / 45px no-repeat !important;
+  background: url(/static/content/themes/lorewood/img/tvitter2.png) 5px 4px / 45px no-repeat !important;
   background-color: #44a9e4 !important;
   opacity: 1 !important;
 }

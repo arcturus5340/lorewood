@@ -17,7 +17,7 @@ class ActivationKeyAdmin(admin.ModelAdmin):
         'activation_key',  'new_email', 'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
     )
     list_filter = (
-        'new_email', 'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
+        'is_2step_verification', 'is_email_change', 'is_registration', 'is_remember',
     )
 
 
@@ -49,14 +49,14 @@ class Records(admin.ModelAdmin):
 @admin.register(models.Header)
 class Header(admin.ModelAdmin):
     list_display = (
-        'title', 'record', '_order',
+        'title', '_order',
     )
 
 
 @admin.register(models.File)
 class File(admin.ModelAdmin):
     list_display = (
-        'src', 'header', '_order',
+        '__str__', 'src', '_order',
     )
 
 
@@ -105,7 +105,7 @@ class Revenue(admin.ModelAdmin):
     )
 
 
-admin.site.site_header = "Sharewood"
+admin.site.site_header = "Lorewood"
 admin.site.unregister(social_django.models.Association)
 admin.site.unregister(social_django.models.UserSocialAuth)
 admin.site.unregister(social_django.models.Nonce)

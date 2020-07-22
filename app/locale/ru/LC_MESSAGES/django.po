@@ -1,5 +1,5 @@
 # Copyright (C) 2020 Dlyaver Djebarov, Abror Ruziboev
-# This file is distributed under the same license as the sharewood package.
+# This file is distributed under the same license as the lorewood package.
 # Dlyaver Djebarov arcturus5340@gmail.com, 2020.
 #
 #, fuzzy
