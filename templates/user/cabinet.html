@@ -13,13 +13,13 @@
                         <td valign="top">
                             <div class="col-4">
                                 <div class="list-group" id="list-tab" role="tablist" style="width: 250px; padding-right: 40px">
-                                    <a class="list-group-item list-group-item-action {% if list == 'default' %} active {% endif %}" id="list-personal-data-list" data-toggle="list" href="#list-personal-data" role="tab" aria-controls="personal-data">Личные данные</a>
+                                    <a class="list-group-item list-group-item-action {% if section == 'default' %} active {% endif %}" id="list-personal-data-list" data-toggle="list" href="#list-personal-data" role="tab" aria-controls="personal-data">Личные данные</a>
 
-                                    <a class="list-group-item list-group-item-action {% if list == 'list-settings' %} active {% endif %}" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
+                                    <a class="list-group-item list-group-item-action {% if section == 'list-settings' %} active {% endif %}" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Настройки</a>
 
-                                    <a class="list-group-item list-group-item-action {% if list == 'list-pay-in' %} active {% endif %}" id="list-pay-in-list" data-toggle="list" href="#list-pay-in" role="tab" aria-controls="pay-in">Пополнить счет</a>
+                                    <a class="list-group-item list-group-item-action {% if section == 'list-pay-in' %} active {% endif %}" id="list-pay-in-list" data-toggle="list" href="#list-pay-in" role="tab" aria-controls="pay-in">Пополнить счет</a>
 
-                                    <a class="list-group-item list-group-item-action {% if list == 'list-buy-premium' %} active {% endif %}" id="list-buy-premium-list" data-toggle="list" href="#list-buy-premium" role="tab" aria-controls="buy-premium">Купить ПРЕМИУМ</a>
+                                    <a class="list-group-item list-group-item-action {% if section == 'list-buy-premium' %} active {% endif %}" id="list-buy-premium-list" data-toggle="list" href="#list-buy-premium" role="tab" aria-controls="buy-premium">Купить ПРЕМИУМ</a>
                                 </div>
                             </div>
                         </td>
@@ -261,7 +261,7 @@ jQuery('#password-errors').hide()
 i.preventDefault();
 jQuery.ajax({
     type: "POST",
-    url: '/change-cabinet-password/',
+    url: '/change-password/',
     data: jQuery("#new_password_form").serialize(),
     success: function(response) {
         // do something with response

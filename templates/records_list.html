@@ -24,7 +24,7 @@
                     <div class="post-wrap-h2">
                         <h2><a href="/r{{ record.id }}/">{{ record.title }}</a></h2></div>
                     <div class="excerpt clip">
-                        <p style="height: 146px;">{{ record.description }}</p>
+                        <p>{{ record.description|safe }}</p>
                     </div>
                     <div class="meta-block">
                         <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>
@@ -55,7 +55,7 @@
                         <h2><a href="/r{{ record.id }}">{{ record.title }}</a></h2>
                     </div>
                     <div class="excerpt clip">
-                        <p>{{ record.description }}</p>
+                        <p>{{ record.description|safe }}</p>
                     </div>
                     <div class="meta-block">
                         <div class="meta-item"><span class="post-ratings__results">{{ record.rating }}</span></div>

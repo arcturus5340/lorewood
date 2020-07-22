@@ -8,11 +8,11 @@
 
     <link rel="stylesheet" href="/static/content/themes/sharewood/fonts/font-awesome/css/font-awesome.min.css">
 
-    <title>Результаты поиска для {{ search }}</title>
+    <title>Результаты поиска для {{ search_text }}</title>
     <meta name='robots' content='noindex,follow' />
     <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
     <link rel='dns-prefetch' href='https://s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="Результаты поиска для {{ search }}" href="/tag/{{ tag }}" />
+    <link rel="alternate" type="application/rss+xml" title="Результаты поиска для {{ search_text }}" href="/tag/{{ tag }}" />
     <script type="text/javascript" src="/static/includes/some_shit.js"></script>
 
     <link rel='stylesheet' id='login-with-ajax-css' href='/static/content/plugins/login-with-ajax/widget/widget.css?ver=3.1.7' type='text/css' media='all' />
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
 
-                <h1><span>Результаты поиска для </span>{{ search }}</h1>
+                <h1><span>Результаты поиска для </span>{{ search_text }}</h1>
                 <div class="col-xs-12 col-md-8 inf">
 
                     {% include page_template %}
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    {% include 'popular_records_template.html' %}
+                    {% include 'popular_records.html' %}
 
                     <div class="social-sidebar">
                         <div style="text-align:left;" id="__utl-buttons-1">

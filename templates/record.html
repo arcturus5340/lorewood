@@ -473,7 +473,7 @@
                     <div class="col-xs-12 col-md-4 col-sm-4">
                         <div class="rating"><span><span class="post-ratings__results">{{ record.rating }}</span>
                             <meta itemprop="headline" content="{{ record.title }}" />
-                            <meta itemprop="description" content="{{ record.description }}" />
+                            <meta itemprop="description" content="{{ record.description|safe }}" />
                             <meta itemprop="datePublished" content="{{ record.date|date:"j M Y" }}" />
                             <meta itemprop="url" content="/r{{ record.id }}" />
                             <meta itemprop="author" content="{{ record.author }}" />
@@ -568,7 +568,7 @@
                                             <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10">
                                                 <div class="row mt-25">
                                                     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                        {{ record.content }}
+                                                        {{ record.content|safe }}
 
                                                         <h4>Материалы курса</h4>
                                                         <ul id="menu">
@@ -580,15 +580,15 @@
                                                                         {% if is_provided or user.profile.is_premium  %}
                                                                           {% if format == 'A' %}
                                                                               <a class="audio-link" href="#audio-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
-                                                                              <a href="/media/{{ file }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                              </a>
-                                                                          {% elif format == 'F' %}
-                                                                              <a href="/media/{{ file }}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
-                                                                              <a href="/media/{{ file }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              <a href="/media/{{ file.src }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% elif data.0 == 'V' %}
                                                                               <a class="video-modal" href="#video-modal-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}" style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
-                                                                              <a href="/media/{{ file }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              <a href="/media/{{ file.src }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% else %}
+                                                                              <a href="/media/{{ file.src }}" style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
+                                                                              <a href="/media/{{ file.src }}" download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% endif %}
                                                                           {% else %}
@@ -596,12 +596,12 @@
                                                                               <a style="float:left; width: 90%"><img src="/static/includes/images/media/audio.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
                                                                               <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
-                                                                          {% elif format == 'F' %}
-                                                                              <a style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{file }}</a>
-                                                                              <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
-                                                                              </a>
                                                                           {% elif format == 'V' %}
                                                                               <a style="float:left; width: 90%"><img src="/static/includes/images/media/video.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
+                                                                              <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
+                                                                              </a>
+                                                                          {% else %}
+                                                                              <a style="float:left; width: 90%" ><img src="/static/includes/images/media/document.png" style="width:18px;height:22px; margin-left: 25px">{{ file }}</a>
                                                                               <a download><img src="/static/includes/images/download.png" style="width:22px;height:22px; margin-left: 25px">
                                                                               </a>
                                                                           {% endif %}
@@ -1020,16 +1020,16 @@
     <script type="text/javascript" src="/static/includes/auth_script.js"></script>
     <script>
         {% if is_provided or user.profile.is_premium  %}
-            {% for parts in content %}
-                {% for data in parts.1 %}
-                    {% if data.0 == 'A' %}
+           {% for header, files in content.items %}
+                {% for format, file in files %}
+                    {% if format == 'A' %}
                         $("#audio-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
                             $("#audio-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
                         });
                         $("#audio-close-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
                             $("#audio-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
                         });
-                    {% elif data.0 == 'V' %}
+                    {% elif format == 'V' %}
                         $("#video-cancel-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").on("click", function() {
                             $("#video-{{ forloop.parentloop.counter0 }}-{{ forloop.counter0 }}").load();
                         });
