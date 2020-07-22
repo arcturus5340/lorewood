@@ -1,42 +1,42 @@
 <div class="row" style="padding: 0 15px;">
-    <div id="post-4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
-        <div class="rating"><span><span class="post-ratings__results">8.2 </span><span class="eee">из 10</span></span>
+    <div id="post-{{ record.0.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 post-sidebar-top">
+        <div class="rating"><span><span class="post-ratings__results">{{ record.0.rating }} </span><span class="eee">из 10</span></span>
         </div>
         <div class="post-wrap-h2">
-            <h2><a href="/r4">Linux Administration</a></h2></div>
+            <h2><a href="/r{{ record.0.id }}">{{ record.0.title|safe }}</a></h2></div>
         <div class="excerpt clip">
-            <p>Linux  — семейство Unix-подобных операционных систем на базе ядра Linux, включающих тот или иной набор утилит и программ проекта GNU, и, возможно, другие компоненты</p>
+            <p>{{ record.0.description|safe }}</p>
         </div>
     </div>
 </div>
 <div class="triangle2">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-2 pr-0">
-            <article id="post-6" class="post-6 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
-                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url(/media/record_src/eagle_C1oj7Sp.png)no-repeat;background-size: cover;">
+            <article id="post-{{ record.1.id }}" class="post-{{ record.1.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url(/media/{{ record.1.main_pic }})no-repeat; background-size: cover;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">8.0</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">{{ record.1.rating }}</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r6">Учим ценить природу</a></h2></div>
-                            <div class="excerpt clip">Цените природу, друзья</div>
+                                <h2><a href="/r{{ record.1.id }}">{{ record.1.title|safe }}</a></h2></div>
+                            <div class="excerpt clip">{{ record.1.description|safe }}</div>
                         </div>
                     </div>
                 </div>
             </article>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-1 pl-0">
-            <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+            <article id="post-{{ record.2.id }}" class="post-{{ record.2.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
                 <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: #51b956;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">5.0</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">{{ record.2.rating }}</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r1">Python 3</a></h2></div>
+                                <h2><a href="/r{{ record.2.id }}">{{ record.2.title|safe }}</a></h2></div>
                             <div class="excerpt clip">
-                                <p>Python — высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и читаемости кода. Синтаксис ядра Python минималистичен. В то же время стандартная библиотека включает большой объём полезных функций.</p>
+                                <p>{{ record.2.description|safe }}</p>
                             </div>
                         </div>
                     </div>
@@ -46,16 +46,16 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-2 pr-0">
-            <article id="post-2" class="post-2 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+            <article id="post-{{ record.3.id }}" class="post-{{ record.3.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
                 <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: #51b956;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">4.5</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">{{ record.3.rating }}</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r2">Название Записи</a></h2></div>
+                                <h2><a href="/r{{ record.3.id }}">{{ record.3.title|safe }}</a></h2></div>
                             <div class="excerpt clip">
-                                <p>Описание. Описание. Описание. Описание. Описание.</p>
+                                <p>{{ record.3.description|safe }}</p>
                             </div>
                         </div>
                     </div>
@@ -63,16 +63,16 @@
             </article>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 post-green-sidebar post-sidebar-1 pl-0">
-            <article id="post-3" class="post-3 post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
-                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url(/media/record_src/progger_main_pic.png)no-repeat;background-size: cover;">
+            <article id="{{ record.4.id }}" class="post-{{ record.4.id }} post type-post status-publish format-standard has-post-thumbnail hentry category-general tag">
+                <div class="row post-sidebar-cropped post-sidebar-overlay" style="margin: 0; background: url(/media/{{ record.4.main_pic }})no-repeat; background-size: cover;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="post-wrap-sidebar">
-                            <div class="rating"><span><span class="post-ratings__results">4.5</span></span>
+                            <div class="rating"><span><span class="post-ratings__results">{{ record.4.rating }}</span></span>
                             </div>
                             <div class="post-wrap-h2">
-                                <h2><a href="/r3">Как стать программистом?</a></h2></div>
+                                <h2><a href="/r{{ record.4.id }}">{{ record.4.title|safe }}</a></h2></div>
                             <div class="excerpt clip">
-                                <p>Задавались ли вы вопросом, как стать программистом? Да? Велкам на наш курс (и да, мы будем вставлять везде английские словечки. Это же так кул)</p>
+                                <p>{{ record.4.description|safe }}</p>
                             </div>
                         </div>
                     </div>
