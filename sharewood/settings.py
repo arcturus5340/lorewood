@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'el_pagination',
     'social_django',
-    'app',
+    'app.apps.AppConfig',
     'rest_framework',
     'django_wysiwyg',
     'ckeditor',

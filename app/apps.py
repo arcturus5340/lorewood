@@ -6,4 +6,4 @@ class AppConfig(django.apps.AppConfig):
 
     def ready(self):
         from app import popular_records_gen
-        popular_records_gen.start()
+        popular_records_gen.update()
