@@ -22,7 +22,7 @@ SECRET_KEY = 'i_6_gq)3)iq-m#(sync@yp$oq87u31rp+z9dr93qw8gtcuzjk5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lorewood.online', 'localhost', '127.0.0.1', 'www.lorewood.online']
+ALLOWED_HOSTS = ['lorewood.herokuapp.com', 'www.lorewood.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
