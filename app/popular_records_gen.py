@@ -10,7 +10,7 @@ def start():
 
 
 def update():
-    most_popular_records = Records.objects.order_by('rating').all()[:5]
+    most_popular_records = Records.objects.order_by('-rating').all()[:5]
     content = render_to_string('popular_records_template.html', {'record': most_popular_records})
 
     with open('templates/popular_records.html', 'w') as static_file:
