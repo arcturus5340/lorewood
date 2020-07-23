@@ -22,7 +22,7 @@ SECRET_KEY = 'i_6_gq)3)iq-m#(sync@yp$oq87u31rp+z9dr93qw8gtcuzjk5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['185.235.130.111', 'lorewood.online', 'localhost', '127.0.0.1', 'www.lorewood.online']
+ALLOWED_HOSTS = ['lorewood.online', 'localhost', '127.0.0.1', 'www.lorewood.online']
 
 # Application definition
 
@@ -160,7 +160,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    '{}/Projects/lorewood/static/'.format(os.getenv("HOME")),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -171,8 +171,8 @@ CKEDITOR_UPLOAD_PATH = 'uploads'
 # Mail server data
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'abinba28@gmail.com'
-EMAIL_HOST_PASSWORD = 'MobyDick228'
+EMAIL_HOST_USER = 'lorewood.info@gmail.com'
+EMAIL_HOST_PASSWORD = 'lorewood.info.password'
 EMAIL_PORT = 587
 
 LOGGING = {
@@ -204,3 +204,8 @@ LOGGING = {
         },
     },
 }
+
+# Activate Django-Heroku.
+import django_heroku
+
+django_heroku.settings(locals())
