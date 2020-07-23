@@ -45,7 +45,7 @@ class Records(models.Model):
     best_rating = models.IntegerField(default=0)
     rating_count = models.IntegerField(default=0)
     worst_rating = models.IntegerField(default=10)
-    includes = models.TextField(default='-', max_length=256)
+    includes = models.TextField(default=None, max_length=256, blank=True, null=True)
     price = models.IntegerField()
     sales = models.IntegerField(default=0)
 
@@ -59,7 +59,7 @@ class Records(models.Model):
 
 class Header(models.Model):
     id = models.AutoField(primary_key=True)
-    record = models.ForeignKey(Records, on_delete=models.CASCADE)
+    record = models.ManyToManyField(Records)
     title = models.CharField(max_length=128)
     _order = models.IntegerField(default=0)
 
@@ -74,7 +74,7 @@ class Header(models.Model):
 
 class File(models.Model):
     id = models.AutoField(primary_key=True)
-    header = models.ForeignKey(Header, on_delete=models.CASCADE)
+    header = models.ManyToManyField(Header)
     src = models.FileField(upload_to='record_src/')
     _order = models.IntegerField(default=0)
 
@@ -93,9 +93,6 @@ class Comment(models.Model):
     content = models.TextField()
     date = models.DateTimeField(default=timezone.now)
     record = models.ForeignKey(Records, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.id
 
     class Meta:
         db_table = 'app_comments'

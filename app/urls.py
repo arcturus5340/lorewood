@@ -10,7 +10,7 @@ urlpatterns = [
     path('donations/', menu.donations),
 
     path('r<int:record_id>/', menu.record),
-    path('r<int:record_id>/buy/', menu.buy),
+    path('r<int:record_id>/buy/', cabinet.buy),
 
     path('tag/<str:tag>/', menu.records_by_tags),
     path('search/', menu.search),

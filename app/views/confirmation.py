@@ -6,7 +6,7 @@ from django.shortcuts import redirect, render
 
 import logging
 
-from app.models import Activation
+from app.models import ActivationKey
 
 logger = logging.getLogger('app')
 
@@ -15,7 +15,7 @@ logger = logging.getLogger('app')
 def activate_setting(request: HttpRequest, username: str, activation_key: str):
     try:
         user = User.objects.get(username=username)
-        activation_obj = Activation.objects.get(user=user)
+        activation_obj = ActivationKey.objects.get(user=user)
         if activation_obj.activation_key == activation_key:
             if activation_obj.is_email_change:
                 user.email = activation_obj.new_email
@@ -39,6 +39,6 @@ def activate_setting(request: HttpRequest, username: str, activation_key: str):
     except exceptions.MultipleObjectsReturned:
         logger.warning('DataBase error: Multiple activation objects are returned for one username')
     except exceptions.ObjectDoesNotExist:
-        logger.warning('Setting activation fail: Wrong username')
+        logger.warning('Activation fail: Wrong username')
 
     return render(request, 'invalid_activation_key.html')

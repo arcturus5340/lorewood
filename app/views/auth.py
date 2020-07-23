@@ -15,7 +15,7 @@ import re
 import smtplib
 import string
 
-from app.models import Activation
+from app.models import ActivationKey, Profile
 
 logger = logging.getLogger('app')
 
@@ -37,7 +37,7 @@ def send_message(subject: str, message: str, user: User):
     try:
         mail.send_mail(subject, message, from_email, [user.email])
     except smtplib.SMTPException as err:
-        logger.warning('SMTP error: {}'.format(err.strerror))
+        logger.warning('SMTP error: {}'.format(err.args[1]))
         return JsonResponse({
             'status': 'fail',
             'message': _('Error sending activation email'),
@@ -62,16 +62,16 @@ def login(request: HttpRequest):
         })
 
     if user.profile.has_2step_verification:
-        obj, created = Activation.objects.get_or_create(user=user)
+        obj, created = ActivationKey.objects.get_or_create(user=user)
         obj.activation_key = activation_key_generator()
         obj.is_2step_verification = True
         obj.save()
 
-        subject = 'Двойная верификация аккаунта sharewood.online'
+        subject = 'Двойная верификация аккаунта lorewood.online'
         message = ('Здравствуйте! \n'
-                   'Поступил запрос на вход на сайт sharewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
-                   'https://sharewood.online/user/{}/verify/{} \n\n'
-                   'С уважением, команда Sharewood').format(user.username, obj.activation_key)
+                   'Поступил запрос на вход на сайт lorewood.online. Перейдите по ссылке, чтобы войти в свой аккаунт: '
+                   'https://lorewood.online/user/{}/verify/{} \n\n'
+                   'С уважением, команда Lorewood').format(user.username, obj.activation_key)
 
         send_message(subject, message, user)
 
@@ -97,17 +97,17 @@ def change_email(request: HttpRequest):
             'message': _('This email address is already registered'),
         })
 
-    obj, created = Activation.objects.update_or_create(user=user)
+    obj, created = ActivationKey.objects.update_or_create(user=user)
     obj.activation_key = activation_key_generator()
     obj.new_email = new_email
     obj.is_email_change = True
     obj.save()
 
-    subject = 'Изменение email аккаунта sharewood.online'
+    subject = 'Изменение email аккаунта lorewood.online'
     message = ('Здравствуйте!\n'
                'Перейдите по ссылке, чтобы подтвердить данный email: '
-               'https://sharewood.online/user/{}/change-email/\n\n'
-               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
+               'https://lorewood.online/user/{}/change-email/\n\n'
+               'С уважением, команда Lorewood').format(user.username, obj.activation_key)
 
     send_message(subject, message, user)
 
@@ -117,6 +117,8 @@ def change_email(request: HttpRequest):
 
 
 def register(request: HttpRequest):
+    from django.utils.translation import gettext as _
+
     username = request.POST.get('username')
     email = request.POST.get('email')
     password = request.POST.get('password1')
@@ -168,16 +170,17 @@ def register(request: HttpRequest):
         })
 
     user = auth.models.User.objects.create_user(username, email, password)
-    obj, _ = Activation.objects.update_or_create(
+    Profile.objects.create(user=user)
+    obj, _ = ActivationKey.objects.update_or_create(
         user=user,
         defaults={'is_registration': True, 'activation_key': activation_key_generator()},
     )
 
-    subject = 'Активация аккаунта sharewood.online'
+    subject = 'Активация аккаунта lorewood.online'
     message = ('Здравствуйте! \n'
-               'Вы зарегестирорвались на сайте sharewood.online. Перейдите по ссылке, чтобы активировать '
-               'ваш аккаунт: https://sharewood.online/user/{}/activate/{} \n\n'
-               'С уважением, команда Sharewood').format(username, obj.activation_key)
+               'Вы зарегестирорвались на сайте lorewood.online. Перейдите по ссылке, чтобы активировать '
+               'ваш аккаунт: https://lorewood.online/user/{}/activate/{} \n\n'
+               'С уважением, команда Lorewood').format(username, obj.activation_key)
 
     send_message(subject, message, user)
 
@@ -212,16 +215,16 @@ def remember(request: HttpRequest):
             'message': _('User with this email address is not registered'),
         })
 
-    obj, created = Activation.objects.update_or_create(user=user)
+    obj, created = ActivationKey.objects.update_or_create(user=user)
     obj.activation_key = activation_key_generator()
     obj.is_remember = True
     obj.save()
 
-    subject = 'Восстановление аккаунта sharewood.online'
+    subject = 'Восстановление аккаунта lorewood.online'
     message = ('Здравствуйте!\n'
                'Перейдите по ссылке, чтобы поменять ваш пароль: '
-               'https://sharewood.online/user/{}/remember/{}\n\n'
-               'С уважением, команда Sharewood').format(user.username, obj.activation_key)
+               'https://lorewood.online/user/{}/remember/{}\n\n'
+               'С уважением, команда Lorewood').format(user.username, obj.activation_key)
 
     send_message(subject, message, user)
 
