@@ -6,13 +6,16 @@ chardet==3.0.4
 confusable-homoglyphs==3.2.0
 cryptography==2.9.2
 defusedxml==0.7.0rc1
+dj-database-url==0.5.0
 Django==3.0.8
 django-ckeditor==5.9.0
 django-el-pagination==3.3.0
+django-heroku==0.3.1
 django-js-asset==1.2.2
 django-registration==3.1
 django-wysiwyg==0.8.0
 djangorestframework==3.11.0
+gunicorn==20.0.4
 idna==2.10
 oauthlib==3.1.0
 Pillow==7.2.0
@@ -29,3 +32,4 @@ social-auth-core==3.3.3
 sqlparse==0.3.1
 tzlocal==2.1
 urllib3==1.25.9
+whitenoise==5.1.0

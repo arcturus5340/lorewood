@@ -1,4 +1,4 @@
-#!/home/arcturus/Projects/sharewood/venv/bin/python
+#!/home/arcturus/Projects/lorewood/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":
