@@ -12,6 +12,72 @@ is_active bool
 date_joined datetime
 last_name varchar(150)
 
+app_activation_keys
+-
+user integer FK >- auth_user.id
+activation_key text unique
+is_2step_verification boolean default=False
+is_email_change boolean default=False
+is_registration boolean default=False
+is_remember boolean default=False
+new_email varchar(254)
+
+app_tags
+-
+id pk integer
+tag varchar(32) unique
+
+app_records
+-
+id pk integer
+title varchar(128)
+content text
+description varchar(256)
+tags integer FK >-< app_tags.id
+main_pic file
+pre_video file
+author integer FK >- auth_user.id
+date datetime default=timezone.now
+rating float default=0.0
+best_rating integer default=0
+rating_count integer default=0
+worst_rating integer default=10
+includes text default=NULL
+price integer
+sales integer default=0
+
+app_headers
+-
+id pk integer
+record integer FK >- app_records.id
+title varchar(128)
+_order integer default=0
+
+app_files
+-
+id pk integer
+header integer FK >- app_headers.id
+src file
+_order integer default=0
+
+app_comments
+-
+id pk integer
+author integer FK >- auth_user.id
+content text
+date datetime default=timezone.now
+record integer FK >- app_records.id
+
+app_profile
+-
+user integer FK - auth_user.id
+avatar file default='/media/avatars/avatar-default.png'
+bio text
+balance integer default=0
+is_premium boolean default=False
+is_verified boolean default=False
+has_2step_verification boolean default=False
+
 app_provided_users
 -
 user integer FK >- auth_user.id
@@ -19,65 +85,5 @@ record integer FK >- app_records.id
 
 app_rated_users
 -
-user integer FK >- auth_user.id
-record integer FK >- app_records.id
-
-app_comments
--
-id pk integer
-author integer FK >- auth_user.id
-content text
-record integer FK >- app_records.id
-date date
-
-app_profile
--
-user pk integer FK - auth_user.id
-avatar text
-balance integer
-is_premium bool
-has_2stepverif bool
-bio text
-
-app_records
--
-id pk integer
-title text
-content text
-description varchar(300)
-main_pic file
-pre_video file
-author integer FK >- auth_user.id
-date date
-rating real
-best_rating integer
-rating_count integer
-worst_rating integer
-rating_sum integer
-includes text
-price integer
-sales integer
-
-app_tags
--
-id pk integer FK >-< app_records.id
-tag varchar(64) unique
-
-app_activation
--
-user pk integer FK - auth_user.id
-activation_key text unique
-
-app_headers
--
-id pk integer
-record integer FK >- app_records.id
-title varchar(128)
-_order integer unique
-
-app_files
--
-id pk integer
-header FK >- app_headers.id
-src file
-_order integer unique
+user FK >- auth_user.id
+record FK >- app_records.id
